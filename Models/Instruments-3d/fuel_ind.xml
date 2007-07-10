@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<!--
+sweat by maggse
+    -->
+<PropertyList>
+
+ <path>fuel_ind.ac</path>
+ 
+
+ <!-- fuel indicators -->
+
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>fuel1</object-name>
+	 <property>/consumables/fuel/tank[2]/level-lbs</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>35000.0</ind>
+			 <dep>0.108</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>fuel2</object-name>
+	 <property>/consumables/fuel/tank[3]/level-lbs</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>40000.0</ind>
+			 <dep>0.108</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>fuel3</object-name>
+	 <property>/consumables/fuel/tank[4]/level-lbs</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>25000.0</ind>
+			 <dep>0.108</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>fuel4</object-name>
+	 <property>/consumables/fuel/tank[5]/level-lbs</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>50000.0</ind>
+			 <dep>0.108</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>fuell</object-name>
+	 <property>/consumables/fuel/tank[0]/level-lbs</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>35000.0</ind>
+			 <dep>0.108</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>fuelr</object-name>
+	 <property>/consumables/fuel/tank[1]/level-lbs</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>35000.0</ind>
+			 <dep>0.108</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+ </animation>
+ 
+
+ 
+</PropertyList>

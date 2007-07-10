@@ -1,0 +1,48 @@
+<!--
+maggse
+-->
+
+<PropertyList>
+
+ <path>radar_alt.ac</path>
+
+
+ 
+
+ <animation>
+   <type>rotate</type>
+   <object-name>needle</object-name>
+   <property>/position/altitude-agl-ft</property>
+<interpolation>
+     <entry>
+       <ind>0</ind>
+       <dep>0</dep>
+     </entry>
+     <entry>
+       <ind>500</ind>
+       <dep>-180</dep>
+     </entry>
+     <entry>
+       <ind>1000</ind>
+       <dep>-216</dep>
+     </entry>
+     <entry>
+	     <ind>4000</ind>
+	     <dep>-324</dep>
+     </entry>
+</interpolation>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+  <center>
+	  <x-m>0.041</x-m>
+	  <y-m>-0.00</y-m>
+	  <z-m>-0.00</z-m>
+   </center>
+ </animation>
+ 
+
+
+</PropertyList>

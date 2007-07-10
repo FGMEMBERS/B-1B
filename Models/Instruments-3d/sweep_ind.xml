@@ -1,0 +1,149 @@
+<!--
+maggse
+-->
+
+<PropertyList>
+
+ <path>sweep_ind.ac</path>
+
+ <!--<animation>
+    <name>Alpha Sort</name>
+    <object-name>APspeed</object-name>
+    <object-name>APlnav</object-name>
+    <object-name>APvnav</object-name>
+    <object-name>ASIribbon</object-name>
+    <object-name>ALTribbon</object-name>
+
+</animation>-->
+ 
+
+ <animation>
+   <type>rotate</type>
+   <object-name>sweep</object-name>
+   <property>/controls/flight/wing-sweep</property>
+<interpolation>
+     <entry>
+       <ind>0</ind>
+       <dep>-75</dep>
+     </entry>
+     <entry>
+       <ind>0.25</ind>
+       <dep>-55</dep>
+     </entry>
+     <entry>
+       <ind>0.75</ind>
+       <dep>-18</dep>
+     </entry>
+     <entry>
+	     <ind>1.0</ind>
+	     <dep>0</dep>
+     </entry>
+</interpolation>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+  <center>
+	  <x-m>0.000</x-m>
+	  <y-m>-0.008</y-m>
+	  <z-m>-0.031</z-m>
+   </center>
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>flaps</object-name>
+	 <property>/controls/flight/flaps</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0</ind>
+			 <dep>0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.5</ind>
+			 <dep>-15</dep>
+		 </entry>
+		 <entry>
+			 <ind>1</ind>
+			 <dep>-30</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>1</x>
+		 <y>0</y>
+		 <z>0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.000</x-m>
+		 <y-m>-0.064</y-m>
+		 <z-m>-0.052</z-m>
+   </center>
+
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>spoilerr</object-name>
+	 <property>/controls/flight/spoilers</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0</ind>
+			 <dep>0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.5</ind>
+			 <dep>30</dep>
+		 </entry>
+		 <entry>
+			 <ind>1</ind>
+			 <dep>60</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>1</x>
+		 <y>0</y>
+		 <z>0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.000</x-m>
+		 <y-m>0.012</y-m>
+		 <z-m>0.028</z-m>
+	 </center>
+	 
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>spoilerl</object-name>
+	 <property>/controls/flight/spoilers</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0</ind>
+			 <dep>0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.5</ind>
+			 <dep>-28</dep>
+		 </entry>
+		 <entry>
+			 <ind>1</ind>
+			 <dep>-55</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>1</x>
+		 <y>0</y>
+		 <z>0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.000</x-m>
+		 <y-m>0.012</y-m>
+		 <z-m>0.028</z-m>
+	 </center>
+	 
+ </animation>
+
+
+
+</PropertyList>
