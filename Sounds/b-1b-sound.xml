@@ -4,7 +4,6 @@
   
 <fx>
 
-
 <!-- engine0 -->
 
 <engine>
@@ -13,16 +12,16 @@
 	<mode>looped</mode>
 	<property>/engines/engine[0]/running</property>
 	<position>
-		<x>4.5</x><!-- + = right -->
-		<y>-2.0</y><!-- + = up -->
-		<z>10.0</z><!-- + = aft -->
+		<x>32.0</x><!-- + = aft -->
+		<y>4.5</y><!-- + = left -->
+		<z>-2.0</z><!-- + = up -->
 	</position>
 	<orientation>
-		<x>0.0</x>
+		<x>180.0</x>
 		<y>0.0</y>
-		<z>180.0</z>
-		<inner-cone>180.0</inner-cone>
-		<outer-cone>360.0</outer-cone>
+		<z>0.0</z>
+		<inner-angle>180.0</inner-angle>
+		<outer-angle>360.0</outer-angle>
 		<outer-gain>0.2</outer-gain>
 	</orientation>
 	<volume>
@@ -38,22 +37,24 @@
 	<path>Sounds/turbojet_fan.wav</path>
 	<mode>looped</mode>
 	<condition>
+		<and>
 		<not>
 			<property>/sim/current-view/internal</property>
 		</not>
 		<property>/engines/engine[0]/running</property>
+	        </and>
 	</condition>
 	<position>
-		<x>4.5</x><!-- + = right -->
-		<y>-2.0</y><!-- + = up -->
-		<z>10.0</z><!-- + = aft -->
+		<x>32.0</x>
+		<y>4.5</y>
+		<z>-2.0</z>
 	</position>
 	<orientation>
-		<x>0.0</x>
+		<x>180.0</x>
 		<y>0.0</y>
-		<z>180.0</z>
-		<inner-cone>180.0</inner-cone>
-		<outer-cone>360.0</outer-cone>
+		<z>0.0</z>
+		<inner-angle>180.0</inner-angle>
+		<outer-angle>360.0</outer-angle>
 		<outer-gain>0.5</outer-gain>
 	</orientation>
 	<pitch>
@@ -74,23 +75,26 @@
 	<path>Sounds/jet.wav</path>
 	<mode>looped</mode>
 	<condition>
+		<and>
 		<equals>
 		<property>/controls/engines/engine[0]/afterburner</property>
 		<value>1</value>
 		</equals>
+		<property>/engines/engine[0]/running</property>
+	        </and>
 	</condition>
 	
 	<position>
-		<x>4.5</x>
-		<y>-2.0</y>
-		<z>10.0</z>
+		<x>32.0</x>
+		<y>4.5</y>
+		<z>-2.0</z>
 	</position>
 	<orientation>
-		<x>0.0</x>
+		<x>180.0</x>
 		<y>0.0</y>
-		<z>180.0</z>
-		<inner-cone>180.0</inner-cone>
-		<outer-cone>360.0</outer-cone>
+		<z>0.0</z>
+		<inner-angle>240.0</inner-angle>
+		<outer-angle>360.0</outer-angle>
 		<outer-gain>0.5</outer-gain>
 	</orientation>
 	<volume>
@@ -110,13 +114,15 @@
 	<path>Sounds/whine.wav</path>
 	<mode>looped</mode>
 	<condition>
+		<and>
 		<property>/sim/current-view/internal</property>
 		<property>/engines/engine[0]/running</property>
+	        </and>
 	</condition>
 	<position>
-		<x>4.5</x>
-		<y>-2.0</y>
-		<z>20.0</z>
+		<x>32.0</x>
+		<y>4.5</y>
+		<z>-2.0</z>
 	</position>
 
 	<pitch>
@@ -137,16 +143,16 @@
 	  <mode>looped</mode>
 	  <property>/engines/engine[1]/running</property>
 	  <position>
-		  <x>3.5</x><!-- + = right -->
-		  <y>-2.0</y><!-- + = up -->
-		  <z>10.0</z><!-- + = aft -->
+		  <x>32.0</x><!-- + = aft -->
+		  <y>4.0</y><!-- + = left -->
+		  <z>-2.0</z><!-- + = up -->
 	  </position>
 	  <orientation>
-		  <x>0.0</x>
+		  <x>180.0</x>
 		  <y>0.0</y>
-		  <z>180.0</z>
-		  <inner-cone>180.0</inner-cone>
-		  <outer-cone>360.0</outer-cone>
+		  <z>0.0</z>
+		  <inner-angle>180.0</inner-angle>
+		  <outer-angle>360.0</outer-angle>
 		  <outer-gain>0.2</outer-gain>
 	  </orientation>
 	  <volume>
@@ -162,22 +168,24 @@
 	  <path>Sounds/turbojet_fan.wav</path>
 	  <mode>looped</mode>
 	  <condition>
+		  <and>
 		  <not>
 			  <property>/sim/current-view/internal</property>
 		  </not>
 		  <property>/engines/engine[1]/running</property>
+	          </and>
 	  </condition>
 	  <position>
-		  <x>3.5</x><!-- + = right -->
-		  <y>-2.0</y><!-- + = up -->
-		  <z>10.0</z><!-- + = aft -->
+		  <x>32.0</x>
+		  <y>4.0</y>
+		  <z>-2.0</z>
 	  </position>
 	  <orientation>
-		  <x>0.0</x>
+		  <x>180.0</x>
 		  <y>0.0</y>
-		  <z>180.0</z>
-		  <inner-cone>180.0</inner-cone>
-		  <outer-cone>360.0</outer-cone>
+		  <z>0.0</z>
+		  <inner-angle>180.0</inner-angle>
+		  <outer-angle>360.0</outer-angle>
 		  <outer-gain>0.5</outer-gain>
 	  </orientation>
 	  <pitch>
@@ -198,23 +206,26 @@
 	  <path>Sounds/jet.wav</path>
 	  <mode>looped</mode>
 	  <condition>
+		  <and>
 		  <equals>
 			  <property>/controls/engines/engine[1]/afterburner</property>
 			  <value>1</value>
 		  </equals>
+		  <property>/engines/engine[1]/running</property>
+	          </and>
 	  </condition>
 	  
 	  <position>
-		  <x>3.5</x>
-		  <y>-2.0</y>
-		  <z>10.0</z>
+		  <x>25</x>
+		  <y>4.0</y>
+		  <z>-2.0</z>
 	  </position>
 	  <orientation>
-		  <x>0.0</x>
+		  <x>180.0</x>
 		  <y>0.0</y>
-		  <z>180.0</z>
-		  <inner-cone>180.0</inner-cone>
-		  <outer-cone>360.0</outer-cone>
+		  <z>0.0</z>
+		  <inner-angle>240.0</inner-angle>
+		  <outer-angle>360.0</outer-angle>
 		  <outer-gain>0.5</outer-gain>
 	  </orientation>
 	  <volume>
@@ -234,13 +245,15 @@
 	  <path>Sounds/whine.wav</path>
 	  <mode>looped</mode>
 	  <condition>
+		  <and>
 		  <property>/sim/current-view/internal</property>
 		  <property>/engines/engine[1]/running</property>
+	          </and>
 	  </condition>
 	  <position>
-		  <x>3.5</x>
-		  <y>-2.0</y>
-		  <z>20.0</z>
+		  <x>32.0</x>
+		  <y>4.0</y>
+		  <z>-2.0</z>
 	  </position>
 	  
 	  <pitch>
@@ -261,16 +274,16 @@
 	  <mode>looped</mode>
 	  <property>/engines/engine[2]/running</property>
 	  <position>
-		  <x>-3.5</x><!-- + = right -->
-		  <y>-2.0</y><!-- + = up -->
-		  <z>10.0</z><!-- + = aft -->
+		  <x>32.0</x>
+		  <y>-4.0</y>
+		  <z>-2.0</z>
 	  </position>
 	  <orientation>
-		  <x>0.0</x>
+		  <x>180.0</x>
 		  <y>0.0</y>
-		  <z>180.0</z>
-		  <inner-cone>180.0</inner-cone>
-		  <outer-cone>360.0</outer-cone>
+		  <z>0.0</z>
+		  <inner-angle>180.0</inner-angle>
+		  <outer-angle>360.0</outer-angle>
 		  <outer-gain>0.2</outer-gain>
 	  </orientation>
 	  <volume>
@@ -286,22 +299,24 @@
 	  <path>Sounds/turbojet_fan.wav</path>
 	  <mode>looped</mode>
 	  <condition>
+		  <and>
 		  <not>
 			  <property>/sim/current-view/internal</property>
 		  </not>
 		  <property>/engines/engine[2]/running</property>
+	          </and>
 	  </condition>
 	  <position>
-		  <x>-3.5</x><!-- + = right -->
-		  <y>-2.0</y><!-- + = up -->
-		  <z>10.0</z><!-- + = aft -->
+		  <x>32.0</x>
+		  <y>-4.0</y>
+		  <z>-2.0</z>
 	  </position>
 	  <orientation>
-		  <x>0.0</x>
+		  <x>180.0</x>
 		  <y>0.0</y>
-		  <z>180.0</z>
-		  <inner-cone>180.0</inner-cone>
-		  <outer-cone>360.0</outer-cone>
+		  <z>0.0</z>
+		  <inner-angle>180.0</inner-angle>
+		  <outer-angle>360.0</outer-angle>
 		  <outer-gain>0.5</outer-gain>
 	  </orientation>
 	  <pitch>
@@ -322,23 +337,26 @@
 	  <path>Sounds/jet.wav</path>
 	  <mode>looped</mode>
 	  <condition>
+		  <and>
 		  <equals>
 			  <property>/controls/engines/engine[2]/afterburner</property>
 			  <value>1</value>
 		  </equals>
+		  <property>/engines/engine[2]/running</property>
+	          </and>
 	  </condition>
 	  
 	  <position>
-		  <x>-3.5</x>
-		  <y>-2.0</y>
-		  <z>10.0</z>
+		  <x>32.0</x>
+		  <y>-4.0</y>
+		  <z>-2.0</z>
 	  </position>
 	  <orientation>
-		  <x>0.0</x>
+		  <x>180.0</x>
 		  <y>0.0</y>
-		  <z>180.0</z>
-		  <inner-cone>180.0</inner-cone>
-		  <outer-cone>360.0</outer-cone>
+		  <z>0.0</z>
+		  <inner-angle>240.0</inner-angle>
+		  <outer-angle>360.0</outer-angle>
 		  <outer-gain>0.5</outer-gain>
 	  </orientation>
 	  <volume>
@@ -359,13 +377,15 @@
 	  <path>Sounds/whine.wav</path>
 	  <mode>looped</mode>
 	  <condition>
+		  <and>
 		  <property>/sim/current-view/internal</property>
 		  <property>/engines/engine[2]/running</property>
+	          </and>
 	  </condition>
 	  <position>
-		  <x>-3.5</x>
-		  <y>-2.0</y>
-		  <z>20.0</z>
+		  <x>25.5</x>
+		  <y>-4.0</y>
+		  <z>-2.0</z>
 	  </position>
 	  
 	  <pitch>
@@ -386,16 +406,16 @@
 	  <mode>looped</mode>
 	  <property>/engines/engine[3]/running</property>
 	  <position>
-		  <x>-4.5</x><!-- + = right -->
-		  <y>-2.0</y><!-- + = up -->
-		  <z>10.0</z><!-- + = aft -->
+		  <x>32.0</x>
+		  <y>-4.5</y>
+		  <z>-2.0</z>
 	  </position>
 	  <orientation>
-		  <x>0.0</x>
+		  <x>180.0</x>
 		  <y>0.0</y>
-		  <z>180.0</z>
-		  <inner-cone>180.0</inner-cone>
-		  <outer-cone>360.0</outer-cone>
+		  <z>0.0</z>
+		  <inner-angle>180.0</inner-angle>
+		  <outer-angle>360.0</outer-angle>
 		  <outer-gain>0.2</outer-gain>
 	  </orientation>
 	  <volume>
@@ -411,22 +431,24 @@
 	  <path>Sounds/turbojet_fan.wav</path>
 	  <mode>looped</mode>
 	  <condition>
+		  <and>
 		  <not>
 			  <property>/sim/current-view/internal</property>
 		  </not>
 		  <property>/engines/engine[3]/running</property>
+	          </and>
 	  </condition>
 	  <position>
-		  <x>-4.5</x><!-- + = right -->
-		  <y>-2.0</y><!-- + = up -->
-		  <z>10.0</z><!-- + = aft -->
+		  <x>32.0</x>
+		  <y>-4.5</y>
+		  <z>-2.0</z>
 	  </position>
 	  <orientation>
-		  <x>0.0</x>
+		  <x>180.0</x>
 		  <y>0.0</y>
-		  <z>180.0</z>
-		  <inner-cone>180.0</inner-cone>
-		  <outer-cone>360.0</outer-cone>
+		  <z>0.0</z>
+		  <inner-angle>180.0</inner-angle>
+		  <outer-angle>360.0</outer-angle>
 		  <outer-gain>0.5</outer-gain>
 	  </orientation>
 	  <pitch>
@@ -447,23 +469,26 @@
 	  <path>Sounds/jet.wav</path>
 	  <mode>looped</mode>
 	  <condition>
+		  <and>
 		  <equals>
 			  <property>/controls/engines/engine[3]/afterburner</property>
 			  <value>1</value>
 		  </equals>
+		  <property>/engines/engine[3]/running</property>
+	          </and>
 	  </condition>
 	  
 	  <position>
-		  <x>-4.5</x>
-		  <y>-2.0</y>
-		  <z>10.0</z>
+		  <x>32.0</x>
+		  <y>-4.5</y>
+		  <z>-2.0</z>
 	  </position>
 	  <orientation>
-		  <x>0.0</x>
+		  <x>180.0</x>
 		  <y>0.0</y>
-		  <z>180.0</z>
-		  <inner-cone>180.0</inner-cone>
-		  <outer-cone>360.0</outer-cone>
+		  <z>0.0</z>
+		  <inner-angle>240.0</inner-angle>
+		  <outer-angle>360.0</outer-angle>
 		  <outer-gain>0.5</outer-gain>
 	  </orientation>
 	  <volume>
@@ -483,13 +508,15 @@
 	  <path>Sounds/whine.wav</path>
 	  <mode>looped</mode>
 	  <condition>
+		  <and>
 		  <property>/sim/current-view/internal</property>
 		  <property>/engines/engine[3]/running</property>
+	          </and>
 	  </condition>
 	  <position>
-		  <x>-4.5</x>
-		  <y>-2.0</y>
-		  <z>20.0</z>
+		  <x>32.0</x>
+		  <y>-4.5</y>
+		  <z>-2.0</z>
 	  </position>
 	  
 	  <pitch>
