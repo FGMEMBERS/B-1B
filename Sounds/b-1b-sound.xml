@@ -10,7 +10,13 @@
 	<name>engine0</name>
 	<path>Sounds/jet.wav</path>
 	<mode>looped</mode>
-	<property>/engines/engine[0]/running</property>
+	<condition>
+		<equals>
+			<property>/controls/engines/engine[0]/cutoff</property>
+			<value>0</value>
+		</equals>
+	</condition>
+	<value>0</value>
 	<position>
 		<x>32.0</x><!-- + = aft -->
 		<y>4.5</y><!-- + = left -->
@@ -41,7 +47,10 @@
 		<not>
 			<property>/sim/current-view/internal</property>
 		</not>
-		<property>/engines/engine[0]/running</property>
+		<equals>
+			<property>/controls/engines/engine[0]/cutoff</property>
+			<value>0</value>
+		</equals>
 	        </and>
 	</condition>
 	<position>
@@ -80,7 +89,10 @@
 		<property>/controls/engines/engine[0]/afterburner</property>
 		<value>1</value>
 		</equals>
-		<property>/engines/engine[0]/running</property>
+		<equals>
+			<property>/controls/engines/engine[0]/cutoff</property>
+			<value>0</value>
+		</equals>
 	        </and>
 	</condition>
 	
@@ -116,7 +128,10 @@
 	<condition>
 		<and>
 		<property>/sim/current-view/internal</property>
-		<property>/engines/engine[0]/running</property>
+		<equals>
+			<property>/controls/engines/engine[0]/cutoff</property>
+			<value>0</value>
+		</equals>
 	        </and>
 	</condition>
 	<position>
@@ -141,7 +156,12 @@
 	  <name>engine1</name>
 	  <path>Sounds/jet.wav</path>
 	  <mode>looped</mode>
-	  <property>/engines/engine[1]/running</property>
+	  <condition>
+			  <equals>
+				  <property>/controls/engines/engine[1]/cutoff</property>
+				  <value>0</value>
+			  </equals>
+	</condition>
 	  <position>
 		  <x>32.0</x><!-- + = aft -->
 		  <y>4.0</y><!-- + = left -->
@@ -172,7 +192,10 @@
 		  <not>
 			  <property>/sim/current-view/internal</property>
 		  </not>
-		  <property>/engines/engine[1]/running</property>
+		  <equals>
+			  <property>/controls/engines/engine[1]/cutoff</property>
+			  <value>0</value>
+			  </equals>
 	          </and>
 	  </condition>
 	  <position>
@@ -211,7 +234,10 @@
 			  <property>/controls/engines/engine[1]/afterburner</property>
 			  <value>1</value>
 		  </equals>
-		  <property>/engines/engine[1]/running</property>
+		  <equals>
+			  <property>/controls/engines/engine[1]/cutoff</property>
+			  <value>0</value>
+			  </equals>
 	          </and>
 	  </condition>
 	  
@@ -247,7 +273,10 @@
 	  <condition>
 		  <and>
 		  <property>/sim/current-view/internal</property>
-		  <property>/engines/engine[1]/running</property>
+		  <equals>
+			  <property>/controls/engines/engine[1]/cutoff</property>
+			  <value>0</value>
+			  </equals>
 	          </and>
 	  </condition>
 	  <position>
@@ -272,7 +301,12 @@
 	  <name>engine2</name>
 	  <path>Sounds/jet.wav</path>
 	  <mode>looped</mode>
-	  <property>/engines/engine[2]/running</property>
+	  <condition>
+			  <equals>
+				  <property>/controls/engines/engine[2]/cutoff</property>
+				  <value>0</value>
+			  </equals>
+	  </condition>
 	  <position>
 		  <x>32.0</x>
 		  <y>-4.0</y>
@@ -303,7 +337,10 @@
 		  <not>
 			  <property>/sim/current-view/internal</property>
 		  </not>
-		  <property>/engines/engine[2]/running</property>
+		  <equals>
+			  <property>/controls/engines/engine[2]/cutoff</property>
+			  <value>0</value>
+			  </equals>
 	          </and>
 	  </condition>
 	  <position>
@@ -342,7 +379,10 @@
 			  <property>/controls/engines/engine[2]/afterburner</property>
 			  <value>1</value>
 		  </equals>
-		  <property>/engines/engine[2]/running</property>
+		  <equals>
+			  <property>/controls/engines/engine[2]/cutoff</property>
+			  <value>0</value>
+			  </equals>
 	          </and>
 	  </condition>
 	  
@@ -379,7 +419,10 @@
 	  <condition>
 		  <and>
 		  <property>/sim/current-view/internal</property>
-		  <property>/engines/engine[2]/running</property>
+		  <equals>
+			  <property>/controls/engines/engine[2]/cutoff</property>
+			  <value>0</value>
+			  </equals>
 	          </and>
 	  </condition>
 	  <position>
@@ -404,7 +447,13 @@
 	  <name>engine3</name>
 	  <path>Sounds/jet.wav</path>
 	  <mode>looped</mode>
-	  <property>/engines/engine[3]/running</property>
+	  <condition>
+			  <equals>
+				  <property>/controls/engines/engine[3]/cutoff</property>
+				  <value>0</value>
+			  </equals>
+	  </condition>
+
 	  <position>
 		  <x>32.0</x>
 		  <y>-4.5</y>
@@ -435,7 +484,10 @@
 		  <not>
 			  <property>/sim/current-view/internal</property>
 		  </not>
-		  <property>/engines/engine[3]/running</property>
+		  <equals>
+			  <property>/controls/engines/engine[3]/cutoff</property>
+			  <value>0</value>
+			  </equals>
 	          </and>
 	  </condition>
 	  <position>
@@ -474,7 +526,10 @@
 			  <property>/controls/engines/engine[3]/afterburner</property>
 			  <value>1</value>
 		  </equals>
-		  <property>/engines/engine[3]/running</property>
+		  <equals>
+			  <property>/controls/engines/engine[3]/cutoff</property>
+			  <value>0</value>
+			  </equals>
 	          </and>
 	  </condition>
 	  
@@ -510,7 +565,10 @@
 	  <condition>
 		  <and>
 		  <property>/sim/current-view/internal</property>
-		  <property>/engines/engine[3]/running</property>
+		  <equals>
+			  <property>/controls/engines/engine[3]/cutoff</property>
+			  <value>0</value>
+			  </equals>
 	          </and>
 	  </condition>
 	  <position>

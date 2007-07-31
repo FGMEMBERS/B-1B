@@ -8,10 +8,10 @@
 
 <!-- Approach configuration -->
   <approach speed="160" aoa="3.0" fuel="0.7">
-    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.25"/>
-    <control-setting axis="/controls/engines/engine[1]/throttle" value="0.25"/>
-    <control-setting axis="/controls/engines/engine[2]/throttle" value="0.25"/>
-    <control-setting axis="/controls/engines/engine[3]/throttle" value="0.25"/>
+    <control-setting axis="/controls/engines/engine[0]/throttle-lever" value="0.25"/>
+    <control-setting axis="/controls/engines/engine[1]/throttle-lever" value="0.25"/>
+    <control-setting axis="/controls/engines/engine[2]/throttle-lever" value="0.25"/>
+    <control-setting axis="/controls/engines/engine[3]/throttle-lever" value="0.25"/>
     <control-setting axis="/controls/engines/engine[0]/afterburner" value="0.0"/>
     <control-setting axis="/controls/engines/engine[1]/afterburner" value="0.0"/>
     <control-setting axis="/controls/engines/engine[2]/afterburner" value="0.0"/>
@@ -35,10 +35,10 @@
      
 -->
   <cruise speed="582" alt="36000" fuel="0.6">
-    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.6"/>
-    <control-setting axis="/controls/engines/engine[1]/throttle" value="0.6"/>
-    <control-setting axis="/controls/engines/engine[2]/throttle" value="0.6"/>
-    <control-setting axis="/controls/engines/engine[3]/throttle" value="0.6"/>
+    <control-setting axis="/controls/engines/engine[0]/throttle-lever" value="0.6"/>
+    <control-setting axis="/controls/engines/engine[1]/throttle-lever" value="0.6"/>
+    <control-setting axis="/controls/engines/engine[2]/throttle-lever" value="0.6"/>
+    <control-setting axis="/controls/engines/engine[3]/throttle-lever" value="0.6"/>
     <control-setting axis="/controls/engines/engine[0]/afterburner" value="0.0"/>
     <control-setting axis="/controls/engines/engine[1]/afterburner" value="0.0"/>
     <control-setting axis="/controls/engines/engine[2]/afterburner" value="0.0"/>
@@ -145,13 +145,13 @@
 
 <jet x="-30.3" y="4.2" z="-2.5" mass="3200" tsfc="0.6" thrust="14600" afterburner="30700">
 	<actionpt x="-35.6" y="4.2" z="-2.4"/>
-	<control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
+	<control-input axis="/controls/engines/engine[0]/throttle-lever" control="THROTTLE"/>
 	<control-input axis="/controls/engines/engine[0]/afterburner" control="REHEAT"/>
 </jet>
 
 <jet x="-30.3" y="3.2" z="-2.5" mass="3200" tsfc="0.6" thrust="14600" afterburner="30700">
 	<actionpt x="-35.6" y="3.2" z="-2.4"/>
-	<control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
+	<control-input axis="/controls/engines/engine[1]/throttle-lever" control="THROTTLE"/>
 	<control-input axis="/controls/engines/engine[0]/afterburner" control="REHEAT"/>
 </jet>
 
@@ -159,13 +159,13 @@
 
 <jet x="-30.3" y="-3.2" z="-2.5" mass="3200" tsfc="0.6" thrust="14600" afterburner="30700">
 	<actionpt x="-35.6" y="-3.2" z="-2.4"/>
-	<control-input axis="/controls/engines/engine[2]/throttle" control="THROTTLE"/>
+	<control-input axis="/controls/engines/engine[2]/throttle-lever" control="THROTTLE"/>
 	<control-input axis="/controls/engines/engine[0]/afterburner" control="REHEAT"/>
 </jet>
 
 <jet x="-30.3" y="-4.2" z="-2.5" mass="3200" tsfc="0.6" thrust="14600" afterburner="30700">
 	<actionpt x="-35.6" y="-4.2" z="-2.4"/>
-	<control-input axis="/controls/engines/engine[3]/throttle" control="THROTTLE"/>
+	<control-input axis="/controls/engines/engine[3]/throttle-lever" control="THROTTLE"/>
 	<control-input axis="/controls/engines/engine[0]/afterburner" control="REHEAT"/>
   </jet>
 
@@ -215,13 +215,15 @@
 <!-- 6 fuel tanks with total 190000 lb -->
 <!-- approximate positions
      -->
-  <tank x="-26.6" y="4.0" z="-0.5" capacity="30000"/>
-  <tank x="-26.6" y="-4.0" z="-0.5" capacity="30000"/>
-  <tank x="-8.0" y="0.0" z="-0.5" capacity="30000"/>
+  <tank x="-26.6" y="3.0" z="-0.5" capacity="25000"/>
+  <tank x="-26.6" y="-3.0" z="-0.5" capacity="25000"/>
+  <tank x="-8.0" y="0.0" z="-0.5" capacity="25000"/>
   <tank x="-14.0" y="0.0" z="-0.5" capacity="40000"/>
   <tank x="-32.0" y="0.0" z="-0.5" capacity="20000"/>
-  <tank x="-39.0" y="0.0" z="-0.5" capacity="40000"/>
-
+  <tank x="-39.0" y="0.0" z="-0.5" capacity="35000"/>
+<!-- 2 collector fuel tanks with total 10000 lb each -->
+<tank x="-28.1" y="4.0" z="-0.5" capacity="10000"/>
+  <tank x="-28.1" y="-4.0" z="-0.5" capacity="10000"/>
 
 <!-- ballast used to trim the aircraft -->
 <ballast x="-44.0" y="0" z="0" mass="-15000"/>

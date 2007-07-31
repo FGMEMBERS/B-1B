@@ -29,7 +29,7 @@ B-1B set file.
     <view n="0">
       <internal archive="y">true</internal>
       <config>
-        <x-offset-m archive="y">-0.64</x-offset-m><!-- left-/right+ -->
+        <x-offset-m archive="y">-0.67</x-offset-m><!-- left-/right+ -->
         <y-offset-m archive="y">1.70</y-offset-m><!-- up+/down- -->
         <z-offset-m archive="y">7.53</z-offset-m><!-- back+ -->
         <pitch-offset-deg>0</pitch-offset-deg>
@@ -73,7 +73,7 @@ B-1B set file.
     
     <submodels>
 	    <serviceable type="bool">true</serviceable>
-	    <path>Aircraft/B-1B/Submodels/smoke_puff.xml</path>
+	    <path>Aircraft/B-1B/Submodels/sub_lancer.xml</path>
     </submodels>
 
     <!--  <panel>
@@ -89,10 +89,26 @@ B-1B set file.
     <model>
       <path>Aircraft/B-1B/Models/B-1B.xml</path>
          <!-- <doors>
-		 <bombbay/>
 		 <fuelhatch/>
 		 <hatch/>
 	</doors>-->
+	<!--<B-1B>
+	<engines>
+		<engine n="0">
+			<running type="bool">0</running>
+		</engine>
+		<engine n="1">
+			<running type="bool">0</running>
+		</engine>
+		<engine n="2">
+			<running type="bool">0</running>
+		</engine>
+		<engine n="3">
+			<running type="bool">0</running>
+	        </engine>
+        </engines>
+</B-1B>-->
+
 </model>
 
     <systems>
@@ -207,21 +223,55 @@ B-1B set file.
       <flaps type="double">0.0</flaps>
       <elevator-incidence-deg type="double">0.0</elevator-incidence-deg>
     </flight>
+    <engines>
+	    <engine n="0">
+		    <magnetos type="double">0</magnetos>
+		    <throttle type="double">0.0</throttle>
+		    <cutoff>1</cutoff>
+		    <ignition>0</ignition>
+	    </engine>
+	    <engine n="1">
+		    <magnetos type="double">0</magnetos>
+		    <throttle type="double">0.0</throttle>
+		    <cutoff>1</cutoff>
+		    <ignition>0</ignition>
+	    </engine>
+	    <engine n="2">
+		    <magnetos type="double">0</magnetos>
+		    <throttle type="double">0.0</throttle>
+		    <cutoff>1</cutoff>
+		    <ignition>0</ignition>
+	    </engine>
+	    <engine n="3">
+		    <magnetos type="double">0</magnetos>
+		    <throttle type="double">0.0</throttle>
+		    <cutoff>1</cutoff>
+		    <ignition>0</ignition>
+	    </engine>
+        </engines>
   </controls>
   
 <!-- Engine indexes -->
   <engines>
     <engine n="0">
-      <engine-num type="int">0</engine-num>
+	    <engine-num type="int">0</engine-num>
+	    <running>false</running>
+	    <rpm type="double">0</rpm>
     </engine>
     <engine n="1">
-      <engine-num type="int">1</engine-num>
+	    <engine-num type="int">1</engine-num>
+	    <running>false</running>
+	    <rpm type="double">0</rpm>
     </engine>
     <engine n="2">
-      <engine-num type="int">2</engine-num>
+	    <engine-num type="int">2</engine-num>
+	    <running>false</running>
+	    <rpm type="double">0</rpm>
     </engine>
     <engine n="3">
-      <engine-num type="int">3</engine-num>
+	    <engine-num type="int">3</engine-num>
+	    <running>false</running>
+	    <rpm type="double">0</rpm>
     </engine>
     
   </engines>
@@ -243,6 +293,22 @@ B-1B set file.
       </tank>
       <tank n="3">
 	      <tank-num type="int">3</tank-num>
+	      <kill-when-empty type="bool">false</kill-when-empty>
+      </tank>
+      <tank n="4">
+	      <tank-num type="int">4</tank-num>
+	      <kill-when-empty type="bool">false</kill-when-empty>
+      </tank>
+      <tank n="5">
+	      <tank-num type="int">5</tank-num>
+	      <kill-when-empty type="bool">false</kill-when-empty>
+      </tank>
+      <tank n="6">
+	      <tank-num type="int">6</tank-num>
+	      <kill-when-empty type="bool">false</kill-when-empty>
+      </tank>
+      <tank n="7">
+	      <tank-num type="int">7</tank-num>
 	      <kill-when-empty type="bool">false</kill-when-empty>
       </tank>
     </fuel>
