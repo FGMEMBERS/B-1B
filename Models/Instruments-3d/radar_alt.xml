@@ -12,19 +12,19 @@ maggse
  <animation>
    <type>rotate</type>
    <object-name>needle</object-name>
-   <property>/position/altitude-agl-ft</property>
+   <property>position/altitude-agl-ft</property>
 <interpolation>
      <entry>
        <ind>0</ind>
-       <dep>0</dep>
+       <dep>-5</dep>
      </entry>
      <entry>
        <ind>500</ind>
-       <dep>-180</dep>
+       <dep>-170</dep>
      </entry>
      <entry>
        <ind>1000</ind>
-       <dep>-216</dep>
+       <dep>-205</dep>
      </entry>
      <entry>
 	     <ind>4000</ind>

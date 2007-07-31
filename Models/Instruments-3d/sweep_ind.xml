@@ -20,7 +20,7 @@ maggse
  <animation>
    <type>rotate</type>
    <object-name>sweep</object-name>
-   <property>/controls/flight/wing-sweep</property>
+   <property>controls/flight/wing-sweep</property>
 <interpolation>
      <entry>
        <ind>0</ind>
@@ -54,7 +54,7 @@ maggse
  <animation>
 	 <type>rotate</type>
 	 <object-name>flaps</object-name>
-	 <property>/controls/flight/flaps</property>
+	 <property>controls/flight/flaps</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0</ind>
@@ -85,7 +85,7 @@ maggse
  <animation>
 	 <type>rotate</type>
 	 <object-name>spoilerr</object-name>
-	 <property>/controls/flight/spoilers</property>
+	 <property>controls/flight/spoilers</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0</ind>
@@ -116,7 +116,7 @@ maggse
  <animation>
 	 <type>rotate</type>
 	 <object-name>spoilerl</object-name>
-	 <property>/controls/flight/spoilers</property>
+	 <property>controls/flight/spoilers</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0</ind>

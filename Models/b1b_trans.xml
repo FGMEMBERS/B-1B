@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!--
+sweat by maggse
+    -->
+<PropertyList>
+
+ <path>b1b_trans.ac</path>
+
+
+  <!-- afterburner flame -->
+  
+  <animation>
+	  <type>select</type>
+	  <object-name>eng_flame</object-name>
+	  <object-name>eng_flame.001</object-name>
+	  <object-name>eng_flame.002</object-name>
+	  <object-name>eng_flame.003</object-name>
+	  <condition>
+		  <greater-than>
+			  <property>controls/engines/engine[0]/afterburner</property>
+			  <value>0.0</value>
+		  </greater-than>
+	  </condition>
+  </animation>
+  
+  <animation>
+	  <type>noshadow</type>
+	  <object-name>eng_flame</object-name>
+	  <object-name>eng_flame.001</object-name>
+	  <object-name>eng_flame.002</object-name>
+	  <object-name>eng_flame.003</object-name>
+  </animation>
+  
+  <animation>
+	  <type>blend</type>
+	  <object-name>eng_flame</object-name>
+	  <object-name>eng_flame.001</object-name>
+	  <object-name>eng_flame.002</object-name>
+	  <object-name>eng_flame.003</object-name>
+	  <property>controls/engines/engine[0]/throttle</property>
+	  <offset>0.95</offset>
+	  <factor>-0.20</factor>
+  </animation>
+  
+  <!-- engine fire -->
+  
+  <animation>
+	  <type>noshadow</type>
+	  <object-name>eng_left_ex</object-name>
+	  <object-name>eng_left_ex.001</object-name>
+	  <object-name>eng_right_ex</object-name>
+	  <object-name>eng_right_ex.001</object-name>
+  </animation>
+  
+  <animation>
+	  <type>blend</type>
+	  <object-name>eng_left_ex</object-name>
+	  <property>engines/engine[0]/thrust-lbs</property>
+	  <offset>0.9</offset>
+	  <factor>-0.000033</factor>
+ </animation>
+ 
+ <animation>
+	 <type>blend</type>
+	 <object-name>eng_left_ex.001</object-name>
+	 <property>engines/engine[1]/thrust-lbs</property>
+	 <offset>0.9</offset>
+	 <factor>-0.000033</factor>
+ </animation>
+ 
+ <animation>
+	 <type>blend</type>
+	 <object-name>eng_right_ex</object-name>
+	 <property>engines/engine[2]/thrust-lbs</property>
+	 <offset>0.9</offset>
+	 <factor>-0.000033</factor>
+ </animation>
+
+ <animation>
+	 <type>blend</type>
+	 <object-name>eng_right_ex.001</object-name>
+	 <property>engines/engine[3]/thrust-lbs</property>
+	 <offset>0.9</offset>
+	 <factor>-0.000033</factor>
+ </animation>
+
+</PropertyList>

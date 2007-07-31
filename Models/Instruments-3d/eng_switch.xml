@@ -1,0 +1,197 @@
+<?xml version="1.0"?>
+<!--
+sweat by maggse
+    -->
+<PropertyList>
+
+ <path>eng_switch.ac</path>
+ 
+
+ <!-- engines on/off -->
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>switch_eng0</object-name>
+	 <property>controls/engines/engine[0]/cutoff</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>-30.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.005</x-m>
+		 <y-m>-0.449</y-m>
+		 <z-m>0.148</z-m>
+   </center>
+ </animation>
+ 
+ <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+ 
+ <animation>
+	 <type>pick</type>
+	 <object-name>switch_eng0</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/engines/engine[0]/cutoff</property>
+		 </binding>
+		 <binding>
+			 <command>nasal</command>
+			 <script>b1b.eng_state(0)</script>
+		 </binding>
+	 </action>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>switch_eng1</object-name>
+	<property>controls/engines/engine[1]/cutoff</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>-30.0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>30.0</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m>0.005</x-m>
+		<y-m>-0.421</y-m>
+		<z-m>0.148</z-m>
+	</center>
+</animation>
+
+<!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+<animation>
+	<type>pick</type>
+	<object-name>switch_eng1</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.5</interval-sec>
+		<binding>
+			<command>property-toggle</command>
+			<property>controls/engines/engine[1]/cutoff</property>
+		</binding>
+		<binding>
+			<command>nasal</command>
+			<script>b1b.eng_state(0)</script>
+		</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>switch_eng2</object-name>
+	<property>controls/engines/engine[2]/cutoff</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>-30.0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>30.0</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m>0.005</x-m>
+		<y-m>-0.393</y-m>
+		<z-m>0.148</z-m>
+	</center>
+</animation>
+
+<!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+<animation>
+	<type>pick</type>
+	<object-name>switch_eng2</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.5</interval-sec>
+		<binding>
+			<command>property-toggle</command>
+			<property>controls/engines/engine[2]/cutoff</property>
+		</binding>
+		<binding>
+			<command>nasal</command>
+			<script>b1b.eng_state(0)</script>
+		</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>switch_eng3</object-name>
+	<property>controls/engines/engine[3]/cutoff</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>-30.0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>30.0</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m>0.005</x-m>
+		<y-m>-0.366</y-m>
+		<z-m>0.148</z-m>
+	</center>
+</animation>
+
+<!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+<animation>
+	<type>pick</type>
+	<object-name>switch_eng3</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.5</interval-sec>
+		<binding>
+			<command>property-toggle</command>
+			<property>controls/engines/engine[3]/cutoff</property>
+		</binding>
+		<binding>
+			<command>nasal</command>
+			<script>b1b.eng_state(0)</script>
+		</binding>
+	</action>
+</animation>
+
+
+</PropertyList>

@@ -135,6 +135,50 @@ sweat by maggse
 	 </axis>
  </animation>
  
+ <!-- collector tanks-->
+ 
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>fuelmainl</object-name>
+	 <property>/consumables/fuel/tank[6]/level-lbs</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>10000.0</ind>
+			 <dep>0.108</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>fuelmainr</object-name>
+	 <property>/consumables/fuel/tank[7]/level-lbs</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>10000.0</ind>
+			 <dep>0.108</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+ </animation>
+ 
 
  
 </PropertyList>
