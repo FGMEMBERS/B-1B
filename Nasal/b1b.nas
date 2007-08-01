@@ -6,19 +6,10 @@ setprop("controls/switches/terra-report", 0);
 #setprop("/engines/engine[0]/running", 0);
 #setprop("/engines/engine[1]/running", 0);
 setprop("sim/multiplay/chat_display", 1);
-setprop("sim/user/callsign", 'BONE');
+setprop("sim/user/callsign", 'B-ONE');
 #setprop("/consumables/fuel/tank[4]/level-gal_us", 1000);
 #fuel_syst();
-
-#static fuel distribution
-#setprop("/controls/fuel/tank[0]/fuel_selector", 1);
-#setprop("/controls/fuel/tank[0]/to_tank", 6);
-#setprop("/controls/fuel/tank[1]/fuel_selector", 1);
-#setprop("/controls/fuel/tank[1]/to_tank", 7);
-#setprop("/controls/fuel/tank[6]/fuel_selector", 1);
-#setprop("/controls/fuel/tank[6]/to_engine", 1);
-#setprop("/controls/fuel/tank[7]/fuel_selector", 1);
-#setprop("/controls/fuel/tank[7]/to_engine", 2);
+settimer(eng_state, 1);
 
 print ("B-1B warming up!");
 }
@@ -107,15 +98,21 @@ ter_avoid_switch = func {
 if(tas == 1) {
 if(rs == 1) {
    setprop("controls/switches/terrain-avoid-rng-m", 1);
+   setprop("controls/switches/terrain-avoid-rng-mh", 1);
    setprop("controls/switches/terrain-avoid-rng-s", 0);
+   setprop("controls/switches/terrain-avoid-rng-sh", 0);
 #   ter_avoid();
 } else {
    setprop("controls/switches/terrain-avoid-rng-m", 0);
+   setprop("controls/switches/terrain-avoid-rng-mh", 0);
    setprop("controls/switches/terrain-avoid-rng-s", 1);
+   setprop("controls/switches/terrain-avoid-rng-sh", 1);
 }
 } else {
    setprop("controls/switches/terrain-avoid-rng-m", 0);
+   setprop("controls/switches/terrain-avoid-rng-mh", 0);
    setprop("controls/switches/terrain-avoid-rng-s", 0);
+   setprop("controls/switches/terrain-avoid-rng-sh", 0);
 }
 }
 #
@@ -128,9 +125,11 @@ radar_switch = func {
    if(rs == 1) {
    setprop("controls/switches/terrain-avoid-rng-m", 1);
    setprop("controls/switches/terrain-avoid-rng-s", 0);
+   setprop("controls/switches/terrain-avoid-rng-sh", 0);
 } else {
    setprop("controls/switches/terrain-avoid-rng-m", 0);
    setprop("controls/switches/terrain-avoid-rng-s", 1);
+   setprop("controls/switches/terrain-avoid-rng-sh", 1);
 }
 }
 }
@@ -141,6 +140,8 @@ radar_switch = func {
 radar_clrpln = func {
 
 var rcs = getprop("controls/switches/terrain-avoid-clrpln");
+   tas = getprop("controls/switches/terrain-avoid");
+   if(tas == 1) {
 if(rcs <= 0.1) {
 setprop("controls/switches/terrain-avoid-clrpln-1", 0);
 setprop("controls/switches/terrain-avoid-clrpln-3", 0);
@@ -168,28 +169,60 @@ setprop("controls/switches/terrain-avoid-clrpln-9", 1);
 }
 
 }
+}
 #
 ##### Terrain Avoidance Radar Pulse (inspired from vulcanb2)
 #
-#ter_avoid = func {
-
 settimer(func {
 
-  # Add listener for radar pulse impact
-  setlistener("sim/armament/weapons/impact", func {
-    var impact = cmdarg().getValue();
-    var solid = getprop(impact ~ "/material/solid");
+  # Add listener for radar pulse contacth
+  setlistener("sim/radar/teravd/contacth", func {
+    var contacth = cmdarg().getValue();
+    var solid = getprop(contacth ~ "/material/solid");
     
     if (solid)
     {
-      var long = getprop(impact ~ "/impact/longitude-deg");
-      var lat = getprop(impact ~ "/impact/latitude-deg");
-#      terflw = getprop("controls/switches/terrain-follow");
-#      var malt = getprop(impact ~ "/impact/altitude-m");
+      var long = getprop(contacth ~ "/contacth/longitude-deg");
+      var lat = getprop(contacth ~ "/contacth/latitude-deg");
 
-# pitch clearance with alt mod
-      var pitch = getprop("/autopilot/settings/target-pitch-deg");
-      setprop("/autopilot/settings/target-pitch-deg", (pitch + 1));
+# pitch clearance with alt mod for impacth contact
+      var cpit = getprop("/orientation/pitch-deg");
+#      var pitch = getprop("/autopilot/settings/target-pitch-deg");
+      setprop("/autopilot/settings/target-pitch-deg", (cpit + 6));
+      setprop("/autopilot/locks/altitude", "pitch-hold");
+
+      falt = getprop("/position/altitude-ft");
+      tagl = getprop("autopilot/settings/target-agl-ft");
+      if(tagl >= 1000) {
+          cl = tagl;
+} else {
+          cl = 1000;
+}
+      
+      nalt = falt + cl;
+      setprop("/autopilot/settings/target-altitude-ft", nalt);
+      setprop("controls/switches/terra-report", 1);
+      teravd_alt();
+
+    }
+  });
+}, 0);
+settimer(func {
+
+  # Add listener for radar pulse contactm
+  setlistener("sim/radar/teravd/contactm", func {
+    var contactm = cmdarg().getValue();
+    var solid = getprop(contactm ~ "/material/solid");
+    
+    if (solid)
+    {
+      var long = getprop(contactm ~ "/contactm/longitude-deg");
+      var lat = getprop(contactm ~ "/contactm/latitude-deg");
+
+# pitch clearance with alt mod for impactm contact
+      var cpit = getprop("/orientation/pitch-deg");
+#      var pitch = getprop("/autopilot/settings/target-pitch-deg");
+      setprop("/autopilot/settings/target-pitch-deg", (cpit + 3));
       setprop("/autopilot/locks/altitude", "pitch-hold");
 
       falt = getprop("/position/altitude-ft");
@@ -205,22 +238,82 @@ settimer(func {
       setprop("controls/switches/terra-report", 1);
       teravd_alt();
 
-# simple alt clearance
-#       falt = getprop("/position/altitude-ft");
-#       setprop("/autopilot/settings/target-altitude-ft", falt + 1000);
-#       setprop("/autopilot/locks/altitude", "altitude-hold");
+    }
+  });
+}, 0);
+settimer(func {
 
-# simle fpm clearance
-#       setprop("/autopilot/settings/vertical-speed-fpm", 3000);
-#       setprop("/autopilot/locks/altitude", "vertical-speed-hold");
+# Add listener for radar pulse contactl
+  setlistener("sim/radar/teravd/contactl", func {
+    var contactl = cmdarg().getValue();
+    var solid = getprop(contactl ~ "/material/solid");
+    
+    if (solid)
+    {
+      var long = getprop(contactl ~ "/contactl/longitude-deg");
+      var lat = getprop(contactl ~ "/contactl/latitude-deg");
 
+# pitch clearance with alt mod for impactl contact
+      var cpit = getprop("/orientation/pitch-deg");
+#      var pitch = getprop("/autopilot/settings/target-pitch-deg");
+      setprop("/autopilot/settings/target-pitch-deg", (cpit + 2));
+      setprop("/autopilot/locks/altitude", "pitch-hold");
+
+      falt = getprop("/position/altitude-ft");
+      tagl = getprop("autopilot/settings/target-agl-ft");
+      if(tagl >= 100) {
+          cl = tagl / 2;
+} else {
+          cl = 100;
+}
       
-#      geo.put_model("Aircraft/vulcanb2/Models/crater.ac", lat, long);
+      nalt = falt + cl;
+      setprop("/autopilot/settings/target-altitude-ft", nalt);
+      setprop("controls/switches/terra-report", 1);
+      teravd_alt();
+
     }
   });
 
 }, 0);
-#}
+
+settimer(func {
+
+# Add listener for radar pulse contactd which monitors climb behaviour
+  setlistener("sim/radar/teravd/contactd", func {
+    var contactd = cmdarg().getValue();
+    var solid = getprop(contactd ~ "/material/solid");
+    
+    if (solid)
+    {
+
+      var long = getprop(contactd ~ "/contactd/longitude-deg");
+      var lat = getprop(contactd ~ "/contactd/latitude-deg");
+
+# pitch clearance with alt mod for impactl contact
+      var cpit = getprop("/orientation/pitch-deg");
+#      var pitch = getprop("/autopilot/settings/target-pitch-deg");
+
+      falt = getprop("/position/altitude-ft");
+      tagl = getprop("autopilot/settings/target-agl-ft");
+
+      if(cpit >= 5) {
+
+      if(tagl >= 1000) {
+          cl = tagl;
+} else {
+          cl = 1000;
+}
+      
+      nalt = falt + cl;
+      setprop("/autopilot/settings/target-altitude-ft", nalt);
+} else {
+}
+    }
+  });
+
+}, 0);
+
 
 # control alt while climb and trigger end of climb
 teravd_alt = func {
@@ -229,14 +322,19 @@ salt = getprop("/autopilot/settings/target-altitude-ft");
 pitch = getprop("/autopilot/settings/target-pitch-deg");
 
 if(calt >= salt) {
-#       setprop("/autopilot/settings/target-altitude-ft", salt + 300);
-       setprop("/autopilot/settings/target-pitch-deg", (pitch - 1));
+
+       setprop("controls/switches/terrain-avoid-rng-d", 0);
+#       setprop("/autopilot/settings/target-pitch-deg", (pitch - 1));
        if(pitch >= 5) {
          setprop("/autopilot/settings/target-pitch-deg", 5);
        }
        aglreinit();
 } else {
-settimer(teravd_alt, 1);
+   if(pitch <= 1) {
+         setprop("/autopilot/settings/target-pitch-deg", 1.5);
+       }
+   setprop("controls/switches/terrain-avoid-rng-d", 1);
+   settimer(teravd_alt, 1);
 }
 }
 

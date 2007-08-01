@@ -12,7 +12,7 @@ sweat by maggse
  <animation>
 	 <type>rotate</type>
 	 <object-name>switch_1</object-name>
-	 <property>/consumables/fuel/tank[2]/selected</property>
+	 <property>consumables/fuel/tank[2]/selected</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -46,7 +46,7 @@ sweat by maggse
 		 <interval-sec>0.1</interval-sec>
 		 <binding>
 			 <command>property-toggle</command>
-			 <property>/consumables/fuel/tank[2]/selected</property>
+			 <property>consumables/fuel/tank[2]/selected</property>
 		 </binding>
 	 </action>
 </animation>
@@ -56,7 +56,7 @@ sweat by maggse
 <animation>
 	<type>rotate</type>
 	<object-name>switch_3</object-name>
-	<property>/consumables/fuel/tank[3]/selected</property>
+	<property>consumables/fuel/tank[3]/selected</property>
 	<interpolation>
 		<entry>
 			<ind>0.0</ind>
@@ -90,7 +90,7 @@ sweat by maggse
 		<interval-sec>0.1</interval-sec>
 		<binding>
 			<command>property-toggle</command>
-			<property>/consumables/fuel/tank[3]/selected</property>
+			<property>consumables/fuel/tank[3]/selected</property>
 		</binding>
 	</action>
 </animation>
@@ -100,7 +100,7 @@ sweat by maggse
 <animation>
 	<type>rotate</type>
 	<object-name>switch_wgl</object-name>
-	<property>/consumables/fuel/tank[0]/selected</property>
+	<property>consumables/fuel/tank[0]/selected</property>
 	<interpolation>
 		<entry>
 			<ind>0.0</ind>
@@ -134,7 +134,7 @@ sweat by maggse
 		<interval-sec>0.1</interval-sec>
 		<binding>
 			<command>property-toggle</command>
-			<property>/consumables/fuel/tank[0]/selected</property>
+			<property>consumables/fuel/tank[0]/selected</property>
 		</binding>
 	</action>
 </animation>
@@ -144,7 +144,7 @@ sweat by maggse
 <animation>
 	<type>rotate</type>
 	<object-name>switch_wgr</object-name>
-	<property>/consumables/fuel/tank[1]/selected</property>
+	<property>consumables/fuel/tank[1]/selected</property>
 	<interpolation>
 		<entry>
 			<ind>0.0</ind>
@@ -178,7 +178,7 @@ sweat by maggse
 		<interval-sec>0.1</interval-sec>
 		<binding>
 			<command>property-toggle</command>
-			<property>/consumables/fuel/tank[1]/selected</property>
+			<property>consumables/fuel/tank[1]/selected</property>
 		</binding>
 	</action>
 </animation>
@@ -188,7 +188,7 @@ sweat by maggse
 <animation>
 	<type>rotate</type>
 	<object-name>switch_2</object-name>
-	<property>/consumables/fuel/tank[4]/selected</property>
+	<property>consumables/fuel/tank[4]/selected</property>
 	<interpolation>
 		<entry>
 			<ind>0.0</ind>
@@ -222,7 +222,7 @@ sweat by maggse
 		<interval-sec>0.1</interval-sec>
 		<binding>
 			<command>property-toggle</command>
-			<property>/consumables/fuel/tank[4]/selected</property>
+			<property>consumables/fuel/tank[4]/selected</property>
 		</binding>
 	</action>
 </animation>
@@ -232,7 +232,7 @@ sweat by maggse
 <animation>
 	<type>rotate</type>
 	<object-name>switch_4</object-name>
-	<property>/consumables/fuel/tank[5]/selected</property>
+	<property>consumables/fuel/tank[5]/selected</property>
 	<interpolation>
 		<entry>
 			<ind>0.0</ind>
@@ -266,7 +266,7 @@ sweat by maggse
 		<interval-sec>0.1</interval-sec>
 		<binding>
 			<command>property-toggle</command>
-			<property>/consumables/fuel/tank[5]/selected</property>
+			<property>consumables/fuel/tank[5]/selected</property>
 		</binding>
 	</action>
 </animation>
@@ -276,7 +276,7 @@ sweat by maggse
 <animation>
 	<type>rotate</type>
 	<object-name>switch_lmain</object-name>
-	<property>/consumables/fuel/tank[6]/selected</property>
+	<property>consumables/fuel/tank[6]/selected</property>
 	<interpolation>
 		<entry>
 			<ind>0.0</ind>
@@ -310,7 +310,7 @@ sweat by maggse
 		<interval-sec>0.1</interval-sec>
 		<binding>
 			<command>property-toggle</command>
-			<property>/consumables/fuel/tank[6]/selected</property>
+			<property>consumables/fuel/tank[6]/selected</property>
 		</binding>
 	</action>
 </animation>
@@ -318,7 +318,7 @@ sweat by maggse
 <animation>
 	<type>rotate</type>
 	<object-name>switch_rmain</object-name>
-	<property>/consumables/fuel/tank[7]/selected</property>
+	<property>consumables/fuel/tank[7]/selected</property>
 	<interpolation>
 		<entry>
 			<ind>0.0</ind>
@@ -352,7 +352,7 @@ sweat by maggse
 		<interval-sec>0.1</interval-sec>
 		<binding>
 			<command>property-toggle</command>
-			<property>/consumables/fuel/tank[7]/selected</property>
+			<property>consumables/fuel/tank[7]/selected</property>
 		</binding>
 	</action>
 </animation>

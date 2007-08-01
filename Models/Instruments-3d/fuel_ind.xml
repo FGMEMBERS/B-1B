@@ -12,7 +12,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>fuel1</object-name>
-	 <property>/consumables/fuel/tank[2]/level-lbs</property>
+	 <property>consumables/fuel/tank[2]/level-lbs</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -33,7 +33,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>fuel2</object-name>
-	 <property>/consumables/fuel/tank[3]/level-lbs</property>
+	 <property>consumables/fuel/tank[3]/level-lbs</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -54,7 +54,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>fuel3</object-name>
-	 <property>/consumables/fuel/tank[4]/level-lbs</property>
+	 <property>consumables/fuel/tank[4]/level-lbs</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -75,7 +75,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>fuel4</object-name>
-	 <property>/consumables/fuel/tank[5]/level-lbs</property>
+	 <property>consumables/fuel/tank[5]/level-lbs</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -96,7 +96,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>fuell</object-name>
-	 <property>/consumables/fuel/tank[0]/level-lbs</property>
+	 <property>consumables/fuel/tank[0]/level-lbs</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -117,7 +117,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>fuelr</object-name>
-	 <property>/consumables/fuel/tank[1]/level-lbs</property>
+	 <property>consumables/fuel/tank[1]/level-lbs</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -140,7 +140,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>fuelmainl</object-name>
-	 <property>/consumables/fuel/tank[6]/level-lbs</property>
+	 <property>consumables/fuel/tank[6]/level-lbs</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -161,7 +161,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>fuelmainr</object-name>
-	 <property>/consumables/fuel/tank[7]/level-lbs</property>
+	 <property>consumables/fuel/tank[7]/level-lbs</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>

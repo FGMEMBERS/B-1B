@@ -12,7 +12,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>ind1</object-name>
-	 <property>/engines/engine[0]/prop-thrust</property>
+	 <property>engines/engine[0]/prop-thrust</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -33,7 +33,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>ind1.001</object-name>
-	 <property>/engines/engine[1]/prop-thrust</property>
+	 <property>engines/engine[1]/prop-thrust</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -54,7 +54,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>ind1.003</object-name>
-	 <property>/engines/engine[2]/prop-thrust</property>
+	 <property>engines/engine[2]/prop-thrust</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -75,7 +75,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>ind1.002</object-name>
-	 <property>/engines/engine[3]/prop-thrust</property>
+	 <property>engines/engine[3]/prop-thrust</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -98,7 +98,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>ind1.007</object-name>
-	 <property>/sim/model/B-1B/n1[0]</property>
+	 <property>sim/model/B-1B/n1[0]</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -119,7 +119,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>ind1.006</object-name>
-	 <property>/sim/model/B-1B/n1[1]</property>
+	 <property>sim/model/B-1B/n1[1]</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -140,7 +140,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>ind1.004</object-name>
-	 <property>/sim/model/B-1B/n1[2]</property>
+	 <property>sim/model/B-1B/n1[2]</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -161,7 +161,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>ind1.005</object-name>
-	 <property>/sim/model/B-1B/n1[3]</property>
+	 <property>sim/model/B-1B/n1[3]</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -184,7 +184,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>ind1.008</object-name>
-	 <property>/engines/engine[0]/egt-degf</property>
+	 <property>engines/engine[0]/egt-degf</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -205,7 +205,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>ind1.009</object-name>
-	 <property>/engines/engine[1]/egt-degf</property>
+	 <property>engines/engine[1]/egt-degf</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -226,7 +226,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>ind1.011</object-name>
-	 <property>/engines/engine[2]/egt-degf</property>
+	 <property>engines/engine[2]/egt-degf</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -247,7 +247,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>ind1.010</object-name>
-	 <property>/engines/engine[3]/egt-degf</property>
+	 <property>engines/engine[3]/egt-degf</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -270,7 +270,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>ind1.015</object-name>
-	 <property>/engines/engine[0]/fuel-flow-gph</property>
+	 <property>engines/engine[0]/fuel-flow-gph</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -295,7 +295,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>ind1.014</object-name>
-	 <property>/engines/engine[1]/fuel-flow-gph</property>
+	 <property>engines/engine[1]/fuel-flow-gph</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -320,7 +320,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>ind1.012</object-name>
-	 <property>/engines/engine[2]/fuel-flow-gph</property>
+	 <property>engines/engine[2]/fuel-flow-gph</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -345,7 +345,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>ind1.013</object-name>
-	 <property>/engines/engine[3]/fuel-flow-gph</property>
+	 <property>engines/engine[3]/fuel-flow-gph</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -372,7 +372,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>ind1.023</object-name>
-	 <property>/engines/engine[0]/oilp-norm</property>
+	 <property>engines/engine[0]/oilp-norm</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -393,7 +393,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>ind1.022</object-name>
-	 <property>/engines/engine[1]/oilp-norm</property>
+	 <property>engines/engine[1]/oilp-norm</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -414,7 +414,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>ind1.020</object-name>
-	 <property>/engines/engine[2]/oilp-norm</property>
+	 <property>engines/engine[2]/oilp-norm</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -435,7 +435,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>ind1.021</object-name>
-	 <property>/engines/engine[3]/oilp-norm</property>
+	 <property>engines/engine[3]/oilp-norm</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -458,7 +458,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>ind1.031</object-name>
-	 <property>/engines/engine[0]/oilt-norm</property>
+	 <property>engines/engine[0]/oilt-norm</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -479,7 +479,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>ind1.030</object-name>
-	 <property>/engines/engine[1]/oilt-norm</property>
+	 <property>engines/engine[1]/oilt-norm</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -500,7 +500,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>ind1.028</object-name>
-	 <property>/engines/engine[2]/oilt-norm</property>
+	 <property>engines/engine[2]/oilt-norm</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -521,7 +521,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>ind1.029</object-name>
-	 <property>/engines/engine[3]/oilt-norm</property>
+	 <property>engines/engine[3]/oilt-norm</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -544,7 +544,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>ind1.016</object-name>
-	 <property>/sim/model/B-1B/n2[0]</property>
+	 <property>sim/model/B-1B/n2[0]</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -565,7 +565,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>ind1.017</object-name>
-	 <property>/sim/model/B-1B/n2[1]</property>
+	 <property>sim/model/B-1B/n2[1]</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -586,7 +586,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>ind1.019</object-name>
-	 <property>/sim/model/B-1B/n2[2]</property>
+	 <property>sim/model/B-1B/n2[2]</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -607,7 +607,7 @@ sweat by maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>ind1.018</object-name>
-	 <property>/sim/model/B-1B/n2[3]</property>
+	 <property>sim/model/B-1B/n2[3]</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>

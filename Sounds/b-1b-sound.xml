@@ -47,10 +47,10 @@
 		<not>
 			<property>/sim/current-view/internal</property>
 		</not>
-		<equals>
+		<!--<equals>
 			<property>/controls/engines/engine[0]/cutoff</property>
 			<value>0</value>
-		</equals>
+		</equals>-->
 	        </and>
 	</condition>
 	<position>
@@ -67,14 +67,14 @@
 		<outer-gain>0.5</outer-gain>
 	</orientation>
 	<pitch>
-		<property>/engines/engine[0]/n1</property>
-		<ofset>0.7</ofset>
+		<property>/sim/model/B-1B/n1[0]</property>
+		<offset>0.3</offset>
 		<factor>.003</factor>
 	</pitch>
 	<volume>
-		<property>/engines/engine[0]/n1</property>
-		<offset>1.0</offset>
-		<factor>-0.008</factor>
+		<property>/sim/model/B-1B/n1[0]</property>
+		<offset>0.0</offset>
+		<factor>0.008</factor>
 		<max>0.6</max>
 	</volume>
 </engine>
@@ -142,7 +142,7 @@
 
 	<pitch>
 		<property>/engines/engine[0]/n1</property>
-		<ofset>0.7</ofset>
+		<offset>0.5</offset>
 		<factor>.00075</factor>
 	</pitch>
 	<volume>
@@ -192,10 +192,10 @@
 		  <not>
 			  <property>/sim/current-view/internal</property>
 		  </not>
-		  <equals>
+		  <!--  <equals>
 			  <property>/controls/engines/engine[1]/cutoff</property>
 			  <value>0</value>
-			  </equals>
+			  </equals>-->
 	          </and>
 	  </condition>
 	  <position>
@@ -212,14 +212,14 @@
 		  <outer-gain>0.5</outer-gain>
 	  </orientation>
 	  <pitch>
-		  <property>/engines/engine[1]/n1</property>
-		  <ofset>0.7</ofset>
+		  <property>/sim/model/B-1B/n1[1]</property>
+		  <offset>0.3</offset>
 		  <factor>.003</factor>
 	  </pitch>
 	  <volume>
-		  <property>/engines/engine[1]/n1</property>
-		  <offset>1.0</offset>
-		  <factor>-0.008</factor>
+		  <property>/sim/model/B-1B/n1[1]</property>
+		  <offset>0.0</offset>
+		  <factor>0.008</factor>
 		  <max>0.6</max>
 	  </volume>
   </engine>
@@ -287,7 +287,7 @@
 	  
 	  <pitch>
 		  <property>/engines/engine[1]/n1</property>
-		  <ofset>0.7</ofset>
+		  <offset>0.5</offset>
 		  <factor>.00075</factor>
 	  </pitch>
 	  <volume>
@@ -337,10 +337,10 @@
 		  <not>
 			  <property>/sim/current-view/internal</property>
 		  </not>
-		  <equals>
+		  <!--<equals>
 			  <property>/controls/engines/engine[2]/cutoff</property>
 			  <value>0</value>
-			  </equals>
+			  </equals>-->
 	          </and>
 	  </condition>
 	  <position>
@@ -357,14 +357,14 @@
 		  <outer-gain>0.5</outer-gain>
 	  </orientation>
 	  <pitch>
-		  <property>/engines/engine[2]/n1</property>
-		  <ofset>0.7</ofset>
+		  <property>/sim/model/B-1B/n1[2]</property>
+		  <offset>0.3</offset>
 		  <factor>.003</factor>
 	  </pitch>
 	  <volume>
-		  <property>/engines/engine[2]/n1</property>
-		  <offset>1.0</offset>
-		  <factor>-0.008</factor>
+		  <property>/sim/model/B-1B/n1[2]</property>
+		  <offset>0.0</offset>
+		  <factor>0.008</factor>
 		  <max>0.6</max>
 	  </volume>
   </engine>
@@ -433,7 +433,7 @@
 	  
 	  <pitch>
 		  <property>/engines/engine[2]/n1</property>
-		  <ofset>0.7</ofset>
+		  <offset>0.5</offset>
 		  <factor>.00075</factor>
 	  </pitch>
 	  <volume>
@@ -484,10 +484,10 @@
 		  <not>
 			  <property>/sim/current-view/internal</property>
 		  </not>
-		  <equals>
+		  <!--<equals>
 			  <property>/controls/engines/engine[3]/cutoff</property>
 			  <value>0</value>
-			  </equals>
+			  </equals>-->
 	          </and>
 	  </condition>
 	  <position>
@@ -504,14 +504,14 @@
 		  <outer-gain>0.5</outer-gain>
 	  </orientation>
 	  <pitch>
-		  <property>/engines/engine[3]/n1</property>
-		  <ofset>0.7</ofset>
+		  <property>/sim/model/B-1B/n1[3]</property>
+		  <offset>0.3</offset>
 		  <factor>.003</factor>
 	  </pitch>
 	  <volume>
-		  <property>/engines/engine[3]/n1</property>
-		  <offset>1.0</offset>
-		  <factor>-0.008</factor>
+		  <property>/sim/model/B-1B/n1[3]</property>
+		  <offset>0.0</offset>
+		  <factor>0.008</factor>
 		  <max>0.6</max>
 	  </volume>
   </engine>
