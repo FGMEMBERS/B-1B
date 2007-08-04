@@ -1,16 +1,14 @@
+setlistener("/sim/signals/fdm-initialized", func {
+	init_b1b();
+});
+
 init_b1b = func {
 setprop("/sim/current-view/field-of-view", 60);
 setprop("/autopilot/settings/target-pitch-deg", 2);
 setprop("controls/switches/terra-report", 0);
 #setprop("/sim/panel-hotspots", 1);
-#setprop("/engines/engine[0]/running", 0);
-#setprop("/engines/engine[1]/running", 0);
-setprop("sim/multiplay/chat_display", 1);
-setprop("sim/user/callsign", 'B-ONE');
-#setprop("/consumables/fuel/tank[4]/level-gal_us", 1000);
 #fuel_syst();
-settimer(eng_state, 1);
-
+settimer(eng_state, 3);
 print ("B-1B warming up!");
 }
 

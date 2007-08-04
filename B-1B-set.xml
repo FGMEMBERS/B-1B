@@ -457,7 +457,6 @@ B-1B set file.
 <nasal>
 	<b1b>
 		<file>Aircraft/B-1B/Nasal/b1b.nas</file>
-		<script>init_b1b();</script>
 	</b1b>
 	<b1b-fuel>
 		<module>fuel-aar</module>
