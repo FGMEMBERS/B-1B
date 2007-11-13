@@ -18,11 +18,15 @@ sweat by maggse
 			<dep>20.0</dep>
 		</entry>
 		<entry>
-			<ind>0.25</ind>
+			<ind>0.23</ind>
 			<dep>10</dep>
 		</entry>
 		<entry>
-			<ind>0.75</ind>
+			<ind>0.42</ind>
+			<dep>0</dep>
+		</entry>
+		<entry>
+			<ind>0.80</ind>
 			<dep>-10</dep>
 		</entry>
 		<entry>
@@ -53,12 +57,12 @@ sweat by maggse
 		<interval-sec>0.2</interval-sec>
 		<binding>
 			<command>nasal</command>
-			<script>b1b.wingSweep(-1)</script>
+			<script>flightcontrols.wingSweep(-1)</script>
 		</binding>
 		<mod-up>
 			<binding>
 				<command>nasal</command>
-				<script>b1b.wingSweep(0)</script>
+				<script>flightcontrols.wingSweep(0)</script>
 			</binding>
                 </mod-up>
 	</action>
@@ -68,12 +72,12 @@ sweat by maggse
 		<interval-sec>0.2</interval-sec>
 		<binding>
 			<command>nasal</command>
-			<script>b1b.wingSweep(1)</script>
+			<script>flightcontrols.wingSweep(1)</script>
 		</binding>
 		<mod-up>
 			<binding>
 				<command>nasal</command>
-				<script>b1b.wingSweep(0)</script>
+				<script>flightcontrols.wingSweep(0)</script>
 			</binding>
                 </mod-up>
 	</action>

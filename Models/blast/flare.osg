@@ -1,0 +1,172 @@
+//thanks to gerard robin, martin spott, detlef faber and all who create osg files
+//flare for flightgear osg, free for use
+
+Group {
+  UniqueID Group_1
+  DataVariance DYNAMIC
+  name "flare.osg"
+  nodeMask 0xffffffff
+  cullingActive TRUE
+  num_children 3
+  MatrixTransform {
+    UniqueID MatrixTransform_2
+    DataVariance DYNAMIC
+    name "transform0"
+    nodeMask 0xffffffff
+    cullingActive FALSE
+    referenceFrame ABSOLUTE
+    Matrix {
+      1 0 0 0
+      0 1 0 0
+      0 0 1 0
+      0 0 0 1
+    }
+    num_children 1
+    MatrixTransform {
+      UniqueID MatrixTransform_3
+      DataVariance DYNAMIC
+      name "transform1"
+      nodeMask 0xffffffff
+      cullingActive TRUE
+      referenceFrame ABSOLUTE
+      Matrix {
+        1 0 0 0
+        0 1 0 0
+        0 0 1 0
+        0 0 0 1
+      }
+      num_children 1
+      osgParticle::ModularEmitter {
+        UniqueID ModularEmitter_4
+        DataVariance DYNAMIC
+        name "ModularEmitter2"
+        nodeMask 0xffffffff
+        cullingActive FALSE
+        osgParticle::ParticleSystem {
+          UniqueID ParticleSystem_5
+          DataVariance DYNAMIC
+          StateSet {
+            UniqueID StateSet_6
+            DataVariance STATIC
+            rendering_hint OPAQUE_BIN
+            renderBinMode USE
+            binNumber 12
+            binName DepthSortedBin
+            GL_LIGHTING OFF
+            GL_COLOR_MATERIAL ON
+            GL_BLEND ON
+            textureUnit 0 {
+              GL_TEXTURE_2D ON
+              Texture2D {
+                UniqueID Texture2D_7
+                DataVariance STATIC
+                wrap_s CLAMP
+                wrap_t CLAMP
+                wrap_r CLAMP
+                min_filter LINEAR
+                mag_filter LINEAR
+                maxAnisotropy 1
+                borderColor 0 0 0 0
+                borderWidth 0
+                useHardwareMipMapGeneration TRUE
+                unRefImageDataAfterApply FALSE
+                internalFormatMode USE_IMAGE_DATA_FORMAT
+                resizeNonPowerOfTwo TRUE
+              }
+              TexEnv {
+                UniqueID TexEnv_8
+                DataVariance STATIC
+                mode MODULATE
+              }
+            }
+          }
+          supportsDisplayList FALSE
+          useDisplayList FALSE
+          useVertexBufferObjects FALSE
+          particleAlignment BILLBOARD
+          alignVectorX 1 0 0
+          alignVectorY 0 1 0
+          doublePassRendering FALSE
+          frozen FALSE
+          freezeOnCull TRUE
+          defaultBoundingBox -1 -1 -1 1 1 1
+          particleTemplate {
+            shape HEXAGON
+            lifeTime 1.0
+            sizeRange 1.5 0.3
+            alphaRange 0.6 0.1
+            colorRange 0.9 0.8 0.7 0.3 0.65 0.45 0.35 1
+            position 0 0 0
+            velocity 0 0 0
+            angle 0 0 0
+            angularVelocity 0 0 0
+            radius 0.3
+            mass 0.1
+            textureTile 1 1 1
+            sizeInterpolator {
+              osgParticle::LinearInterpolator {
+                UniqueID LinearInterpolator_9
+                DataVariance DYNAMIC
+              }
+            }
+            alphaInterpolator {
+              osgParticle::LinearInterpolator {
+                UniqueID LinearInterpolator_10
+                DataVariance DYNAMIC
+              }
+            }
+            colorInterpolator {
+              osgParticle::LinearInterpolator {
+                UniqueID LinearInterpolator_11
+                DataVariance DYNAMIC
+              }
+            }
+          }
+        }
+        enabled TRUE
+        referenceFrame ABSOLUTE
+        endless TRUE
+        lifeTime 0
+        startTime 0
+        currentTime 0
+        resetTime 2
+        useDefaultTemplate TRUE
+        osgParticle::RandomRateCounter {
+          UniqueID RandomRateCounter_12
+          DataVariance DYNAMIC
+          rateRange 20 20
+        }
+        osgParticle::SectorPlacer {
+          UniqueID SectorPlacer_13
+          DataVariance DYNAMIC
+          center 0 0 0
+          radiusRange 0 0.5
+          phiRange 0 6.28319
+        }
+        osgParticle::RadialShooter {
+          UniqueID RadialShooter_14
+          DataVariance DYNAMIC
+          thetaRange 0 0
+          phiRange 0 0
+          initialSpeedRange 12 10
+          initialRotationalSpeedRange 0 0 10 0 10 30
+        }
+      }
+    }
+  }
+  osgParticle::ParticleSystemUpdater {
+    DataVariance DYNAMIC
+    name "ParticleSystemUpdater6"
+    nodeMask 0xffffffff
+    cullingActive FALSE
+    Use ParticleSystem_5
+  }
+  Geode {
+    DataVariance DYNAMIC
+    name "geode1"
+    nodeMask 0xffffffff
+    cullingActive TRUE
+    num_drawables 1
+    Use ParticleSystem_5
+  }
+}

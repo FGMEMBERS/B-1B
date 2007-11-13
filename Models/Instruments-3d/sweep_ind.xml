@@ -24,14 +24,18 @@ maggse
 <interpolation>
      <entry>
        <ind>0</ind>
-       <dep>-75</dep>
+       <dep>-92</dep>
      </entry>
      <entry>
-       <ind>0.25</ind>
+	     <ind>0.23</ind>
+	     <dep>-75</dep>
+     </entry>
+     <entry>
+       <ind>0.42</ind>
        <dep>-55</dep>
      </entry>
      <entry>
-       <ind>0.75</ind>
+       <ind>0.8</ind>
        <dep>-18</dep>
      </entry>
      <entry>

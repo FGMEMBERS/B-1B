@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<!--
+sweat by maggse
+    -->
+<PropertyList>
+
+ <path>apmode.ac</path>
+ 
+ <!-- apmode button animations -->
+ 
+ <animation>
+	 <type>blend</type>
+	 <object-name>apmode_alt</object-name>
+			 <property>controls/switches/apmode/alt-hold</property>
+
+	 <offset>0.6</offset>
+	 <factor>-0.6</factor>
+ </animation>
+ 
+ <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+      
+      <animation>
+	      <type>pick</type>
+	      <object-name>apmode_alt</object-name>
+	      <action>
+		      <button>0</button>
+		      <repeatable>true</repeatable>
+		      <interval-sec>0.5</interval-sec>
+		      <binding>
+			      <command>property-toggle</command>
+			      <property>controls/switches/apmode/alt-hold</property>
+		      </binding>
+	      </action>
+      </animation>
+      
+      <animation>
+	      <type>blend</type>
+	      <object-name>apmode_vfpm</object-name>
+	      <property>controls/switches/apmode/vfpm-hold</property>
+	      
+	      <offset>0.6</offset>
+	      <factor>-0.6</factor>
+      </animation>
+      
+      <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+      
+      <animation>
+	      <type>pick</type>
+	      <object-name>apmode_vfpm</object-name>
+	      <action>
+		      <button>0</button>
+		      <repeatable>true</repeatable>
+		      <interval-sec>0.5</interval-sec>
+		      <binding>
+			      <command>property-toggle</command>
+			      <property>controls/switches/apmode/vfpm-hold</property>
+		      </binding>
+	      </action>
+      </animation>
+      
+      <animation>
+	      <type>blend</type>
+	      <object-name>apmode_ptch</object-name>
+	      <property>controls/switches/apmode/ptch-hold</property>
+	      
+	      <offset>0.6</offset>
+	      <factor>-0.6</factor>
+      </animation>
+      
+      <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+      
+      <animation>
+	      <type>pick</type>
+	      <object-name>apmode_ptch</object-name>
+	      <action>
+		      <button>0</button>
+		      <repeatable>true</repeatable>
+		      <interval-sec>0.5</interval-sec>
+		      <binding>
+			      <command>property-toggle</command>
+			      <property>controls/switches/apmode/ptch-hold</property>
+		      </binding>
+	      </action>
+      </animation>
+ 
+      <animation>
+	      <type>blend</type>
+	      <object-name>apmode_bhdg</object-name>
+	      <property>controls/switches/apmode/bhdg-hold</property>
+	      
+	      <offset>0.6</offset>
+	      <factor>-0.6</factor>
+      </animation>
+      
+      <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+      
+      <animation>
+	      <type>pick</type>
+	      <object-name>apmode_bhdg</object-name>
+	      <action>
+		      <button>0</button>
+		      <repeatable>true</repeatable>
+		      <interval-sec>0.5</interval-sec>
+		      <binding>
+			      <command>property-toggle</command>
+			      <property>controls/switches/apmode/bhdg-hold</property>
+		      </binding>
+	      </action>
+      </animation>
+      
+      <animation>
+	      <type>blend</type>
+	      <object-name>apmode_thdg</object-name>
+	      <property>controls/switches/apmode/thdg-hold</property>
+	      
+	      <offset>0.6</offset>
+	      <factor>-0.6</factor>
+      </animation>
+      
+      <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+      
+      <animation>
+	      <type>pick</type>
+	      <object-name>apmode_thdg</object-name>
+	      <action>
+		      <button>0</button>
+		      <repeatable>true</repeatable>
+		      <interval-sec>0.5</interval-sec>
+		      <binding>
+			      <command>property-toggle</command>
+			      <property>controls/switches/apmode/thdg-hold</property>
+		      </binding>
+	      </action>
+      </animation>
+      
+      <animation>
+	      <type>blend</type>
+	      <object-name>apmode_spd</object-name>
+	      <property>controls/switches/apmode/spd-hold</property>
+	      
+	      <offset>0.6</offset>
+	      <factor>-0.6</factor>
+      </animation>
+      
+      <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+      
+      <animation>
+	      <type>pick</type>
+	      <object-name>apmode_spd</object-name>
+	      <action>
+		      <button>0</button>
+		      <repeatable>true</repeatable>
+		      <interval-sec>0.5</interval-sec>
+		      <binding>
+			      <command>property-toggle</command>
+			      <property>controls/switches/apmode/spd-hold</property>
+		      </binding>
+	      </action>
+      </animation>
+      
+      <animation>
+	      <type>blend</type>
+	      <object-name>apmode_spdptch</object-name>
+	      <property>controls/switches/apmode/spdptch-hold</property>
+	      
+	      <offset>0.6</offset>
+	      <factor>-0.6</factor>
+      </animation>
+      
+      <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+      
+      <animation>
+	      <type>pick</type>
+	      <object-name>apmode_spdptch</object-name>
+	      <action>
+		      <button>0</button>
+		      <repeatable>true</repeatable>
+		      <interval-sec>0.5</interval-sec>
+		      <binding>
+			      <command>property-toggle</command>
+			      <property>controls/switches/apmode/spdptch-hold</property>
+		      </binding>
+	      </action>
+      </animation>
+      
+      <animation>
+	      <type>blend</type>
+	      <object-name>apmode_terrflw</object-name>
+	      <property>controls/switches/terrain-follow</property>
+	      
+	      <offset>0.6</offset>
+	      <factor>-0.6</factor>
+      </animation>
+ 
+
+</PropertyList>

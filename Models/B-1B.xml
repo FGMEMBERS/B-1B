@@ -23,8 +23,8 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/pfdb2.xml</path>
 	  <offsets>
 		  <x-m>-18.200</x-m>
-		  <y-m>-0.670</y-m>
-		  <z-m>1.200</z-m>
+		  <y-m>-0.675</y-m>
+		  <z-m>1.197</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -45,20 +45,20 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/radar_alt.xml</path>
 	  <offsets>
 		  <x-m>-18.210</x-m>
-		  <y-m>-0.500</y-m>
-		  <z-m>1.300</z-m>
+		  <y-m>-0.534</y-m>
+		  <z-m>1.315</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
   
   <model>
 	  <name>hsi</name>
-	  <path>Aircraft/B-2/Models/Instruments-3d/nd.xml</path>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/nd.xml</path>
 	  <offsets>
 		  <x-m>-18.200</x-m>
-		  <y-m>-0.670</y-m>
-		  <z-m>1.015</z-m>
-		  <pitch-deg>0</pitch-deg>
+		  <y-m>-0.675</y-m>
+		  <z-m>0.998</z-m>
+		  <pitch-deg>-1</pitch-deg>
 	  </offsets>
   </model>
   
@@ -96,12 +96,56 @@ more to come :-)
   </model>
   
   <model>
+	  <name>fltdir</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/fltdir.xml</path>
+	  <offsets>
+		  <x-m>-18.190</x-m>
+		  <y-m>-0.584</y-m>
+		  <z-m>0.865</z-m>
+		  <pitch-deg>0</pitch-deg>
+	  </offsets>
+  </model>
+  
+  <model>
+	  <name>reporter-lights</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/rep_lights.xml</path>
+	  <offsets>
+		  <x-m>-18.190</x-m>
+		  <y-m>-0.584</y-m>
+		  <z-m>0.865</z-m>
+		  <pitch-deg>0</pitch-deg>
+	  </offsets>
+  </model>
+  
+  <model>
+	  <name>fireind</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/fire_ind.xml</path>
+	  <offsets>
+		  <x-m>-18.190</x-m>
+		  <y-m>0.154</y-m>
+		  <z-m>1.239</z-m>
+		  <pitch-deg>0</pitch-deg>
+	  </offsets>
+  </model>
+  
+  <model>
+	  <name>apmode</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/apmode.xml</path>
+	  <offsets>
+		  <x-m>-18.150</x-m>
+		  <y-m>-0.640</y-m>
+		  <z-m>0.940</z-m>
+		  <roll-deg>-25</roll-deg>
+	  </offsets>
+  </model>
+  
+  <model>
 	  <name>alt</name>
 	  <path>Aircraft/Instruments-3d/alt-2/alt2-3d.xml</path>
 	  <offsets>
 		  <x-m>-18.210</x-m>
-		  <y-m>-0.400</y-m>
-		  <z-m>1.200</z-m>
+		  <y-m>-0.395</y-m>
+		  <z-m>1.185</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -111,8 +155,8 @@ more to come :-)
 	  <path>Aircraft/Instruments-3d/vsi-6/vsi-3d.xml</path>
 	  <offsets>
 		  <x-m>-18.210</x-m>
-		  <y-m>-0.500</y-m>
-		  <z-m>1.200</z-m>
+		  <y-m>-0.490</y-m>
+		  <z-m>1.185</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -122,8 +166,8 @@ more to come :-)
 	  <path>Aircraft/Instruments-3d/attitude-indicator.xml</path>
 	  <offsets>
 		  <x-m>-18.210</x-m>
-		  <y-m>-0.400</y-m>
-		  <z-m>1.300</z-m>
+		  <y-m>-0.450</y-m>
+		  <z-m>1.276</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -133,8 +177,19 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/sweep_ind.xml</path>
 	  <offsets>
 		  <x-m>-18.200</x-m>
-		  <y-m>-0.430</y-m>
-		  <z-m>1.050</z-m>
+		  <y-m>-0.336</y-m>
+		  <z-m>1.015</z-m>
+		  <pitch-deg>0</pitch-deg>
+	  </offsets>
+  </model>
+  
+  <model>
+	  <name>bomb doors</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/nuc.xml</path>
+	  <offsets>
+		  <x-m>-18.200</x-m>
+		  <y-m>-0.336</y-m>
+		  <z-m>1.015</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -144,8 +199,8 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/terflw_ind.xml</path>
 	  <offsets>
 		  <x-m>-18.190</x-m>
-		  <y-m>-0.090</y-m>
-		  <z-m>0.950</z-m>
+		  <y-m>0.005</y-m>
+		  <z-m>0.910</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -155,7 +210,7 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/fuel_ind.xml</path>
 	  <offsets>
 		  <x-m>-18.190</x-m>
-		  <y-m>-0.100</y-m>
+		  <y-m>0.110</y-m>
 		  <z-m>1.000</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
@@ -166,7 +221,7 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/fuelvalves.xml</path>
 	  <offsets>
 		  <x-m>-18.200</x-m>
-		  <y-m>-0.160</y-m>
+		  <y-m>0.050</y-m>
 		  <z-m>1.110</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
@@ -177,7 +232,7 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/fuelpos_ind.xml</path>
 	  <offsets>
 		  <x-m>-18.190</x-m>
-		  <y-m>-0.175</y-m>
+		  <y-m>0.035</y-m>
 		  <z-m>0.980</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
@@ -227,17 +282,19 @@ more to come :-)
 	  </offsets>
   </model>
   
+  <!-- middle console -->
   <model>
 	  <name>engine switch</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/eng_switch.xml</path>
 	  <offsets>
-		  <x-m>-18.180</x-m>
+		  <x-m>-17.950</x-m>
 		  <y-m>0.050</y-m>
-		  <z-m>0.650</z-m>
-		  <pitch-deg>0</pitch-deg>
+		  <z-m>0.700</z-m>
+		  <pitch-deg>-90</pitch-deg>
 	  </offsets>
   </model>
   
+  <!-- trans parts -->
   <model>
 	  <name>transparent parts</name>
 	  <path>Aircraft/B-1B/Models/b1b_trans.xml</path>
@@ -247,8 +304,7 @@ more to come :-)
 			  <y-m>0.0</y-m>
 			  <z-m>0.24</z-m>
 			  <pitch-deg>0</pitch-deg>
-			  
-  </offsets>
+                  </offsets>
 	  </offsets>
   </model>
 
@@ -262,7 +318,7 @@ more to come :-)
 	  <interpolation>
 		  <entry>
 			  <ind>0.0</ind>
-			  <dep>-40.0</dep>
+			  <dep>-52.0</dep>
 		  </entry>
 		  <entry>
 			  <ind>1.0</ind>
@@ -290,7 +346,7 @@ more to come :-)
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
-			 <dep>40.0</dep>
+			 <dep>52.0</dep>
 		 </entry>
 		 <entry>
 			 <ind>1.0</ind>
@@ -323,21 +379,61 @@ more to come :-)
 	 <object-name>axle.004</object-name>
 	 <object-name>gear_r_up</object-name>
 	 <object-name>gear_r_low</object-name>
-	 <object-name>axle.003</object-name>
-	 <object-name>axle.002</object-name>
-	 <object-name>tyre.004</object-name>
-	 <object-name>tyre.005</object-name>
-	 <object-name>tyre.006</object-name>
-	 <object-name>tyre.007</object-name>
 	 <object-name>gear_gear</object-name>
 	 <object-name>gear_l_up</object-name>
 	 <object-name>gear_l_low</object-name>
-	 <object-name>axle.001</object-name>
+	 <condition>
+		 <greater-than>
+			 <property>gear/gear[0]/position-norm</property>
+			 <value>0.0</value>
+		 </greater-than>
+	 </condition>
+ </animation>
+ 
+ <animation>
+	 <type>select</type>
 	 <object-name>axle</object-name>
-	 <object-name>tyre.002</object-name>
-	 <object-name>tyre.003</object-name>
 	 <object-name>tyre.001</object-name>
 	 <object-name>tyre</object-name>
+	 <condition>
+		 <greater-than>
+			 <property>gear/gear[0]/position-norm</property>
+			 <value>0.0</value>
+		 </greater-than>
+	 </condition>
+ </animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>axle.002</object-name>
+	 <object-name>tyre.004</object-name>
+	 <object-name>tyre.005</object-name>
+	 <condition>
+		 <greater-than>
+			 <property>gear/gear[0]/position-norm</property>
+			 <value>0.0</value>
+		 </greater-than>
+	 </condition>
+ </animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>axle.003</object-name>
+	 <object-name>tyre.006</object-name>
+	 <object-name>tyre.007</object-name>
+	 <condition>
+		 <greater-than>
+			 <property>gear/gear[0]/position-norm</property>
+			 <value>0.0</value>
+		 </greater-than>
+	 </condition>
+ </animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>axle.001</object-name>
+	 <object-name>tyre.002</object-name>
+	 <object-name>tyre.003</object-name>
 	 <condition>
 		 <greater-than>
 			 <property>gear/gear[0]/position-norm</property>
@@ -476,6 +572,33 @@ more to come :-)
 		      <y>0</y>
 		      <z>1</z>
 	      </axis>
+ </animation>
+ 
+ <animation>
+	 <type>spin</type>
+	 <object-name>tyre.008</object-name>
+	 <object-name>tyre.009</object-name>
+	 <property>gear/gear[0]/rollspeed-ms</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0</dep>
+		 </entry>
+		 <entry>
+			 <ind>100.0</ind>
+			 <dep>-500.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-16.508</x-m>
+		 <y-m>0.0</y-m>
+		 <z-m>-3.818</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
  </animation>
  
  <!-- front gear covers -->
@@ -708,12 +831,41 @@ more to come :-)
 	 <type>translate</type>
 	 <object-name>gear_l_low</object-name>
 	 <object-name>axle.001</object-name>
-	 <object-name>axle</object-name>
 	 <object-name>tyre.002</object-name>
 	 <object-name>tyre.003</object-name>
+	 <property>gear/gear[1]/position-norm</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>3.2</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.2</ind>
+			 <dep>3.2</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>2.03</x-m>
+		 <y-m>-2.11</y-m>
+		 <z-m>-1.05</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>0.33</y>
+		 <z>1</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>translate</type>
+	 <object-name>axle</object-name>
 	 <object-name>tyre.001</object-name>
 	 <object-name>tyre</object-name>
-	 <property>gear/gear[1]/position-norm</property>
+	 <property>gear/gear[2]/position-norm</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -902,12 +1054,41 @@ more to come :-)
 	 <type>translate</type>
 	 <object-name>gear_r_low</object-name>
 	 <object-name>axle.002</object-name>
-	 <object-name>axle.003</object-name>
 	 <object-name>tyre.004</object-name>
 	 <object-name>tyre.005</object-name>
+	 <property>gear/gear[3]/position-norm</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>3.2</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.2</ind>
+			 <dep>3.2</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>2.03</x-m>
+		 <y-m>2.11</y-m>
+		 <z-m>-1.05</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>-0.33</y>
+		 <z>1</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>translate</type>
+	 <object-name>axle.003</object-name>
 	 <object-name>tyre.006</object-name>
 	 <object-name>tyre.007</object-name>
-	 <property>gear/gear[2]/position-norm</property>
+	 <property>gear/gear[4]/position-norm</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -944,7 +1125,7 @@ more to come :-)
 	 <object-name>gear_l_up1.006</object-name>
 	 <object-name>gear_l_up1.004</object-name>
 	 <object-name>gear_l_up1.005</object-name>
-	 <property>gear/gear[1]/position-norm</property>
+	 <property>gear/gear[3]/position-norm</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -975,7 +1156,7 @@ more to come :-)
 	 <type>rotate</type>
 	 <object-name>gear_l_up1.007</object-name>
 	 <object-name>gear_l_up1.006</object-name>
-	 <property>gear/gear[1]/position-norm</property>
+	 <property>gear/gear[3]/position-norm</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -1005,7 +1186,7 @@ more to come :-)
  <animation>
 	 <type>rotate</type>
 	 <object-name>gear_l_up1.006</object-name>
-	 <property>gear/gear[1]/position-norm</property>
+	 <property>gear/gear[3]/position-norm</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -1036,7 +1217,7 @@ more to come :-)
 	 <type>rotate</type>
 	 <object-name>gear_l_up1.004</object-name>
 	 <object-name>gear_l_up1.005</object-name>
-	 <property>gear/gear[1]/position-norm</property>
+	 <property>gear/gear[3]/position-norm</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -1066,7 +1247,7 @@ more to come :-)
  <animation>
 	 <type>rotate</type>
 	 <object-name>gear_l_up1.005</object-name>
-	 <property>gear/gear[1]/position-norm</property>
+	 <property>gear/gear[3]/position-norm</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -1094,19 +1275,16 @@ more to come :-)
  </animation>
  
  
- <!-- Compression -->
+ <!-- Compression left gear front and aft-->
  <animation>
 	 <type>translate</type>
 	 <name>l_gear_comp</name>
 	 <object-name>gear_l_low</object-name>
 	 <object-name>axle.001</object-name>
-	 <object-name>axle</object-name>
 	 <object-name>tyre.002</object-name>
 	 <object-name>tyre.003</object-name>
-	 <object-name>tyre.001</object-name>
-	 <object-name>tyre</object-name>
 	 <property>gear/gear[1]/compression-norm</property>
-	 <factor>0.2</factor>
+	 <factor>0.3</factor>
 	 <axis>
 		 <x>0</x>
 		 <y>0</y>
@@ -1114,19 +1292,46 @@ more to come :-)
 	 </axis>
  </animation>
  
- <!-- Compression -->
+ <animation>
+	 <type>translate</type>
+	 <name>l_gear_comp_aft</name>
+	 <object-name>axle</object-name>
+	 <object-name>tyre.001</object-name>
+	 <object-name>tyre</object-name>
+	 <property>gear/gear[2]/compression-norm</property>
+	 <factor>1.1</factor>
+	 <axis>
+		 <x>0</x>
+		 <y>0</y>
+		 <z>1</z>
+	 </axis>
+ </animation>
+ 
+ <!-- Compression right front and aft-->
  <animation>
 	 <type>translate</type>
 	 <name>r_gear_comp</name>
 	 <object-name>gear_r_low</object-name>
 	 <object-name>axle.002</object-name>
-	 <object-name>axle.003</object-name>
 	 <object-name>tyre.004</object-name>
 	 <object-name>tyre.005</object-name>
+	 <property>gear/gear[3]/compression-norm</property>
+	 <factor>0.3</factor>
+	 <axis>
+		 <x>0</x>
+		 <y>0</y>
+		 <z>1</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>translate</type>
+	 <name>r_gear_comp_aft</name>
+	 <object-name>axle.003</object-name>
 	 <object-name>tyre.006</object-name>
 	 <object-name>tyre.007</object-name>
-	 <property>gear/gear[2]/compression-norm</property>
-	 <factor>0.2</factor>
+	 <property>gear/gear[4]/compression-norm</property>
+	 <factor>1.1</factor>
 	 <axis>
 		 <x>0</x>
 		 <y>0</y>

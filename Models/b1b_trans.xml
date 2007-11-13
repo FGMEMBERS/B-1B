@@ -5,8 +5,218 @@ sweat by maggse
 <PropertyList>
 
  <path>b1b_trans.ac</path>
-
-
+ 
+ <!-- strobes -->
+ <model>
+	 <name>strobe0</name>
+	 <path>Aircraft/B-1B/Models/blast/strobe.xml</path>
+	 <offsets>
+		 <x-m>-3.500</x-m>
+		 <y-m>-4.9</y-m>
+		 <z-m>-1.0</z-m>
+		 <pitch-deg>90</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <model>
+	 <name>strobe1</name>
+	 <path>Aircraft/B-1B/Models/blast/strobe.xml</path>
+	 <offsets>
+		 <x-m>-3.500</x-m>
+		 <y-m>4.9</y-m>
+		 <z-m>-1.0</z-m>
+		 <pitch-deg>90</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <!-- afterburner jetblast -->
+ 
+ <model>
+	 <name>ablast0</name>
+	 <path>Aircraft/B-1B/Models/blast/blast_afterburner.xml</path>
+	 <condition>
+		 <and>
+			 <equals>
+				 <property>controls/engines/engine[0]/afterburner</property>
+				 <value>1</value>
+			 </equals>
+			 <equals>
+				 <property>controls/engines/engine[0]/cutoff</property>
+				 <value>0</value>
+			 </equals>
+		 </and>
+	 </condition>
+	 <offsets>
+		 <x-m>9.400</x-m>
+		 <y-m>-4.9</y-m>
+		 <z-m>-1.9</z-m>
+		 <pitch-deg>90</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <model>
+	 <name>ablast1</name>
+	 <path>Aircraft/B-1B/Models/blast/blast_afterburner.xml</path>
+	 <condition>
+		 <and>
+			 <equals>
+				 <property>controls/engines/engine[1]/afterburner</property>
+				 <value>1</value>
+			 </equals>
+			 <equals>
+				 <property>controls/engines/engine[1]/cutoff</property>
+				 <value>0</value>
+			 </equals>
+		 </and>
+	 </condition>
+	 <offsets>
+		 <x-m>9.400</x-m>
+		 <y-m>-3.1</y-m>
+		 <z-m>-1.9</z-m>
+		 <pitch-deg>90</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <model>
+	 <name>ablast2</name>
+	 <path>Aircraft/B-1B/Models/blast/blast_afterburner.xml</path>
+	 <condition>
+		 <and>
+			 <equals>
+				 <property>controls/engines/engine[2]/afterburner</property>
+				 <value>1</value>
+			 </equals>
+			 <equals>
+				 <property>controls/engines/engine[2]/cutoff</property>
+				 <value>0</value>
+			 </equals>
+		 </and>
+	 </condition>
+	 <offsets>
+		 <x-m>9.400</x-m>
+		 <y-m>4.9</y-m>
+		 <z-m>-1.9</z-m>
+		 <pitch-deg>90</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <model>
+	 <name>ablast3</name>
+	 <path>Aircraft/B-1B/Models/blast/blast_afterburner.xml</path>
+	 <condition>
+		 <and>
+			 <equals>
+				 <property>controls/engines/engine[3]/afterburner</property>
+				 <value>1</value>
+			 </equals>
+			 <equals>
+				 <property>controls/engines/engine[3]/cutoff</property>
+				 <value>0</value>
+			 </equals>
+		 </and>
+	 </condition>
+	 <offsets>
+		 <x-m>9.400</x-m>
+		 <y-m>3.1</y-m>
+		 <z-m>-1.9</z-m>
+		 <pitch-deg>90</pitch-deg>
+	 </offsets>
+  </model>
+  
+  <!-- norm jetblast -->
+  <model>
+	  <name>blast0</name>
+	  <path>Aircraft/B-1B/Models/blast/blast_engine.xml</path>
+	  <condition>
+		  <and>
+			  <greater-than>
+				  <property>controls/engines/engine[0]/throttle-lever</property>
+				  <value>0.2</value>
+			  </greater-than>
+			  <equals>
+				  <property>controls/engines/engine[0]/cutoff</property>
+				  <value>0</value>
+			  </equals>
+		  </and>
+	  </condition>
+	  <offsets>
+		  <x-m>9.200</x-m>
+		  <y-m>-4.9</y-m>
+		  <z-m>-1.9</z-m>
+		  <pitch-deg>90</pitch-deg>
+	  </offsets>
+  </model>
+  
+  <model>
+	  <name>blast1</name>
+	  <path>Aircraft/B-1B/Models/blast/blast_engine.xml</path>
+	  <condition>
+		  <and>
+			  <greater-than>
+				  <property>controls/engines/engine[1]/throttle-lever</property>
+				  <value>0.2</value>
+			  </greater-than>
+			  <equals>
+				  <property>controls/engines/engine[1]/cutoff</property>
+				  <value>0</value>
+			  </equals>
+		  </and>
+	  </condition>
+	  <offsets>
+		  <x-m>9.200</x-m>
+		  <y-m>-3.1</y-m>
+		  <z-m>-1.9</z-m>
+		  <pitch-deg>90</pitch-deg>
+	  </offsets>
+  </model>
+  
+  <model>
+	  <name>blast2</name>
+	  <path>Aircraft/B-1B/Models/blast/blast_engine.xml</path>
+	  <condition>
+		  <and>
+			  <greater-than>
+				  <property>controls/engines/engine[2]/throttle-lever</property>
+				  <value>0.2</value>
+			  </greater-than>
+			  <equals>
+				  <property>controls/engines/engine[2]/cutoff</property>
+				  <value>0</value>
+			  </equals>
+		  </and>
+	  </condition>
+	  <offsets>
+		  <x-m>9.200</x-m>
+		  <y-m>3.1</y-m>
+		  <z-m>-1.9</z-m>
+		  <pitch-deg>90</pitch-deg>
+	  </offsets>
+  </model>
+  
+  <model>
+	  <name>blast3</name>
+	  <path>Aircraft/B-1B/Models/blast/blast_engine.xml</path>
+	  <condition>
+		  <and>
+			  <greater-than>
+				  <property>controls/engines/engine[3]/throttle-lever</property>
+				  <value>0.2</value>
+			  </greater-than>
+			  <equals>
+				  <property>controls/engines/engine[3]/cutoff</property>
+				  <value>0</value>
+			  </equals>
+		  </and>
+	  </condition>
+	  <offsets>
+		  <x-m>9.200</x-m>
+		  <y-m>4.9</y-m>
+		  <z-m>-1.9</z-m>
+		  <pitch-deg>90</pitch-deg>
+	  </offsets>
+  </model>
+  
+  
   <!-- afterburner flame -->
   
   <animation>
@@ -83,5 +293,66 @@ sweat by maggse
 	 <offset>0.9</offset>
 	 <factor>-0.000033</factor>
  </animation>
+ 
+ <!-- wing contrails -->
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>wing_contr_l</object-name>
+	 <object-name>wing_contr_r</object-name>
+	 <condition>
+		 <and>
+		  <greater-than>
+			 <property>environment/relative-humidity</property>
+			 <value>50.0</value>
+		  </greater-than>
+		  <equals>
+			  <property>controls/flight/wing-sweep</property>
+			  <value>1.0</value>
+		  </equals>
+		  <greater-than>
+			  <property>velocities/mach</property>
+			  <value>0.2</value>
+		  </greater-than>
+		  <greater-than>
+			  <property>orientation/pitch-deg</property>
+			  <value>1.0</value>
+		  </greater-than>
+	 	</and>
+	 </condition>
+  </animation>
+  
+  <animation>
+	  <type>blend</type>
+	  <object-name>wing_contr_l</object-name>
+	  <property>orientation/pitch-deg</property>
+	  <offset>1.0</offset>
+	  <factor>-0.05</factor>
+ </animation>
+ 
+ <animation>
+	 <type>blend</type>
+	 <object-name>wing_contr_r</object-name>
+	 <property>orientation/pitch-deg</property>
+	 <offset>1.0</offset>
+	 <factor>-0.05</factor>
+ </animation>
+  
+  <!--<animation>
+	  <type>texrotate</type>
+	  <object-name>wing_contr_l</object-name>
+	  <property>velocities/mach</property>
+	  <factor>1000</factor>
+	  <center>
+		  <x>0.75</x>
+		  <y>0.4</y>
+		  <z>0.0</z>
+	  </center>
+	  <axis>
+		  <x>0</x>
+		  <y>0</y>
+		  <z>1</z>
+	  </axis>
+ </animation>-->
 
 </PropertyList>

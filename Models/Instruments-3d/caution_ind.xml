@@ -96,6 +96,147 @@ sweat by maggse
 		 </equals>
 	 </condition>
  </animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>rep_aftburner</object-name>
+	 <condition>
+		 <equals>
+			 <property>controls/engines/engine[0]/afterburner</property>
+			 <value>1.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>rep_brake</object-name>
+	 <condition>
+	    <and>
+		 <equals>
+			 <property>gear/gear[0]/wow</property>
+			 <value>1.0</value>
+		 </equals>
+		 <or>
+			 <equals>
+				 <property>controls/gear[0]/brake-left</property>
+				 <value>1.0</value>
+		 	</equals>
+			<equals>
+				<property>controls/gear[0]/brake-right</property>
+				<value>1.0</value>
+		 	</equals>
+			<equals>
+				<property>controls/gear[0]/brake-parking</property>
+				<value>1.0</value>
+		 	</equals>
+		</or>
+	    </and>
+	 </condition>
+ </animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>rep_gforce</object-name>
+	 <condition>
+		 <greater-than>
+			 <property>accelerations/pilot-g</property>
+			 <value>4.0</value>
+		 </greater-than>
+	 </condition>
+ </animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>rep_eng1</object-name>
+	 <condition>
+	      <or>
+		 <equals>
+			 <property>engines/engine[0]/out-of-fuel</property>
+			 <value>1.0</value>
+		 </equals>
+		 <and>
+		 <equals>
+			 <property>controls/engines/engine[0]/cutoff</property>
+			 <value>1.0</value>
+		 </equals>
+		 <equals>
+			 <property>gear/gear[0]/wow</property>
+			 <value>0.0</value>
+		 </equals>
+	        </and>
+	      </or>
+	 </condition>
+ </animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>rep_eng2.001</object-name>
+	 <condition>
+		 <or>
+			 <equals>
+				 <property>engines/engine[1]/out-of-fuel</property>
+				 <value>1.0</value>
+			 </equals>
+			 <and>
+				 <equals>
+					 <property>controls/engines/engine[1]/cutoff</property>
+					 <value>1.0</value>
+				 </equals>
+				 <equals>
+					 <property>gear/gear[1]/wow</property>
+					 <value>0.0</value>
+				 </equals>
+			 </and>
+		 </or>
+	 </condition>
+ </animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>rep_eng3</object-name>
+	 <condition>
+		 <or>
+			 <equals>
+				 <property>engines/engine[2]/out-of-fuel</property>
+				 <value>1.0</value>
+			 </equals>
+			 <and>
+				 <equals>
+					 <property>controls/engines/engine[2]/cutoff</property>
+					 <value>1.0</value>
+				 </equals>
+				 <equals>
+					 <property>gear/gear[2]/wow</property>
+					 <value>0.0</value>
+				 </equals>
+			 </and>
+		 </or>
+	 </condition>
+ </animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>rep_eng4</object-name>
+	 <condition>
+		 <or>
+			 <equals>
+				 <property>engines/engine[3]/out-of-fuel</property>
+				 <value>1.0</value>
+			 </equals>
+			 <and>
+				 <equals>
+					 <property>controls/engines/engine[3]/cutoff</property>
+					 <value>1.0</value>
+				 </equals>
+				 <equals>
+					 <property>gear/gear[3]/wow</property>
+					 <value>0.0</value>
+				 </equals>
+			 </and>
+		 </or>
+	 </condition>
+ </animation>
 
 
 
