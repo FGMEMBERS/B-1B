@@ -61,10 +61,10 @@
 
 
   <wing x="-26.2" y="5.0" z="-2.2" taper="0.25" incidence="0" twist="-2"
-        length="14.8" chord="6.1" sweep="55.0" dihedral="0.0">
-    <stall aoa="20.0" width="4" peak="1.4"/>
+        length="14.8" chord="6.3" sweep="53.0" dihedral="0.0">
+    <stall aoa="18.0" width="4" peak="1.4"/>
     <flap0 start="0.6" end="0.90" lift="1.5" drag="1.1"/>
-    <spoiler start="0.1" end="0.6" lift="1.0" drag="2.4"/>
+    <spoiler start="0.1" end="0.6" lift="1.0" drag="2.8"/>
     
     <control-input axis="/controls/flight/aileron" control="FLAP0" split="true"/>
     <control-input axis="/controls/flight/spoilers" control="SPOILER"/>
@@ -82,12 +82,12 @@
   
   <!-- blended wing body -->
   
-  <mstab x="-24.0" y="2.0" z="-2.2" taper="0.4" incidence="1.4"
-	 length="3.0" chord="15.0" sweep="-20.0" dihedral="-1.0">
-	  <stall aoa="18.0" width="4" peak="1.5"/>
+  <mstab x="-24.0" y="2.0" z="-2.2" taper="0.35" incidence="1.4"
+	 length="2.8" chord="14.0" sweep="-18.0" dihedral="-1.0">
+	  <stall aoa="22.0" width="5" peak="1.5"/>
 	  
-	  <flap0 start="0.0" end="0.5" lift="1.4" drag="1.4"/>
-	  <flap1 start="0.5" end="1.0" lift="1.22" drag="1.1"/><!-- wingsweep 15/25/45/55 -->
+	  <flap0 start="0.0" end="0.5" lift="1.3" drag="1.4"/>
+	  <flap1 start="0.5" end="1.0" lift="1.22" drag="1.1"/><!-- wingsweep 15/25/45/55/67 -->
 	  
 	  <control-input axis="/controls/flight/wing-sweep" control="FLAP1"/>
 	  <control-input axis="/controls/flight/flaps" control="FLAP0"/>
@@ -139,18 +139,18 @@
 	  <control-speed control="FLAP0" transition-time="0.5"/>-->
   </mstab>
 
-<!-- engines are rated 14600lb or 17390lb each (4x) and 30780 with afterburner 
+<!-- engines are rated 14600lb or 17390lb military thrust each (4x) and 30780 with afterburner 
      colported tsfc 0.562 dry and 2.46  with afterburner, but dry tsfc looks suspicious -->
 
 <!-- left wing engines original  -->
 
-<jet x="-30.3" y="4.2" z="-2.5" mass="4400" tsfc="0.6" thrust="14600" afterburner="30780">
+<jet x="-30.3" y="4.2" z="-2.5" mass="4400" tsfc="0.6" thrust="17390" afterburner="30780">
 	<actionpt x="-35.6" y="4.2" z="-2.4"/>
 	<control-input axis="/controls/engines/engine[0]/throttle-lever" control="THROTTLE"/>
 	<control-input axis="/controls/engines/engine[0]/afterburner" control="REHEAT"/>
 </jet>
 
-<jet x="-30.3" y="3.2" z="-2.5" mass="4400" tsfc="0.6" thrust="14600" afterburner="30780">
+<jet x="-30.3" y="3.2" z="-2.5" mass="4400" tsfc="0.6" thrust="17390" afterburner="30780">
 	<actionpt x="-35.6" y="3.2" z="-2.4"/>
 	<control-input axis="/controls/engines/engine[1]/throttle-lever" control="THROTTLE"/>
 	<control-input axis="/controls/engines/engine[0]/afterburner" control="REHEAT"/>
@@ -158,13 +158,13 @@
 
 <!-- right wing engines -->
 
-<jet x="-30.3" y="-3.2" z="-2.5" mass="4400" tsfc="0.6" thrust="14600" afterburner="30780">
+<jet x="-30.3" y="-3.2" z="-2.5" mass="4400" tsfc="0.6" thrust="17390" afterburner="30780">
 	<actionpt x="-35.6" y="-3.2" z="-2.4"/>
 	<control-input axis="/controls/engines/engine[2]/throttle-lever" control="THROTTLE"/>
 	<control-input axis="/controls/engines/engine[0]/afterburner" control="REHEAT"/>
 </jet>
 
-<jet x="-30.3" y="-4.2" z="-2.5" mass="4400" tsfc="0.6" thrust="14600" afterburner="30780">
+<jet x="-30.3" y="-4.2" z="-2.5" mass="4400" tsfc="0.6" thrust="17390" afterburner="30780">
 	<actionpt x="-35.6" y="-4.2" z="-2.4"/>
 	<control-input axis="/controls/engines/engine[3]/throttle-lever" control="THROTTLE"/>
 	<control-input axis="/controls/engines/engine[0]/afterburner" control="REHEAT"/>
@@ -184,8 +184,8 @@
   </gear>
 
 
-<!-- rear left -->
-  <gear x="-27.5" y="2.9" z="-4.0" retract-time="8" compression="0.9" spring="1.2">
+<!-- rear left front -->
+  <gear x="-27.0" y="2.9" z="-4.0" retract-time="8" compression="0.9" spring="1.2">
     <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
     <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
     <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
@@ -193,15 +193,35 @@
     <control-speed control="BRAKE" transition-time="0.5"/>
     <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
   </gear>
+  
+  <!-- rear left aft -->
+  <gear x="-28.2" y="2.9" z="-4.2" retract-time="8" compression="1.6" spring="0.6">
+	  <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+	  <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
+	  <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+	  <control-speed control="EXTEND" transition-time="8"/>
+	  <control-speed control="BRAKE" transition-time="0.5"/>
+	  <control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
+  </gear>
 
-<!-- rear right -->
-  <gear x="-27.5" y="-2.9" z="-4.0" retract-time="8" compression="0.9" spring="1.2">
+<!-- rear right front -->
+  <gear x="-27.0" y="-2.9" z="-4.0" retract-time="8" compression="0.9" spring="1.2">
     <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
     <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
     <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
     <control-speed control="EXTEND" transition-time="8"/>
     <control-speed control="BRAKE" transition-time="0.5"/>
-    <control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
+    <control-output control="EXTEND" prop="/gear/gear[3]/position-norm"/>
+  </gear>
+  
+  <!-- rear right aft -->
+  <gear x="-28.2" y="-2.9" z="-4.2" retract-time="8" compression="1.6" spring="0.6">
+	  <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+	  <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
+	  <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+	  <control-speed control="EXTEND" transition-time="8"/>
+	  <control-speed control="BRAKE" transition-time="0.5"/>
+	  <control-output control="EXTEND" prop="/gear/gear[4]/position-norm"/>
   </gear>
   
   <!-- Canopy / Cockpit access behind front gear

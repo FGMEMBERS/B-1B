@@ -41,6 +41,25 @@
 -->  
  
 <PropertyList>
+	
+   <submodel>
+		<name>flare</name>
+		<model>Aircraft/B-1B/Models/blast/flare.xml</model>
+		<trigger>controls/switches/flare</trigger>
+		<speed>400</speed>
+		<repeat>true</repeat>
+		<delay>1.2</delay>
+		<count>4</count>
+		<x-offset>-60.0</x-offset>
+		<y-offset>0.0</y-offset>
+		<z-offset>5.0</z-offset>
+		<eda>0.1</eda>
+		<life>10</life>
+		<buoyancy>31</buoyancy>
+		<aero-stabilise>false</aero-stabilise>
+		<wind>true</wind>
+	  <pitch-offset>45.0</pitch-offset>
+  </submodel>
 
   <submodel>
     <name>left gear smoke</name>
@@ -77,194 +96,152 @@
   </submodel>
   
   <submodel>
-	  <name>radar pulse d</name>
+	  <name>radar pulse m0d</name>
 	  <model></model>
-	  <trigger>controls/switches/terrain-avoid-rng-d</trigger>
-	  <speed>30000</speed>
+	  <trigger>controls/switches/terrain-avoid-rng-50</trigger>
+	  <speed>60000</speed>
 	  <repeat>true</repeat>
-	  <delay>1.0</delay>
+	  <delay>0.5</delay>
 	  <count>-1</count>
 	  <x-offset>0.0</x-offset>
 	  <y-offset>0.0</y-offset>
 	  <z-offset>0.0</z-offset>
-	  <eda>0.001</eda>
+	  <eda>0.0001</eda>
+	  <life>0.5</life>
+	  <buoyancy>32</buoyancy>
+	  <aero-stabilise>false</aero-stabilise>
+	  <wind>false</wind>
+	  <pitch-offset>0.0</pitch-offset>
+	  <impact>true</impact>
+	  <impact-reports>sim/radar/teravd/contactm0d</impact-reports>
+  </submodel>
+  
+  <submodel>
+	  <name>radar pulse m0d</name>
+	  <model></model>
+	  <trigger>controls/switches/terrain-avoid-rng-25</trigger>
+	  <speed>60000</speed>
+	  <repeat>true</repeat>
+	  <delay>0.5</delay>
+	  <count>-1</count>
+	  <x-offset>0.0</x-offset>
+	  <y-offset>0.0</y-offset>
+	  <z-offset>0.0</z-offset>
+	  <eda>0.0001</eda>
+	  <life>0.5</life>
+	  <buoyancy>32</buoyancy>
+	  <aero-stabilise>false</aero-stabilise>
+	  <wind>false</wind>
+	  <pitch-offset>0.0</pitch-offset>
+	  <impact>true</impact>
+	  <impact-reports>sim/radar/teravd/contactm0d</impact-reports>
+  </submodel>
+  
+  <submodel>
+	  <name>radar pulse m4d</name>
+	  <model></model>
+	  <trigger>controls/switches/terrain-avoid-rng-25</trigger>
+	  <speed>84000</speed>
+	  <repeat>true</repeat>
+	  <delay>0.1</delay>
+	  <count>-1</count>
+	  <x-offset>0.0</x-offset>
+	  <y-offset>0.0</y-offset>
+	  <z-offset>0.0</z-offset>
+	  <eda>0.0001</eda>
+	  <life>0.3</life>
+	  <buoyancy>32</buoyancy>
+	  <aero-stabilise>false</aero-stabilise>
+	  <wind>false</wind>
+	  <pitch-offset>-5.0</pitch-offset>
+	  <impact>true</impact>
+	  <impact-reports>sim/radar/teravd/contactm4d</impact-reports>
+  </submodel>
+  
+  <submodel>
+	  <name>radar pulse m4d</name>
+	  <model></model>
+	  <trigger>controls/switches/terrain-avoid-rng-50</trigger>
+	  <speed>84000</speed>
+	  <repeat>true</repeat>
+	  <delay>0.1</delay>
+	  <count>-1</count>
+	  <x-offset>0.0</x-offset>
+	  <y-offset>0.0</y-offset>
+	  <z-offset>0.0</z-offset>
+	  <eda>0.0001</eda>
+	  <life>0.3</life>
+	  <buoyancy>32</buoyancy>
+	  <aero-stabilise>false</aero-stabilise>
+	  <wind>false</wind>
+	  <pitch-offset>-3.0</pitch-offset>
+	  <impact>true</impact>
+	  <impact-reports>sim/radar/teravd/contactm4d</impact-reports>
+  </submodel>
+  
+  <submodel>
+	  <name>radar pulse m20d</name>
+	  <model></model>
+	  <trigger>controls/switches/terrain-avoid-rng-25</trigger>
+	  <speed>60000</speed>
+	  <repeat>true</repeat>
+	  <delay>0.2</delay>
+	  <count>-1</count>
+	  <x-offset>0.0</x-offset>
+	  <y-offset>0.0</y-offset>
+	  <z-offset>0.0</z-offset>
+	  <eda>0.0001</eda>
+	  <life>0.5</life>
+	  <buoyancy>32</buoyancy>
+	  <aero-stabilise>false</aero-stabilise>
+	  <wind>false</wind>
+	  <pitch-offset>-14</pitch-offset>
+	  <impact>true</impact>
+	  <impact-reports>sim/radar/teravd/contactm20d</impact-reports>
+  </submodel>
+  
+  <submodel>
+	  <name>radar pulse m20d</name>
+	  <model></model>
+	  <trigger>controls/switches/terrain-avoid-rng-50</trigger>
+	  <speed>60000</speed>
+	  <repeat>true</repeat>
+	  <delay>0.2</delay>
+	  <count>-1</count>
+	  <x-offset>0.0</x-offset>
+	  <y-offset>0.0</y-offset>
+	  <z-offset>0.0</z-offset>
+	  <eda>0.0001</eda>
 	  <life>0.5</life>
 	  <buoyancy>32</buoyancy>
 	  <aero-stabilise>false</aero-stabilise>
 	  <wind>false</wind>
 	  <pitch-offset>-10</pitch-offset>
 	  <impact>true</impact>
-	  <impact-reports>sim/radar/teravd/contactd</impact-reports>
+	  <impact-reports>sim/radar/teravd/contactm20d</impact-reports>
   </submodel>
   
   <submodel>
-	  <name>radar pulse m</name>
+	  <name>radar pulse m20dtf</name>
 	  <model></model>
-	  <trigger>controls/switches/terrain-avoid-rng-m</trigger>
-	  <speed>30000</speed>
+	  <trigger>controls/switches/terrain-follow-map-enabled</trigger>
+	  <speed>60000</speed>
 	  <repeat>true</repeat>
-	  <delay>2.0</delay>
+	  <delay>0.2</delay>
 	  <count>-1</count>
 	  <x-offset>0.0</x-offset>
 	  <y-offset>0.0</y-offset>
 	  <z-offset>0.0</z-offset>
-	  <eda>0.001</eda>
+	  <eda>0.0001</eda>
 	  <life>1.0</life>
 	  <buoyancy>32</buoyancy>
 	  <aero-stabilise>false</aero-stabilise>
 	  <wind>false</wind>
-	  <pitch-offset>-0.5</pitch-offset>
+	  <pitch-offset>-14</pitch-offset>
 	  <impact>true</impact>
-	  <impact-reports>sim/radar/teravd/contactm</impact-reports>
+	  <impact-reports>sim/radar/teravd/contactm20dtf</impact-reports>
   </submodel>
   
-  <submodel>
-	  <name>radar pulse mh</name>
-	  <model></model>
-	  <trigger>controls/switches/terrain-avoid-rng-mh</trigger>
-	  <speed>34000</speed>
-	  <repeat>true</repeat>
-	  <delay>2.0</delay>
-	  <count>-1</count>
-	  <x-offset>0.0</x-offset>
-	  <y-offset>0.0</y-offset>
-	  <z-offset>0.0</z-offset>
-	  <eda>0.001</eda>
-	  <life>1.0</life>
-	  <buoyancy>32</buoyancy>
-	  <aero-stabilise>false</aero-stabilise>
-	  <wind>false</wind>
-	  <pitch-offset>2.0</pitch-offset>
-	  <impact>true</impact>
-	  <impact-reports>sim/radar/teravd/contacth</impact-reports>
-  </submodel>
-  
-  <submodel>
-	  <name>radar pulse s</name>
-	  <model></model>
-	  <trigger>controls/switches/terrain-avoid-rng-s</trigger>
-	  <speed>30000</speed>
-	  <repeat>true</repeat>
-	  <delay>2.0</delay>
-	  <count>-1</count>
-	  <x-offset>0.0</x-offset>
-	  <y-offset>0.0</y-offset>
-	  <z-offset>0.0</z-offset>
-	  <eda>0.001</eda>
-	  <life>0.5</life>
-	  <buoyancy>32</buoyancy>
-	  <aero-stabilise>false</aero-stabilise>
-	  <wind>false</wind>
-	  <pitch-offset>-0.1</pitch-offset>
-	  <impact>true</impact>
-	  <impact-reports>sim/radar/teravd/contactm</impact-reports>
-  </submodel>
-  
-  <submodel>
-	  <name>radar pulse sh</name>
-	  <model></model>
-	  <trigger>controls/switches/terrain-avoid-rng-sh</trigger>
-	  <speed>34000</speed>
-	  <repeat>true</repeat>
-	  <delay>2.0</delay>
-	  <count>-1</count>
-	  <x-offset>0.0</x-offset>
-	  <y-offset>0.0</y-offset>
-	  <z-offset>0.0</z-offset>
-	  <eda>0.001</eda>
-	  <life>0.5</life>
-	  <buoyancy>32</buoyancy>
-	  <aero-stabilise>false</aero-stabilise>
-	  <wind>false</wind>
-	  <pitch-offset>3.3</pitch-offset>
-	  <impact>true</impact>
-	  <impact-reports>sim/radar/teravd/contacth</impact-reports>
-  </submodel>
-  
-  <submodel>
-	  <name>radar pulse clr1</name>
-	  <model></model>
-	  <trigger>controls/switches/terrain-avoid-clrpln-1</trigger>
-	  <speed>30000</speed>
-	  <repeat>true</repeat>
-	  <delay>1.0</delay>
-	  <count>-1</count>
-	  <x-offset>0.0</x-offset>
-	  <y-offset>0.0</y-offset>
-	  <z-offset>0.0</z-offset>
-	  <eda>0.001</eda>
-	  <life>0.30</life>
-	  <buoyancy>32</buoyancy>
-	  <aero-stabilise>false</aero-stabilise>
-	  <wind>false</wind>
-	  <pitch-offset>-0.57</pitch-offset>
-	  <impact>true</impact>
-	  <impact-reports>sim/radar/teravd/contactl</impact-reports>
-  </submodel>
-  
-  
-  <submodel>
-	  <name>radar pulse clr3</name>
-	  <model></model>
-	  <trigger>controls/switches/terrain-avoid-clrpln-3</trigger>
-	  <speed>30000</speed>
-	  <repeat>true</repeat>
-	  <delay>1.0</delay>
-	  <count>-1</count>
-	  <x-offset>0.0</x-offset>
-	  <y-offset>0.0</y-offset>
-	  <z-offset>0.0</z-offset>
-	  <eda>0.001</eda>
-	  <life>0.30</life>
-	  <buoyancy>32</buoyancy>
-	  <aero-stabilise>false</aero-stabilise>
-	  <wind>false</wind>
-	  <pitch-offset>-1.7</pitch-offset>
-	  <impact>true</impact>
-	  <impact-reports>sim/radar/teravd/contactl</impact-reports>
-  </submodel>
-  
-  <submodel>
-	  <name>radar pulse clr5</name>
-	  <model></model>
-	  <trigger>controls/switches/terrain-avoid-clrpln-5</trigger>
-	  <speed>30000</speed>
-	  <repeat>true</repeat>
-	  <delay>1.0</delay>
-	  <count>-1</count>
-	  <x-offset>0.0</x-offset>
-	  <y-offset>0.0</y-offset>
-	  <z-offset>0.0</z-offset>
-	  <eda>0.001</eda>
-	  <life>0.43</life>
-	  <buoyancy>32</buoyancy>
-	  <aero-stabilise>false</aero-stabilise>
-	  <wind>false</wind>
-	  <pitch-offset>-1.9</pitch-offset>
-	  <impact>true</impact>
-	  <impact-reports>sim/radar/teravd/contactl</impact-reports>
-  </submodel>
-  
-  <submodel>
-	  <name>radar pulse clr9</name>
-	  <model></model>
-	  <trigger>controls/switches/terrain-avoid-clrpln-9</trigger>
-	  <speed>30000</speed>
-	  <repeat>true</repeat>
-	  <delay>1.0</delay>
-	  <count>-1</count>
-	  <x-offset>0.0</x-offset>
-	  <y-offset>0.0</y-offset>
-	  <z-offset>0.0</z-offset>
-	  <eda>0.001</eda>
-	  <life>0.43</life>
-	  <buoyancy>32</buoyancy>
-	  <aero-stabilise>false</aero-stabilise>
-	  <wind>false</wind>
-	  <pitch-offset>-3.8</pitch-offset>
-	  <impact>true</impact>
-	  <impact-reports>sim/radar/teravd/contactl</impact-reports>
-  </submodel>
   
 
 </PropertyList>

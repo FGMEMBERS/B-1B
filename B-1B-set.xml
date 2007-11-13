@@ -48,7 +48,7 @@ B-1B set file.
 
     <view n="2">
       <config>
-        <y-offset-m archive="y" type="double">8.0</y-offset-m>
+        <x-offset-m archive="y" type="double">8.0</x-offset-m>
         <z-offset-m archive="y">-19.7</z-offset-m>
         <target-z-offset-m archive="y" type="double">20.0</target-z-offset-m>
       </config>
@@ -122,8 +122,9 @@ B-1B set file.
 
 <wing-sweep>
   <setting>0.00</setting>
-  <setting>0.25</setting>
-  <setting>0.75</setting>
+  <setting>0.23</setting>
+  <setting>0.42</setting>
+  <setting>0.80</setting>
   <setting>1.00</setting>
 </wing-sweep>
 
@@ -173,7 +174,20 @@ B-1B set file.
 	      <name>CTRL B</name>
 	      <desc>toggle airbrakes</desc>
       </key>-->
-      <line>Afterburner used for TakeOff/Climb</line>
+      <line>Afterburner(ab) used for TakeOff/Climb</line>
+      <line>For takeoff apply 1/2 flaps, full ab</line>
+      <line>Rotate at 160kts/takeoff at 170/180kts</line>
+      <line>---------------------------------------</line>
+      <line>It's OSG baby!</line>
+      <line>Terrain Following/Avoidance Systems:</line>
+      <line>1. Adjust clearance (SET CLEAR or CLR PLN)</line>
+      <line>2. Toggle master switch(es) on</line>
+      <line>3a. For TFS: switch PRTY to TERRAIN FOLLOW</line>
+      <line>3b. For TFS: over water switch PRTY to MAP</line>
+      <key>
+	      <name>Ctrl D</name>
+	      <desc>Flare out</desc>
+      </key>
       <line>Good Luck!</line>
     </help>
     
@@ -226,96 +240,42 @@ B-1B set file.
 
     <engines>
 	    <engine n="0">
-		    <throttle type="double">0.0</throttle>
 		    <cutoff>0</cutoff>
-		    <ignition>0</ignition>
+		    
 	    </engine>
 	    <engine n="1">
-		    <throttle type="double">0.0</throttle>
 		    <cutoff>0</cutoff>
-		    <ignition>0</ignition>
+		    
 	    </engine>
 	    <engine n="2">
-		    <throttle type="double">0.0</throttle>
 		    <cutoff>0</cutoff>
-		    <ignition>0</ignition>
+		    
 	    </engine>
 	    <engine n="3">
-		    <throttle type="double">0.0</throttle>
 		    <cutoff>0</cutoff>
-		    <ignition>0</ignition>
+		    
 	    </engine>
-        </engines>
-
-    <engines>
-	    <engine n="0">
-		    <magnetos type="double">0</magnetos>
-		    <throttle type="double">0.0</throttle>
-		    <cutoff>1</cutoff>
-		    <ignition>0</ignition>
-	    </engine>
-	    <engine n="1">
-		    <magnetos type="double">0</magnetos>
-		    <throttle type="double">0.0</throttle>
-		    <cutoff>1</cutoff>
-		    <ignition>0</ignition>
-	    </engine>
-	    <engine n="2">
-		    <magnetos type="double">0</magnetos>
-		    <throttle type="double">0.0</throttle>
-		    <cutoff>1</cutoff>
-		    <ignition>0</ignition>
-	    </engine>
-	    <engine n="3">
-		    <magnetos type="double">0</magnetos>
-		    <throttle type="double">0.0</throttle>
-		    <cutoff>1</cutoff>
-		    <ignition>0</ignition>
-	    </engine>
-        </engines>
+	    
+  </engines>
 
   </controls>
   
 <!-- Engine indexes -->
   <engines>
     <engine n="0">
-
 	    <engine-num type="int">0</engine-num>
-	    <running>true</running>
-
-	    <engine-num type="int">0</engine-num>
-	    <running>false</running>
-	    <rpm type="double">0</rpm>
 
     </engine>
     <engine n="1">
-
 	    <engine-num type="int">1</engine-num>
-	    <running>true</running>
-
-	    <engine-num type="int">1</engine-num>
-	    <running>false</running>
-	    <rpm type="double">0</rpm>
 
     </engine>
     <engine n="2">
-
 	    <engine-num type="int">2</engine-num>
-	    <running>true</running>
-
-	    <engine-num type="int">2</engine-num>
-	    <running>false</running>
-	    <rpm type="double">0</rpm>
 
     </engine>
     <engine n="3">
-
 	    <engine-num type="int">3</engine-num>
-	    <running>true</running>
-
-	    <engine-num type="int">3</engine-num>
-	    <running>false</running>
-	    <rpm type="double">0</rpm>
 
     </engine>
     
@@ -424,12 +384,12 @@ B-1B set file.
 			  <desc>Increase sweep</desc>
 			  <binding>
 				  <command>nasal</command>
-				  <script>b1b.wingSweep(-1)</script>
+				  <script>flightcontrols.wingSweep(-1)</script>
 			  </binding>
 			  <mod-up>
 				  <binding>
 					  <command>nasal</command>
-					  <script>b1b.wingSweep(0)</script>
+					  <script>flightcontrols.wingSweep(0)</script>
 				  </binding>
 			  </mod-up>
 		  </key>
@@ -439,16 +399,24 @@ B-1B set file.
 			  <desc>Decrease sweep</desc>
 			  <binding>
 				  <command>nasal</command>
-				  <script>b1b.wingSweep(1)</script>
+				  <script>flightcontrols.wingSweep(1)</script>
 			  </binding>
 			  <mod-up>
 				  <binding>
 					  <command>nasal</command>
-					  <script>b1b.wingSweep(0)</script>
+					  <script>flightcontrols.wingSweep(0)</script>
 				  </binding>
 			  </mod-up>
  </key>
-		  
+ 
+ <key n="4">
+	 <name>Ctrl-D</name>
+	 <desc>Flare out</desc>
+	 <binding>
+		 <command>property-toggle</command>
+		<property>controls/switches/flare</property>
+	 </binding>
+   </key>
 		  
 	  </keyboard>
 </input>
@@ -462,6 +430,9 @@ B-1B set file.
 		<module>fuel-aar</module>
 		<file>Aircraft/Generic/aar.nas</file>
 	</b1b-fuel>
+	<flightcontrols>
+		<file>Aircraft/B-1B/Nasal/flightcontrols.nas</file>
+	</flightcontrols>
 
 </nasal>
 
