@@ -30,6 +30,10 @@ sweat by maggse
 			      <command>property-toggle</command>
 			      <property>controls/switches/apmode/alt-hold</property>
 		      </binding>
+		      <binding>
+			      <command>nasal</command>
+			      <script>b1b.checkapmode()</script>
+		 </binding>
 	      </action>
       </animation>
       
@@ -55,6 +59,10 @@ sweat by maggse
 			      <command>property-toggle</command>
 			      <property>controls/switches/apmode/vfpm-hold</property>
 		      </binding>
+		      <binding>
+			      <command>nasal</command>
+			      <script>b1b.checkapmode()</script>
+		 </binding>
 	      </action>
       </animation>
       
@@ -80,6 +88,10 @@ sweat by maggse
 			      <command>property-toggle</command>
 			      <property>controls/switches/apmode/ptch-hold</property>
 		      </binding>
+		      <binding>
+			      <command>nasal</command>
+			      <script>b1b.checkapmode()</script>
+		 </binding>
 	      </action>
       </animation>
  
@@ -105,6 +117,10 @@ sweat by maggse
 			      <command>property-toggle</command>
 			      <property>controls/switches/apmode/bhdg-hold</property>
 		      </binding>
+		      <binding>
+			      <command>nasal</command>
+			      <script>b1b.checkapmode()</script>
+		 </binding>
 	      </action>
       </animation>
       
@@ -130,6 +146,10 @@ sweat by maggse
 			      <command>property-toggle</command>
 			      <property>controls/switches/apmode/thdg-hold</property>
 		      </binding>
+		      <binding>
+			      <command>nasal</command>
+			      <script>b1b.checkapmode()</script>
+		 </binding>
 	      </action>
       </animation>
       
@@ -155,6 +175,10 @@ sweat by maggse
 			      <command>property-toggle</command>
 			      <property>controls/switches/apmode/spd-hold</property>
 		      </binding>
+		      <binding>
+			      <command>nasal</command>
+			      <script>b1b.checkapmode()</script>
+		 </binding>
 	      </action>
       </animation>
       
@@ -180,6 +204,10 @@ sweat by maggse
 			      <command>property-toggle</command>
 			      <property>controls/switches/apmode/spdptch-hold</property>
 		      </binding>
+		      <binding>
+			      <command>nasal</command>
+			      <script>b1b.checkapmode()</script>
+		 </binding>
 	      </action>
       </animation>
       

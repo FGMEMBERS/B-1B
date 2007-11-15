@@ -18,6 +18,10 @@ setprop("controls/switches/terrain-avoid-rng-50", 0);
 setprop("controls/switches/terrain-follow-map", 0);
 setprop("controls/switches/terrain-follow-clr", 0);
 setprop("sim/panel-hotspots", 1);
+setprop("controls/engines/engine[0]/cutoff", 0);#start with engines on
+setprop("controls/engines/engine[1]/cutoff", 0);
+setprop("controls/engines/engine[2]/cutoff", 0);
+setprop("controls/engines/engine[3]/cutoff", 0);
 wingSweep(1);
 wingSweep(1);
 wingSweep(1);
@@ -29,20 +33,10 @@ print ("B-1B warming up!");
 
 aftburn_on = func {
 
-#if (on > 0) {
-
 setprop("controls/engines/engine[0]/afterburner", 1);
 setprop("controls/engines/engine[1]/afterburner", 1);
 setprop("controls/engines/engine[2]/afterburner", 1);
 setprop("controls/engines/engine[3]/afterburner", 1);
-
-#  } else {
-#   setprop("controls/engines/engine[0]/afterburner", 0);
-#   setprop("controls/engines/engine[1]/afterburner", 0);
-#   setprop("controls/engines/engine[2]/afterburner", 0);
-#   setprop("controls/engines/engine[3]/afterburner", 0);
-
-#     }
 
 }
 
@@ -662,7 +656,6 @@ if (spdhold == 1) {
 }
 
 }
-setlistener("controls/switches/apmode/", checkapmode);
 
 ###
 # flight director modes selector

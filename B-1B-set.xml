@@ -93,20 +93,7 @@ B-1B set file.
 		 <hatch/>
 	</doors>-->
 	<!--<B-1B>
-	<engines>
-		<engine n="0">
-			<running type="bool">0</running>
-		</engine>
-		<engine n="1">
-			<running type="bool">0</running>
-		</engine>
-		<engine n="2">
-			<running type="bool">0</running>
-		</engine>
-		<engine n="3">
-			<running type="bool">0</running>
-	        </engine>
-        </engines>
+
 </B-1B>-->
 
 </model>
@@ -240,19 +227,19 @@ B-1B set file.
 
     <engines>
 	    <engine n="0">
-		    <cutoff>0</cutoff>
+		    <cutoff type="double">0</cutoff>
 		    
 	    </engine>
 	    <engine n="1">
-		    <cutoff>0</cutoff>
+		    <cutoff type="double">0</cutoff>
 		    
 	    </engine>
 	    <engine n="2">
-		    <cutoff>0</cutoff>
+		    <cutoff type="double">0</cutoff>
 		    
 	    </engine>
 	    <engine n="3">
-		    <cutoff>0</cutoff>
+		    <cutoff type="double">0</cutoff>
 		    
 	    </engine>
 	    
