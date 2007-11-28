@@ -33,6 +33,16 @@ sweat by maggse
 		 <z-m>0.078</z-m>
 	 </center>
  </animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>switch_firetest</object-name>
+	 <emission>
+		 <red>0.7</red>
+		 <green>0.4</green>
+		 <blue>0.3</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	 </emission>
+</animation>
  
  <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
  
@@ -63,6 +73,16 @@ sweat by maggse
 		 </equals>
 	 </condition>
  </animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>rep_fire1</object-name>
+	 <emission>
+		 <red>0.7</red>
+		 <green>0.4</green>
+		 <blue>0.3</blue>
+		 <factor-prop>controls/switches/fire</factor-prop>
+	 </emission>
+</animation>
  
  <animation>
 	 <type>select</type>
@@ -74,6 +94,16 @@ sweat by maggse
 		 </equals>
 	 </condition>
  </animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>rep_fire2</object-name>
+	 <emission>
+		 <red>0.7</red>
+		 <green>0.4</green>
+		 <blue>0.3</blue>
+		 <factor-prop>controls/switches/fire</factor-prop>
+	 </emission>
+</animation>
  
  <animation>
 	 <type>select</type>
@@ -85,6 +115,16 @@ sweat by maggse
 		 </equals>
 	 </condition>
  </animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>rep_fire3</object-name>
+	 <emission>
+		 <red>0.7</red>
+		 <green>0.4</green>
+		 <blue>0.3</blue>
+		 <factor-prop>controls/switches/fire</factor-prop>
+	 </emission>
+</animation>
  
  <animation>
 	 <type>select</type>
@@ -96,6 +136,16 @@ sweat by maggse
 		 </equals>
 	 </condition>
  </animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>rep_fire4</object-name>
+	 <emission>
+		 <red>0.7</red>
+		 <green>0.4</green>
+		 <blue>0.3</blue>
+		 <factor-prop>controls/switches/fire</factor-prop>
+	 </emission>
+</animation>
  
  <animation>
 	 <type>select</type>
@@ -107,6 +157,17 @@ sweat by maggse
 		 </equals>
 	 </condition>
  </animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>rep_fire5</object-name>
+	 <emission>
+		 <red>0.7</red>
+		 <green>0.4</green>
+		 <blue>0.3</blue>
+		 <factor-prop>controls/switches/fire</factor-prop>
+	 </emission>
+</animation>
+
  
  <animation>
 	 <type>select</type>
@@ -118,6 +179,16 @@ sweat by maggse
 		 </equals>
 	 </condition>
  </animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>rep_fire6</object-name>
+	 <emission>
+		 <red>0.7</red>
+		 <green>0.4</green>
+		 <blue>0.3</blue>
+		 <factor-prop>controls/switches/fire</factor-prop>
+	 </emission>
+</animation>
 
  <animation>
 	 <type>select</type>
@@ -129,6 +200,16 @@ sweat by maggse
 		 </equals>
 	 </condition>
  </animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>rep_firelapu</object-name>
+	 <emission>
+		 <red>0.7</red>
+		 <green>0.4</green>
+		 <blue>0.3</blue>
+		 <factor-prop>controls/switches/fire</factor-prop>
+	 </emission>
+</animation>
  
  <animation>
 	 <type>select</type>
@@ -140,5 +221,26 @@ sweat by maggse
 		 </equals>
 	 </condition>
  </animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>rep_firerapu</object-name>
+	 <emission>
+		 <red>0.7</red>
+		 <green>0.4</green>
+		 <blue>0.3</blue>
+		 <factor-prop>controls/switches/fire</factor-prop>
+	 </emission>
+</animation>
+
+<animation>
+	<type>material</type>
+	<object-name>fire.001</object-name>
+	<emission>
+		<red>0.5</red>
+		<green>0.3</green>
+		<blue>0.2</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+</animation>
 
 </PropertyList>

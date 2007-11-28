@@ -45,6 +45,16 @@ sweat by maggse
 		<z-m>-0.004</z-m>
 	</center>
 </animation>
+<animation>
+	<type>material</type>
+	<object-name>switch_flaps</object-name>
+	<emission>
+		<red>0.6</red>
+		<green>0.4</green>
+		<blue>0.3</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+</animation>
 
 <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
 

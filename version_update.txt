@@ -1,0 +1,26 @@
+Rockwell B-1B Lancer "The Bone"
+
+
+XXXXXX  Version Nr: 0011 24112007 XXXXXX
+
+News/updates: Major update
+
+- Improoved and adjusted FDM
+- Instrument lights switchable
+- Added strobe and position lights (switchable)
+- Remapping/Misuse of properties in order to get them displayed correctly in multiplayer
+- Wing sweep weight distribution modelled (wings and fuel tanks)
+- Center of Gravity display and experimental FCGMS control
+- terrain following system now works also on water
+- tons of little bugfixes and adjustments
+
+Todo: (uncomlete/most urgent)
+- Fuel management system needs to be written (nasal), that provides fuel pumps to and from tanks
+- 3D Model needs to be added
+- Electric systems need modelling
+
+-----------------------------------------
+
+Have Fun! Good Luck!
+
+Markus Zojer,  25/11/2007

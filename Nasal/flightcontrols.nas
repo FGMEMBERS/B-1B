@@ -4,14 +4,10 @@
 #
 wingSweep = func {
     if(arg[0] == 0) { return; }
-    if(props.globals.getNode("/sim/wing-sweep") != nil) {
-        stepProps("/controls/flight/wing-sweep", "/sim/wing-sweep", arg[0]);
+    if(props.globals.getNode("sim/wing-sweep") != nil) {
+        stepProps("controls/flight/wing-sweep", "sim/wing-sweep", arg[0]);
         return;
     }
-    # Hard-coded flaps movement in 3 equal steps:
-    val = 0.25 * arg[0] + getprop("/controls/flight/wing-sweep");
-    if(val > 1) { val = 1 } elsif(val < 0) { val = 0 }
-    setprop("/controls/flight/wing-sweep", val);
 }
 
 stepProps = func {
@@ -31,3 +27,59 @@ stepProps = func {
     array.getNode("current-setting").setIntValue(curr);
     dst.setValue(sets[curr].getValue());
 }
+##
+#wingsweep monitor to adjust position of the weight of the wings
+##
+setlistener("controls/flight/wing-sweep", func {
+var sweep = getprop("controls/flight/wing-sweep");
+var wingm = 20000;# estimated mass of both wings
+var fwdsweep = wingm * sweep;
+var aftsweep = wingm - fwdsweep;
+setprop("sim/weight[0]/weight-lb", fwdsweep);
+setprop("sim/weight[1]/weight-lb", aftsweep);
+},0,0);
+
+##
+#wingsweep monitor to adjust wingfuel position
+##
+var fuelsweep = func {
+var sweep = getprop("controls/flight/wing-sweep");
+var fuelm = getprop("consumables/fuel/tank[0]/level-lbs");
+
+var aftfuel = (fuelm * (1 - sweep) * 2);
+var fwdfuel = (aftfuel * (-1));
+setprop("sim/weight[2]/weight-lb", fwdfuel);
+setprop("sim/weight[3]/weight-lb", aftfuel);
+settimer(fuelsweep, 0.3);
+}
+
+##
+#wingsweep mapped to rotor in order to display state in multiplayer
+##
+setlistener("surface-positions/wing-sweep-pos-norm", func {
+var sweep = getprop("surface-positions/wing-sweep-pos-norm");
+setprop("rotors/main/blade[0]/position-deg", sweep);
+},0,0);
+##
+#mapping to properties available in multiplayer
+##
+setlistener("controls/engines/engine[0]/afterburner", func {
+var conv = getprop("controls/engines/engine[0]/afterburner");
+setprop("engines/engine[4]/n1", conv);
+},0,0);
+setlistener("controls/engines/engine[0]/cutoff", func {
+var conv = getprop("controls/engines/engine[0]/cutoff");
+setprop("engines/engine[4]/n2", conv);
+},1,0);
+setlistener("controls/engines/engine[1]/cutoff", func {
+var conv = getprop("controls/engines/engine[0]/cutoff");
+setprop("engines/engine[5]/n2", conv);
+},1,0);
+setlistener("controls/engines/engine[2]/cutoff", func {
+var conv = getprop("controls/engines/engine[0]/cutoff");
+setprop("engines/engine[6]/n2", conv);
+},1,0);
+setlistener("controls/engines/engine[3]/cutoff", func {
+var conv = getprop("controls/engines/engine[0]/cutoff");
+setprop("engines/engine[7]/n2", conv);
+},1,0);

@@ -1,7 +1,7 @@
 Rockwell B-1B Lancer "The Bone"
 
 
-XXXXXX  Version Nr: 0009 14112007 XXXXXX
+XXXXXX  Version Nr: 0011 24112007 XXXXXX
 
 
 
@@ -50,15 +50,30 @@ When the terrain avoid system gets active, it adds the desired clearance distanc
 
 Terrain Following System (TFS)
 
-There is a basic terrain following system (TFS) present. You have to enable the master switch ON/OFF, then the PRTY switch to TERRAIN FOLLOW. The PRTY switch toggles the build in tfs from flightgear named MAP(doesn't work very well with with tas) or enables the new tfs, native to the bone, by switching to TERRAIN FOLLOW especially when using the tas. The advantage of the new TFS system is its ability to look forward to scan the terrain in front of the plane. 
-Note: Above water switch to MAP, over terrain back to TERRAIN FOLLOW.
+There is a basic terrain following system (TFS) present. You have to enable the master switch ON/OFF, then the PRTY switch to TERRAIN FOLLOW. The PRTY switch toggles the build in tfs from flightgear named MAP(doesn't work very well with with tas) or enables the new tfs, native to the bone, by switching to TERRAIN FOLLOW especially when using the tas. The advantage of the new TFS system is its ability to look forward to scan the terrain in front of the plane.
 
 The native tfs and the build in flightgear tfs(MAP) use the clearance settings from SET CLR.
 The clearance settings start from 0ft and increase in 200ft increments up to 2000ft. A=0ft, B=200ft, C=400ft,..., F=1000ft,..., K=2000ft.
 
-XXXX BLAST, FLARES, STROBE XXXX
+XXXX FCGMS Center of Gravity System XXXX
+
+This system sets the Center of Gravity (CG) in % of MAC, and lets you manipulate it in a destinct range. Enable the system by switching on SET on the FCGMS panel and choose your desired CG position. The display to the right shows your current CG position. This is done by using shifting weight to simulate fuel pump adjustments, so the system works only within a certain margin.
+Todo: Write a fuel nas for the B-1B to provide a real fuel pumping experience.
+
+
+XXXX BLAST, FLARES, STROBE, SPOT XXXX
 
 Based on preexisting osg files some eyecandy for engine blast, strobe and flares was added.
+An experimental landing light can be activated by uncommenting the link in Models/b1b-trans.xml, and you have to recompile flightgear cvs with the following additions in /src/main/renderer.cxx.
+In the class SGPuDrawable block after 
+stateSet->setTextureAttribute(0, new osg::TexEnv(osg::TexEnv::MODULATE));
+I added:
+    // Test for more light sources
+    stateSet->setMode(GL_LIGHTING, osg::StateAttribute::ON);
+    stateSet->setMode(GL_LIGHT0, osg::StateAttribute::ON);
+    stateSet->setMode(GL_LIGHT1, osg::StateAttribute::ON);
+
+recompile current fgfs cvs and it should work.
 
 It's OSG baby!
 
@@ -78,14 +93,14 @@ D	sweep wing fwd
 XXXX PROGRESS XXXX
 
 
-FDM:	 	alpha - in use / needs tuning		80%complete
+FDM:	 	alpha - in use / needs tuning		90%complete
 3D model:	alpha - in use / more accurate		50%complete
 Textures:	alpha - in use / too few		30%complete
 Animations:	alpha - in use / more to come		65%complete
 Autopilot:	alpha - in use / needs finetuning	85%complete
-3Dcockpit:	alpha - in use / needs completion	78%complete
+3Dcockpit:	alpha - in use / needs completion	85%complete
 
 
 Have Fun! Good Luck!
 
-Markus Zojer,  07/11/2007
+Markus Zojer,  25/11/2007

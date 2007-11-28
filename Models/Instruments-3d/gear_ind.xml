@@ -33,6 +33,17 @@ sweat by maggse
 		 <z-m>0.115</z-m>
 	 </center>
  </animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>switch_gear</object-name>
+	 <object-name>fuel_valves.002</object-name>
+	 <emission>
+		 <red>0.6</red>
+		 <green>0.4</green>
+		 <blue>0.3</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	 </emission>
+</animation>
  
  <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
  
@@ -62,6 +73,16 @@ sweat by maggse
 		 </equals>
 	 </condition>
  </animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>gearind_fr</object-name>
+	 <emission>
+		 <red>0.6</red>
+		 <green>0.4</green>
+		 <blue>0.3</blue>
+		 <factor-prop>gear/gear[0]/position-norm</factor-prop>
+	 </emission>
+</animation>
  
  <animation>
 	 <type>select</type>
@@ -73,17 +94,37 @@ sweat by maggse
 		 </equals>
 	 </condition>
  </animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>gearind_bl</object-name>
+	 <emission>
+		 <red>0.6</red>
+		 <green>0.4</green>
+		 <blue>0.3</blue>
+		 <factor-prop>gear/gear[1]/position-norm</factor-prop>
+	 </emission>
+</animation>
  
  <animation>
 	 <type>select</type>
 	 <object-name>gearind_br</object-name>
 	 <condition>
 		 <equals>
-			 <property>gear/gear[2]/position-norm</property>
+			 <property>gear/gear[3]/position-norm</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
  </animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>gearind_br</object-name>
+	 <emission>
+		 <red>0.6</red>
+		 <green>0.4</green>
+		 <blue>0.3</blue>
+		 <factor-prop>gear/gear[3]/position-norm</factor-prop>
+	 </emission>
+</animation>
 
 
 

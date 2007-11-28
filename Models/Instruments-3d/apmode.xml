@@ -9,13 +9,15 @@ sweat by maggse
  <!-- apmode button animations -->
  
  <animation>
-	 <type>blend</type>
+	 <type>material</type>
 	 <object-name>apmode_alt</object-name>
-			 <property>controls/switches/apmode/alt-hold</property>
-
-	 <offset>0.6</offset>
-	 <factor>-0.6</factor>
- </animation>
+	 <emission>
+		 <red>0.5</red>
+		 <green>0.8</green>
+		 <blue>0.5</blue>
+		 <factor-prop>controls/switches/apmode/alt-hold</factor-prop>
+	 </emission>
+</animation>
  
  <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
       
@@ -38,13 +40,15 @@ sweat by maggse
       </animation>
       
       <animation>
-	      <type>blend</type>
+	      <type>material</type>
 	      <object-name>apmode_vfpm</object-name>
-	      <property>controls/switches/apmode/vfpm-hold</property>
-	      
-	      <offset>0.6</offset>
-	      <factor>-0.6</factor>
-      </animation>
+	      <emission>
+		      <red>0.5</red>
+		      <green>0.8</green>
+		      <blue>0.5</blue>
+		      <factor-prop>controls/switches/apmode/vfpm-hold</factor-prop>
+	      </emission>
+</animation>
       
       <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
       
@@ -67,13 +71,15 @@ sweat by maggse
       </animation>
       
       <animation>
-	      <type>blend</type>
+	      <type>material</type>
 	      <object-name>apmode_ptch</object-name>
-	      <property>controls/switches/apmode/ptch-hold</property>
-	      
-	      <offset>0.6</offset>
-	      <factor>-0.6</factor>
-      </animation>
+	      <emission>
+		      <red>0.5</red>
+		      <green>0.8</green>
+		      <blue>0.5</blue>
+		      <factor-prop>controls/switches/apmode/ptch-hold</factor-prop>
+	      </emission>
+</animation>
       
       <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
       
@@ -96,13 +102,15 @@ sweat by maggse
       </animation>
  
       <animation>
-	      <type>blend</type>
+	      <type>material</type>
 	      <object-name>apmode_bhdg</object-name>
-	      <property>controls/switches/apmode/bhdg-hold</property>
-	      
-	      <offset>0.6</offset>
-	      <factor>-0.6</factor>
-      </animation>
+	      <emission>
+		      <red>0.5</red>
+		      <green>0.8</green>
+		      <blue>0.5</blue>
+		      <factor-prop>controls/switches/apmode/bhdg-hold</factor-prop>
+	      </emission>
+</animation>
       
       <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
       
@@ -125,13 +133,15 @@ sweat by maggse
       </animation>
       
       <animation>
-	      <type>blend</type>
+	      <type>material</type>
 	      <object-name>apmode_thdg</object-name>
-	      <property>controls/switches/apmode/thdg-hold</property>
-	      
-	      <offset>0.6</offset>
-	      <factor>-0.6</factor>
-      </animation>
+	      <emission>
+		      <red>0.5</red>
+		      <green>0.8</green>
+		      <blue>0.5</blue>
+		      <factor-prop>controls/switches/apmode/thdg-hold</factor-prop>
+	      </emission>
+</animation>
       
       <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
       
@@ -154,13 +164,15 @@ sweat by maggse
       </animation>
       
       <animation>
-	      <type>blend</type>
+	      <type>material</type>
 	      <object-name>apmode_spd</object-name>
-	      <property>controls/switches/apmode/spd-hold</property>
-	      
-	      <offset>0.6</offset>
-	      <factor>-0.6</factor>
-      </animation>
+	      <emission>
+		      <red>0.5</red>
+		      <green>0.8</green>
+		      <blue>0.5</blue>
+		      <factor-prop>controls/switches/apmode/spd-hold</factor-prop>
+	      </emission>
+</animation>
       
       <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
       
@@ -183,13 +195,15 @@ sweat by maggse
       </animation>
       
       <animation>
-	      <type>blend</type>
+	      <type>material</type>
 	      <object-name>apmode_spdptch</object-name>
-	      <property>controls/switches/apmode/spdptch-hold</property>
-	      
-	      <offset>0.6</offset>
-	      <factor>-0.6</factor>
-      </animation>
+	      <emission>
+		      <red>0.5</red>
+		      <green>0.8</green>
+		      <blue>0.5</blue>
+		      <factor-prop>controls/switches/apmode/spdptch-hold</factor-prop>
+	      </emission>
+</animation>
       
       <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
       
@@ -212,13 +226,26 @@ sweat by maggse
       </animation>
       
       <animation>
-	      <type>blend</type>
+	      <type>material</type>
 	      <object-name>apmode_terrflw</object-name>
-	      <property>controls/switches/terrain-follow</property>
-	      
-	      <offset>0.6</offset>
-	      <factor>-0.6</factor>
-      </animation>
+	      <emission>
+		      <red>0.5</red>
+		      <green>0.8</green>
+		      <blue>0.5</blue>
+		      <factor-prop>controls/switches/terrain-follow</factor-prop>
+	      </emission>
+</animation>
+
+<animation>
+	<type>material</type>
+	<object-name>apmode</object-name>
+	<emission>
+		<red>0.4</red>
+		<green>0.3</green>
+		<blue>0.2</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+</animation>
  
 
 </PropertyList>

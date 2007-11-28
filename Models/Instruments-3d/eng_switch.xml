@@ -34,6 +34,16 @@ sweat by maggse
 		 <z-m>0.148</z-m>
    </center>
  </animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>switch_eng0</object-name>
+	 <emission>
+		 <red>0.6</red>
+		 <green>0.4</green>
+		 <blue>0.3</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	 </emission>
+</animation>
  
  <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
  
@@ -79,6 +89,16 @@ sweat by maggse
 		<y-m>-0.421</y-m>
 		<z-m>0.148</z-m>
 	</center>
+</animation>
+<animation>
+	<type>material</type>
+	<object-name>switch_eng1</object-name>
+	<emission>
+		<red>0.6</red>
+		<green>0.4</green>
+		<blue>0.3</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
 </animation>
 
 <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
@@ -126,6 +146,16 @@ sweat by maggse
 		<z-m>0.148</z-m>
 	</center>
 </animation>
+<animation>
+	<type>material</type>
+	<object-name>switch_eng2</object-name>
+	<emission>
+		<red>0.6</red>
+		<green>0.4</green>
+		<blue>0.3</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+</animation>
 
 <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
 
@@ -172,6 +202,16 @@ sweat by maggse
 		<z-m>0.148</z-m>
 	</center>
 </animation>
+<animation>
+	<type>material</type>
+	<object-name>switch_eng3</object-name>
+	<emission>
+		<red>0.6</red>
+		<green>0.4</green>
+		<blue>0.3</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+</animation>
 
 <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
 
@@ -193,5 +233,15 @@ sweat by maggse
 	</action>
 </animation>
 
+<animation>
+	<type>material</type>
+	<object-name>fuel_cov.005</object-name>
+	<emission>
+		<red>0.5</red>
+		<green>0.3</green>
+		<blue>0.2</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+</animation>
 
 </PropertyList>

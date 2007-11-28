@@ -6,19 +6,136 @@ sweat by maggse
 
  <path>b1b_trans.ac</path>
  
- <!-- strobes -->
+ <!-- landing light 
+ 
  <model>
-	 <name>strobe0</name>
-	 <path>Aircraft/B-1B/Models/blast/strobe.xml</path>
+	 <name>light2</name>
+	 <path>Aircraft/B-1B/Models/blast/lights.xml</path>
+	 <condition>
+			 <equals>
+				 <property>gear/gear[0]/position-norm</property>
+				 <value>1</value>
+			 </equals>
+			 <equals>
+				 <property>controls/lighting/landing-lights</property>
+				 <value>1</value>
+		 </equals>
+	 </condition>
 	 <offsets>
-		 <x-m>-3.500</x-m>
-		 <y-m>-4.9</y-m>
-		 <z-m>-1.0</z-m>
+		 <x-m>-17.5</x-m>
+		 <y-m>0.0</y-m>
+		 <z-m>-2.0</z-m>
+		 <pitch-deg>-3</pitch-deg>
+	 </offsets>
+ </model>-->
+ 
+ <!-- gear breaking smoke -->
+ <model>
+	 <name>smoke0</name>
+	 <path>Aircraft/B-1B/Models/blast/gear_smoke.xml</path>
+	 <condition>
+		 <and>
+			 <greater-than>
+				 <property>velocities/airspeed-kt</property>
+				 <value>120</value>
+			 </greater-than>
+			 <less-than>
+				 <property>accelerations/pilot/x-accel-fps_sec</property>
+				 <value>0</value>
+			 </less-than>
+			 <greater-than>
+				 <property>gear/gear/wow</property>
+				 <value>0</value>
+			 </greater-than>
+	 </and>
+	 </condition>
+	 <offsets>
+		 <x-m>3.400</x-m>
+		 <y-m>-2.4</y-m>
+		 <z-m>-3.4</z-m>
 		 <pitch-deg>90</pitch-deg>
 	 </offsets>
  </model>
  
  <model>
+	 <name>smoke1</name>
+	 <path>Aircraft/B-1B/Models/blast/gear_smoke.xml</path>
+	 <condition>
+		 <and>
+			 <greater-than>
+				 <property>/velocities/airspeed-kt</property>
+				 <value>120</value>
+			 </greater-than>
+			 <less-than>
+				 <property>/accelerations/pilot/x-accel-fps_sec</property>
+				 <value>0</value>
+			 </less-than>
+			 <greater-than>
+				 <property>gear/gear/wow</property>
+				 <value>0</value>
+			 </greater-than>
+	 </and>
+	 </condition>
+	 <offsets>
+		 <x-m>3.400</x-m>
+		 <y-m>2.4</y-m>
+		 <z-m>-3.4</z-m>
+		 <pitch-deg>90</pitch-deg>
+	 </offsets>
+ </model>
+ <!-- pos lights -->
+ 
+ <model>
+	 <name>posred</name>
+	 <path>Aircraft/B-1B/Models/posred.xml</path>
+	 
+	 <offsets>
+		 <x-m>3.35</x-m>
+		 <y-m>-20.87</y-m>
+		 <z-m>-0.82</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <model>
+	 <name>posgreen</name>
+	 <path>Aircraft/B-1B/Models/posgreen.xml</path>
+	 
+	 <offsets>
+		 <x-m>3.35</x-m>
+		 <y-m>20.95</y-m>
+		 <z-m>-1.0</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <!-- strobes -->
+ 
+ <model>
+	 <name>strobe2</name>
+	 <path>Aircraft/B-1B/Models/strobe.xml</path>
+
+	 <offsets>
+		 <x-m>-3.500</x-m>
+		 <y-m>-4.8</y-m>
+		 <z-m>-1.0</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <model>
+	 <name>strobe3</name>
+	 <path>Aircraft/B-1B/Models/strobe.xml</path>
+	 
+	 <offsets>
+		 <x-m>-3.500</x-m>
+		 <y-m>4.8</y-m>
+		 <z-m>-1.0</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <!--<model>
 	 <name>strobe1</name>
 	 <path>Aircraft/B-1B/Models/blast/strobe.xml</path>
 	 <offsets>
@@ -27,9 +144,9 @@ sweat by maggse
 		 <z-m>-1.0</z-m>
 		 <pitch-deg>90</pitch-deg>
 	 </offsets>
- </model>
+ </model>-->
  
- <!-- afterburner jetblast -->
+ <!-- afterburner jetblast conversions are for multiplayer-->
  
  <model>
 	 <name>ablast0</name>
@@ -37,11 +154,13 @@ sweat by maggse
 	 <condition>
 		 <and>
 			 <equals>
-				 <property>controls/engines/engine[0]/afterburner</property>
+				 <!--<property>controls/engines/engine[0]/afterburner</property>-->
+				 <property>engines/engine[4]/n1</property>
 				 <value>1</value>
 			 </equals>
 			 <equals>
-				 <property>controls/engines/engine[0]/cutoff</property>
+				 <!--<property>controls/engines/engine[0]/cutoff</property>-->
+				 <property>engines/engine[4]/n2</property>
 				 <value>0</value>
 			 </equals>
 		 </and>
@@ -60,11 +179,13 @@ sweat by maggse
 	 <condition>
 		 <and>
 			 <equals>
-				 <property>controls/engines/engine[1]/afterburner</property>
+				 <!--<property>controls/engines/engine[1]/afterburner</property>-->
+				 <property>engines/engine[4]/n1</property>
 				 <value>1</value>
 			 </equals>
 			 <equals>
-				 <property>controls/engines/engine[1]/cutoff</property>
+				 <property>engines/engine[5]/n2</property>
+				 <!--<property>controls/engines/engine[1]/cutoff</property>-->
 				 <value>0</value>
 			 </equals>
 		 </and>
@@ -83,11 +204,13 @@ sweat by maggse
 	 <condition>
 		 <and>
 			 <equals>
-				 <property>controls/engines/engine[2]/afterburner</property>
+				 <!--<property>controls/engines/engine[2]/afterburner</property>-->
+				 <property>engines/engine[4]/n1</property>
 				 <value>1</value>
 			 </equals>
 			 <equals>
-				 <property>controls/engines/engine[2]/cutoff</property>
+				  <property>engines/engine[6]/n2</property>
+				 <!--<property>controls/engines/engine[2]/cutoff</property>-->
 				 <value>0</value>
 			 </equals>
 		 </and>
@@ -106,11 +229,13 @@ sweat by maggse
 	 <condition>
 		 <and>
 			 <equals>
-				 <property>controls/engines/engine[3]/afterburner</property>
+				 <property>engines/engine[4]/n1</property>
+				 <!--<property>controls/engines/engine[3]/afterburner</property>-->
 				 <value>1</value>
 			 </equals>
 			 <equals>
-				 <property>controls/engines/engine[3]/cutoff</property>
+				 <property>engines/engine[7]/n2</property>
+				 <!-- <property>controls/engines/engine[3]/cutoff</property>-->
 				 <value>0</value>
 			 </equals>
 		 </and>
@@ -130,11 +255,12 @@ sweat by maggse
 	  <condition>
 		  <and>
 			  <greater-than>
-				  <property>controls/engines/engine[0]/throttle-lever</property>
-				  <value>0.2</value>
+				  <property>engines/engine[0]/n2</property>
+				  <value>75</value>
 			  </greater-than>
 			  <equals>
-				  <property>controls/engines/engine[0]/cutoff</property>
+				  <property>engines/engine[4]/n2</property>
+				  <!--<property>controls/engines/engine[0]/cutoff</property>-->
 				  <value>0</value>
 			  </equals>
 		  </and>
@@ -153,11 +279,12 @@ sweat by maggse
 	  <condition>
 		  <and>
 			  <greater-than>
-				  <property>controls/engines/engine[1]/throttle-lever</property>
-				  <value>0.2</value>
+				  <property>engines/engine[1]/n2</property>
+				  <value>75</value>
 			  </greater-than>
 			  <equals>
-				  <property>controls/engines/engine[1]/cutoff</property>
+				  <property>engines/engine[5]/n2</property>
+				  <!--<property>controls/engines/engine[1]/cutoff</property>-->
 				  <value>0</value>
 			  </equals>
 		  </and>
@@ -176,11 +303,12 @@ sweat by maggse
 	  <condition>
 		  <and>
 			  <greater-than>
-				  <property>controls/engines/engine[2]/throttle-lever</property>
-				  <value>0.2</value>
+				  <property>engines/engine[2]/n2</property>
+				  <value>75</value>
 			  </greater-than>
 			  <equals>
-				  <property>controls/engines/engine[2]/cutoff</property>
+				  <property>engines/engine[6]/n2</property>
+				  <!--<property>controls/engines/engine[2]/cutoff</property>-->
 				  <value>0</value>
 			  </equals>
 		  </and>
@@ -199,11 +327,12 @@ sweat by maggse
 	  <condition>
 		  <and>
 			  <greater-than>
-				  <property>controls/engines/engine[3]/throttle-lever</property>
-				  <value>0.2</value>
+				  <property>engines/engine[3]/n2</property>
+				  <value>75</value>
 			  </greater-than>
 			  <equals>
-				  <property>controls/engines/engine[3]/cutoff</property>
+				  <property>engines/engine[7]/n2</property>
+				  <!--<property>controls/engines/engine[3]/cutoff</property>-->
 				  <value>0</value>
 			  </equals>
 		  </and>
@@ -215,8 +344,7 @@ sweat by maggse
 		  <pitch-deg>90</pitch-deg>
 	  </offsets>
   </model>
-  
-  
+
   <!-- afterburner flame -->
   
   <animation>
@@ -338,21 +466,6 @@ sweat by maggse
 	 <factor>-0.05</factor>
  </animation>
   
-  <!--<animation>
-	  <type>texrotate</type>
-	  <object-name>wing_contr_l</object-name>
-	  <property>velocities/mach</property>
-	  <factor>1000</factor>
-	  <center>
-		  <x>0.75</x>
-		  <y>0.4</y>
-		  <z>0.0</z>
-	  </center>
-	  <axis>
-		  <x>0</x>
-		  <y>0</y>
-		  <z>1</z>
-	  </axis>
- </animation>-->
+
 
 </PropertyList>

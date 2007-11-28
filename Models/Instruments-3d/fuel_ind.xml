@@ -29,6 +29,16 @@ sweat by maggse
 		 <z>0.0</z>
 	 </axis>
  </animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>fuel1</object-name>
+	 <emission>
+		 <red>0.7</red>
+		 <green>0.4</green>
+		 <blue>0.3</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	 </emission>
+</animation>
  
  <animation>
 	 <type>textranslate</type>
@@ -50,6 +60,16 @@ sweat by maggse
 		 <z>0.0</z>
 	 </axis>
  </animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>fuel2</object-name>
+	 <emission>
+		 <red>0.7</red>
+		 <green>0.4</green>
+		 <blue>0.3</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	 </emission>
+</animation>
  
  <animation>
 	 <type>textranslate</type>
@@ -71,6 +91,16 @@ sweat by maggse
 		 <z>0.0</z>
 	 </axis>
  </animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>fuel3</object-name>
+	 <emission>
+		 <red>0.7</red>
+		 <green>0.4</green>
+		 <blue>0.3</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	 </emission>
+</animation>
  
  <animation>
 	 <type>textranslate</type>
@@ -92,6 +122,16 @@ sweat by maggse
 		 <z>0.0</z>
 	 </axis>
  </animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>fuel4</object-name>
+	 <emission>
+		 <red>0.7</red>
+		 <green>0.4</green>
+		 <blue>0.3</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	 </emission>
+</animation>
  
  <animation>
 	 <type>textranslate</type>
@@ -113,6 +153,16 @@ sweat by maggse
 		 <z>0.0</z>
 	 </axis>
  </animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>fuell</object-name>
+	 <emission>
+		 <red>0.7</red>
+		 <green>0.4</green>
+		 <blue>0.3</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	 </emission>
+</animation>
  
  <animation>
 	 <type>textranslate</type>
@@ -134,6 +184,16 @@ sweat by maggse
 		 <z>0.0</z>
 	 </axis>
  </animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>fuelr</object-name>
+	 <emission>
+		 <red>0.7</red>
+		 <green>0.4</green>
+		 <blue>0.3</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	 </emission>
+</animation>
  
  <!-- collector tanks-->
  
@@ -157,6 +217,16 @@ sweat by maggse
 		 <z>0.0</z>
 	 </axis>
  </animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>fuelmainl</object-name>
+	 <emission>
+		 <red>0.7</red>
+		 <green>0.4</green>
+		 <blue>0.3</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	 </emission>
+</animation>
  
  <animation>
 	 <type>textranslate</type>
@@ -178,6 +248,27 @@ sweat by maggse
 		 <z>0.0</z>
 	 </axis>
  </animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>fuelmainr</object-name>
+	 <emission>
+		 <red>0.7</red>
+		 <green>0.4</green>
+		 <blue>0.3</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	 </emission>
+</animation>
+
+<animation>
+	<type>material</type>
+	<object-name>fuel_face</object-name>
+	<emission>
+		<red>0.6</red>
+		<green>0.4</green>
+		<blue>0.3</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+</animation>
  
 
  

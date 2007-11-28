@@ -41,6 +41,28 @@ more to come :-)
   </model>
   
   <model>
+	  <name>cg mac</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/mac_ind.xml</path>
+	  <offsets>
+		  <x-m>-18.210</x-m>
+		  <y-m>-0.250</y-m>
+		  <z-m>1.200</z-m>
+		  <pitch-deg>0</pitch-deg>
+	  </offsets>
+  </model>
+  
+  <model>
+	  <name>fcgms</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/fcgms.xml</path>
+	  <offsets>
+		  <x-m>-18.210</x-m>
+		  <y-m>-0.250</y-m>
+		  <z-m>1.200</z-m>
+		  <pitch-deg>0</pitch-deg>
+	  </offsets>
+  </model>
+  
+  <model>
 	  <name>radaralt</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/radar_alt.xml</path>
 	  <offsets>
@@ -287,7 +309,17 @@ more to come :-)
 	  <name>engine switch</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/eng_switch.xml</path>
 	  <offsets>
-		  <x-m>-17.950</x-m>
+		  <x-m>-17.850</x-m>
+		  <y-m>0.050</y-m>
+		  <z-m>0.700</z-m>
+		  <pitch-deg>-90</pitch-deg>
+	  </offsets>
+  </model>
+  <model>
+	  <name>light switch</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/light_switches.xml</path>
+	  <offsets>
+		  <x-m>-17.850</x-m>
 		  <y-m>0.050</y-m>
 		  <z-m>0.700</z-m>
 		  <pitch-deg>-90</pitch-deg>
@@ -313,7 +345,7 @@ more to come :-)
   <animation>
 	  <type>rotate</type>
 	  <object-name>wing_right</object-name>
-	  <property>surface-positions/wing-sweep-pos-norm</property>
+	  <property>rotors/main/blade[0]/position-deg</property>
 	  
 	  <interpolation>
 		  <entry>
@@ -341,7 +373,7 @@ more to come :-)
  <animation>
 	 <type>rotate</type>
 	 <object-name>wing_left</object-name>
-	 <property>surface-positions/wing-sweep-pos-norm</property>
+	 <property>rotors/main/blade[0]/position-deg</property>
 	 
 	 <interpolation>
 		 <entry>

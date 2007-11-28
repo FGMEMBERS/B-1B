@@ -1,0 +1,35 @@
+LightSource {
+  UniqueID LightSource_1
+  DataVariance STATIC
+  nodeMask 0xffffff
+  cullingActive FALSE
+  StateSet {
+    UniqueID StateSet_2
+    DataVariance STATIC
+    rendering_hint DEFAULT_BIN
+    renderBinMode INHERIT
+    binNumber 10
+    binName DepthSortedBin
+    GL_LIGHTING ON
+    GL_LIGHT0 ON
+    GL_LIGHT1 ON
+  }
+  referenceFrame RELATIVE
+  Light {
+    DataVariance STATIC
+    light_num 1 //0 reserved
+    ambient 0.14 0.14 0.14 1
+    diffuse 0.8 0.8 0.8 1
+    specular 0.6 0.6 0.6 1
+    position 1 0 0 1
+    direction -1 0 0
+    constant_attenuation 0
+    linear_attenuation 0.005
+    quadratic_attenuation 0
+    spot_exponent 40
+    spot_cutoff 60
+  }
+  num_children 0
+}
+
+

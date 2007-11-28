@@ -31,6 +31,16 @@ maggse
 		 <z-m>0.073</z-m>
 	 </center>
  </animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>rep_eng1.014</object-name>
+	 <emission>
+		 <red>0.6</red>
+		 <green>0.3</green>
+		 <blue>0.2</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	 </emission>
+</animation>
  
  <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
  
@@ -74,6 +84,16 @@ maggse
 		<z-m>0.037</z-m>
 	</center>
 </animation>
+<animation>
+	<type>material</type>
+	<object-name>switch_eject.002</object-name>
+	<emission>
+		<red>0.6</red>
+		<green>0.3</green>
+		<blue>0.2</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+</animation>
 
 <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
 
@@ -93,6 +113,17 @@ maggse
 			<script>b1b.nuc(0)</script>
 		</binding>
 	</action>
+</animation>
+
+<animation>
+	<type>material</type>
+	<object-name>fltdir.001</object-name>
+	<emission>
+		<red>0.4</red>
+		<green>0.3</green>
+		<blue>0.2</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
 </animation>
 
 </PropertyList>

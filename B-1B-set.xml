@@ -81,11 +81,6 @@ B-1B set file.
 </panel>-->
 
 
-    <!--<hud>
-      <path>Aircraft/B-1B/Huds/B-52F-hud1.xml</path>
-      <visibility>true</visibility>
-    </hud>-->
-
     <model>
       <path>Aircraft/B-1B/Models/B-1B.xml</path>
          <!-- <doors>
@@ -126,6 +121,43 @@ B-1B set file.
       <setting>0.5</setting>
       <setting>1.0</setting>
     </spoilers>
+
+    <weight n="0">
+	    <name>wing pos fwd</name>
+	    <weight-lb type="float">20000</weight-lb>
+    </weight>
+    <weight n="1">
+	    <name>wing pos aft</name>
+	    <weight-lb type="float">0</weight-lb>
+    </weight>
+    <weight n="2">
+	    <name>fuelwing fwd</name>
+	    <weight-lb type="float">0</weight-lb>
+    </weight>
+    <weight n="3">
+	    <name>fuelwing aft</name>
+	    <weight-lb type="float">0</weight-lb>
+    </weight>
+    <weight n="4">
+	    <name>bay fwd</name>
+	    <weight-lb type="float">10000</weight-lb>
+    </weight>
+    <weight n="5">
+	    <name>bay intmd</name>
+	    <weight-lb type="float">10000</weight-lb>
+    </weight>
+    <weight n="6">
+	    <name>bay aft</name>
+	    <weight-lb type="float">0</weight-lb>
+    </weight>
+    <weight n="7">
+	    <name>fwd fuel cg</name>
+	    <weight-lb type="float">0</weight-lb>
+    </weight>
+    <weight n="8">
+	    <name>aft fuel cg</name>
+	    <weight-lb type="float">0</weight-lb>
+    </weight>
 
 <!-- AoA Indexer target 1.0 deg -->
      <aoa-indexer>
@@ -169,8 +201,7 @@ B-1B set file.
       <line>Terrain Following/Avoidance Systems:</line>
       <line>1. Adjust clearance (SET CLEAR or CLR PLN)</line>
       <line>2. Toggle master switch(es) on</line>
-      <line>3a. For TFS: switch PRTY to TERRAIN FOLLOW</line>
-      <line>3b. For TFS: over water switch PRTY to MAP</line>
+      <line>3. For TFS: switch PRTY to TERRAIN FOLLOW</line>
       <key>
 	      <name>Ctrl D</name>
 	      <desc>Flare out</desc>
@@ -344,27 +375,7 @@ B-1B set file.
 			  </binding>
       		  </key>
 		  
-		  <!-- map keys for wingsweep 
-		  
-		  <key n="100">
-			  <name>d</name>
-			  <desc>wing sweep aft</desc>
-			<binding>
-				  <command>property-adjust</command>
-				  <property>/controls/flight/wing-sweep</property>
-				  <step type="double">-0.25</step>
-        		</binding>
-      		  </key>
-		  
-		  <key n="68">
-			  <name>D</name>
-			  <desc>wing sweep fwd</desc>
-			<binding>
-				  <command>property-adjust</command>
-				  <property>/controls/flight/wing-sweep</property>
-				  <step type="double">0.25</step>
-        		</binding>
-		  </key>-->
+		  <!-- map keys for wingsweep -->
 		  
 		  <key n="100">
 			  <name>d</name>
@@ -420,6 +431,9 @@ B-1B set file.
 	<flightcontrols>
 		<file>Aircraft/B-1B/Nasal/flightcontrols.nas</file>
 	</flightcontrols>
+	<cg>
+		<file>Aircraft/B-1B/Nasal/cg.nas</file>
+	</cg>
 
 </nasal>
 

@@ -147,6 +147,21 @@ maggse
 	 </center>
 	 
  </animation>
+ 
+ <animation>
+	 <type>material</type>
+	 <object-name>sweep</object-name>
+	 <object-name>flaps</object-name>
+	 <object-name>spoilerr</object-name>
+	 <object-name>spoilerl</object-name>
+	 <object-name>glas_face.007</object-name>
+	 <emission>
+		 <red>0.7</red>
+		 <green>0.4</green>
+		 <blue>0.3</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	 </emission>
+</animation>
 
 
 

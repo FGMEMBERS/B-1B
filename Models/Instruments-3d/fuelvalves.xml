@@ -79,6 +79,7 @@ sweat by maggse
 	</center>
 </animation>
 
+
 <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
 
 <animation>
@@ -355,6 +356,25 @@ sweat by maggse
 			<property>consumables/fuel/tank[7]/selected</property>
 		</binding>
 	</action>
+</animation>
+
+<animation>
+	<type>material</type>
+	<object-name>switch_1</object-name>
+	<object-name>switch_3</object-name>
+	<object-name>switch_wgl</object-name>
+	<object-name>switch_wgr</object-name>
+	<object-name>switch_2</object-name>
+	<object-name>switch_4</object-name>
+	<object-name>switch_lmain</object-name>
+	<object-name>switch_rmain</object-name>
+	<object-name>fuel_valves</object-name>
+	<emission>
+		<red>0.6</red>
+		<green>0.4</green>
+		<blue>0.3</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
 </animation>
 
 

@@ -48,14 +48,14 @@
 		<trigger>controls/switches/flare</trigger>
 		<speed>400</speed>
 		<repeat>true</repeat>
-		<delay>1.2</delay>
-		<count>4</count>
+		<delay>1.5</delay>
+		<count>-1</count>
 		<x-offset>-60.0</x-offset>
 		<y-offset>0.0</y-offset>
 		<z-offset>5.0</z-offset>
 		<eda>0.1</eda>
 		<life>10</life>
-		<buoyancy>31</buoyancy>
+		<buoyancy>28</buoyancy>
 		<aero-stabilise>false</aero-stabilise>
 		<wind>true</wind>
 	  <pitch-offset>45.0</pitch-offset>
