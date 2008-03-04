@@ -3,6 +3,12 @@ setlistener("/sim/signals/fdm-initialized", func {
 });
 
 var init_b1b = func {
+setprop("instrumentation/teravd/target-vfpm-exec", 0);
+setprop("instrumentation/teravd/target-alt-exec", 0);
+setprop("autopilot/settings/target-altitude-ft", 0);
+setprop("autopilot/settings/vertical-speed-fpm", 0);
+setprop("instrumentation/teravd/alt-reached", 1);
+setprop("instrumentation/teravd/ridge-clear", 0);
 setprop("autopilot/settings/target-pitch-deg", 2);
 setprop("controls/switches/terra-report", 0);
 setprop("controls/switches/fltdir", 0.25);
@@ -24,6 +30,7 @@ setprop("consumables/fuel/tank[3]/level-gal_us", 5000);
 setprop("consumables/fuel/tank[5]/level-gal_us", 5000);
 setprop("instrumentation/cg/cg_mac_set", 25);
 setprop("instrumentation/cg/cg_mac", 30);
+setprop("instrumentation/tacan/frequencies/selected-channel[12]", 2);
 settimer(flightcontrols.fuelsweep, 1);
 setprop("sim/weight[7]/weigth-lb", 0);
 setprop("sim/weight[8]/weigth-lb", 0);
@@ -34,7 +41,7 @@ wingSweep(1);
 settimer(cg.cg_dist, 2);
 #fuel_syst();
 settimer(eng_state, 3);
-print ("B-1B warming up!");
+print ("B-1B starting up!");
 }
 
 var aftburn_on = func {
@@ -268,31 +275,6 @@ settimer(func {
   });
 }, 0);
 
-settimer(func {
-
-  # Add listener for radar pulse contactm20dtf for terrain follow
-  setlistener("sim/radar/teravd/contactm20dtf", func {
-    var contactm20dtf = cmdarg().getValue();
-#    var solid = getprop(contactm20dtf ~ "/material/solid");
-    
-#    if (solid)
-#    {
-      var long = getprop(contactm20dtf ~ "/impact/longitude-deg");
-      var lat = getprop(contactm20dtf ~ "/impact/latitude-deg");
-      var elev_m = getprop(contactm20dtf ~ "/impact/elevation-m");
-      var spd = getprop(contactm20dtf ~ "/impact/speed-mps");
-      var time = getprop(contactm20dtf ~ "/sim/time/elapsed-sec");
-      var elev_ft = int(elev_m * 3.28);
-      var dist_ft = int(spd * time * 3.28);
-      setprop("instrumentation/teravd/elevationm20dtf", elev_ft);
-      setprop("instrumentation/teravd/distancem20dtf", dist_ft);
-
-     settimer(teravd_m20dtf, 0);
-
-#    }
-  });
-}, 0);
-
 
 # control alt while climb and trigger end of climb
 
@@ -309,20 +291,20 @@ var distm0d = getprop("instrumentation/teravd/distancem0d");
 var clr = getprop("controls/switches/terrain-avoid-clr1000");
 
 if (rdist25 = 1) {
-var rdist = 15000;
-} elsif (rdist50 = 1) {
-var rdist = 30000;
+  var rdist = 15000;
+  } elsif (rdist50 = 1) {
+  var rdist = 30000;
 }
 var daltm0d = ((elem0d + clr) - calt);
 
 if ((distm0d < rdist) and (daltm0d > 0)) {
-var talt = calt + daltm0d;
-var itime = distm0d / (cspd * 1.6878);
-var tvfpm = int((daltm0d) / (itime / 2)) * 60;
-setprop("instrumentation/teravd/target-vfpm", tvfpm);
-setprop("instrumentation/teravd/target-alt", talt);
-setprop("controls/switches/terra-report", 1);
-settimer(setvfpm, 0);
+  var talt = calt + daltm0d;
+  var itime = distm0d / (cspd * 1.6878);
+  var tvfpm = int((daltm0d) / (itime / 2)) * 60;
+  setprop("instrumentation/teravd/target-vfpm", tvfpm);
+  setprop("instrumentation/teravd/target-alt", talt);
+  setprop("controls/switches/terra-report", 1);
+  settimer(setvfpm, 0);
 }
 }
 
@@ -344,9 +326,9 @@ var evfpm = getprop("instrumentation/teravd/target-vfpm");
 var etalt = getprop("instrumentation/teravd/target-alt");
 
 if (rdist25 = 1) {
-var rdist = 15000;
-} elsif (rdist50 = 1) {
-var rdist = 30000;
+  var rdist = 15000;
+  } elsif (rdist50 = 1) {
+  var rdist = 30000;
 }
 
 var daltm4d = ((elem4d + clr) - calt);
@@ -357,10 +339,10 @@ var itime = distm4d / (cspd * 1.6878);
 var tvfpm = int((daltm4d) / ((itime * 2) / 3)) * 60;
 
 if (etalt < talt) {
-setprop("instrumentation/teravd/target-alt", talt);
+  setprop("instrumentation/teravd/target-alt", talt);
 }
 if (evfpm < tvfpm) {
-setprop("instrumentation/teravd/target-vfpm", tvfpm);
+  setprop("instrumentation/teravd/target-vfpm", tvfpm);
 }
 setprop("controls/switches/terra-report", 1);
 settimer(setvfpm, 0);
@@ -386,21 +368,21 @@ var prty = getprop("controls/switches/terrain-follow-map-enabled");
 if (rdist25 = 1) {
 var rdist2 = 15000;
 } elsif (rdist50 = 1) {
-var rdist2 = 30000;
+  var rdist2 = 30000;
 }
 
 var daltm20d = ((elem20d + clr) - calt);
 
 if ((distm20d < rdist2) and (daltm20d > 0)) {
-var talt = calt + daltm20d;
-var itime = distm20d / (cspd * 1.6878);
-var tvfpm = int((daltm20d) / (itime / 2)) * 60;
+  var talt = calt + daltm20d;
+  var itime = distm20d / (cspd * 1.6878);
+  var tvfpm = int((daltm20d) / (itime / 2)) * 60;
 
 if (etalt < talt) {
-setprop("instrumentation/teravd/target-alt", talt);
+  setprop("instrumentation/teravd/target-alt", talt);
 }
 if (evfpm < tvfpm) {
-setprop("instrumentation/teravd/target-vfpm", tvfpm);
+  setprop("instrumentation/teravd/target-vfpm", tvfpm);
 }
 setprop("controls/switches/terra-report", 1);
 settimer(setvfpm, 0);
@@ -408,65 +390,6 @@ settimer(setvfpm, 0);
 
 }
 
-var teravd_m20dtf = func {
-
-var terrep = getprop("controls/switches/terra-report");
-#if (terrep == 0) {
-
-var calt = getprop("position/altitude-ft");
-var cspd = getprop("velocities/groundspeed-kt");
-var talt = getprop("autopilot/settings/target-altitude-ft");
-var tvfpm = getprop("autopilot/settings/vertical-speed-fpm");
-var rdist25 = getprop("controls/switches/terrain-avoid-rng-25");
-var rdist50  = getprop("controls/switches/terrain-avoid-rng-50");
-
-var evfpm = getprop("instrumentation/teravd/target-vfpm");
-var etalt = getprop("instrumentation/teravd/target-alt");
-
-var elem20dtf = getprop("instrumentation/teravd/elevationm20dtf");
-var distm20dtf = getprop("instrumentation/teravd/distancem20dtf");
-var tfclr = getprop("controls/switches/terrain-follow-clr");
-var prty = getprop("controls/switches/terrain-follow-map-enabled");
-
-
-if (rdist25 = 1) {
-var rdist2 = 60000;
-} elsif (rdist50 = 1) {
-var rdist2 = 60000;
-}
-
-var daltm20dtf = ((elem20dtf + tfclr) - calt);
-
-if ((distm20dtf < rdist2) and (daltm20dtf > 0)) {
-var talt = calt + daltm20dtf;
-var itime = distm20dtf / (cspd * 1.6878);
-var tvfpm = int((daltm20dtf) / itime) * 60;
-
-if (etalt < talt) {
-setprop("instrumentation/teravd/target-alt", talt);
-}
-if (evfpm < tvfpm) {
-setprop("instrumentation/teravd/target-vfpm", tvfpm);
-}
-#setprop("controls/switches/terra-report", 1);
-settimer(setvfpmplus, 0);
-}
-# this is the terrain following part, terrain is lower than clr limit
-if ((distm20dtf < rdist2) and (daltm20dtf < 0)) {
-var talt = calt + daltm20dtf;
-var itime = (distm20dtf / (cspd * 1.6878)) * (-1);
-var tvfpm = (int((daltm20dtf) / (itime * 2)) * 60) * (-1);
-
-
-if ((evfpm <= 0) and (prty == 1)) {
-setprop("instrumentation/teravd/target-alt", talt);
-setprop("instrumentation/teravd/target-vfpm", tvfpm);
-settimer(setvfpmminus, 0);
-}
-}
-
-#}
-}
 
 var setvfpm = func {
 var calt = getprop("position/altitude-ft");
@@ -479,55 +402,28 @@ setprop("controls/switches/apmode/vfpm-hold", 0);
 setprop("autopilot/settings/vertical-speed-fpm", tvfpm);
 setprop("autopilot/locks/altitude", "vertical-speed-hold");
 if (calt > talt) {
-setprop("autopilot/settings/vertical-speed-fpm", 0);
-setprop("controls/switches/terra-report", 0);
-setprop("instrumentation/teravd/target-vfpm", 0);
-setprop("instrumentation/teravd/target-alt", 0);
-#settimer(aglreinit, 0);
+  setprop("autopilot/settings/vertical-speed-fpm", 0);
+  setprop("controls/switches/terra-report", 0);
+  setprop("instrumentation/teravd/target-vfpm", 0);
+  setprop("instrumentation/teravd/target-alt", 0);
+  #settimer(aglreinit, 0);
 } else {
-settimer(setvfpm, 0.5);
-}
-}
-
-var setvfpmplus = func {
-var terflw = getprop("controls/switches/terrain-follow");
-if (terflw == 1) {
-var calt = getprop("position/altitude-ft");
-var talt = getprop("instrumentation/teravd/target-alt");
-var tvfpm = getprop("instrumentation/teravd/target-vfpm");
-
-setprop("autopilot/settings/vertical-speed-fpm", tvfpm);
-setprop("autopilot/locks/altitude", "vertical-speed-hold");
-if (calt > talt) {
-setprop("autopilot/settings/vertical-speed-fpm", 0);
-
-setprop("instrumentation/teravd/target-vfpm", 0);
-setprop("instrumentation/teravd/target-alt", 0);
-#settimer(aglreinit, 0);
-} else {
-settimer(setvfpmplus, 0.5);
-}
-}
+  settimer(setvfpm, 0.5);
+  }
 }
 
-var setvfpmminus = func {
-var tvfpm = getprop("instrumentation/teravd/target-vfpm");
-setprop("autopilot/settings/vertical-speed-fpm", tvfpm);
-setprop("autopilot/locks/altitude", "vertical-speed-hold");
-
-}
 
 # reinit previous flight params
-var aglreinit = func {
-var terflw = getprop("controls/switches/terrain-follow");
-  setprop("controls/switches/terra-report", 0);
-  if(terflw == 1) {
-     setprop("autopilot/locks/altitude", "agl-hold");
- } else {
-setprop("autopilot/locks/altitude", "vertical-speed-hold");
-#     setprop("autopilot/locks/altitude", "altitude-hold");
- }
-}
+#var aglreinit = func {
+#var terflw = getprop("controls/switches/terrain-follow");
+#setprop("controls/switches/terra-report", 0);
+#if(terflw == 1) {
+#  setprop("autopilot/locks/altitude", "vertical-speed-hold");
+#} elsif {
+#  setprop("autopilot/locks/altitude", "vertical-speed-hold");
+  #setprop("autopilot/locks/altitude", "altitude-hold");
+# }
+#}
 ### end of terrain avoidance behaviour #########################
 
 ### engine on/off workaround adapted from Citation Bravo
@@ -576,20 +472,6 @@ var eng_state = func {
 settimer(eng_state, 0);
 }
 
-#fuel distribution system
-#var fuel_syst = func {
-
-#var tank0 = getprop("consumables/fuel/tank[0]/level-gal_us");#wing left
-#var tank1 = props.globals.getNode("consumables/fuel/tank[1]/level-gal_us", 1);#wing right
-#var tank6 = getprop("consumables/fuel/tank[6]/level-gal_us");#collector left
-#var tank7 = props.globals.getNode("consumables/fuel/tank[7]/level-gal_us", 1);#collector right
-
-#if(tank6 < 1500){
-#        setprop("consumables/fuel/tank[6]/level-gal_us", tank6 + 80);
-#        setprop("consumables/fuel/tank[0]/level-gal_us", tank0 - 80);
-#    }
-#settimer(fuel_syst, 0);
-#}
 
 # checks wing sweep/flaps and allow flaps only to be extended at minimum sweep - adopted from limits.nas
 
@@ -711,6 +593,44 @@ if (radran == 0.00) {
 }
 }
 
+##
+# tacan block
+##
+var tacan = func(add) {
+var ch2 = getprop("instrumentation/tacan/frequencies/selected-channel");
+var ch21 = int(ch2 / 10);
+var ch21_new = ch21;
+
+if ((add == 1) and (ch21 <= 11.5)) {
+var ch21_new = ch21 + 1;
+} elsif ((add == -1) and (ch21 >= 0.5)) {
+var ch21_new = ch21 - 1;
+}
+
+var ch1_new = int(ch21_new / 10);
+setprop("instrumentation/tacan/frequencies/selected-channel[1]", ch1_new);
+
+if (ch1_new >= 0.95) {
+var ch2_new = ch21_new - 10;
+setprop("instrumentation/tacan/frequencies/selected-channel[2]", ch2_new);
+} elsif (ch1_new <= 0.95) {
+var ch2_new = ch21_new;
+setprop("instrumentation/tacan/frequencies/selected-channel[2]", ch2_new);
+}
+}
+
+var tacanxy = func() {
+var xy = getprop("instrumentation/tacan/frequencies/selected-channel[4]");
+if (xy == "X") {
+setprop("instrumentation/tacan/frequencies/selected-channel[4]", "Y");
+} elsif (xy == "Y") {
+setprop("instrumentation/tacan/frequencies/selected-channel[4]", "X");
+}
+}
+
+##
+# nuc switch
+##
 var nuc = func {
 if (getprop("controls/switches/nuc") == 1) {
 ltext = "Sorry, Duke Nukem not available yet on this plane(t)!";

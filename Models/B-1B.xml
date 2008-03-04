@@ -16,313 +16,18 @@ more to come :-)
     
   </offsets>
   
-  <!--   cockpit-->
-
-  <model>
-	  <name>pfdb1</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/pfdb2.xml</path>
-	  <offsets>
-		  <x-m>-18.200</x-m>
-		  <y-m>-0.675</y-m>
-		  <z-m>1.197</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model>
+  <!-- cockpit instruments -->
   
   <model>
-	  <name>eng</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/eng_ind.xml</path>
+	  <name>instruments</name>
+	  <path>Aircraft/B-1B/Models/instruments.xml</path>
 	  <offsets>
-		  <x-m>-18.210</x-m>
-		  <y-m>-0.250</y-m>
-		  <z-m>1.200</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model>
-  
-  <model>
-	  <name>cg mac</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/mac_ind.xml</path>
-	  <offsets>
-		  <x-m>-18.210</x-m>
-		  <y-m>-0.250</y-m>
-		  <z-m>1.200</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model>
-  
-  <model>
-	  <name>fcgms</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/fcgms.xml</path>
-	  <offsets>
-		  <x-m>-18.210</x-m>
-		  <y-m>-0.250</y-m>
-		  <z-m>1.200</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model>
-  
-  <model>
-	  <name>radaralt</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/radar_alt.xml</path>
-	  <offsets>
-		  <x-m>-18.210</x-m>
-		  <y-m>-0.534</y-m>
-		  <z-m>1.315</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model>
-  
-  <model>
-	  <name>hsi</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/nd.xml</path>
-	  <offsets>
-		  <x-m>-18.200</x-m>
-		  <y-m>-0.675</y-m>
-		  <z-m>0.998</z-m>
-		  <pitch-deg>-1</pitch-deg>
-	  </offsets>
-  </model>
-  
- <model>
-	  <name>clock</name>
-	  <path>Aircraft/Instruments-3d/clock/clock.xml</path>
-	  <offsets>
-		  <x-m>-18.200</x-m>
-		  <y-m>-0.840</y-m>
-		  <z-m>1.230</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model>
-  
- <model>
-	  <name>gearind</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/gear_ind.xml</path>
-	  <offsets>
-		  <x-m>-18.200</x-m>
-		  <y-m>-0.740</y-m>
-		  <z-m>1.010</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model>
-  
-  <model>
-	  <name>cautionind</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/caution_ind.xml</path>
-	  <offsets>
-		  <x-m>-18.200</x-m>
-		  <y-m>-0.350</y-m>
-		  <z-m>1.235</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model>
-  
-  <model>
-	  <name>fltdir</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/fltdir.xml</path>
-	  <offsets>
-		  <x-m>-18.190</x-m>
-		  <y-m>-0.584</y-m>
-		  <z-m>0.865</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model>
-  
-  <model>
-	  <name>reporter-lights</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/rep_lights.xml</path>
-	  <offsets>
-		  <x-m>-18.190</x-m>
-		  <y-m>-0.584</y-m>
-		  <z-m>0.865</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model>
-  
-  <model>
-	  <name>fireind</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/fire_ind.xml</path>
-	  <offsets>
-		  <x-m>-18.190</x-m>
-		  <y-m>0.154</y-m>
-		  <z-m>1.239</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model>
-  
-  <model>
-	  <name>apmode</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/apmode.xml</path>
-	  <offsets>
-		  <x-m>-18.150</x-m>
-		  <y-m>-0.640</y-m>
-		  <z-m>0.940</z-m>
-		  <roll-deg>-25</roll-deg>
-	  </offsets>
-  </model>
-  
-  <model>
-	  <name>alt</name>
-	  <path>Aircraft/Instruments-3d/alt-2/alt2-3d.xml</path>
-	  <offsets>
-		  <x-m>-18.210</x-m>
-		  <y-m>-0.395</y-m>
-		  <z-m>1.185</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model>
-  
-  <model>
-	  <name>vsi</name>
-	  <path>Aircraft/Instruments-3d/vsi-6/vsi-3d.xml</path>
-	  <offsets>
-		  <x-m>-18.210</x-m>
-		  <y-m>-0.490</y-m>
-		  <z-m>1.185</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model>
-  
-  <model>
-	  <name>ai</name>
-	  <path>Aircraft/Instruments-3d/attitude-indicator.xml</path>
-	  <offsets>
-		  <x-m>-18.210</x-m>
-		  <y-m>-0.450</y-m>
-		  <z-m>1.276</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model>
-  
-  <model>
-	  <name>sweep</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/sweep_ind.xml</path>
-	  <offsets>
-		  <x-m>-18.200</x-m>
-		  <y-m>-0.336</y-m>
-		  <z-m>1.015</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model>
-  
-  <model>
-	  <name>bomb doors</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/nuc.xml</path>
-	  <offsets>
-		  <x-m>-18.200</x-m>
-		  <y-m>-0.336</y-m>
-		  <z-m>1.015</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model>
-  
-  <model>
-	  <name>terrain_flw</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/terflw_ind.xml</path>
-	  <offsets>
-		  <x-m>-18.190</x-m>
-		  <y-m>0.005</y-m>
-		  <z-m>0.910</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model>
-  
-  <model>
-	  <name>fuel indicator</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/fuel_ind.xml</path>
-	  <offsets>
-		  <x-m>-18.190</x-m>
-		  <y-m>0.110</y-m>
-		  <z-m>1.000</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model>
-  
-  <model>
-	  <name>fuel valves</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/fuelvalves.xml</path>
-	  <offsets>
-		  <x-m>-18.200</x-m>
-		  <y-m>0.050</y-m>
-		  <z-m>1.110</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model>
-  
-  <model>
-	  <name>fuel positions</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/fuelpos_ind.xml</path>
-	  <offsets>
-		  <x-m>-18.190</x-m>
-		  <y-m>0.035</y-m>
-		  <z-m>0.980</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model>
-  
-  <model>
-	  <name>flaps handle</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/switch_flaps.xml</path>
-	  <offsets>
-		  <x-m>-18.190</x-m>
-		  <y-m>-0.490</y-m>
-		  <z-m>1.000</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model>
-  
-  <model>
-	  <name>flaps scale</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/flaps_scale.xml</path>
-	  <offsets>
-		  <x-m>-18.190</x-m>
-		  <y-m>-0.490</y-m>
-		  <z-m>1.000</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model>
-  
-  <model>
-	  <name>sweep handle</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/switch_sweep.xml</path>
-	  <offsets>
-		  <x-m>-18.190</x-m>
-		  <y-m>-0.600</y-m>
-		  <z-m>1.000</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model>
-  
-  <model>
-	  <name>sweep scale</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/sweep_scale.xml</path>
-	  <offsets>
-		  <x-m>-18.190</x-m>
-		  <y-m>-0.630</y-m>
-		  <z-m>1.000</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model>
-  
-  <!-- middle console -->
-  <model>
-	  <name>engine switch</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/eng_switch.xml</path>
-	  <offsets>
-		  <x-m>-17.850</x-m>
-		  <y-m>0.050</y-m>
-		  <z-m>0.700</z-m>
-		  <pitch-deg>-90</pitch-deg>
-	  </offsets>
-  </model>
-  <model>
-	  <name>light switch</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/light_switches.xml</path>
-	  <offsets>
-		  <x-m>-17.850</x-m>
-		  <y-m>0.050</y-m>
-		  <z-m>0.700</z-m>
-		  <pitch-deg>-90</pitch-deg>
+		  <offsets>
+			  <x-m>25.0</x-m>
+			  <y-m>0.0</y-m>
+			  <z-m>0.24</z-m>
+			  <pitch-deg>0</pitch-deg>
+		  </offsets>
 	  </offsets>
   </model>
   
@@ -340,6 +45,76 @@ more to come :-)
 	  </offsets>
   </model>
 
+  <!-- correct wing position -->
+  <animation>
+	  <type>translate</type>
+	  <object-name>wing_right</object-name>
+	  <object-name>slat_right</object-name>
+	  <object-name>slat_right_up</object-name>
+	  <object-name>flap_right1</object-name>
+	  <object-name>flap_right2</object-name>
+	  <object-name>flap_right3</object-name>
+	  <object-name>flap_right1_up</object-name>
+	  <object-name>flap_right2_up</object-name>
+	 <object-name>flap_right3_up</object-name>
+	 <object-name>spoiler_right1</object-name>
+	 <object-name>spoiler_right2</object-name>
+	 <object-name>spoiler_right3</object-name>
+	 <object-name>spoiler_right4</object-name>
+	  <property>rotors/main/blade[0]/position-deg</property>
+	  
+	  <interpolation>
+		  <entry>
+			  <ind>0.0</ind>
+			  <dep>-0.6</dep>
+		  </entry>
+		  <entry>
+			  <ind>1.0</ind>
+			  <dep>-0.6</dep>
+		  </entry>
+	  </interpolation>
+	  <axis>
+		  <x>-1</x>
+		  <y>0</y>
+		  <z>0</z>
+	  </axis>
+	  
+ </animation>
+ 
+ <animation>
+	 <type>translate</type>
+	 <object-name>wing_left</object-name>
+	 <object-name>slat_left</object-name>
+	 <object-name>slat_left_up</object-name>
+	 <object-name>flap_left1</object-name>
+	 <object-name>flap_left2</object-name>
+	 <object-name>flap_left3</object-name>
+	 <object-name>flap_left1_up</object-name>
+	 <object-name>flap_left2_up</object-name>
+	 <object-name>flap_left3_up</object-name>
+	 <object-name>spoiler_left1</object-name>
+	 <object-name>spoiler_left2</object-name>
+	 <object-name>spoiler_left3</object-name>
+	 <object-name>spoiler_left4</object-name>
+	 <property>rotors/main/blade[0]/position-deg</property>
+	 
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>-0.6</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-0.6</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>-1</x>
+		 <y>0</y>
+		 <z>0</z>
+	 </axis>
+	 
+ </animation>
   <!-- wing sweep -->
   
   <animation>
@@ -350,16 +125,18 @@ more to come :-)
 	  <interpolation>
 		  <entry>
 			  <ind>0.0</ind>
-			  <dep>-52.0</dep>
+			  <dep>0.0</dep>
 		  </entry>
 		  <entry>
 			  <ind>1.0</ind>
-			  <dep>0.0</dep>
+			  <dep>52.0</dep>
 		  </entry>
 	  </interpolation>
 	  <center>
-		  <x-m>-2.00</x-m>
-		  <y-m>4.94</y-m>
+		  <!--<x-m>-2.00</x-m>
+		  <y-m>4.94</y-m>-->
+		  <x-m>-1.66</x-m>
+		  <y-m>3.99</y-m>
 		  <z-m>0.00</z-m>
 	  </center>
 	  <axis>
@@ -369,25 +146,32 @@ more to come :-)
 	  </axis>
 	  
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
-	 <object-name>wing_left</object-name>
+	 <object-name>slat_right</object-name>
+	 <object-name>slat_right_up</object-name>
+	 <object-name>flap_right1</object-name>
+	 <object-name>flap_right2</object-name>
+	 <object-name>flap_right3</object-name>
+	 <object-name>flap_right1_up</object-name>
+	 <object-name>flap_right2_up</object-name>
+	 <object-name>flap_right3_up</object-name>
 	 <property>rotors/main/blade[0]/position-deg</property>
 	 
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
-			 <dep>52.0</dep>
+			 <dep>0.0</dep>
 		 </entry>
 		 <entry>
 			 <ind>1.0</ind>
-			 <dep>0.0</dep>
+			 <dep>52.0</dep>
 		 </entry>
 	 </interpolation>
 	 <center>
-		 <x-m>-2.00</x-m>
-		 <y-m>-4.89</y-m>
+		 <x-m>-1.66</x-m>
+		 <y-m>3.99</y-m>
 		 <z-m>0.00</z-m>
 	 </center>
 	 <axis>
@@ -398,6 +182,860 @@ more to come :-)
 	 
  </animation>
  
+ <animation>
+	 <type>rotate</type>
+	 <object-name>spoiler_right1</object-name>
+	 <object-name>spoiler_right2</object-name>
+	 <object-name>spoiler_right3</object-name>
+	 <object-name>spoiler_right4</object-name>
+	 <property>rotors/main/blade[0]/position-deg</property>
+	 
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>52.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-1.66</x-m>
+		 <y-m>3.99</y-m>
+		 <z-m>0.00</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>0</y>
+		 <z>1</z>
+	 </axis>
+	 
+ </animation>
+
+ 
+ <!-- right flaps-->
+ <animation>
+	 <type>translate</type>
+	 <object-name>flap_right1</object-name>
+	 <object-name>flap_right1_up</object-name>
+	 <property>surface-positions/flaps-pos-norm</property>
+	 <condition>
+		 <equals>
+			 <property>controls/flight/wing-sweep</property>
+			 <value>1</value>
+		 </equals>
+	 </condition>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-0.5</dep>
+		 </entry>
+	 </interpolation>
+	 
+	 <axis>
+		 <x>-0.7</x>
+		 <y>1.1</y>
+		 <z>0.0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>flap_right1</object-name>
+	 <object-name>flap_right1_up</object-name> 
+	 <property>surface-positions/flaps-pos-norm</property>
+	 <condition>
+		 <equals>
+			 <property>controls/flight/wing-sweep</property>
+			 <value>1</value>
+		 </equals>
+	 </condition>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>4.05</x-m>
+		 <y-m>3.95</y-m>
+		 <z-m>-0.80</z-m>
+	 </center>
+	 <axis>
+		 <x>1.1</x>
+		 <y>0.8</y>
+		 <z>0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
+	 <type>translate</type>
+	 <object-name>flap_right2</object-name>
+	 <object-name>flap_right2_up</object-name>
+	 <property>surface-positions/flaps-pos-norm</property>
+	 <condition>
+		 <equals>
+			 <property>controls/flight/wing-sweep</property>
+			 <value>1</value>
+		 </equals>
+	 </condition>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-0.5</dep>
+		 </entry>
+	 </interpolation>
+	 
+	 <axis>
+		 <x>-3</x>
+		 <y>5</y>
+		 <z>-1.0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>flap_right2</object-name>
+	 <object-name>flap_right2_up</object-name>
+	 <property>surface-positions/flaps-pos-norm</property>
+	 <condition>
+		 <equals>
+			 <property>controls/flight/wing-sweep</property>
+			 <value>1</value>
+		 </equals>
+	 </condition>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>6.65</x-m>
+		 <y-m>5.95</y-m>
+		 <z-m>-0.80</z-m>
+	 </center>
+	 <axis>
+		 <x>5</x>
+		 <y>3</y>
+		 <z>0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
+	 <type>translate</type>
+	 <object-name>flap_right3</object-name>
+	 <object-name>flap_right3_up</object-name>
+	 <property>surface-positions/flaps-pos-norm</property>
+	 <condition>
+		 <equals>
+			 <property>controls/flight/wing-sweep</property>
+			 <value>1</value>
+		 </equals>
+	 </condition>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-0.5</dep>
+		 </entry>
+	 </interpolation>
+	 
+	 <axis>
+		 <x>-3</x>
+		 <y>5</y>
+		 <z>0.0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>flap_right3</object-name>
+	 <object-name>flap_right3_up</object-name>
+	 <property>surface-positions/flaps-pos-norm</property>
+	 <condition>
+		 <equals>
+			 <property>controls/flight/wing-sweep</property>
+			 <value>1</value>
+		 </equals>
+	 </condition>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>9.61</x-m>
+		 <y-m>7.63</y-m>
+		 <z-m>-0.80</z-m>
+	 </center>
+	 <axis>
+		 <x>5</x>
+		 <y>3</y>
+		 <z>0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <!-- right slats-->
+ 
+ <animation>
+	 <type>translate</type>
+	 <object-name>slat_right_up</object-name>
+	 <property>surface-positions/flaps-pos-norm</property>
+	 <condition>
+		 <equals>
+			 <property>controls/flight/wing-sweep</property>
+			 <value>1</value>
+		 </equals>
+	 </condition>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>0.40</dep>
+		 </entry>
+	 </interpolation>
+
+	 <axis>
+		 <x>-2.8</x>
+		 <y>7.2</y>
+		 <z>-6.0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>slat_right_up</object-name>
+	 <property>surface-positions/flaps-pos-norm</property>
+	 <condition>
+		 <equals>
+			 <property>controls/flight/wing-sweep</property>
+			 <value>1</value>
+		 </equals>
+	 </condition>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-40</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>3.00</x-m>
+		 <y-m>6.78</y-m>
+		 <z-m>-0.70</z-m>
+	 </center>
+	 <axis>
+		 <x>5.4</x>
+		 <y>2.22</y>
+		 <z>0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <!-- right spoilers -->
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>spoiler_right1</object-name>
+	 <object-name>spoiler_right2</object-name>
+	 <property>controls/flight/spoilers</property>
+	 
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-40.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>6.74</x-m>
+		 <y-m>5.85</y-m>
+		 <z-m>-0.71</z-m>
+	 </center>
+	 <axis>
+		 <x>3.45</x>
+		 <y>2</y>
+		 <z>0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>spoiler_right3</object-name>
+	 <property>controls/flight/aileron</property>
+	 
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.2</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-40.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>9.65</x-m>
+		 <y-m>7.54</y-m>
+		 <z-m>-0.71</z-m>
+	 </center>
+	 <axis>
+		 <x>3.45</x>
+		 <y>2</y>
+		 <z>0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>spoiler_right4</object-name>
+	 <property>controls/flight/aileron</property>
+	 
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-40.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>9.65</x-m>
+		 <y-m>7.54</y-m>
+		 <z-m>-0.71</z-m>
+	 </center>
+	 <axis>
+		 <x>3.45</x>
+		 <y>2</y>
+		 <z>0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <!-- left wing sweep -->
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>wing_left</object-name>
+	 <property>rotors/main/blade[0]/position-deg</property>
+	 
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-52.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-1.66</x-m>
+		 <y-m>-3.99</y-m>
+		 <z-m>0.00</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>0</y>
+		 <z>1</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>slat_left</object-name>
+	 <object-name>slat_left_up</object-name>
+	 <object-name>flap_left1</object-name>
+	 <object-name>flap_left2</object-name>
+	 <object-name>flap_left3</object-name>
+	 <object-name>flap_left1_up</object-name>
+	 <object-name>flap_left2_up</object-name>
+	 <object-name>flap_left3_up</object-name>
+	 <property>rotors/main/blade[0]/position-deg</property>
+	 
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-52.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-1.66</x-m>
+		 <y-m>-3.99</y-m>
+		 <z-m>0.00</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>0</y>
+		 <z>1</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>spoiler_left1</object-name>
+	 <object-name>spoiler_left2</object-name>
+	 <object-name>spoiler_left3</object-name>
+	 <object-name>spoiler_left4</object-name>
+	 <property>rotors/main/blade[0]/position-deg</property>
+	 
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-52.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-1.66</x-m>
+		 <y-m>-3.99</y-m>
+		 <z-m>0.00</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>0</y>
+		 <z>1</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>spoiler_left1</object-name>
+	 <object-name>spoiler_left2</object-name>
+	 <property>controls/flight/spoilers</property>
+	 
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>40.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>6.74</x-m>
+		 <y-m>-5.85</y-m>
+		 <z-m>-0.71</z-m>
+	 </center>
+	 <axis>
+		 <x>3.45</x>
+		 <y>-2</y>
+		 <z>0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>spoiler_left3</object-name>
+	 <property>controls/flight/aileron</property>
+	 
+	 <interpolation>
+		 <entry>
+			 <ind>-1.0</ind>
+			 <dep>40.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>-0.2</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>9.65</x-m>
+		 <y-m>-7.54</y-m>
+		 <z-m>-0.71</z-m>
+	 </center>
+	 <axis>
+		 <x>3.45</x>
+		 <y>-2</y>
+		 <z>0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>spoiler_left4</object-name>
+	 <property>controls/flight/aileron</property>
+	 
+	 <interpolation>
+		 <entry>
+			 <ind>-1.0</ind>
+			 <dep>40.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>9.65</x-m>
+		 <y-m>-7.54</y-m>
+		 <z-m>-0.71</z-m>
+	 </center>
+	 <axis>
+		 <x>3.45</x>
+		 <y>-2</y>
+		 <z>0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <!-- left slats-->
+ <animation>
+	 <type>translate</type>
+	 <object-name>slat_left_up</object-name>
+	 <property>surface-positions/flaps-pos-norm</property>
+	 <condition>
+		 <equals>
+			 <property>controls/flight/wing-sweep</property>
+			 <value>1</value>
+		 </equals>
+	 </condition>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>0.40</dep>
+		 </entry>
+	 </interpolation>
+	 
+	 <axis>
+		 <x>-2.8</x>
+		 <y>-7.2</y>
+		 <z>-6.0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>slat_left_up</object-name>
+	 <property>surface-positions/flaps-pos-norm</property>
+	 <condition>
+		 <equals>
+			 <property>controls/flight/wing-sweep</property>
+			 <value>1</value>
+		 </equals>
+	 </condition>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>40</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>3.00</x-m>
+		 <y-m>-6.78</y-m>
+		 <z-m>-0.70</z-m>
+	 </center>
+	 <axis>
+		 <x>5.4</x>
+		 <y>-2.22</y>
+		 <z>0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <!-- left flaps-->
+ <animation>
+	 <type>translate</type>
+	 <object-name>flap_left1</object-name>
+	 <object-name>flap_left1_up</object-name>
+	 <property>surface-positions/flaps-pos-norm</property>
+	 <condition>
+		 <equals>
+			 <property>controls/flight/wing-sweep</property>
+			 <value>1</value>
+		 </equals>
+	 </condition>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-0.5</dep>
+		 </entry>
+	 </interpolation>
+	 
+	 <axis>
+		 <x>-0.7</x>
+		 <y>-1.1</y>
+		 <z>0.0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>flap_left1</object-name>
+	 <object-name>flap_left1_up</object-name> 
+	 <property>surface-positions/flaps-pos-norm</property>
+	 <condition>
+		 <equals>
+			 <property>controls/flight/wing-sweep</property>
+			 <value>1</value>
+		 </equals>
+	 </condition>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>4.05</x-m>
+		 <y-m>-3.95</y-m>
+		 <z-m>-0.80</z-m>
+	 </center>
+	 <axis>
+		 <x>1.1</x>
+		 <y>-0.8</y>
+		 <z>0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
+	 <type>translate</type>
+	 <object-name>flap_left2</object-name>
+	 <object-name>flap_left2_up</object-name>
+	 <property>surface-positions/flaps-pos-norm</property>
+	 <condition>
+		 <equals>
+			 <property>controls/flight/wing-sweep</property>
+			 <value>1</value>
+		 </equals>
+	 </condition>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-0.5</dep>
+		 </entry>
+	 </interpolation>
+	 
+	 <axis>
+		 <x>-3</x>
+		 <y>-5</y>
+		 <z>-1.0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>flap_left2</object-name>
+	 <object-name>flap_left2_up</object-name>
+	 <property>surface-positions/flaps-pos-norm</property>
+	 <condition>
+		 <equals>
+			 <property>controls/flight/wing-sweep</property>
+			 <value>1</value>
+		 </equals>
+	 </condition>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>6.65</x-m>
+		 <y-m>-5.95</y-m>
+		 <z-m>-0.80</z-m>
+	 </center>
+	 <axis>
+		 <x>5</x>
+		 <y>-3</y>
+		 <z>0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
+	 <type>translate</type>
+	 <object-name>flap_left3</object-name>
+	 <object-name>flap_left3_up</object-name>
+	 <property>surface-positions/flaps-pos-norm</property>
+	 <condition>
+		 <equals>
+			 <property>controls/flight/wing-sweep</property>
+			 <value>1</value>
+		 </equals>
+	 </condition>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-0.5</dep>
+		 </entry>
+	 </interpolation>
+	 
+	 <axis>
+		 <x>-3</x>
+		 <y>-5</y>
+		 <z>0.0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>flap_left3</object-name>
+	 <object-name>flap_left3_up</object-name>
+	 <property>surface-positions/flaps-pos-norm</property>
+	 <condition>
+		 <equals>
+			 <property>controls/flight/wing-sweep</property>
+			 <value>1</value>
+		 </equals>
+	 </condition>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>9.61</x-m>
+		 <y-m>-7.63</y-m>
+		 <z-m>-0.80</z-m>
+	 </center>
+	 <axis>
+		 <x>5</x>
+		 <y>-3</y>
+		 <z>0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <!-- rudder -->
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>rudder2</object-name>
+	 <object-name>rudder3</object-name>
+	 <property>controls/flight/rudder</property>
+	 <interpolation>
+		 <entry>
+			 <ind>-1.0</ind>
+			 <dep>-30.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>16.98</x-m>
+		 <y-m>0.00</y-m>
+		 <z-m>5.62</z-m>
+	 </center>
+	 <axis>
+		 <x>1</x>
+		 <y>0</y>
+		 <z>2.2</z>
+	 </axis>
+	 
+ </animation>
  <!-- gear management -->
  
  <!-- gear visibility -->
@@ -421,6 +1059,35 @@ more to come :-)
 		 </greater-than>
 	 </condition>
  </animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>gear_l_up1</object-name>
+	 <object-name>gear_l_up1.001</object-name>
+	 <object-name>gear_l_up1.002</object-name>
+	 <object-name>gear_l_up1.003</object-name>
+	 <condition>
+		 <greater-than>
+			 <property>gear/gear[0]/position-norm</property>
+			 <value>0.0</value>
+		 </greater-than>
+	 </condition>
+ </animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>gear_l_up1.004</object-name>
+	 <object-name>gear_l_up1.005</object-name>
+	 <object-name>gear_l_up1.006</object-name>
+	 <object-name>gear_l_up1.007</object-name>
+	 <condition>
+		 <greater-than>
+			 <property>gear/gear[0]/position-norm</property>
+			 <value>0.0</value>
+		 </greater-than>
+	 </condition>
+ </animation>
+ 
  
  <animation>
 	 <type>select</type>
@@ -633,7 +1300,7 @@ more to come :-)
 	 </axis>
  </animation>
  
- <!-- front gear covers -->
+ <!-- front gear covers 
  
  <animation>
 	 <type>rotate</type>
@@ -723,9 +1390,9 @@ more to come :-)
 		 <y>0</y>
 		 <z>0</z>
 	 </axis>
- </animation>
+ </animation>-->
  
- <!-- rear gear covers -->
+ <!-- rear gear covers 
  
  <animation>
 	 <type>rotate</type>
@@ -853,7 +1520,7 @@ more to come :-)
 		 <y>0</y>
 		 <z>0</z>
 	 </axis>
- </animation>
+ </animation>-->
  
 
  
@@ -869,25 +1536,20 @@ more to come :-)
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
-			 <dep>3.2</dep>
+			 <dep>3.36</dep>
 		 </entry>
 		 <entry>
 			 <ind>0.2</ind>
-			 <dep>3.2</dep>
+			 <dep>3.36</dep>
 		 </entry>
 		 <entry>
 			 <ind>1.0</ind>
 			 <dep>0.0</dep>
 		 </entry>
 	 </interpolation>
-	 <center>
-		 <x-m>2.03</x-m>
-		 <y-m>-2.11</y-m>
-		 <z-m>-1.05</z-m>
-	 </center>
 	 <axis>
 		 <x>0</x>
-		 <y>0.33</y>
+		 <y>0.45</y>
 		 <z>1</z>
 	 </axis>
  </animation>
@@ -901,25 +1563,20 @@ more to come :-)
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
-			 <dep>3.2</dep>
+			 <dep>3.36</dep>
 		 </entry>
 		 <entry>
 			 <ind>0.2</ind>
-			 <dep>3.2</dep>
+			 <dep>3.36</dep>
 		 </entry>
 		 <entry>
 			 <ind>1.0</ind>
 			 <dep>0.0</dep>
 		 </entry>
 	 </interpolation>
-	 <center>
-		 <x-m>2.03</x-m>
-		 <y-m>-2.11</y-m>
-		 <z-m>-1.05</z-m>
-	 </center>
 	 <axis>
 		 <x>0</x>
-		 <y>0.33</y>
+		 <y>0.45</y>
 		 <z>1</z>
 	 </axis>
  </animation>
@@ -935,25 +1592,20 @@ more to come :-)
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
-			 <dep>3.2</dep>
+			 <dep>3.36</dep>
 		 </entry>
 		 <entry>
 			 <ind>0.2</ind>
-			 <dep>3.2</dep>
+			 <dep>3.36</dep>
 		 </entry>
 		 <entry>
 			 <ind>1.0</ind>
 			 <dep>0.0</dep>
 		 </entry>
 	 </interpolation>
-	 <center>
-		 <x-m>2.03</x-m>
-		 <y-m>-2.11</y-m>
-		 <z-m>-1.05</z-m>
-	 </center>
 	 <axis>
 		 <x>0</x>
-		 <y>0.33</y>
+		 <y>0.45</y>
 		 <z>1</z>
 	 </axis>
  </animation>
@@ -1092,25 +1744,20 @@ more to come :-)
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
-			 <dep>3.2</dep>
+			 <dep>3.36</dep>
 		 </entry>
 		 <entry>
 			 <ind>0.2</ind>
-			 <dep>3.2</dep>
+			 <dep>3.36</dep>
 		 </entry>
 		 <entry>
 			 <ind>1.0</ind>
 			 <dep>0.0</dep>
 		 </entry>
 	 </interpolation>
-	 <center>
-		 <x-m>2.03</x-m>
-		 <y-m>2.11</y-m>
-		 <z-m>-1.05</z-m>
-	 </center>
 	 <axis>
 		 <x>0</x>
-		 <y>-0.33</y>
+		 <y>-0.45</y>
 		 <z>1</z>
 	 </axis>
  </animation>
@@ -1124,25 +1771,20 @@ more to come :-)
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
-			 <dep>3.2</dep>
+			 <dep>3.36</dep>
 		 </entry>
 		 <entry>
 			 <ind>0.2</ind>
-			 <dep>3.2</dep>
+			 <dep>3.36</dep>
 		 </entry>
 		 <entry>
 			 <ind>1.0</ind>
 			 <dep>0.0</dep>
 		 </entry>
 	 </interpolation>
-	 <center>
-		 <x-m>2.03</x-m>
-		 <y-m>2.11</y-m>
-		 <z-m>-1.05</z-m>
-	 </center>
 	 <axis>
 		 <x>0</x>
-		 <y>-0.33</y>
+		 <y>-0.45</y>
 		 <z>1</z>
 	 </axis>
  </animation>
@@ -1161,25 +1803,20 @@ more to come :-)
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
-			 <dep>3.2</dep>
+			 <dep>3.36</dep>
 		 </entry>
 		 <entry>
 			 <ind>0.2</ind>
-			 <dep>3.2</dep>
+			 <dep>3.36</dep>
 		 </entry>
 		 <entry>
 			 <ind>1.0</ind>
 			 <dep>0.0</dep>
 		 </entry>
 	 </interpolation>
-	 <center>
-		 <x-m>2.03</x-m>
-		 <y-m>2.11</y-m>
-		 <z-m>-1.05</z-m>
-	 </center>
 	 <axis>
 		 <x>0</x>
-		 <y>-0.33</y>
+		 <y>-0.45</y>
 		 <z>1</z>
 	 </axis>
  </animation>

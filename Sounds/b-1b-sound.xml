@@ -111,7 +111,7 @@
 	</orientation>
 	<volume>
 		<property>/engines/engine[0]/thrust_lb</property>
-		<factor>0.000030</factor>
+		<factor>0.000033</factor>
 		<min>0.6</min>
 		<max>1.0</max>
 	</volume>
@@ -256,7 +256,7 @@
 	  </orientation>
 	  <volume>
 		  <property>/engines/engine[1]/thrust_lb</property>
-		  <factor>0.000030</factor>
+		  <factor>0.000033</factor>
 		  <min>0.6</min>
 		  <max>1.0</max>
 	  </volume>
@@ -401,7 +401,7 @@
 	  </orientation>
 	  <volume>
 		  <property>/engines/engine[2]/thrust_lb</property>
-		  <factor>0.000030</factor>
+		  <factor>0.000033</factor>
 		  <min>0.6</min>
 		  <max>1.0</max>
 	  </volume>
@@ -548,7 +548,7 @@
 	  </orientation>
 	  <volume>
 		  <property>/engines/engine[3]/thrust_lb</property>
-		  <factor>0.000030</factor>
+		  <factor>0.000033</factor>
 		  <min>0.6</min>
 		  <max>1.0</max>
 	  </volume>
@@ -957,6 +957,42 @@
         <min>90.0</min>
       </volume>
     </stall>
+    
+    <rain>
+	    <name>rain</name>
+	    <mode>looped</mode>
+	    <path>Aircraft/B-1B/Sounds/rain_canopy.wav</path>
+	    <condition>
+		    <and>
+			    <equals>
+				    <property>environment/rain/above_clouds</property>
+				    <value>0</value>
+			    </equals>
+			    <or>
+				    <greater-than>
+					    <property>environment/metar/rain-norm</property>
+					    <value>0.2</value>
+				    </greater-than>
+				    <greater-than>
+					    <property>environment/metar/snow-norm</property>
+					    <value>0.2</value>
+				    </greater-than>
+			    </or>
+		    </and>
+	 </condition>
+	    <volume>
+		    <property>/environment/metar/rain-norm</property>
+		    <factor>1.00</factor>
+		    <offset>0.00</offset>
+		    <min>0.4</min>
+		<max>0.9</max>
+	    </volume>
+	    <pitch>
+		    <property>/velocities/airspeed-kt</property>
+		    <factor>0.001</factor>
+		    <offset>1.0</offset>
+            </pitch>
+    </rain>
 
 <!-- no binding yet?
     <click>

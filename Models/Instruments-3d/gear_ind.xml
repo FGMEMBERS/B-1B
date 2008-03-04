@@ -50,6 +50,12 @@ sweat by maggse
  <animation>
 	 <type>pick</type>
 	 <object-name>switch_gear</object-name>
+	 <condition>
+		 <less-than>
+			 <property>gear/gear/wow</property>
+			 <value>1.0</value>
+		 </less-than>
+	 </condition>
 	 <action>
 		 <button>0</button>
 		 <repeatable>true</repeatable>

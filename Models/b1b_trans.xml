@@ -28,6 +28,9 @@ sweat by maggse
 		 <pitch-deg>-3</pitch-deg>
 	 </offsets>
  </model>-->
+
+ 
+ 
  
  <!-- gear breaking smoke -->
  <model>
@@ -90,9 +93,9 @@ sweat by maggse
 	 <path>Aircraft/B-1B/Models/posred.xml</path>
 	 
 	 <offsets>
-		 <x-m>3.35</x-m>
-		 <y-m>-20.87</y-m>
-		 <z-m>-0.82</z-m>
+		 <x-m>3.00</x-m>
+		 <y-m>-20.95</y-m>
+		 <z-m>-0.92</z-m>
 		 <pitch-deg>0</pitch-deg>
 	 </offsets>
  </model>
@@ -102,9 +105,9 @@ sweat by maggse
 	 <path>Aircraft/B-1B/Models/posgreen.xml</path>
 	 
 	 <offsets>
-		 <x-m>3.35</x-m>
+		 <x-m>3.00</x-m>
 		 <y-m>20.95</y-m>
-		 <z-m>-1.0</z-m>
+		 <z-m>-0.92</z-m>
 		 <pitch-deg>0</pitch-deg>
 	 </offsets>
  </model>
@@ -116,9 +119,9 @@ sweat by maggse
 	 <path>Aircraft/B-1B/Models/strobe.xml</path>
 
 	 <offsets>
-		 <x-m>-3.500</x-m>
-		 <y-m>-4.8</y-m>
-		 <z-m>-1.0</z-m>
+		 <x-m>-3.000</x-m>
+		 <y-m>-4.50</y-m>
+		 <z-m>-0.9</z-m>
 		 <pitch-deg>0</pitch-deg>
 	 </offsets>
  </model>
@@ -128,9 +131,9 @@ sweat by maggse
 	 <path>Aircraft/B-1B/Models/strobe.xml</path>
 	 
 	 <offsets>
-		 <x-m>-3.500</x-m>
-		 <y-m>4.8</y-m>
-		 <z-m>-1.0</z-m>
+		 <x-m>-3.000</x-m>
+		 <y-m>4.50</y-m>
+		 <z-m>-0.9</z-m>
 		 <pitch-deg>0</pitch-deg>
 	 </offsets>
  </model>
@@ -166,9 +169,9 @@ sweat by maggse
 		 </and>
 	 </condition>
 	 <offsets>
-		 <x-m>9.400</x-m>
-		 <y-m>-4.9</y-m>
-		 <z-m>-1.9</z-m>
+		 <x-m>9.200</x-m>
+		 <y-m>-4.11</y-m>
+		 <z-m>-1.68</z-m>
 		 <pitch-deg>90</pitch-deg>
 	 </offsets>
  </model>
@@ -191,9 +194,9 @@ sweat by maggse
 		 </and>
 	 </condition>
 	 <offsets>
-		 <x-m>9.400</x-m>
-		 <y-m>-3.1</y-m>
-		 <z-m>-1.9</z-m>
+		 <x-m>9.200</x-m>
+		 <y-m>-2.48</y-m>
+		 <z-m>-1.68</z-m>
 		 <pitch-deg>90</pitch-deg>
 	 </offsets>
  </model>
@@ -216,9 +219,9 @@ sweat by maggse
 		 </and>
 	 </condition>
 	 <offsets>
-		 <x-m>9.400</x-m>
-		 <y-m>4.9</y-m>
-		 <z-m>-1.9</z-m>
+		 <x-m>9.200</x-m>
+		 <y-m>2.52</y-m>
+		 <z-m>-1.68</z-m>
 		 <pitch-deg>90</pitch-deg>
 	 </offsets>
  </model>
@@ -241,9 +244,9 @@ sweat by maggse
 		 </and>
 	 </condition>
 	 <offsets>
-		 <x-m>9.400</x-m>
-		 <y-m>3.1</y-m>
-		 <z-m>-1.9</z-m>
+		 <x-m>9.200</x-m>
+		 <y-m>4.16</y-m>
+		 <z-m>-1.68</z-m>
 		 <pitch-deg>90</pitch-deg>
 	 </offsets>
   </model>
@@ -266,9 +269,9 @@ sweat by maggse
 		  </and>
 	  </condition>
 	  <offsets>
-		  <x-m>9.200</x-m>
-		  <y-m>-4.9</y-m>
-		  <z-m>-1.9</z-m>
+		  <x-m>8.200</x-m>
+		  <y-m>-4.11</y-m>
+		  <z-m>-1.68</z-m>
 		  <pitch-deg>90</pitch-deg>
 	  </offsets>
   </model>
@@ -290,9 +293,9 @@ sweat by maggse
 		  </and>
 	  </condition>
 	  <offsets>
-		  <x-m>9.200</x-m>
-		  <y-m>-3.1</y-m>
-		  <z-m>-1.9</z-m>
+		  <x-m>8.200</x-m>
+		  <y-m>-2.48</y-m>
+		  <z-m>-1.68</z-m>
 		  <pitch-deg>90</pitch-deg>
 	  </offsets>
   </model>
@@ -314,9 +317,9 @@ sweat by maggse
 		  </and>
 	  </condition>
 	  <offsets>
-		  <x-m>9.200</x-m>
-		  <y-m>3.1</y-m>
-		  <z-m>-1.9</z-m>
+		  <x-m>8.200</x-m>
+		  <y-m>2.48</y-m>
+		  <z-m>-1.68</z-m>
 		  <pitch-deg>90</pitch-deg>
 	  </offsets>
   </model>
@@ -338,14 +341,14 @@ sweat by maggse
 		  </and>
 	  </condition>
 	  <offsets>
-		  <x-m>9.200</x-m>
-		  <y-m>4.9</y-m>
-		  <z-m>-1.9</z-m>
+		  <x-m>8.200</x-m>
+		  <y-m>4.11</y-m>
+		  <z-m>-1.68</z-m>
 		  <pitch-deg>90</pitch-deg>
 	  </offsets>
   </model>
 
-  <!-- afterburner flame -->
+  <!-- afterburner flame 
   
   <animation>
 	  <type>select</type>
@@ -378,7 +381,7 @@ sweat by maggse
 	  <property>controls/engines/engine[0]/throttle</property>
 	  <offset>0.95</offset>
 	  <factor>-0.20</factor>
-  </animation>
+  </animation>-->
   
   <!-- engine fire -->
   
@@ -465,7 +468,80 @@ sweat by maggse
 	 <offset>1.0</offset>
 	 <factor>-0.05</factor>
  </animation>
-  
+ 
+  <animation>
+	 <type>select</type>
+	 <object-name>bone_rain</object-name>
+	 <condition>
+	   <and>
+	      <equals>
+		      <property>environment/rain/above_clouds</property>
+		      <value>0</value>
+	      </equals>
+	       <or>
+		 <greater-than>
+			 <property>environment/metar/rain-norm</property>
+			 <value>0.2</value>
+		 </greater-than>
+		 <greater-than>
+			 <property>environment/metar/snow-norm</property>
+			 <value>0.2</value>
+		 </greater-than>
+	        </or>
+	    </and>
+	 </condition>
+  </animation>
+ 
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>bone_rain</object-name>
+	 <property>environment/rain/rain</property>
+	 <factor>0.1</factor>
+	 <step>1</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <!--<animation>
+	 <type>texmultiple</type>
+	 <object-name>bone_rain</object-name>
+	 <transform>
+		 <property>instrumentation/rain/rain</property>
+		 <subtype>textranslate</subtype>
+		 <factor>0.1</factor>
+		 <step>1</step>
+		 <axis>
+			 <x>0</x>
+			 <y>1</y>
+			 <z>0</z>
+		 </axis>
+	 </transform>
+	 <transform>
+		 <property>instrumentation/rain/rain</property>
+		 <subtype>texranslate</subtype>
+		 <factor>0.01</factor>
+		 <axis>
+			 <x>0</x>
+			 <y>1</y>
+			 <z>0</z>
+		 </axis>
+	 </transform>
+ </animation>-->
+ 
 
+  
+ <!--<animation>
+	 <type>select</type>
+	 <object-name>bone.003</object-name>
+	 <condition>
+		 <greater-than>
+			 <property>controls/engines/engine[0]/afterburner</property>
+			 <value>0.0</value>
+		 </greater-than>
+	 </condition>
+  </animation>-->
 
 </PropertyList>

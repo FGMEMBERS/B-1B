@@ -229,9 +229,9 @@
 	  <repeat>true</repeat>
 	  <delay>0.2</delay>
 	  <count>-1</count>
-	  <x-offset>0.0</x-offset>
+	  <x-offset>-30.0</x-offset>
 	  <y-offset>0.0</y-offset>
-	  <z-offset>0.0</z-offset>
+	  <z-offset>-5.0</z-offset>
 	  <eda>0.0001</eda>
 	  <life>1.0</life>
 	  <buoyancy>32</buoyancy>
@@ -239,7 +239,28 @@
 	  <wind>false</wind>
 	  <pitch-offset>-14</pitch-offset>
 	  <impact>true</impact>
-	  <impact-reports>sim/radar/teravd/contactm20dtf</impact-reports>
+	  <impact-reports>sim/radar/teravd/contact_tf</impact-reports>
+  </submodel>
+  
+  <submodel>
+	  <name>radar pulse m14dtf</name>
+	  <model></model>
+	  <trigger>controls/switches/terrain-follow-map-enabled</trigger>
+	  <speed>60000</speed>
+	  <repeat>true</repeat>
+	  <delay>0.2</delay>
+	  <count>-1</count>
+	  <x-offset>-30.0</x-offset>
+	  <y-offset>0.0</y-offset>
+	  <z-offset>-5.0</z-offset>
+	  <eda>0.0001</eda>
+	  <life>1.0</life>
+	  <buoyancy>32</buoyancy>
+	  <aero-stabilise>false</aero-stabilise>
+	  <wind>false</wind>
+	  <pitch-offset>-35</pitch-offset>
+	  <impact>true</impact>
+	  <impact-reports>sim/radar/teravd/contact_in_tf</impact-reports>
   </submodel>
   
   

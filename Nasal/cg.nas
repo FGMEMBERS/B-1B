@@ -29,12 +29,12 @@ var w6p = -21.0;
 var w7m = getprop("sim/weight[6]/weigth-lb");
 if (w7m == nil){w7m = 0;}
 var w7p = -31.0;
-var w8m = getprop("sim/weight[7]/weigth-lb");
-if (w8m == nil){w8m = 0;}
-var w8p = -20.0;
-var w9m = getprop("sim/weight[8]/weigth-lb");
-if (w9m == nil){w9m = 0;}
-var w9p = -36.0;
+#var w8m = getprop("sim/weight[7]/weigth-lb");
+#if (w8m == nil){w8m = 0;}
+#var w8p = -20.0;
+#var w9m = getprop("sim/weight[8]/weigth-lb");
+#if (w9m == nil){w9m = 0;}
+#var w9p = -36.0;
 # fuel weights and position (from yasim file)
 var f1m = getprop("consumables/fuel/tank[0]/level-lbs");
 var f1p = -26.2;
@@ -53,7 +53,7 @@ var f7p = -24.5;
 var f8m = getprop("consumables/fuel/tank[7]/level-lbs");
 var f8p = -24.5;
 #calculate the distance of cg from datum (in meters)
-var dist_cg = (acm * acp_e + w1m * w1p + w2m * w2p + w3m * w3p + w4m * w4p + w5m * w5p + w5m * w5p + w6m * w6p + w7m * w7p + w8m * w8p + w9m * w9p + f1m * f1p + f2m * f2p + f3m * f3p + f4m * f4p + f5m * f5p + f6m * f6p + f7m * f7p + f8m * f8p) / (getprop("yasim/gross-weight-lbs"));
+var dist_cg = (acm * acp_e + w1m * w1p + w2m * w2p + w3m * w3p + w4m * w4p + w5m * w5p + w5m * w5p + w6m * w6p + w7m * w7p + f1m * f1p + f2m * f2p + f3m * f3p + f4m * f4p + f5m * f5p + f6m * f6p + f7m * f7p + f8m * f8p) / (getprop("yasim/gross-weight-lbs"));
 setprop("instrumentation/cg/dist_cg_from_datum_m", dist_cg);
 var dist_wing = 20.57;# 19.56
 var cg_dist_wing = ((dist_cg) + dist_wing) * (-1);
@@ -93,6 +93,7 @@ settimer(cg_dist, 0.5);
 var cg_adjust = func {
 var cg_on = getprop("controls/switches/cg-adjust");
 if (cg_on == 1) {
+#setprop("/sim/freeze/fuel", 1);
 var cg_macf = getprop("instrumentation/cg/cg_mac");
 var cg_mac_set = getprop("instrumentation/cg/cg_mac_set");
 
@@ -101,8 +102,7 @@ var fuel_aft = getprop("consumables/fuel/tank[5]/level-lbs");
 var fuel_fwd_cap = getprop("consumables/fuel/tank[3]/capacity-gal_us");
 var fuel_aft_cap = getprop("consumables/fuel/tank[5]/capacity-gal_us");
 var fuel_dens = getprop("consumables/fuel/tank[3]/density-ppg");
-var ballast_fwd = getprop("/sim/weight[7]/weigth-lb");
-var ballast_aft = getprop("/sim/weight[8]/weigth-lb");
+
 var utime = 1;
 var ffrate = (200 * utime);# in lb/sec
 var fuel_fwd_caplb = fuel_fwd_cap * fuel_dens;
@@ -110,33 +110,26 @@ var fuel_aft_caplb = fuel_aft_cap * fuel_dens;
 var fuel_fwd_space = fuel_fwd_caplb - fuel_fwd;
 var fuel_aft_space = fuel_aft_caplb - fuel_aft;
 
+
 if (cg_macf > cg_mac_set) {
-  if (((fuel_fwd + ffrate) <= 40000) and ((fuel_aft) >= (ballast_fwd + ffrate))
- and ((fuel_fwd_space - ballast_fwd - ffrate) >= 0)) {
-  var fuel_fwd_new = (ballast_fwd + ffrate);
-setprop("instrumentation/cg/cg_fuel_fwd_new", fuel_fwd_new);
-  var fuel_aft_new = (ballast_aft - ffrate);
-setprop("/sim/weight[7]/weigth-lb", fuel_fwd_new);
-setprop("/sim/weight[8]/weigth-lb", fuel_aft_new);
-#print ("weight dist1");
-}
+  if (((fuel_fwd + ffrate) <= fuel_fwd_caplb) and ((fuel_aft) >= (0 + ffrate))) {
+    var fuel_fwd_new = (fuel_fwd + ffrate) / fuel_dens;
+    var fuel_aft_new = (fuel_aft - ffrate) / fuel_dens;
+    setprop("/consumables/fuel/tank[3]/level-gal_us", fuel_fwd_new);
+    setprop("/consumables/fuel/tank[5]/level-gal_us", fuel_aft_new);
+    #print ("weight dist1");
+  }
 }
 if (cg_macf < cg_mac_set) {
-  if (((fuel_fwd) >= (ballast_aft + ffrate)) and ((fuel_aft + ffrate) <= 50000)
- and ((fuel_aft_space - ballast_aft) >= 0)) {
-  var fuel_fwd_new = ballast_fwd - ffrate;
-  var fuel_aft_new = ballast_aft + ffrate;
-setprop("/sim/weight[7]/weigth-lb", fuel_fwd_new);
-setprop("/sim/weight[8]/weigth-lb", fuel_aft_new);
-#print ("weight dist2");
+  if (((fuel_fwd) >= (0 + ffrate)) and ((fuel_aft + ffrate) <= fuel_aft_caplb)) {
+    var fuel_fwd_new = (fuel_fwd - ffrate) / fuel_dens;
+    var fuel_aft_new = (fuel_aft + ffrate) / fuel_dens;
+    setprop("/consumables/fuel/tank[3]/level-gal_us", fuel_fwd_new);
+    setprop("/consumables/fuel/tank[5]/level-gal_us", fuel_aft_new);
+    #print ("weight dist2");
+  }
 }
-}
-#if (cg_macf = cg_mac_set) {
-#  var fuel_fwd_new = ballast_fwd;
-#  var fuel_aft_new = ballast_aft;
-#print ("weight dist4");
-#}
-
+#setprop("/sim/freeze/fuel", 0);
 settimer(cg_adjust, utime);
 }
 }

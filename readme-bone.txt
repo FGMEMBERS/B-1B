@@ -1,11 +1,13 @@
 Rockwell B-1B Lancer "The Bone"
 
 
-XXXXXX  Version Nr: 0011 24112007 XXXXXX
+XXXXXX  Version Nr: 0012 03032008 XXXXXX
 
 
 
-This aircraft model represents a hack of the B-1B variable wingsweep bomber. The available sweep angles are 15 (takeoff) 25 (slow flight) 45 (high altitude flight) 55/67 (low and high altitude fast flight). The wingsweep is simulated by adding lift/drag to the inner wing part. The outer wing part always stays at 67 degrees and represents the most accurate hack ;-). Afterburner is used for takeoff and for rapid climb maneuvers.
+This aircraft model represents a hack of the B-1B variable wingsweep bomber. The available sweep angles are 15 (takeoff) 25 (slow flight) 45 (high altitude flight) 55/67 (low and high altitude fast flight). The wingsweep is simulated by adding lift/drag to the inner wing part. The outer wing part always stays at 67 degrees and represents the most accurate hack ;-). Afterburner is used for takeoff and for rapid climb/acceleration maneuvers.
+The bone is limited to 3g at wartime (currently warning light flashes at 4g), so turning radius is huge at high speeds.
+
 
 XXXX INSTRUCTIONS XXXX
 
@@ -20,11 +22,12 @@ Takeoff:
 Flight:
 
 - dependent on your altitude and speed choose 15/25/45/55/67 degrees wingweep (d/D)
-- max speed at sea level is mach 1.1, at altitude mach 1.3, because of structural damage to engine inlets
-- typical performance speed is around mach 0.8 - 0.95 @sea level and mach 0.9 - 1.1 at altitude.
+- max speed at sea level is mach 1.2, at altitude mach 1.3, at altitude short periods 
+  at mach 1.5 are possible, but you put the wings on danger to twist
+- typical performance speed is around mach 0.8 - 0.95 @sea level and mach 0.9 - 1.2 at altitude.
 
 - 15 degrees ws: used for takeoff/landing <290 knots @ sealevel
-- 25 degrees ws: used for slow flight/refuelling < 360 knots @sealevel
+- 25 degrees ws: used for slow flight/refuelling < 350 knots @sealevel
 - 45 degrees ws: used for cruise at high altitude (mach 0.6 - 0.75)
 - 55 degrees ws: used for high/low alt flight (above mach 0.7)
 - 67 degrees ws: used for high/low alt flight (above mach 0.8)
@@ -33,8 +36,8 @@ Flight:
 Landing:
 
 - ws 15 degrees
-- use 1/2 or 2/2 flaps
-- touchdown speed is <180 knots with full fuel load, or 140 nearly empty
+- use 1/2 flaps (on short final put full flaps)
+- touchdown speed is <175 knots with full fuel load, or 135 nearly empty
 
 
 
@@ -57,8 +60,7 @@ The clearance settings start from 0ft and increase in 200ft increments up to 200
 
 XXXX FCGMS Center of Gravity System XXXX
 
-This system sets the Center of Gravity (CG) in % of MAC, and lets you manipulate it in a destinct range. Enable the system by switching on SET on the FCGMS panel and choose your desired CG position. The display to the right shows your current CG position. This is done by using shifting weight to simulate fuel pump adjustments, so the system works only within a certain margin.
-Todo: Write a fuel nas for the B-1B to provide a real fuel pumping experience.
+This system sets the Center of Gravity (CG) in % of MAC, and lets you manipulate it in a destinct range. Enable the system by switching on SET on the FCGMS panel and choose your desired CG position. The display to the right shows your current CG position. This is done by using shifting fuel between 2 tanks, so the system works only within a certain margin.
 
 
 XXXX BLAST, FLARES, STROBE, SPOT XXXX
@@ -94,13 +96,25 @@ XXXX PROGRESS XXXX
 
 
 FDM:	 	alpha - in use / needs tuning		90%complete
-3D model:	alpha - in use / more accurate		50%complete
+3D model:	alpha - in use / refinements ..		70%complete
 Textures:	alpha - in use / too few		30%complete
-Animations:	alpha - in use / more to come		65%complete
+Animations:	alpha - in use / more to come		80%complete
 Autopilot:	alpha - in use / needs finetuning	85%complete
 3Dcockpit:	alpha - in use / needs completion	85%complete
+
+XXXX AUTHORS XXXX
+
+Main 3D model done by Paul Jay Schrenker.
+
+Terms of usage: Released under terms of GPL v2. Falls under the term of "other work" in part 0. Source is the readable text of the .obj & .mtl files themselves.
+
+This model was created via use of Wings3D. Wings3D is an open source 3D modeler and may be found at www.wings3d.com
+
+FDM/Instruments/Animations/3D modelling by Markus Zojer
+
+Terms of usage: Released under terms of GPL v2.
 
 
 Have Fun! Good Luck!
 
-Markus Zojer,  25/11/2007
+Markus Zojer,  03/03/2008

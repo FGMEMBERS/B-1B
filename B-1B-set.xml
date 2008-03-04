@@ -29,9 +29,9 @@ B-1B set file.
     <view n="0">
       <internal archive="y">true</internal>
       <config>
-        <x-offset-m archive="y">-0.67</x-offset-m><!-- left-/right+ -->
-        <y-offset-m archive="y">1.70</y-offset-m><!-- up+/down- -->
-        <z-offset-m archive="y">7.53</z-offset-m><!-- back+ -->
+	      <x-offset-m archive="y">-0.54</x-offset-m><!-- left-/right+ -0.67-->
+	<y-offset-m archive="y">1.37</y-offset-m><!-- up+/down- 1.70-->
+	<z-offset-m archive="y">7.15</z-offset-m><!-- back+ 7.53-->
         <pitch-offset-deg>0</pitch-offset-deg>
         <default-field-of-view-deg>60</default-field-of-view-deg>
       </config>
@@ -150,14 +150,14 @@ B-1B set file.
 	    <name>bay aft</name>
 	    <weight-lb type="float">0</weight-lb>
     </weight>
-    <weight n="7">
+    <!-- <weight n="7">
 	    <name>fwd fuel cg</name>
 	    <weight-lb type="float">0</weight-lb>
     </weight>
     <weight n="8">
 	    <name>aft fuel cg</name>
 	    <weight-lb type="float">0</weight-lb>
-    </weight>
+    </weight>-->
 
 <!-- AoA Indexer target 1.0 deg -->
      <aoa-indexer>
@@ -189,6 +189,10 @@ B-1B set file.
 	      <name>D</name>
 	      <desc>sweep wing fwd</desc>
       </key>
+      <key>
+	      <name>Ctrl D</name>
+	      <desc>Flare out</desc>
+      </key>
       <!-- <key>
 	      <name>CTRL B</name>
 	      <desc>toggle airbrakes</desc>
@@ -198,14 +202,30 @@ B-1B set file.
       <line>Rotate at 160kts/takeoff at 170/180kts</line>
       <line>---------------------------------------</line>
       <line>It's OSG baby!</line>
-      <line>Terrain Following/Avoidance Systems:</line>
-      <line>1. Adjust clearance (SET CLEAR or CLR PLN)</line>
-      <line>2. Toggle master switch(es) on</line>
-      <line>3. For TFS: switch PRTY to TERRAIN FOLLOW</line>
-      <key>
-	      <name>Ctrl D</name>
-	      <desc>Flare out</desc>
-      </key>
+      <line>Terrain Following Systems TER FLW:</line>
+      <line>1. Adjust clearance SET CLR (200ft increments)</line>
+      <line>...A=0, B=200ft, C=400ft, D=600ft to J=2000ft</line>
+      <line>...flatlands: down to 200ft, hills: 400/600ft</line>
+      <line>...mountains: 800ft and above </line>
+      <line>2. switch -PRTY- to TER FLW (other setting MAP)</line>
+      <line>3. Toggle master switch TER FLW on</line>
+      <line>-</line>
+      <line>Terrain Avoidance Systems TER AVD:</line>
+      <line>1. Adjust obstancle clearance CLR PLN</line>
+      <line>...possible settings: 0, 100, 300, 500, 1000ft</line>
+      <line>2. Adjust distance RNG, currently 2.5 or 5nm</line>
+      <line>3. Toggle master switch TER AVD on</line>
+      <line>...plane clears obstancle, stays at new alt</line>
+      <line>-</line>
+      <line>Fuel Center of Gravity Management System FCGMS:</line>
+      <line>(-working but experimental-)</line>
+      <line>1. Set CG SET to %MAC of desire</line>
+      <line>...also visible at %MAC scale as orange marker</line>
+      <line>2. Switch SYS to ON</line>
+      <line>...CG %MAC visible as white marker</line>
+      <line>...works only within a certain margin,</line>
+      <line>...then orange and white marker are at same %MAC</line>
+      
       <line>Good Luck!</line>
     </help>
     
@@ -434,6 +454,15 @@ B-1B set file.
 	<cg>
 		<file>Aircraft/B-1B/Nasal/cg.nas</file>
 	</cg>
+	<tfs>
+		<file>Aircraft/B-1B/Nasal/tfs.nas</file>
+	</tfs>
+	<rain>
+		<file>Aircraft/B-1B/Nasal/rain.nas</file>
+	</rain>
+	<radar>
+		<file>Aircraft/B-1B/Nasal/radar.nas</file>
+	</radar>
 
 </nasal>
 

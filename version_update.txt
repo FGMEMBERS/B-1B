@@ -1,5 +1,19 @@
 Rockwell B-1B Lancer "The Bone"
 
+XXXXXX  Version Nr: 0012 03032008 XXXXXX
+
+News/updates: Major update
+
+- New 3D model by pauljs75
+- Cockpit remodelled
+- Experimental FCGMS control uses real fuel now to establish CG
+- Windscreen rain amimation (preview) and sound
+- Terrain following system rewritten, now a bit unprecise in clearing crests
+- Radar now shows MP aircraft +/- 1000ft as orange, above blue, below green
+- Throttle handle added, flaps and sweep handle positioned at correct position
+- tacan instrument ARN-118 added, converted to OSG from XIIIs plib version
+- gears and some aircraft body parts textured
+
 
 XXXXXX  Version Nr: 0011 24112007 XXXXXX
 
@@ -14,13 +28,13 @@ News/updates: Major update
 - terrain following system now works also on water
 - tons of little bugfixes and adjustments
 
-Todo: (uncomlete/most urgent)
+Todo: (incomlete/most urgent)
 - Fuel management system needs to be written (nasal), that provides fuel pumps to and from tanks
-- 3D Model needs to be added
+- Finer 3D Model needs to be added
 - Electric systems need modelling
 
 -----------------------------------------
 
 Have Fun! Good Luck!
 
-Markus Zojer,  25/11/2007
+Markus Zojer,  03/03/2008
