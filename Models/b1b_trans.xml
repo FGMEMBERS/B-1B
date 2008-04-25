@@ -29,63 +29,7 @@ sweat by maggse
 	 </offsets>
  </model>-->
 
- 
- 
- 
- <!-- gear breaking smoke -->
- <model>
-	 <name>smoke0</name>
-	 <path>Aircraft/B-1B/Models/blast/gear_smoke.xml</path>
-	 <condition>
-		 <and>
-			 <greater-than>
-				 <property>velocities/airspeed-kt</property>
-				 <value>120</value>
-			 </greater-than>
-			 <less-than>
-				 <property>accelerations/pilot/x-accel-fps_sec</property>
-				 <value>0</value>
-			 </less-than>
-			 <greater-than>
-				 <property>gear/gear/wow</property>
-				 <value>0</value>
-			 </greater-than>
-	 </and>
-	 </condition>
-	 <offsets>
-		 <x-m>3.400</x-m>
-		 <y-m>-2.4</y-m>
-		 <z-m>-3.4</z-m>
-		 <pitch-deg>90</pitch-deg>
-	 </offsets>
- </model>
- 
- <model>
-	 <name>smoke1</name>
-	 <path>Aircraft/B-1B/Models/blast/gear_smoke.xml</path>
-	 <condition>
-		 <and>
-			 <greater-than>
-				 <property>/velocities/airspeed-kt</property>
-				 <value>120</value>
-			 </greater-than>
-			 <less-than>
-				 <property>/accelerations/pilot/x-accel-fps_sec</property>
-				 <value>0</value>
-			 </less-than>
-			 <greater-than>
-				 <property>gear/gear/wow</property>
-				 <value>0</value>
-			 </greater-than>
-	 </and>
-	 </condition>
-	 <offsets>
-		 <x-m>3.400</x-m>
-		 <y-m>2.4</y-m>
-		 <z-m>-3.4</z-m>
-		 <pitch-deg>90</pitch-deg>
-	 </offsets>
- </model>
+
  <!-- pos lights -->
  
  <model>
@@ -138,6 +82,56 @@ sweat by maggse
 	 </offsets>
  </model>
  
+ <!-- engine outlets -->
+ 
+ <model>
+	 <name>engine_outlet_1</name>
+	 <path>Aircraft/B-1B/Models/engine_outlet_1.xml</path>
+	 
+	 <offsets>
+		 <x-m>0.000</x-m>
+		 <y-m>0.00</y-m>
+		 <z-m>0.0</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <model>
+	 <name>engine_outlet_2</name>
+	 <path>Aircraft/B-1B/Models/engine_outlet_2.xml</path>
+	 
+	 <offsets>
+		 <x-m>0.000</x-m>
+		 <y-m>1.627</y-m>
+		 <z-m>0.0</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <model>
+	 <name>engine_outlet_3</name>
+	 <path>Aircraft/B-1B/Models/engine_outlet_3.xml</path>
+	 
+	 <offsets>
+		 <x-m>0.000</x-m>
+		 <y-m>6.646</y-m>
+		 <z-m>0.0</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <model>
+	 <name>engine_outlet_4</name>
+	 <path>Aircraft/B-1B/Models/engine_outlet_4.xml</path>
+	 
+	 <offsets>
+		 <x-m>0.000</x-m>
+		 <y-m>8.273</y-m>
+		 <z-m>0.0</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ 
  <!--<model>
 	 <name>strobe1</name>
 	 <path>Aircraft/B-1B/Models/blast/strobe.xml</path>
@@ -148,241 +142,7 @@ sweat by maggse
 		 <pitch-deg>90</pitch-deg>
 	 </offsets>
  </model>-->
- 
- <!-- afterburner jetblast conversions are for multiplayer-->
- 
- <model>
-	 <name>ablast0</name>
-	 <path>Aircraft/B-1B/Models/blast/blast_afterburner.xml</path>
-	 <condition>
-		 <and>
-			 <equals>
-				 <!--<property>controls/engines/engine[0]/afterburner</property>-->
-				 <property>engines/engine[4]/n1</property>
-				 <value>1</value>
-			 </equals>
-			 <equals>
-				 <!--<property>controls/engines/engine[0]/cutoff</property>-->
-				 <property>engines/engine[4]/n2</property>
-				 <value>0</value>
-			 </equals>
-		 </and>
-	 </condition>
-	 <offsets>
-		 <x-m>9.200</x-m>
-		 <y-m>-4.11</y-m>
-		 <z-m>-1.68</z-m>
-		 <pitch-deg>90</pitch-deg>
-	 </offsets>
- </model>
- 
- <model>
-	 <name>ablast1</name>
-	 <path>Aircraft/B-1B/Models/blast/blast_afterburner.xml</path>
-	 <condition>
-		 <and>
-			 <equals>
-				 <!--<property>controls/engines/engine[1]/afterburner</property>-->
-				 <property>engines/engine[4]/n1</property>
-				 <value>1</value>
-			 </equals>
-			 <equals>
-				 <property>engines/engine[5]/n2</property>
-				 <!--<property>controls/engines/engine[1]/cutoff</property>-->
-				 <value>0</value>
-			 </equals>
-		 </and>
-	 </condition>
-	 <offsets>
-		 <x-m>9.200</x-m>
-		 <y-m>-2.48</y-m>
-		 <z-m>-1.68</z-m>
-		 <pitch-deg>90</pitch-deg>
-	 </offsets>
- </model>
- 
- <model>
-	 <name>ablast2</name>
-	 <path>Aircraft/B-1B/Models/blast/blast_afterburner.xml</path>
-	 <condition>
-		 <and>
-			 <equals>
-				 <!--<property>controls/engines/engine[2]/afterburner</property>-->
-				 <property>engines/engine[4]/n1</property>
-				 <value>1</value>
-			 </equals>
-			 <equals>
-				  <property>engines/engine[6]/n2</property>
-				 <!--<property>controls/engines/engine[2]/cutoff</property>-->
-				 <value>0</value>
-			 </equals>
-		 </and>
-	 </condition>
-	 <offsets>
-		 <x-m>9.200</x-m>
-		 <y-m>2.52</y-m>
-		 <z-m>-1.68</z-m>
-		 <pitch-deg>90</pitch-deg>
-	 </offsets>
- </model>
- 
- <model>
-	 <name>ablast3</name>
-	 <path>Aircraft/B-1B/Models/blast/blast_afterburner.xml</path>
-	 <condition>
-		 <and>
-			 <equals>
-				 <property>engines/engine[4]/n1</property>
-				 <!--<property>controls/engines/engine[3]/afterburner</property>-->
-				 <value>1</value>
-			 </equals>
-			 <equals>
-				 <property>engines/engine[7]/n2</property>
-				 <!-- <property>controls/engines/engine[3]/cutoff</property>-->
-				 <value>0</value>
-			 </equals>
-		 </and>
-	 </condition>
-	 <offsets>
-		 <x-m>9.200</x-m>
-		 <y-m>4.16</y-m>
-		 <z-m>-1.68</z-m>
-		 <pitch-deg>90</pitch-deg>
-	 </offsets>
-  </model>
-  
-  <!-- norm jetblast -->
-  <model>
-	  <name>blast0</name>
-	  <path>Aircraft/B-1B/Models/blast/blast_engine.xml</path>
-	  <condition>
-		  <and>
-			  <greater-than>
-				  <property>engines/engine[0]/n2</property>
-				  <value>75</value>
-			  </greater-than>
-			  <equals>
-				  <property>engines/engine[4]/n2</property>
-				  <!--<property>controls/engines/engine[0]/cutoff</property>-->
-				  <value>0</value>
-			  </equals>
-		  </and>
-	  </condition>
-	  <offsets>
-		  <x-m>8.200</x-m>
-		  <y-m>-4.11</y-m>
-		  <z-m>-1.68</z-m>
-		  <pitch-deg>90</pitch-deg>
-	  </offsets>
-  </model>
-  
-  <model>
-	  <name>blast1</name>
-	  <path>Aircraft/B-1B/Models/blast/blast_engine.xml</path>
-	  <condition>
-		  <and>
-			  <greater-than>
-				  <property>engines/engine[1]/n2</property>
-				  <value>75</value>
-			  </greater-than>
-			  <equals>
-				  <property>engines/engine[5]/n2</property>
-				  <!--<property>controls/engines/engine[1]/cutoff</property>-->
-				  <value>0</value>
-			  </equals>
-		  </and>
-	  </condition>
-	  <offsets>
-		  <x-m>8.200</x-m>
-		  <y-m>-2.48</y-m>
-		  <z-m>-1.68</z-m>
-		  <pitch-deg>90</pitch-deg>
-	  </offsets>
-  </model>
-  
-  <model>
-	  <name>blast2</name>
-	  <path>Aircraft/B-1B/Models/blast/blast_engine.xml</path>
-	  <condition>
-		  <and>
-			  <greater-than>
-				  <property>engines/engine[2]/n2</property>
-				  <value>75</value>
-			  </greater-than>
-			  <equals>
-				  <property>engines/engine[6]/n2</property>
-				  <!--<property>controls/engines/engine[2]/cutoff</property>-->
-				  <value>0</value>
-			  </equals>
-		  </and>
-	  </condition>
-	  <offsets>
-		  <x-m>8.200</x-m>
-		  <y-m>2.48</y-m>
-		  <z-m>-1.68</z-m>
-		  <pitch-deg>90</pitch-deg>
-	  </offsets>
-  </model>
-  
-  <model>
-	  <name>blast3</name>
-	  <path>Aircraft/B-1B/Models/blast/blast_engine.xml</path>
-	  <condition>
-		  <and>
-			  <greater-than>
-				  <property>engines/engine[3]/n2</property>
-				  <value>75</value>
-			  </greater-than>
-			  <equals>
-				  <property>engines/engine[7]/n2</property>
-				  <!--<property>controls/engines/engine[3]/cutoff</property>-->
-				  <value>0</value>
-			  </equals>
-		  </and>
-	  </condition>
-	  <offsets>
-		  <x-m>8.200</x-m>
-		  <y-m>4.11</y-m>
-		  <z-m>-1.68</z-m>
-		  <pitch-deg>90</pitch-deg>
-	  </offsets>
-  </model>
 
-  <!-- afterburner flame 
-  
-  <animation>
-	  <type>select</type>
-	  <object-name>eng_flame</object-name>
-	  <object-name>eng_flame.001</object-name>
-	  <object-name>eng_flame.002</object-name>
-	  <object-name>eng_flame.003</object-name>
-	  <condition>
-		  <greater-than>
-			  <property>controls/engines/engine[0]/afterburner</property>
-			  <value>0.0</value>
-		  </greater-than>
-	  </condition>
-  </animation>
-  
-  <animation>
-	  <type>noshadow</type>
-	  <object-name>eng_flame</object-name>
-	  <object-name>eng_flame.001</object-name>
-	  <object-name>eng_flame.002</object-name>
-	  <object-name>eng_flame.003</object-name>
-  </animation>
-  
-  <animation>
-	  <type>blend</type>
-	  <object-name>eng_flame</object-name>
-	  <object-name>eng_flame.001</object-name>
-	  <object-name>eng_flame.002</object-name>
-	  <object-name>eng_flame.003</object-name>
-	  <property>controls/engines/engine[0]/throttle</property>
-	  <offset>0.95</offset>
-	  <factor>-0.20</factor>
-  </animation>-->
-  
   <!-- engine fire -->
   
   <animation>
@@ -423,6 +183,128 @@ sweat by maggse
 	 <property>engines/engine[3]/thrust-lbs</property>
 	 <offset>0.9</offset>
 	 <factor>-0.000033</factor>
+ </animation>
+ 
+ <!-- engine turbines -->
+ 
+ <animation>
+	 <type>spin</type>
+	 <object-name>turbine_1</object-name>
+	 <property>engines/engine[0]/n2</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0</dep>
+		 </entry>
+		 <entry>
+			 <ind>72.0</ind>
+			 <dep>-20.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>100.0</ind>
+			 <dep>-155.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-15.993</x-m>
+		 <y-m>-4.112</y-m>
+		 <z-m>-1.679</z-m>
+	 </center>
+	 <axis>
+		 <x>1</x>
+		 <y>0</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>spin</type>
+	 <object-name>turbine_2</object-name>
+	 <property>engines/engine[1]/n2</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0</dep>
+		 </entry>
+		 <entry>
+			 <ind>72.0</ind>
+			 <dep>20.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>100.0</ind>
+			 <dep>155.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-15.993</x-m>
+		 <y-m>-2.492</y-m>
+		 <z-m>-1.687</z-m>
+	 </center>
+	 <axis>
+		 <x>1</x>
+		 <y>0</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>spin</type>
+	 <object-name>turbine_3</object-name>
+	 <property>engines/engine[2]/n2</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0</dep>
+		 </entry>
+		 <entry>
+			 <ind>72.0</ind>
+			 <dep>-20.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>100.0</ind>
+			 <dep>-155.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-15.993</x-m>
+		 <y-m>2.533</y-m>
+		 <z-m>-1.678</z-m>
+	 </center>
+	 <axis>
+		 <x>1</x>
+		 <y>0</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>spin</type>
+	 <object-name>turbine_4</object-name>
+	 <property>engines/engine[3]/n2</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0</dep>
+		 </entry>
+		 <entry>
+			 <ind>72.0</ind>
+			 <dep>20.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>100.0</ind>
+			 <dep>155.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-15.993</x-m>
+		 <y-m>4.160</y-m>
+		 <z-m>-1.680</z-m>
+	 </center>
+	 <axis>
+		 <x>1</x>
+		 <y>0</y>
+		 <z>0</z>
+	 </axis>
  </animation>
  
  <!-- wing contrails -->
@@ -505,43 +387,1154 @@ sweat by maggse
 	 </axis>
  </animation>
  
- <!--<animation>
-	 <type>texmultiple</type>
-	 <object-name>bone_rain</object-name>
-	 <transform>
-		 <property>instrumentation/rain/rain</property>
-		 <subtype>textranslate</subtype>
-		 <factor>0.1</factor>
-		 <step>1</step>
-		 <axis>
-			 <x>0</x>
-			 <y>1</y>
-			 <z>0</z>
-		 </axis>
-	 </transform>
-	 <transform>
-		 <property>instrumentation/rain/rain</property>
-		 <subtype>texranslate</subtype>
-		 <factor>0.01</factor>
-		 <axis>
-			 <x>0</x>
-			 <y>1</y>
-			 <z>0</z>
-		 </axis>
-	 </transform>
- </animation>-->
+ <!-- xml OSG particles part starts here -->
  
+ <!-- gear smoke -->
+ 
+ <particlesystem>
+	 <!-- <type>trail</type>-->
+	 <name>gear_smoke_right</name>
+	 <texture>puff.rgb</texture>
+	 <emissive>false</emissive>
+	 <lighting>true</lighting>
+	 
+	 <offsets>
+		 <x-m>3.400</x-m>
+		 <y-m>2.4</y-m>
+		 <z-m>-3.4</z-m>
+		 <pitch-deg>90</pitch-deg>
+	 </offsets>
+	 
+	 <attach>world</attach>
+	 
+	 <placer>
+		 <type>point</type>
+		 
+	 </placer>
+	 
+	 <shooter>
+		 <theta-min-deg>0</theta-min-deg>
+		 <theta-max-deg>0</theta-max-deg>
+		 <phi-min-deg>0</phi-min-deg>
+		 <phi-max-deg>0</phi-max-deg>
+		 <speed>
+			 <value>1</value>
+			 <spread>0.3</spread>
+		 </speed>
+		 <rotspeed>
+			 <minx>0</minx>
+			 <miny>0</miny>
+			 <minz>0</minz>
+			 <maxx>0</maxx>
+			 <maxy>0</maxy>
+			 <maxz>0</maxz>
+		 </rotspeed>
+	 </shooter>
+	 
+	 <counter>
+		 <pps>
+			 <value>30</value>
+			 <spread>0</spread>
+		 </pps>
+		 
+		 <condition>
+			 <and>
+				 <greater-than>
+					 <property>velocities/airspeed-kt</property>
+					 <value>110</value>
+				 </greater-than>
+				 <less-than>
+					 <property>accelerations/pilot/x-accel-fps_sec</property>
+					 <value>0</value>
+				 </less-than>
+				 <greater-than>
+					 <property>gear/gear[4]/wow</property>
+					 <value>0</value>
+				 </greater-than>
+	                 </and>
+		 </condition>
+		 
+	 </counter>
+	 
+	 <align>billboard</align>
+	 
+	 <particle>
+		 <startcolor>
+			 <red>
+				 <value>0.6</value>
+			 </red>
+			 <green>
+				 <value>0.6</value>
+			 </green>
+			 <blue>
+				 <value>0.6</value>
+			 </blue>
+			 <alpha>
+				 <value>0.4</value>
+			 </alpha>
+		 </startcolor>
+		 <endcolor>
+			 <red>
+				 <value>0.8</value>
+			 </red>
+			 <green>
+				 <value>0.8</value>
+			 </green>
+			 <blue>
+				 <value>0.8</value>
+			 </blue>
+			 <alpha>
+				 <value>0.0</value>
+			 </alpha>
+		 </endcolor>
+		 <startsize>
+			 <value>1.0</value>
+		 </startsize>
+		 <endsize>
+			 <value>2.8</value>
+		 </endsize>
+		 <life-sec>
+			 <value>1.5</value>
+		 </life-sec>
+		 <mass-kg>0.1</mass-kg>
+		 <radius-m>0.45</radius-m>
+	 </particle>
+	 
+	 <program>
+		 <fluid>air</fluid>
+		 <gravity>enabled</gravity>
+		 <wind>enabled</wind>
+	 </program>
+	 
+</particlesystem>
 
-  
- <!--<animation>
-	 <type>select</type>
-	 <object-name>bone.003</object-name>
-	 <condition>
-		 <greater-than>
-			 <property>controls/engines/engine[0]/afterburner</property>
-			 <value>0.0</value>
-		 </greater-than>
+<particlesystem>
+	<!-- <type>trail</type>-->
+	<name>gear_smoke_left</name>
+	<texture>puff.rgb</texture>
+	<emissive>false</emissive>
+	<lighting>true</lighting>
+	
+	<offsets>
+		<x-m>3.400</x-m>
+		<y-m>-2.4</y-m>
+		<z-m>-3.4</z-m>
+		<pitch-deg>90</pitch-deg>
+	</offsets>
+	
+	<attach>world</attach>
+	
+	<placer>
+		<type>point</type>
+		
+	</placer>
+	
+	<shooter>
+		<theta-min-deg>0</theta-min-deg>
+		<theta-max-deg>0</theta-max-deg>
+		<phi-min-deg>0</phi-min-deg>
+		<phi-max-deg>0</phi-max-deg>
+		<speed>
+			<value>1</value>
+			<spread>0.3</spread>
+		</speed>
+		<rotspeed>
+			<minx>0</minx>
+			<miny>0</miny>
+			<minz>0</minz>
+			<maxx>0</maxx>
+			<maxy>0</maxy>
+			<maxz>0</maxz>
+		</rotspeed>
+	</shooter>
+	
+	<counter>
+		<pps>
+			<value>30</value>
+			<spread>0</spread>
+		</pps>
+		
+		<condition>
+			<and>
+				<greater-than>
+					<property>velocities/airspeed-kt</property>
+					<value>110</value>
+				</greater-than>
+				<less-than>
+					<property>accelerations/pilot/x-accel-fps_sec</property>
+					<value>0</value>
+				</less-than>
+				<greater-than>
+					<property>gear/gear[2]/wow</property>
+					<value>0</value>
+				</greater-than>
+			</and>
+		</condition>
+		
+	</counter>
+	
+	<align>billboard</align>
+	
+	<particle>
+		<startcolor>
+			<red>
+				<value>0.6</value>
+			</red>
+			<green>
+				<value>0.6</value>
+			</green>
+			<blue>
+				<value>0.6</value>
+			</blue>
+			<alpha>
+				<value>0.4</value>
+			</alpha>
+		</startcolor>
+		<endcolor>
+			<red>
+				<value>0.8</value>
+			</red>
+			<green>
+				<value>0.8</value>
+			</green>
+			<blue>
+				<value>0.8</value>
+			</blue>
+			<alpha>
+				<value>0.0</value>
+			</alpha>
+		</endcolor>
+		<startsize>
+			<value>1.0</value>
+		</startsize>
+		<endsize>
+			<value>2.8</value>
+		</endsize>
+		<life-sec>
+			<value>1.5</value>
+		</life-sec>
+		<mass-kg>0.1</mass-kg>
+		<radius-m>0.45</radius-m>
+	</particle>
+	
+	<program>
+		<fluid>air</fluid>
+		<gravity>enabled</gravity>
+		<wind>enabled</wind>
+	</program>
+	
+</particlesystem>
+
+<!-- particle system for engine blast-->
+
+<particlesystem>
+	<!-- <type>trail</type>-->
+	<name>engine_blast_1</name>
+	<texture>puff.rgb</texture>
+	<emissive>true</emissive>
+	<lighting>false</lighting>
+	<offsets>
+		<x-m>8.600</x-m>
+		<y-m>-4.11</y-m>
+		<z-m>-1.68</z-m>
+		<pitch-deg>90</pitch-deg>
+	  </offsets>
+	
+	<attach>local</attach>
+	
+	<placer>
+		<type>point</type>
+		
+	</placer>
+	
+	<shooter>
+		<theta-min-deg>0</theta-min-deg>
+		<theta-max-deg>0</theta-max-deg>
+		<phi-min-deg>0</phi-min-deg>
+		<phi-max-deg>0</phi-max-deg>
+		<speed>
+			<value>10</value>
+			<spread>0</spread>
+		</speed>
+		<rotspeed>
+			<minx>0</minx>
+			<miny>0</miny>
+			<minz>0</minz>
+			<maxx>0</maxx>
+			<maxy>0</maxy>
+			<maxz>0</maxz>
+		</rotspeed>
+	</shooter>
+	
+	<counter>
+		<pps>
+			<value>15</value>
+			<spread>0</spread>
+		</pps>
+		
+		<condition>
+			<and>
+				<greater-than>
+					<property>engines/engine[0]/n2</property>
+					<value>75</value>
+				</greater-than>
+				<equals>
+					<property>engines/engine[4]/n2</property>
+					<!--<property>controls/engines/engine[0]/cutoff</property>-->
+					<value>0</value>
+				</equals>
+			</and>
+	</condition>
+		
+	</counter>
+	
+	<align>billboard</align>
+	
+	<particle>
+		<startcolor>
+			<red>
+				<value>0.55</value>
+			</red>
+			<green>
+				<value>0.4</value>
+			</green>
+			<blue>
+				<value>0.34</value>
+			</blue>
+			<alpha>
+				<value>0.10</value>
+			</alpha>
+		</startcolor>
+		<endcolor>
+			<red>
+				<value>0.47</value>
+			</red>
+			<green>
+				<value>0.53</value>
+			</green>
+			<blue>
+				<value>0.34</value>
+			</blue>
+			<alpha>
+				<value>0.05</value>
+			</alpha>
+		</endcolor>
+		<startsize>
+			<value>0.40</value>
+		</startsize>
+		<endsize>
+			<value>0.25</value>
+		</endsize>
+		<life-sec>
+			<value>0.3</value>
+		</life-sec>
+		<mass-kg>5.0</mass-kg>
+		<radius-m>0.1</radius-m>
+	</particle>
+	
+	<program>
+		<fluid>air</fluid>
+		<gravity>disabled</gravity>
+		<wind>disabled</wind>
+	</program>
+	
+</particlesystem>
+
+<particlesystem>
+	<!-- <type>trail</type>-->
+	<name>engine_blast_2</name>
+	<texture>puff.rgb</texture>
+	<emissive>true</emissive>
+	<lighting>false</lighting>
+	<offsets>
+		<x-m>8.600</x-m>
+		<y-m>-2.48</y-m>
+		<z-m>-1.68</z-m>
+		<pitch-deg>90</pitch-deg>
+	</offsets>
+	
+	<attach>local</attach>
+	
+	<placer>
+		<type>point</type>
+		
+	</placer>
+	
+	<shooter>
+		<theta-min-deg>0</theta-min-deg>
+		<theta-max-deg>0</theta-max-deg>
+		<phi-min-deg>0</phi-min-deg>
+		<phi-max-deg>0</phi-max-deg>
+		<speed>
+			<value>10</value>
+			<spread>0</spread>
+		</speed>
+		<rotspeed>
+			<minx>0</minx>
+			<miny>0</miny>
+			<minz>0</minz>
+			<maxx>0</maxx>
+			<maxy>0</maxy>
+			<maxz>0</maxz>
+		</rotspeed>
+	</shooter>
+	
+	<counter>
+		<pps>
+			<value>15</value>
+			<spread>0</spread>
+		</pps>
+		
+		<condition>
+			<and>
+				<greater-than>
+					<property>engines/engine[1]/n2</property>
+					<value>75</value>
+				</greater-than>
+				<equals>
+					<property>engines/engine[5]/n2</property>
+					<!--<property>controls/engines/engine[0]/cutoff</property>-->
+					<value>0</value>
+				</equals>
+			</and>
+		</condition>
+		
+	</counter>
+	
+	<align>billboard</align>
+	
+	<particle>
+		<startcolor>
+			<red>
+				<value>0.55</value>
+			</red>
+			<green>
+				<value>0.4</value>
+			</green>
+			<blue>
+				<value>0.34</value>
+			</blue>
+			<alpha>
+				<value>0.10</value>
+			</alpha>
+		</startcolor>
+		<endcolor>
+			<red>
+				<value>0.47</value>
+			</red>
+			<green>
+				<value>0.53</value>
+			</green>
+			<blue>
+				<value>0.34</value>
+			</blue>
+			<alpha>
+				<value>0.05</value>
+			</alpha>
+		</endcolor>
+		<startsize>
+			<value>0.40</value>
+		</startsize>
+		<endsize>
+			<value>0.25</value>
+		</endsize>
+		<life-sec>
+			<value>0.3</value>
+		</life-sec>
+		<mass-kg>5.0</mass-kg>
+		<radius-m>0.1</radius-m>
+	</particle>
+	
+	<program>
+		<fluid>air</fluid>
+		<gravity>disabled</gravity>
+		<wind>disabled</wind>
+	</program>
+	
+</particlesystem>
+
+<particlesystem>
+	<!-- <type>trail</type>-->
+	<name>engine_blast_3</name>
+	<texture>puff.rgb</texture>
+	<emissive>true</emissive>
+	<lighting>false</lighting>
+	<offsets>
+		<x-m>8.600</x-m>
+		<y-m>2.48</y-m>
+		<z-m>-1.68</z-m>
+		<pitch-deg>90</pitch-deg>
+	</offsets>
+	
+	<attach>local</attach>
+	
+	<placer>
+		<type>point</type>
+		
+	</placer>
+	
+	<shooter>
+		<theta-min-deg>0</theta-min-deg>
+		<theta-max-deg>0</theta-max-deg>
+		<phi-min-deg>0</phi-min-deg>
+		<phi-max-deg>0</phi-max-deg>
+		<speed>
+			<value>10</value>
+			<spread>0</spread>
+		</speed>
+		<rotspeed>
+			<minx>0</minx>
+			<miny>0</miny>
+			<minz>0</minz>
+			<maxx>0</maxx>
+			<maxy>0</maxy>
+			<maxz>0</maxz>
+		</rotspeed>
+	</shooter>
+	
+	<counter>
+		<pps>
+			<value>15</value>
+			<spread>0</spread>
+		</pps>
+		
+		<condition>
+			<and>
+				<greater-than>
+					<property>engines/engine[2]/n2</property>
+					<value>75</value>
+				</greater-than>
+				<equals>
+					<property>engines/engine[6]/n2</property>
+					<!--<property>controls/engines/engine[0]/cutoff</property>-->
+					<value>0</value>
+				</equals>
+			</and>
+		</condition>
+		
+	</counter>
+	
+	<align>billboard</align>
+	
+	<particle>
+		<startcolor>
+			<red>
+				<value>0.55</value>
+			</red>
+			<green>
+				<value>0.4</value>
+			</green>
+			<blue>
+				<value>0.34</value>
+			</blue>
+			<alpha>
+				<value>0.10</value>
+			</alpha>
+		</startcolor>
+		<endcolor>
+			<red>
+				<value>0.47</value>
+			</red>
+			<green>
+				<value>0.53</value>
+			</green>
+			<blue>
+				<value>0.34</value>
+			</blue>
+			<alpha>
+				<value>0.05</value>
+			</alpha>
+		</endcolor>
+		<startsize>
+			<value>0.40</value>
+		</startsize>
+		<endsize>
+			<value>0.25</value>
+		</endsize>
+		<life-sec>
+			<value>0.3</value>
+		</life-sec>
+		<mass-kg>5.0</mass-kg>
+		<radius-m>0.1</radius-m>
+	</particle>
+	
+	<program>
+		<fluid>air</fluid>
+		<gravity>disabled</gravity>
+		<wind>disabled</wind>
+	</program>
+	
+</particlesystem>
+
+<particlesystem>
+	<!-- <type>trail</type>-->
+	<name>engine_blast_4</name>
+	<texture>puff.rgb</texture>
+	<emissive>true</emissive>
+	<lighting>false</lighting>
+	<offsets>
+		<x-m>8.600</x-m>
+		<y-m>4.11</y-m>
+		<z-m>-1.68</z-m>
+		<pitch-deg>90</pitch-deg>
+	</offsets>
+	
+	<attach>local</attach>
+	
+	<placer>
+		<type>point</type>
+		
+	</placer>
+	
+	<shooter>
+		<theta-min-deg>0</theta-min-deg>
+		<theta-max-deg>0</theta-max-deg>
+		<phi-min-deg>0</phi-min-deg>
+		<phi-max-deg>0</phi-max-deg>
+		<speed>
+			<value>10</value>
+			<spread>0</spread>
+		</speed>
+		<rotspeed>
+			<minx>0</minx>
+			<miny>0</miny>
+			<minz>0</minz>
+			<maxx>0</maxx>
+			<maxy>0</maxy>
+			<maxz>0</maxz>
+		</rotspeed>
+	</shooter>
+	
+	<counter>
+		<pps>
+			<value>15</value>
+			<spread>0</spread>
+		</pps>
+		
+		<condition>
+			<and>
+				<greater-than>
+					<property>engines/engine[3]/n2</property>
+					<value>75</value>
+				</greater-than>
+				<equals>
+					<property>engines/engine[7]/n2</property>
+					<!--<property>controls/engines/engine[0]/cutoff</property>-->
+					<value>0</value>
+				</equals>
+			</and>
+		</condition>
+		
+	</counter>
+	
+	<align>billboard</align>
+	
+	<particle>
+		<startcolor>
+			<red>
+				<value>0.55</value>
+			</red>
+			<green>
+				<value>0.4</value>
+			</green>
+			<blue>
+				<value>0.34</value>
+			</blue>
+			<alpha>
+				<value>0.10</value>
+			</alpha>
+		</startcolor>
+		<endcolor>
+			<red>
+				<value>0.47</value>
+			</red>
+			<green>
+				<value>0.53</value>
+			</green>
+			<blue>
+				<value>0.34</value>
+			</blue>
+			<alpha>
+				<value>0.05</value>
+			</alpha>
+		</endcolor>
+		<startsize>
+			<value>0.40</value>
+		</startsize>
+		<endsize>
+			<value>0.25</value>
+		</endsize>
+		<life-sec>
+			<value>0.3</value>
+		</life-sec>
+		<mass-kg>5.0</mass-kg>
+		<radius-m>0.1</radius-m>
+	</particle>
+	
+	<program>
+		<fluid>air</fluid>
+		<gravity>disabled</gravity>
+		<wind>disabled</wind>
+	</program>
+	
+</particlesystem>
+
+<!-- particle system for engine afterburner-->
+
+<particlesystem>
+	<!-- <type>trail</type>-->
+	<name>engine_afterburner_1</name>
+	<texture>puff.rgb</texture>
+	<emissive>true</emissive>
+	<lighting>false</lighting>
+	<offsets>
+		<x-m>8.600</x-m>
+		<y-m>-4.11</y-m>
+		<z-m>-1.68</z-m>
+		<pitch-deg>90</pitch-deg>
+	</offsets>
+	
+	<attach>local</attach>
+	
+	<placer>
+		<type>point</type>
+		
+	</placer>
+	
+	<shooter>
+		<theta-min-deg>0</theta-min-deg>
+		<theta-max-deg>0</theta-max-deg>
+		<phi-min-deg>0</phi-min-deg>
+		<phi-max-deg>0</phi-max-deg>
+		<speed>
+			<value>14</value>
+			<spread>0</spread>
+		</speed>
+		<rotspeed>
+			<minx>0</minx>
+			<miny>0</miny>
+			<minz>0</minz>
+			<maxx>0</maxx>
+			<maxy>0</maxy>
+			<maxz>0</maxz>
+		</rotspeed>
+	</shooter>
+	
+	<counter>
+		<pps>
+			<value>22</value>
+			<spread>0</spread>
+		</pps>
+
+		<condition>
+			<and>
+				<equals>
+					<!--<property>controls/engines/engine[0]/afterburner</property>-->
+					<property>engines/engine[4]/n1</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<!--<property>controls/engines/engine[0]/cutoff</property>-->
+					<property>engines/engine[4]/n2</property>
+					<value>0</value>
+				</equals>
+			</and>
 	 </condition>
-  </animation>-->
+		
+	</counter>
+	
+	<align>billboard</align>
+	
+	<particle>
+		<startcolor>
+			<red>
+				<value>0.55</value>
+			</red>
+			<green>
+				<value>0.4</value>
+			</green>
+			<blue>
+				<value>0.34</value>
+			</blue>
+			<alpha>
+				<value>0.30</value>
+			</alpha>
+		</startcolor>
+		<endcolor>
+			<red>
+				<value>0.47</value>
+			</red>
+			<green>
+				<value>0.53</value>
+			</green>
+			<blue>
+				<value>0.34</value>
+			</blue>
+			<alpha>
+				<value>0.15</value>
+			</alpha>
+		</endcolor>
+		<startsize>
+			<value>0.60</value>
+		</startsize>
+		<endsize>
+			<value>0.4</value>
+		</endsize>
+		<life-sec>
+			<value>0.4</value>
+		</life-sec>
+		<mass-kg>5.0</mass-kg>
+		<radius-m>0.1</radius-m>
+	</particle>
+	
+	<program>
+		<fluid>air</fluid>
+		<gravity>disabled</gravity>
+		<wind>disabled</wind>
+	</program>
+	
+</particlesystem>
+
+<particlesystem>
+	<!-- <type>trail</type>-->
+	<name>engine_afterburner_2</name>
+	<texture>puff.rgb</texture>
+	<emissive>true</emissive>
+	<lighting>false</lighting>
+	<offsets>
+		<x-m>8.600</x-m>
+		<y-m>-2.48</y-m>
+		<z-m>-1.68</z-m>
+		<pitch-deg>90</pitch-deg>
+	</offsets>
+	
+	<attach>local</attach>
+	
+	<placer>
+		<type>point</type>
+		
+	</placer>
+	
+	<shooter>
+		<theta-min-deg>0</theta-min-deg>
+		<theta-max-deg>0</theta-max-deg>
+		<phi-min-deg>0</phi-min-deg>
+		<phi-max-deg>0</phi-max-deg>
+		<speed>
+			<value>14</value>
+			<spread>0</spread>
+		</speed>
+		<rotspeed>
+			<minx>0</minx>
+			<miny>0</miny>
+			<minz>0</minz>
+			<maxx>0</maxx>
+			<maxy>0</maxy>
+			<maxz>0</maxz>
+		</rotspeed>
+	</shooter>
+	
+	<counter>
+		<pps>
+			<value>22</value>
+			<spread>0</spread>
+		</pps>
+		
+		<condition>
+			<and>
+				<equals>
+					<!--<property>controls/engines/engine[0]/afterburner</property>-->
+					<property>engines/engine[4]/n1</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<!--<property>controls/engines/engine[0]/cutoff</property>-->
+					<property>engines/engine[5]/n2</property>
+					<value>0</value>
+				</equals>
+			</and>
+		</condition>
+		
+	</counter>
+	
+	<align>billboard</align>
+	
+	<particle>
+		<startcolor>
+			<red>
+				<value>0.55</value>
+			</red>
+			<green>
+				<value>0.4</value>
+			</green>
+			<blue>
+				<value>0.34</value>
+			</blue>
+			<alpha>
+				<value>0.30</value>
+			</alpha>
+		</startcolor>
+		<endcolor>
+			<red>
+				<value>0.47</value>
+			</red>
+			<green>
+				<value>0.53</value>
+			</green>
+			<blue>
+				<value>0.34</value>
+			</blue>
+			<alpha>
+				<value>0.15</value>
+			</alpha>
+		</endcolor>
+		<startsize>
+			<value>0.60</value>
+		</startsize>
+		<endsize>
+			<value>0.4</value>
+		</endsize>
+		<life-sec>
+			<value>0.4</value>
+		</life-sec>
+		<mass-kg>5.0</mass-kg>
+		<radius-m>0.1</radius-m>
+	</particle>
+	
+	<program>
+		<fluid>air</fluid>
+		<gravity>disabled</gravity>
+		<wind>disabled</wind>
+	</program>
+	
+</particlesystem>
+
+<particlesystem>
+	<!-- <type>trail</type>-->
+	<name>engine_afterburner_3</name>
+	<texture>puff.rgb</texture>
+	<emissive>true</emissive>
+	<lighting>false</lighting>
+	<offsets>
+		<x-m>8.600</x-m>
+		<y-m>2.48</y-m>
+		<z-m>-1.68</z-m>
+		<pitch-deg>90</pitch-deg>
+	</offsets>
+	
+	<attach>local</attach>
+	
+	<placer>
+		<type>point</type>
+		
+	</placer>
+	
+	<shooter>
+		<theta-min-deg>0</theta-min-deg>
+		<theta-max-deg>0</theta-max-deg>
+		<phi-min-deg>0</phi-min-deg>
+		<phi-max-deg>0</phi-max-deg>
+		<speed>
+			<value>14</value>
+			<spread>0</spread>
+		</speed>
+		<rotspeed>
+			<minx>0</minx>
+			<miny>0</miny>
+			<minz>0</minz>
+			<maxx>0</maxx>
+			<maxy>0</maxy>
+			<maxz>0</maxz>
+		</rotspeed>
+	</shooter>
+	
+	<counter>
+		<pps>
+			<value>22</value>
+			<spread>0</spread>
+		</pps>
+		
+		<condition>
+			<and>
+				<equals>
+					<!--<property>controls/engines/engine[0]/afterburner</property>-->
+					<property>engines/engine[4]/n1</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<!--<property>controls/engines/engine[0]/cutoff</property>-->
+					<property>engines/engine[6]/n2</property>
+					<value>0</value>
+				</equals>
+			</and>
+		</condition>
+		
+	</counter>
+	
+	<align>billboard</align>
+	
+	<particle>
+		<startcolor>
+			<red>
+				<value>0.55</value>
+			</red>
+			<green>
+				<value>0.4</value>
+			</green>
+			<blue>
+				<value>0.34</value>
+			</blue>
+			<alpha>
+				<value>0.30</value>
+			</alpha>
+		</startcolor>
+		<endcolor>
+			<red>
+				<value>0.47</value>
+			</red>
+			<green>
+				<value>0.53</value>
+			</green>
+			<blue>
+				<value>0.34</value>
+			</blue>
+			<alpha>
+				<value>0.15</value>
+			</alpha>
+		</endcolor>
+		<startsize>
+			<value>0.60</value>
+		</startsize>
+		<endsize>
+			<value>0.4</value>
+		</endsize>
+		<life-sec>
+			<value>0.4</value>
+		</life-sec>
+		<mass-kg>5.0</mass-kg>
+		<radius-m>0.1</radius-m>
+	</particle>
+	
+	<program>
+		<fluid>air</fluid>
+		<gravity>disabled</gravity>
+		<wind>disabled</wind>
+	</program>
+	
+</particlesystem>
+
+<particlesystem>
+	<!-- <type>trail</type>-->
+	<name>engine_afterburner_4</name>
+	<texture>puff.rgb</texture>
+	<emissive>true</emissive>
+	<lighting>false</lighting>
+	<offsets>
+		<x-m>8.600</x-m>
+		<y-m>4.11</y-m>
+		<z-m>-1.68</z-m>
+		<pitch-deg>90</pitch-deg>
+	</offsets>
+	
+	<attach>local</attach>
+	
+	<placer>
+		<type>point</type>
+		
+	</placer>
+	
+	<shooter>
+		<theta-min-deg>0</theta-min-deg>
+		<theta-max-deg>0</theta-max-deg>
+		<phi-min-deg>0</phi-min-deg>
+		<phi-max-deg>0</phi-max-deg>
+		<speed>
+			<value>14</value>
+			<spread>0</spread>
+		</speed>
+		<rotspeed>
+			<minx>0</minx>
+			<miny>0</miny>
+			<minz>0</minz>
+			<maxx>0</maxx>
+			<maxy>0</maxy>
+			<maxz>0</maxz>
+		</rotspeed>
+	</shooter>
+	
+	<counter>
+		<pps>
+			<value>22</value>
+			<spread>0</spread>
+		</pps>
+		
+		<condition>
+			<and>
+				<equals>
+					<!--<property>controls/engines/engine[0]/afterburner</property>-->
+					<property>engines/engine[4]/n1</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<!--<property>controls/engines/engine[0]/cutoff</property>-->
+					<property>engines/engine[7]/n2</property>
+					<value>0</value>
+				</equals>
+			</and>
+		</condition>
+		
+	</counter>
+	
+	<align>billboard</align>
+	
+	<particle>
+		<startcolor>
+			<red>
+				<value>0.55</value>
+			</red>
+			<green>
+				<value>0.4</value>
+			</green>
+			<blue>
+				<value>0.34</value>
+			</blue>
+			<alpha>
+				<value>0.30</value>
+			</alpha>
+		</startcolor>
+		<endcolor>
+			<red>
+				<value>0.47</value>
+			</red>
+			<green>
+				<value>0.53</value>
+			</green>
+			<blue>
+				<value>0.34</value>
+			</blue>
+			<alpha>
+				<value>0.15</value>
+			</alpha>
+		</endcolor>
+		<startsize>
+			<value>0.60</value>
+		</startsize>
+		<endsize>
+			<value>0.4</value>
+		</endsize>
+		<life-sec>
+			<value>0.4</value>
+		</life-sec>
+		<mass-kg>5.0</mass-kg>
+		<radius-m>0.1</radius-m>
+	</particle>
+	
+	<program>
+		<fluid>air</fluid>
+		<gravity>disabled</gravity>
+		<wind>disabled</wind>
+	</program>
+	
+</particlesystem>
 
 </PropertyList>

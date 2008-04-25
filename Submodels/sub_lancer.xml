@@ -44,7 +44,7 @@
 	
    <submodel>
 		<name>flare</name>
-		<model>Aircraft/B-1B/Models/blast/flare.xml</model>
+		<model>Aircraft/B-1B/Models/flare.xml</model>
 		<trigger>controls/switches/flare</trigger>
 		<speed>400</speed>
 		<repeat>true</repeat>
@@ -60,44 +60,10 @@
 		<wind>true</wind>
 	  <pitch-offset>45.0</pitch-offset>
   </submodel>
-
-  <submodel>
-    <name>left gear smoke</name>
-    <model>Aircraft/B-1B/Systems/puff.xml</model>
-    <trigger>gear/gear/wow</trigger>
-    <speed>0</speed>
-    <repeat>true</repeat>
-    <delay>0.2</delay>
-    <count>-1</count>
-    <x-offset>-92.0</x-offset>
-    <y-offset>-8.0</y-offset>
-    <z-offset>-10.0</z-offset>
-    <life>2.0</life>
-    <buoyancy>33</buoyancy>
-    <aero-stabilise>false</aero-stabilise>
-    <wind>true</wind>
-  </submodel>
-
-  <submodel>
-    <name>right gear smoke</name>
-    <model>Aircraft/B-1B/Systems/puff.xml</model>
-    <trigger>gear/gear/wow</trigger>
-    <speed>0</speed>
-    <repeat>true</repeat>
-    <delay>0.2</delay>
-    <count>-1</count>
-    <x-offset>-92.0</x-offset>
-    <y-offset>8.0</y-offset>
-    <z-offset>-10.0</z-offset>
-    <life>2.0</life>
-    <buoyancy>33</buoyancy>
-    <aero-stabilise>false</aero-stabilise>
-    <wind>true</wind>
-  </submodel>
   
   <submodel>
 	  <name>radar pulse m0d</name>
-	  <model></model>
+	  <model>Models/Geometry/null.ac</model>
 	  <trigger>controls/switches/terrain-avoid-rng-50</trigger>
 	  <speed>60000</speed>
 	  <repeat>true</repeat>
@@ -118,7 +84,7 @@
   
   <submodel>
 	  <name>radar pulse m0d</name>
-	  <model></model>
+	  <model>Models/Geometry/null.ac</model>
 	  <trigger>controls/switches/terrain-avoid-rng-25</trigger>
 	  <speed>60000</speed>
 	  <repeat>true</repeat>
@@ -139,7 +105,7 @@
   
   <submodel>
 	  <name>radar pulse m4d</name>
-	  <model></model>
+	  <model>Models/Geometry/null.ac</model>
 	  <trigger>controls/switches/terrain-avoid-rng-25</trigger>
 	  <speed>84000</speed>
 	  <repeat>true</repeat>
@@ -160,7 +126,7 @@
   
   <submodel>
 	  <name>radar pulse m4d</name>
-	  <model></model>
+	  <model>Models/Geometry/null.ac</model>
 	  <trigger>controls/switches/terrain-avoid-rng-50</trigger>
 	  <speed>84000</speed>
 	  <repeat>true</repeat>
@@ -181,7 +147,7 @@
   
   <submodel>
 	  <name>radar pulse m20d</name>
-	  <model></model>
+	  <model>Models/Geometry/null.ac</model>
 	  <trigger>controls/switches/terrain-avoid-rng-25</trigger>
 	  <speed>60000</speed>
 	  <repeat>true</repeat>
@@ -202,7 +168,7 @@
   
   <submodel>
 	  <name>radar pulse m20d</name>
-	  <model></model>
+	  <model>Models/Geometry/null.ac</model>
 	  <trigger>controls/switches/terrain-avoid-rng-50</trigger>
 	  <speed>60000</speed>
 	  <repeat>true</repeat>
@@ -223,7 +189,7 @@
   
   <submodel>
 	  <name>radar pulse m20dtf</name>
-	  <model></model>
+	  <model>Models/Geometry/null.ac</model>
 	  <trigger>controls/switches/terrain-follow-map-enabled</trigger>
 	  <speed>60000</speed>
 	  <repeat>true</repeat>
@@ -244,7 +210,7 @@
   
   <submodel>
 	  <name>radar pulse m14dtf</name>
-	  <model></model>
+	  <model>Models/Geometry/null.ac</model>
 	  <trigger>controls/switches/terrain-follow-map-enabled</trigger>
 	  <speed>60000</speed>
 	  <repeat>true</repeat>

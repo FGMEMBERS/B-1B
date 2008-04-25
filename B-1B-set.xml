@@ -16,7 +16,7 @@ B-1B set file.
 
     <flight-model>yasim</flight-model>
     <status>alpha</status>
-    <author>Markus Zojer</author>
+    <author>Markus Zojer, Paul Jay Schrenker</author>
     <aero>B-1B-yasim</aero>
     <fuel-fraction>1.0</fuel-fraction>
 
@@ -29,7 +29,7 @@ B-1B set file.
     <view n="0">
       <internal archive="y">true</internal>
       <config>
-	      <x-offset-m archive="y">-0.54</x-offset-m><!-- left-/right+ -0.67-->
+	      <x-offset-m archive="y">-0.53</x-offset-m><!-- left-/right+ -0.67-->
 	<y-offset-m archive="y">1.37</y-offset-m><!-- up+/down- 1.70-->
 	<z-offset-m archive="y">7.15</z-offset-m><!-- back+ 7.53-->
         <pitch-offset-deg>0</pitch-offset-deg>
@@ -245,7 +245,7 @@ B-1B set file.
       <target-pitch-deg type="float">0</target-pitch-deg>
       <target-vfps type="float">0</target-vfps>
       <take-off-pitch-deg type="float">2.0</take-off-pitch-deg>
-      <target-speed-kt type="float">290.0</target-speed-kt>
+      <target-speed-kt type="float">350.0</target-speed-kt>
       <climb-out-initial-pitch-deg type="float">6.0</climb-out-initial-pitch-deg>
       <climb-out-final-pitch-deg type="float">3.0</climb-out-final-pitch-deg>
       <target-climb-rate-fpm type="float">2000.0</target-climb-rate-fpm>

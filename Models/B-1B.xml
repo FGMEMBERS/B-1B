@@ -219,7 +219,7 @@ more to come :-)
 	 <type>translate</type>
 	 <object-name>flap_right1</object-name>
 	 <object-name>flap_right1_up</object-name>
-	 <property>surface-positions/flaps-pos-norm</property>
+	 <property>surface-positions/flap-pos-norm</property>
 	 <condition>
 		 <equals>
 			 <property>controls/flight/wing-sweep</property>
@@ -249,7 +249,7 @@ more to come :-)
 	 <type>rotate</type>
 	 <object-name>flap_right1</object-name>
 	 <object-name>flap_right1_up</object-name> 
-	 <property>surface-positions/flaps-pos-norm</property>
+	 <property>surface-positions/flap-pos-norm</property>
 	 <condition>
 		 <equals>
 			 <property>controls/flight/wing-sweep</property>
@@ -283,7 +283,7 @@ more to come :-)
 	 <type>translate</type>
 	 <object-name>flap_right2</object-name>
 	 <object-name>flap_right2_up</object-name>
-	 <property>surface-positions/flaps-pos-norm</property>
+	 <property>surface-positions/flap-pos-norm</property>
 	 <condition>
 		 <equals>
 			 <property>controls/flight/wing-sweep</property>
@@ -313,7 +313,7 @@ more to come :-)
 	 <type>rotate</type>
 	 <object-name>flap_right2</object-name>
 	 <object-name>flap_right2_up</object-name>
-	 <property>surface-positions/flaps-pos-norm</property>
+	 <property>surface-positions/flap-pos-norm</property>
 	 <condition>
 		 <equals>
 			 <property>controls/flight/wing-sweep</property>
@@ -347,7 +347,7 @@ more to come :-)
 	 <type>translate</type>
 	 <object-name>flap_right3</object-name>
 	 <object-name>flap_right3_up</object-name>
-	 <property>surface-positions/flaps-pos-norm</property>
+	 <property>surface-positions/flap-pos-norm</property>
 	 <condition>
 		 <equals>
 			 <property>controls/flight/wing-sweep</property>
@@ -377,7 +377,7 @@ more to come :-)
 	 <type>rotate</type>
 	 <object-name>flap_right3</object-name>
 	 <object-name>flap_right3_up</object-name>
-	 <property>surface-positions/flaps-pos-norm</property>
+	 <property>surface-positions/flap-pos-norm</property>
 	 <condition>
 		 <equals>
 			 <property>controls/flight/wing-sweep</property>
@@ -412,7 +412,7 @@ more to come :-)
  <animation>
 	 <type>translate</type>
 	 <object-name>slat_right_up</object-name>
-	 <property>surface-positions/flaps-pos-norm</property>
+	 <property>surface-positions/flap-pos-norm</property>
 	 <condition>
 		 <equals>
 			 <property>controls/flight/wing-sweep</property>
@@ -441,7 +441,7 @@ more to come :-)
  <animation>
 	 <type>rotate</type>
 	 <object-name>slat_right_up</object-name>
-	 <property>surface-positions/flaps-pos-norm</property>
+	 <property>surface-positions/flap-pos-norm</property>
 	 <condition>
 		 <equals>
 			 <property>controls/flight/wing-sweep</property>
@@ -477,7 +477,7 @@ more to come :-)
 	 <type>rotate</type>
 	 <object-name>spoiler_right1</object-name>
 	 <object-name>spoiler_right2</object-name>
-	 <property>controls/flight/spoilers</property>
+	 <property>surface-positions/right-spoiler-pos-norm</property>
 	 
 	 <interpolation>
 		 <entry>
@@ -505,7 +505,7 @@ more to come :-)
  <animation>
 	 <type>rotate</type>
 	 <object-name>spoiler_right3</object-name>
-	 <property>controls/flight/aileron</property>
+	 <property>surface-positions/right-aileron-pos-norm</property>
 	 
 	 <interpolation>
 		 <entry>
@@ -537,7 +537,7 @@ more to come :-)
  <animation>
 	 <type>rotate</type>
 	 <object-name>spoiler_right4</object-name>
-	 <property>controls/flight/aileron</property>
+	 <property>surface-positions/right-aileron-pos-norm</property>
 	 
 	 <interpolation>
 		 <entry>
@@ -662,7 +662,7 @@ more to come :-)
 	 <type>rotate</type>
 	 <object-name>spoiler_left1</object-name>
 	 <object-name>spoiler_left2</object-name>
-	 <property>controls/flight/spoilers</property>
+	 <property>surface-positions/right-spoiler-pos-norm</property>
 	 
 	 <interpolation>
 		 <entry>
@@ -690,20 +690,20 @@ more to come :-)
  <animation>
 	 <type>rotate</type>
 	 <object-name>spoiler_left3</object-name>
-	 <property>controls/flight/aileron</property>
+	 <property>surface-positions/left-aileron-pos-norm</property>
 	 
 	 <interpolation>
 		 <entry>
-			 <ind>-1.0</ind>
-			 <dep>40.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>-0.2</ind>
-			 <dep>0.0</dep>
-		 </entry>
-		 <entry>
 			 <ind>0.0</ind>
 			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.2</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>40.0</dep>
 		 </entry>
 	 </interpolation>
 	 <center>
@@ -722,16 +722,16 @@ more to come :-)
  <animation>
 	 <type>rotate</type>
 	 <object-name>spoiler_left4</object-name>
-	 <property>controls/flight/aileron</property>
+	 <property>surface-positions/left-aileron-pos-norm</property>
 	 
 	 <interpolation>
 		 <entry>
-			 <ind>-1.0</ind>
-			 <dep>40.0</dep>
-		 </entry>
-		 <entry>
 			 <ind>0.0</ind>
 			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>40.0</dep>
 		 </entry>
 	 </interpolation>
 	 <center>
@@ -751,7 +751,7 @@ more to come :-)
  <animation>
 	 <type>translate</type>
 	 <object-name>slat_left_up</object-name>
-	 <property>surface-positions/flaps-pos-norm</property>
+	 <property>surface-positions/flap-pos-norm</property>
 	 <condition>
 		 <equals>
 			 <property>controls/flight/wing-sweep</property>
@@ -780,7 +780,7 @@ more to come :-)
  <animation>
 	 <type>rotate</type>
 	 <object-name>slat_left_up</object-name>
-	 <property>surface-positions/flaps-pos-norm</property>
+	 <property>surface-positions/flap-pos-norm</property>
 	 <condition>
 		 <equals>
 			 <property>controls/flight/wing-sweep</property>
@@ -815,7 +815,7 @@ more to come :-)
 	 <type>translate</type>
 	 <object-name>flap_left1</object-name>
 	 <object-name>flap_left1_up</object-name>
-	 <property>surface-positions/flaps-pos-norm</property>
+	 <property>surface-positions/flap-pos-norm</property>
 	 <condition>
 		 <equals>
 			 <property>controls/flight/wing-sweep</property>
@@ -845,7 +845,7 @@ more to come :-)
 	 <type>rotate</type>
 	 <object-name>flap_left1</object-name>
 	 <object-name>flap_left1_up</object-name> 
-	 <property>surface-positions/flaps-pos-norm</property>
+	 <property>surface-positions/flap-pos-norm</property>
 	 <condition>
 		 <equals>
 			 <property>controls/flight/wing-sweep</property>
@@ -879,7 +879,7 @@ more to come :-)
 	 <type>translate</type>
 	 <object-name>flap_left2</object-name>
 	 <object-name>flap_left2_up</object-name>
-	 <property>surface-positions/flaps-pos-norm</property>
+	 <property>surface-positions/flap-pos-norm</property>
 	 <condition>
 		 <equals>
 			 <property>controls/flight/wing-sweep</property>
@@ -909,7 +909,7 @@ more to come :-)
 	 <type>rotate</type>
 	 <object-name>flap_left2</object-name>
 	 <object-name>flap_left2_up</object-name>
-	 <property>surface-positions/flaps-pos-norm</property>
+	 <property>surface-positions/flap-pos-norm</property>
 	 <condition>
 		 <equals>
 			 <property>controls/flight/wing-sweep</property>
@@ -943,7 +943,7 @@ more to come :-)
 	 <type>translate</type>
 	 <object-name>flap_left3</object-name>
 	 <object-name>flap_left3_up</object-name>
-	 <property>surface-positions/flaps-pos-norm</property>
+	 <property>surface-positions/flap-pos-norm</property>
 	 <condition>
 		 <equals>
 			 <property>controls/flight/wing-sweep</property>
@@ -973,7 +973,7 @@ more to come :-)
 	 <type>rotate</type>
 	 <object-name>flap_left3</object-name>
 	 <object-name>flap_left3_up</object-name>
-	 <property>surface-positions/flaps-pos-norm</property>
+	 <property>surface-positions/flap-pos-norm</property>
 	 <condition>
 		 <equals>
 			 <property>controls/flight/wing-sweep</property>
@@ -1158,6 +1158,7 @@ more to come :-)
  <animation>
 	 <type>select</type>
 	 <object-name>gear_fr_up</object-name>
+	 <object-name>gear_fr_up_hydr</object-name>
 	 <condition>
 		 <greater-than>
 			 <property>gear/gear[0]/position-norm</property>
@@ -1193,7 +1194,7 @@ more to come :-)
 		 </entry>
 	 </interpolation>
 	 <center>
-		 <x-m>-16.51</x-m>
+		 <x-m>-15.99</x-m>
 		 <y-m>0.0</y-m>
 		 <z-m>-1.05</z-m>
 	 </center>
@@ -1207,6 +1208,7 @@ more to come :-)
  <animation>
 	 <type>rotate</type>
 	 <object-name>gear_fr_up</object-name>
+	 <object-name>gear_fr_up_hydr</object-name>
 	 <property>gear/gear[0]/position-norm</property>
 	 <interpolation>
 		 <entry>
@@ -1223,9 +1225,39 @@ more to come :-)
 		 </entry>
 	 </interpolation>
 	 <center>
-		 <x-m>-16.51</x-m>
+		 <x-m>-15.99</x-m>
 		 <y-m>0.0</y-m>
 		 <z-m>-1.05</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>gear_fr_up_hydr</object-name>
+	 <property>gear/gear[0]/position-norm</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>-130.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.2</ind>
+			 <dep>-130.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-16.174</x-m>
+		 <y-m>0.0</y-m>
+		 <z-m>-2.33</z-m>
 	 </center>
 	 <axis>
 		 <x>0</x>
@@ -1260,11 +1292,17 @@ more to come :-)
 	      <object-name>axle.004</object-name>
 	      <object-name>gear_fr_low</object-name>
 	      <property>surface-positions/rudder-pos-norm</property>
+	      <condition>
+		      <equals>
+			      <property>gear/gear[0]/wow</property>
+			      <value>1</value>
+			 </equals>
+		 </condition>
 	      <factor>50</factor>
 	      <center>
-		      <x-m>-16.51</x-m>
+		      <x-m>-15.993</x-m>
 		      <y-m>0.0</y-m>
-		      <z-m>-1.05</z-m>
+		      <z-m>-3.823</z-m>
 	      </center>
 	      <axis>
 		      <x>0</x>
@@ -1289,9 +1327,9 @@ more to come :-)
 		 </entry>
 	 </interpolation>
 	 <center>
-		 <x-m>-16.508</x-m>
+		 <x-m>-15.993</x-m>
 		 <y-m>0.0</y-m>
-		 <z-m>-3.818</z-m>
+		 <z-m>-3.823</z-m>
 	 </center>
 	 <axis>
 		 <x>0</x>
@@ -1300,11 +1338,11 @@ more to come :-)
 	 </axis>
  </animation>
  
- <!-- front gear covers 
+ <!-- front gear covers -->
  
  <animation>
 	 <type>rotate</type>
-	 <object-name>gearcover_front</object-name>
+	 <object-name>gear_cover</object-name>
 	 <property>gear/gear[0]/position-norm</property>
 	 <interpolation>
 		 <entry>
@@ -1321,9 +1359,9 @@ more to come :-)
 		 </entry>
 	 </interpolation>
 	 <center>
-		 <x-m>-16.00</x-m>
+		 <x-m>-15.68</x-m>
 		 <y-m>0.0</y-m>
-		 <z-m>-1.23</z-m>
+		 <z-m>-1.32</z-m>
 	 </center>
 	 <axis>
 		 <x>0</x>
@@ -1334,7 +1372,7 @@ more to come :-)
  
  <animation>
 	 <type>rotate</type>
-	 <object-name>gearcover_front.001</object-name>
+	 <object-name>gear_cover_front</object-name>
 	 <property>gear/gear[0]/position-norm</property>
 	 <interpolation>
 		 <entry>
@@ -1352,8 +1390,8 @@ more to come :-)
 	 </interpolation>
 	 <center>
 		 <x-m>-16.00</x-m>
-		 <y-m>-0.53</y-m>
-		 <z-m>-1.20</z-m>
+		 <y-m>-0.47</y-m>
+		 <z-m>-1.26</z-m>
 	 </center>
 	 <axis>
 		 <x>1</x>
@@ -1364,7 +1402,7 @@ more to come :-)
 
  <animation>
 	 <type>rotate</type>
-	 <object-name>gearcover_front.002</object-name>
+	 <object-name>gear_cover_front.002</object-name>
 	 <property>gear/gear[0]/position-norm</property>
 	 <interpolation>
 		 <entry>
@@ -1382,15 +1420,15 @@ more to come :-)
 	 </interpolation>
 	 <center>
 		 <x-m>-16.00</x-m>
-		 <y-m>0.53</y-m>
-		 <z-m>-1.20</z-m>
+		 <y-m>0.47</y-m>
+		 <z-m>-1.26</z-m>
 	 </center>
 	 <axis>
 		 <x>1</x>
 		 <y>0</y>
 		 <z>0</z>
 	 </axis>
- </animation>-->
+ </animation>
  
  <!-- rear gear covers 
  
@@ -2012,7 +2050,7 @@ more to come :-)
  <animation>
 	 <type>rotate</type>
 	 <object-name>elevator</object-name>
-	 <property>surface-positions/left-elevator-pos-norm</property>
+	 <property>surface-positions/elevator-pos-norm</property>
 	 <factor>25</factor>
 	 <center>
 		 <x-m>15.70</x-m>

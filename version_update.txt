@@ -1,5 +1,14 @@
 Rockwell B-1B Lancer "The Bone"
 
+XXXXXX  Version Nr: 0013 16042008 XXXXXX
+
+News/updates: Minor update
+
+- New engine outlets
+- Converted .osg to .xml files
+- Cockpit improved
+- Countless little adjustments
+
 XXXXXX  Version Nr: 0012 03032008 XXXXXX
 
 News/updates: Major update

@@ -887,6 +887,32 @@
         <offset>1.2</offset>
       </pitch>
     </squeal>
+    
+    <squeal>
+	    <name>squeal4</name>
+	    <path>Sounds/squeal.wav</path>
+	    <condition>
+		    <property>/gear/gear[4]/wow</property>
+	    </condition>
+	    <volume>
+		    <property>/velocities/speed-down-fps</property>
+		    <factor>0.05</factor>
+	    </volume>
+	    <volume>
+		    <property>/velocities/airspeed-kt</property>
+		    <factor>0.01</factor>
+	    </volume>
+	    <volume>
+		    <internal>dt_stop</internal>
+		    <factor>0.05</factor>
+		    <max>1.0</max>
+	    </volume>
+	    <pitch>
+		    <property>/velocities/airspeed-kt</property>
+		    <factor>0.0025</factor>
+		    <offset>1.2</offset>
+	    </pitch>
+    </squeal>
 
 <!-- Flaps -->
     <flap>
