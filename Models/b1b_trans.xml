@@ -405,11 +405,27 @@ sweat by maggse
 		 <pitch-deg>90</pitch-deg>
 	 </offsets>
 	 
+	 <condition>
+		 <and>
+			 <greater-than>
+				 <property>velocities/airspeed-kt</property>
+				 <value>110</value>
+			 </greater-than>
+			 <less-than>
+				 <property>accelerations/pilot/x-accel-fps_sec</property>
+				 <value>0</value>
+			 </less-than>
+			 <greater-than>
+				 <property>gear/gear[4]/wow</property>
+				 <value>0</value>
+			 </greater-than>
+		 </and>
+	 </condition>
+		 
 	 <attach>world</attach>
 	 
 	 <placer>
 		 <type>point</type>
-		 
 	 </placer>
 	 
 	 <shooter>
@@ -417,82 +433,68 @@ sweat by maggse
 		 <theta-max-deg>0</theta-max-deg>
 		 <phi-min-deg>0</phi-min-deg>
 		 <phi-max-deg>0</phi-max-deg>
-		 <speed>
+		 <speed-mps>
 			 <value>1</value>
 			 <spread>0.3</spread>
-		 </speed>
-		 <rotspeed>
-			 <minx>0</minx>
-			 <miny>0</miny>
-			 <minz>0</minz>
-			 <maxx>0</maxx>
-			 <maxy>0</maxy>
-			 <maxz>0</maxz>
-		 </rotspeed>
+		 </speed-mps>
+		 <rotation-speed>
+			<x-min-deg-sec>0</x-min-deg-sec>
+			<y-min-deg-sec>0</y-min-deg-sec>
+			<z-min-deg-sec>0</z-min-deg-sec>
+			<x-max-deg-sec>0</x-max-deg-sec>
+			<y-max-deg-sec>0</y-max-deg-sec>
+			<z-max-deg-sec>0</z-max-deg-sec>
+		 </rotation-speed>
 	 </shooter>
 	 
 	 <counter>
-		 <pps>
+		 <particles-per-sec>
 			 <value>30</value>
 			 <spread>0</spread>
-		 </pps>
-		 
-		 <condition>
-			 <and>
-				 <greater-than>
-					 <property>velocities/airspeed-kt</property>
-					 <value>110</value>
-				 </greater-than>
-				 <less-than>
-					 <property>accelerations/pilot/x-accel-fps_sec</property>
-					 <value>0</value>
-				 </less-than>
-				 <greater-than>
-					 <property>gear/gear[4]/wow</property>
-					 <value>0</value>
-				 </greater-than>
-	                 </and>
-		 </condition>
-		 
+		 </particles-per-sec>
 	 </counter>
 	 
 	 <align>billboard</align>
 	 
 	 <particle>
-		 <startcolor>
-			 <red>
-				 <value>0.6</value>
-			 </red>
-			 <green>
-				 <value>0.6</value>
-			 </green>
-			 <blue>
-				 <value>0.6</value>
-			 </blue>
-			 <alpha>
-				 <value>0.4</value>
-			 </alpha>
-		 </startcolor>
-		 <endcolor>
-			 <red>
-				 <value>0.8</value>
-			 </red>
-			 <green>
-				 <value>0.8</value>
-			 </green>
-			 <blue>
-				 <value>0.8</value>
-			 </blue>
-			 <alpha>
-				 <value>0.0</value>
-			 </alpha>
-		 </endcolor>
-		 <startsize>
-			 <value>1.0</value>
-		 </startsize>
-		 <endsize>
-			 <value>2.8</value>
-		 </endsize>
+		 <start>
+			 <color>
+				 <red>
+					 <value>0.6</value>
+				 </red>
+				 <green>
+					 <value>0.6</value>
+				 </green>
+				 <blue>
+					 <value>0.6</value>
+				 </blue>
+				 <alpha>
+					 <value>0.4</value>
+				 </alpha>
+			 </color>
+			 <size>
+				 <value>1.0</value>
+			 </size>
+		 </start>
+		 <end>
+			 <color>
+				 <red>
+					 <value>0.8</value>
+				 </red>
+				 <green>
+					 <value>0.8</value>
+				 </green>
+				 <blue>
+					 <value>0.8</value>
+				 </blue>
+				 <alpha>
+					 <value>0.0</value>
+				 </alpha>
+			 </color>
+			 <size>
+				 <value>2.8</value>
+			 </size>
+		 </end>
 		 <life-sec>
 			 <value>1.5</value>
 		 </life-sec>
@@ -502,8 +504,8 @@ sweat by maggse
 	 
 	 <program>
 		 <fluid>air</fluid>
-		 <gravity>enabled</gravity>
-		 <wind>enabled</wind>
+		 <gravity>true</gravity>
+		 <wind>true</wind>
 	 </program>
 	 
 </particlesystem>
@@ -522,11 +524,27 @@ sweat by maggse
 		<pitch-deg>90</pitch-deg>
 	</offsets>
 	
+	<condition>
+		<and>
+			<greater-than>
+				<property>velocities/airspeed-kt</property>
+				<value>110</value>
+			</greater-than>
+			<less-than>
+				<property>accelerations/pilot/x-accel-fps_sec</property>
+				<value>0</value>
+			</less-than>
+			<greater-than>
+				<property>gear/gear[2]/wow</property>
+				<value>0</value>
+			</greater-than>
+		</and>
+	</condition>
+	
 	<attach>world</attach>
 	
 	<placer>
 		<type>point</type>
-		
 	</placer>
 	
 	<shooter>
@@ -534,82 +552,68 @@ sweat by maggse
 		<theta-max-deg>0</theta-max-deg>
 		<phi-min-deg>0</phi-min-deg>
 		<phi-max-deg>0</phi-max-deg>
-		<speed>
+		<speed-mps>
 			<value>1</value>
 			<spread>0.3</spread>
-		</speed>
-		<rotspeed>
-			<minx>0</minx>
-			<miny>0</miny>
-			<minz>0</minz>
-			<maxx>0</maxx>
-			<maxy>0</maxy>
-			<maxz>0</maxz>
-		</rotspeed>
+		</speed-mps>
+		<rotation-speed>
+			<x-min-deg-sec>0</x-min-deg-sec>
+			<y-min-deg-sec>0</y-min-deg-sec>
+			<z-min-deg-sec>0</z-min-deg-sec>
+			<x-max-deg-sec>0</x-max-deg-sec>
+			<y-max-deg-sec>0</y-max-deg-sec>
+			<z-max-deg-sec>0</z-max-deg-sec>
+		</rotation-speed>
 	</shooter>
 	
 	<counter>
-		<pps>
+		<particles-per-sec>
 			<value>30</value>
 			<spread>0</spread>
-		</pps>
-		
-		<condition>
-			<and>
-				<greater-than>
-					<property>velocities/airspeed-kt</property>
-					<value>110</value>
-				</greater-than>
-				<less-than>
-					<property>accelerations/pilot/x-accel-fps_sec</property>
-					<value>0</value>
-				</less-than>
-				<greater-than>
-					<property>gear/gear[2]/wow</property>
-					<value>0</value>
-				</greater-than>
-			</and>
-		</condition>
-		
+		</particles-per-sec>
 	</counter>
 	
 	<align>billboard</align>
 	
 	<particle>
-		<startcolor>
-			<red>
-				<value>0.6</value>
-			</red>
-			<green>
-				<value>0.6</value>
-			</green>
-			<blue>
-				<value>0.6</value>
-			</blue>
-			<alpha>
-				<value>0.4</value>
-			</alpha>
-		</startcolor>
-		<endcolor>
-			<red>
-				<value>0.8</value>
-			</red>
-			<green>
-				<value>0.8</value>
-			</green>
-			<blue>
-				<value>0.8</value>
-			</blue>
-			<alpha>
-				<value>0.0</value>
-			</alpha>
-		</endcolor>
-		<startsize>
-			<value>1.0</value>
-		</startsize>
-		<endsize>
-			<value>2.8</value>
-		</endsize>
+		<start>
+			<color>
+				<red>
+					<value>0.6</value>
+				</red>
+				<green>
+					<value>0.6</value>
+				</green>
+				<blue>
+					<value>0.6</value>
+				</blue>
+				<alpha>
+					<value>0.4</value>
+				</alpha>
+			</color>
+			<size>
+				<value>1.0</value>
+			</size>
+		</start>
+		<end>
+			<color>
+				<red>
+					<value>0.8</value>
+				</red>
+				<green>
+					<value>0.8</value>
+				</green>
+				<blue>
+					<value>0.8</value>
+				</blue>
+				<alpha>
+					<value>0.0</value>
+				</alpha>
+			</color>
+			<size>
+				<value>2.8</value>
+			</size>
+		</end>
 		<life-sec>
 			<value>1.5</value>
 		</life-sec>
@@ -619,8 +623,8 @@ sweat by maggse
 	
 	<program>
 		<fluid>air</fluid>
-		<gravity>enabled</gravity>
-		<wind>enabled</wind>
+		<gravity>true</gravity>
+		<wind>true</wind>
 	</program>
 	
 </particlesystem>
@@ -638,13 +642,26 @@ sweat by maggse
 		<y-m>-4.11</y-m>
 		<z-m>-1.68</z-m>
 		<pitch-deg>90</pitch-deg>
-	  </offsets>
+	</offsets>
+	
+	<condition>
+		<and>
+			<greater-than>
+				<property>engines/engine[0]/n2</property>
+				<value>75</value>
+			</greater-than>
+			<equals>
+				<property>engines/engine[4]/n2</property>
+				<!--<property>controls/engines/engine[0]/cutoff</property>-->
+				<value>0</value>
+			</equals>
+		</and>
+	</condition>
 	
 	<attach>local</attach>
 	
 	<placer>
 		<type>point</type>
-		
 	</placer>
 	
 	<shooter>
@@ -652,79 +669,68 @@ sweat by maggse
 		<theta-max-deg>0</theta-max-deg>
 		<phi-min-deg>0</phi-min-deg>
 		<phi-max-deg>0</phi-max-deg>
-		<speed>
+		<speed-mps>
 			<value>10</value>
 			<spread>0</spread>
-		</speed>
-		<rotspeed>
-			<minx>0</minx>
-			<miny>0</miny>
-			<minz>0</minz>
-			<maxx>0</maxx>
-			<maxy>0</maxy>
-			<maxz>0</maxz>
-		</rotspeed>
+		</speed-mps>
+		<rotation-speed>
+			<x-min-deg-sec>0</x-min-deg-sec>
+			<y-min-deg-sec>0</y-min-deg-sec>
+			<z-min-deg-sec>0</z-min-deg-sec>
+			<x-max-deg-sec>0</x-max-deg-sec>
+			<y-max-deg-sec>0</y-max-deg-sec>
+			<z-max-deg-sec>0</z-max-deg-sec>
+		</rotation-speed>
 	</shooter>
 	
 	<counter>
-		<pps>
+		<particles-per-sec>
 			<value>15</value>
 			<spread>0</spread>
-		</pps>
-		
-		<condition>
-			<and>
-				<greater-than>
-					<property>engines/engine[0]/n2</property>
-					<value>75</value>
-				</greater-than>
-				<equals>
-					<property>engines/engine[4]/n2</property>
-					<!--<property>controls/engines/engine[0]/cutoff</property>-->
-					<value>0</value>
-				</equals>
-			</and>
-	</condition>
-		
+		</particles-per-sec>
 	</counter>
 	
 	<align>billboard</align>
 	
 	<particle>
-		<startcolor>
-			<red>
-				<value>0.55</value>
-			</red>
-			<green>
-				<value>0.4</value>
-			</green>
-			<blue>
-				<value>0.34</value>
-			</blue>
-			<alpha>
-				<value>0.10</value>
-			</alpha>
-		</startcolor>
-		<endcolor>
-			<red>
-				<value>0.47</value>
-			</red>
-			<green>
-				<value>0.53</value>
-			</green>
-			<blue>
-				<value>0.34</value>
-			</blue>
-			<alpha>
-				<value>0.05</value>
-			</alpha>
-		</endcolor>
-		<startsize>
-			<value>0.40</value>
-		</startsize>
-		<endsize>
-			<value>0.25</value>
-		</endsize>
+		<start>
+			<color>
+				<red>
+					<value>0.55</value>
+				</red>
+				<green>
+					<value>0.4</value>
+				</green>
+				<blue>
+					<value>0.34</value>
+				</blue>
+				<alpha>
+					<value>0.10</value>
+				</alpha>
+			</color>
+			<size>
+				<value>0.40</value>
+			</size>
+		</start>
+		<end>
+			<color>
+				<red>
+					<value>0.47</value>
+				</red>
+				<green>
+					<value>0.53</value>
+				</green>
+				<blue>
+					<value>0.34</value>
+				</blue>
+				<alpha>
+					<value>0.05</value>
+				</alpha>
+			</color>
+			<size>
+				<value>0.25</value>
+			</size>
+		</end>
 		<life-sec>
 			<value>0.3</value>
 		</life-sec>
@@ -734,8 +740,8 @@ sweat by maggse
 	
 	<program>
 		<fluid>air</fluid>
-		<gravity>disabled</gravity>
-		<wind>disabled</wind>
+		<gravity>false</gravity>
+		<wind>false</wind>
 	</program>
 	
 </particlesystem>
@@ -753,6 +759,20 @@ sweat by maggse
 		<pitch-deg>90</pitch-deg>
 	</offsets>
 	
+	<condition>
+		<and>
+			<greater-than>
+				<property>engines/engine[1]/n2</property>
+				<value>75</value>
+			</greater-than>
+			<equals>
+				<property>engines/engine[5]/n2</property>
+				<!--<property>controls/engines/engine[0]/cutoff</property>-->
+				<value>0</value>
+			</equals>
+		</and>
+	</condition>
+	
 	<attach>local</attach>
 	
 	<placer>
@@ -765,79 +785,68 @@ sweat by maggse
 		<theta-max-deg>0</theta-max-deg>
 		<phi-min-deg>0</phi-min-deg>
 		<phi-max-deg>0</phi-max-deg>
-		<speed>
+		<speed-mps>
 			<value>10</value>
 			<spread>0</spread>
-		</speed>
-		<rotspeed>
-			<minx>0</minx>
-			<miny>0</miny>
-			<minz>0</minz>
-			<maxx>0</maxx>
-			<maxy>0</maxy>
-			<maxz>0</maxz>
-		</rotspeed>
+		</speed-mps>
+		<rotation-speed>
+			<x-min-deg-sec>0</x-min-deg-sec>
+			<y-min-deg-sec>0</y-min-deg-sec>
+			<z-min-deg-sec>0</z-min-deg-sec>
+			<x-max-deg-sec>0</x-max-deg-sec>
+			<y-max-deg-sec>0</y-max-deg-sec>
+			<z-max-deg-sec>0</z-max-deg-sec>
+		</rotation-speed>
 	</shooter>
 	
 	<counter>
-		<pps>
+		<particles-per-sec>
 			<value>15</value>
 			<spread>0</spread>
-		</pps>
-		
-		<condition>
-			<and>
-				<greater-than>
-					<property>engines/engine[1]/n2</property>
-					<value>75</value>
-				</greater-than>
-				<equals>
-					<property>engines/engine[5]/n2</property>
-					<!--<property>controls/engines/engine[0]/cutoff</property>-->
-					<value>0</value>
-				</equals>
-			</and>
-		</condition>
-		
+		</particles-per-sec>
 	</counter>
 	
 	<align>billboard</align>
 	
 	<particle>
-		<startcolor>
-			<red>
-				<value>0.55</value>
-			</red>
-			<green>
-				<value>0.4</value>
-			</green>
-			<blue>
-				<value>0.34</value>
-			</blue>
-			<alpha>
-				<value>0.10</value>
-			</alpha>
-		</startcolor>
-		<endcolor>
-			<red>
-				<value>0.47</value>
-			</red>
-			<green>
-				<value>0.53</value>
-			</green>
-			<blue>
-				<value>0.34</value>
-			</blue>
-			<alpha>
-				<value>0.05</value>
-			</alpha>
-		</endcolor>
-		<startsize>
-			<value>0.40</value>
-		</startsize>
-		<endsize>
-			<value>0.25</value>
-		</endsize>
+		<start>
+			<color>
+				<red>
+					<value>0.55</value>
+				</red>
+				<green>
+					<value>0.4</value>
+				</green>
+				<blue>
+					<value>0.34</value>
+				</blue>
+				<alpha>
+					<value>0.10</value>
+				</alpha>
+			</color>
+			<size>
+				<value>0.40</value>
+			</size>
+		</start>
+		<end>
+			<color>
+				<red>
+					<value>0.47</value>
+				</red>
+				<green>
+					<value>0.53</value>
+				</green>
+				<blue>
+					<value>0.34</value>
+				</blue>
+				<alpha>
+					<value>0.05</value>
+				</alpha>
+			</color>
+			<size>
+				<value>0.25</value>
+			</size>
+		</end>
 		<life-sec>
 			<value>0.3</value>
 		</life-sec>
@@ -847,8 +856,8 @@ sweat by maggse
 	
 	<program>
 		<fluid>air</fluid>
-		<gravity>disabled</gravity>
-		<wind>disabled</wind>
+		<gravity>false</gravity>
+		<wind>false</wind>
 	</program>
 	
 </particlesystem>
@@ -866,6 +875,20 @@ sweat by maggse
 		<pitch-deg>90</pitch-deg>
 	</offsets>
 	
+	<condition>
+		<and>
+			<greater-than>
+				<property>engines/engine[2]/n2</property>
+				<value>75</value>
+			</greater-than>
+			<equals>
+				<property>engines/engine[6]/n2</property>
+				<!--<property>controls/engines/engine[0]/cutoff</property>-->
+				<value>0</value>
+			</equals>
+		</and>
+	</condition>
+	
 	<attach>local</attach>
 	
 	<placer>
@@ -878,79 +901,68 @@ sweat by maggse
 		<theta-max-deg>0</theta-max-deg>
 		<phi-min-deg>0</phi-min-deg>
 		<phi-max-deg>0</phi-max-deg>
-		<speed>
+		<speed-mps>
 			<value>10</value>
 			<spread>0</spread>
-		</speed>
-		<rotspeed>
-			<minx>0</minx>
-			<miny>0</miny>
-			<minz>0</minz>
-			<maxx>0</maxx>
-			<maxy>0</maxy>
-			<maxz>0</maxz>
-		</rotspeed>
+		</speed-mps>
+		<rotation-speed>
+			<x-min-deg-sec>0</x-min-deg-sec>
+			<y-min-deg-sec>0</y-min-deg-sec>
+			<z-min-deg-sec>0</z-min-deg-sec>
+			<x-max-deg-sec>0</x-max-deg-sec>
+			<y-max-deg-sec>0</y-max-deg-sec>
+			<z-max-deg-sec>0</z-max-deg-sec>
+		</rotation-speed>
 	</shooter>
 	
 	<counter>
-		<pps>
+		<particles-per-sec>
 			<value>15</value>
 			<spread>0</spread>
-		</pps>
-		
-		<condition>
-			<and>
-				<greater-than>
-					<property>engines/engine[2]/n2</property>
-					<value>75</value>
-				</greater-than>
-				<equals>
-					<property>engines/engine[6]/n2</property>
-					<!--<property>controls/engines/engine[0]/cutoff</property>-->
-					<value>0</value>
-				</equals>
-			</and>
-		</condition>
-		
+		</particles-per-sec>
 	</counter>
 	
 	<align>billboard</align>
 	
 	<particle>
-		<startcolor>
-			<red>
-				<value>0.55</value>
-			</red>
-			<green>
-				<value>0.4</value>
-			</green>
-			<blue>
-				<value>0.34</value>
-			</blue>
-			<alpha>
-				<value>0.10</value>
-			</alpha>
-		</startcolor>
-		<endcolor>
-			<red>
-				<value>0.47</value>
-			</red>
-			<green>
-				<value>0.53</value>
-			</green>
-			<blue>
-				<value>0.34</value>
-			</blue>
-			<alpha>
-				<value>0.05</value>
-			</alpha>
-		</endcolor>
-		<startsize>
-			<value>0.40</value>
-		</startsize>
-		<endsize>
-			<value>0.25</value>
-		</endsize>
+		<start>
+			<color>
+				<red>
+					<value>0.55</value>
+				</red>
+				<green>
+					<value>0.4</value>
+				</green>
+				<blue>
+					<value>0.34</value>
+				</blue>
+				<alpha>
+					<value>0.10</value>
+				</alpha>
+			</color>
+			<size>
+				<value>0.40</value>
+			</size>
+		</start>
+		<end>
+			<color>
+				<red>
+					<value>0.47</value>
+				</red>
+				<green>
+					<value>0.53</value>
+				</green>
+				<blue>
+					<value>0.34</value>
+				</blue>
+				<alpha>
+					<value>0.05</value>
+				</alpha>
+			</color>
+			<size>
+				<value>0.25</value>
+			</size>
+		</end>
 		<life-sec>
 			<value>0.3</value>
 		</life-sec>
@@ -960,8 +972,8 @@ sweat by maggse
 	
 	<program>
 		<fluid>air</fluid>
-		<gravity>disabled</gravity>
-		<wind>disabled</wind>
+		<gravity>false</gravity>
+		<wind>false</wind>
 	</program>
 	
 </particlesystem>
@@ -979,6 +991,20 @@ sweat by maggse
 		<pitch-deg>90</pitch-deg>
 	</offsets>
 	
+	<condition>
+		<and>
+			<greater-than>
+				<property>engines/engine[3]/n2</property>
+				<value>75</value>
+			</greater-than>
+			<equals>
+				<property>engines/engine[7]/n2</property>
+				<!--<property>controls/engines/engine[0]/cutoff</property>-->
+				<value>0</value>
+			</equals>
+		</and>
+	</condition>
+	
 	<attach>local</attach>
 	
 	<placer>
@@ -991,79 +1017,68 @@ sweat by maggse
 		<theta-max-deg>0</theta-max-deg>
 		<phi-min-deg>0</phi-min-deg>
 		<phi-max-deg>0</phi-max-deg>
-		<speed>
+		<speed-mps>
 			<value>10</value>
 			<spread>0</spread>
-		</speed>
-		<rotspeed>
-			<minx>0</minx>
-			<miny>0</miny>
-			<minz>0</minz>
-			<maxx>0</maxx>
-			<maxy>0</maxy>
-			<maxz>0</maxz>
-		</rotspeed>
+		</speed-mps>
+		<rotation-speed>
+			<x-min-deg-sec>0</x-min-deg-sec>
+			<y-min-deg-sec>0</y-min-deg-sec>
+			<z-min-deg-sec>0</z-min-deg-sec>
+			<x-max-deg-sec>0</x-max-deg-sec>
+			<y-max-deg-sec>0</y-max-deg-sec>
+			<z-max-deg-sec>0</z-max-deg-sec>
+		</rotation-speed>
 	</shooter>
 	
 	<counter>
-		<pps>
+		<particles-per-sec>
 			<value>15</value>
 			<spread>0</spread>
-		</pps>
-		
-		<condition>
-			<and>
-				<greater-than>
-					<property>engines/engine[3]/n2</property>
-					<value>75</value>
-				</greater-than>
-				<equals>
-					<property>engines/engine[7]/n2</property>
-					<!--<property>controls/engines/engine[0]/cutoff</property>-->
-					<value>0</value>
-				</equals>
-			</and>
-		</condition>
-		
+		</particles-per-sec>
 	</counter>
 	
 	<align>billboard</align>
 	
 	<particle>
-		<startcolor>
-			<red>
-				<value>0.55</value>
-			</red>
-			<green>
-				<value>0.4</value>
-			</green>
-			<blue>
-				<value>0.34</value>
-			</blue>
-			<alpha>
-				<value>0.10</value>
-			</alpha>
-		</startcolor>
-		<endcolor>
-			<red>
-				<value>0.47</value>
-			</red>
-			<green>
-				<value>0.53</value>
-			</green>
-			<blue>
-				<value>0.34</value>
-			</blue>
-			<alpha>
-				<value>0.05</value>
-			</alpha>
-		</endcolor>
-		<startsize>
-			<value>0.40</value>
-		</startsize>
-		<endsize>
-			<value>0.25</value>
-		</endsize>
+		<start>
+			<color>
+				<red>
+					<value>0.55</value>
+				</red>
+				<green>
+					<value>0.4</value>
+				</green>
+				<blue>
+					<value>0.34</value>
+				</blue>
+				<alpha>
+					<value>0.10</value>
+				</alpha>
+			</color>
+			<size>
+				<value>0.40</value>
+			</size>
+		</start>
+		<end>
+			<color>
+				<red>
+					<value>0.47</value>
+				</red>
+				<green>
+					<value>0.53</value>
+				</green>
+				<blue>
+					<value>0.34</value>
+				</blue>
+				<alpha>
+					<value>0.05</value>
+				</alpha>
+			</color>
+			<size>
+				<value>0.25</value>
+			</size>
+		</end>
 		<life-sec>
 			<value>0.3</value>
 		</life-sec>
@@ -1073,8 +1088,8 @@ sweat by maggse
 	
 	<program>
 		<fluid>air</fluid>
-		<gravity>disabled</gravity>
-		<wind>disabled</wind>
+		<gravity>false</gravity>
+		<wind>false</wind>
 	</program>
 	
 </particlesystem>
@@ -1094,6 +1109,21 @@ sweat by maggse
 		<pitch-deg>90</pitch-deg>
 	</offsets>
 	
+	<condition>
+		<and>
+			<equals>
+				<!--<property>controls/engines/engine[0]/afterburner</property>-->
+				<property>engines/engine[4]/n1</property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<!--<property>controls/engines/engine[0]/cutoff</property>-->
+				<property>engines/engine[4]/n2</property>
+				<value>0</value>
+			</equals>
+		</and>
+	</condition>
+	
 	<attach>local</attach>
 	
 	<placer>
@@ -1106,80 +1136,68 @@ sweat by maggse
 		<theta-max-deg>0</theta-max-deg>
 		<phi-min-deg>0</phi-min-deg>
 		<phi-max-deg>0</phi-max-deg>
-		<speed>
+		<speed-mps>
 			<value>14</value>
 			<spread>0</spread>
-		</speed>
-		<rotspeed>
-			<minx>0</minx>
-			<miny>0</miny>
-			<minz>0</minz>
-			<maxx>0</maxx>
-			<maxy>0</maxy>
-			<maxz>0</maxz>
-		</rotspeed>
+		</speed-mps>
+		<rotation-speed>
+			<x-min-deg-sec>0</x-min-deg-sec>
+			<y-min-deg-sec>0</y-min-deg-sec>
+			<z-min-deg-sec>0</z-min-deg-sec>
+			<x-max-deg-sec>0</x-max-deg-sec>
+			<y-max-deg-sec>0</y-max-deg-sec>
+			<z-max-deg-sec>0</z-max-deg-sec>
+		</rotation-speed>
 	</shooter>
 	
 	<counter>
-		<pps>
+		<particles-per-sec>
 			<value>22</value>
 			<spread>0</spread>
-		</pps>
-
-		<condition>
-			<and>
-				<equals>
-					<!--<property>controls/engines/engine[0]/afterburner</property>-->
-					<property>engines/engine[4]/n1</property>
-					<value>1</value>
-				</equals>
-				<equals>
-					<!--<property>controls/engines/engine[0]/cutoff</property>-->
-					<property>engines/engine[4]/n2</property>
-					<value>0</value>
-				</equals>
-			</and>
-	 </condition>
-		
+		</particles-per-sec>
 	</counter>
 	
 	<align>billboard</align>
 	
 	<particle>
-		<startcolor>
-			<red>
-				<value>0.55</value>
-			</red>
-			<green>
+		<start>
+			<color>
+				<red>
+					<value>0.55</value>
+				</red>
+				<green>
+					<value>0.4</value>
+				</green>
+				<blue>
+					<value>0.34</value>
+				</blue>
+				<alpha>
+					<value>0.30</value>
+				</alpha>
+			</color>
+			<size>
+				<value>0.60</value>
+			</size>
+		</start>
+		<end>
+			<color>
+				<red>
+					<value>0.47</value>
+				</red>
+				<green>
+					<value>0.53</value>
+				</green>
+				<blue>
+					<value>0.34</value>
+				</blue>
+				<alpha>
+					<value>0.15</value>
+				</alpha>
+			</color>
+			<size>
 				<value>0.4</value>
-			</green>
-			<blue>
-				<value>0.34</value>
-			</blue>
-			<alpha>
-				<value>0.30</value>
-			</alpha>
-		</startcolor>
-		<endcolor>
-			<red>
-				<value>0.47</value>
-			</red>
-			<green>
-				<value>0.53</value>
-			</green>
-			<blue>
-				<value>0.34</value>
-			</blue>
-			<alpha>
-				<value>0.15</value>
-			</alpha>
-		</endcolor>
-		<startsize>
-			<value>0.60</value>
-		</startsize>
-		<endsize>
-			<value>0.4</value>
-		</endsize>
+			</size>
+		</end>
 		<life-sec>
 			<value>0.4</value>
 		</life-sec>
@@ -1189,8 +1207,8 @@ sweat by maggse
 	
 	<program>
 		<fluid>air</fluid>
-		<gravity>disabled</gravity>
-		<wind>disabled</wind>
+		<gravity>false</gravity>
+		<wind>false</wind>
 	</program>
 	
 </particlesystem>
@@ -1208,6 +1226,21 @@ sweat by maggse
 		<pitch-deg>90</pitch-deg>
 	</offsets>
 	
+	<condition>
+		<and>
+			<equals>
+				<!--<property>controls/engines/engine[0]/afterburner</property>-->
+				<property>engines/engine[4]/n1</property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<!--<property>controls/engines/engine[0]/cutoff</property>-->
+				<property>engines/engine[5]/n2</property>
+				<value>0</value>
+			</equals>
+		</and>
+	</condition>
+	
 	<attach>local</attach>
 	
 	<placer>
@@ -1220,80 +1253,68 @@ sweat by maggse
 		<theta-max-deg>0</theta-max-deg>
 		<phi-min-deg>0</phi-min-deg>
 		<phi-max-deg>0</phi-max-deg>
-		<speed>
+		<speed-mps>
 			<value>14</value>
 			<spread>0</spread>
-		</speed>
-		<rotspeed>
-			<minx>0</minx>
-			<miny>0</miny>
-			<minz>0</minz>
-			<maxx>0</maxx>
-			<maxy>0</maxy>
-			<maxz>0</maxz>
-		</rotspeed>
+		</speed-mps>
+		<rotation-speed>
+			<x-min-deg-sec>0</x-min-deg-sec>
+			<y-min-deg-sec>0</y-min-deg-sec>
+			<z-min-deg-sec>0</z-min-deg-sec>
+			<x-max-deg-sec>0</x-max-deg-sec>
+			<y-max-deg-sec>0</y-max-deg-sec>
+			<z-max-deg-sec>0</z-max-deg-sec>
+		</rotation-speed>
 	</shooter>
 	
 	<counter>
-		<pps>
+		<particles-per-sec>
 			<value>22</value>
 			<spread>0</spread>
-		</pps>
-		
-		<condition>
-			<and>
-				<equals>
-					<!--<property>controls/engines/engine[0]/afterburner</property>-->
-					<property>engines/engine[4]/n1</property>
-					<value>1</value>
-				</equals>
-				<equals>
-					<!--<property>controls/engines/engine[0]/cutoff</property>-->
-					<property>engines/engine[5]/n2</property>
-					<value>0</value>
-				</equals>
-			</and>
-		</condition>
-		
+		</particles-per-sec>
 	</counter>
 	
 	<align>billboard</align>
 	
 	<particle>
-		<startcolor>
-			<red>
-				<value>0.55</value>
-			</red>
-			<green>
+		<start>
+			<color>
+				<red>
+					<value>0.55</value>
+				</red>
+				<green>
+					<value>0.4</value>
+				</green>
+				<blue>
+					<value>0.34</value>
+				</blue>
+				<alpha>
+					<value>0.30</value>
+				</alpha>
+			</color>
+			<size>
+				<value>0.60</value>
+			</size>
+		</start>
+		<end>
+			<color>
+				<red>
+					<value>0.47</value>
+				</red>
+				<green>
+					<value>0.53</value>
+				</green>
+				<blue>
+					<value>0.34</value>
+				</blue>
+				<alpha>
+					<value>0.15</value>
+				</alpha>
+			</color>
+			<size>
 				<value>0.4</value>
-			</green>
-			<blue>
-				<value>0.34</value>
-			</blue>
-			<alpha>
-				<value>0.30</value>
-			</alpha>
-		</startcolor>
-		<endcolor>
-			<red>
-				<value>0.47</value>
-			</red>
-			<green>
-				<value>0.53</value>
-			</green>
-			<blue>
-				<value>0.34</value>
-			</blue>
-			<alpha>
-				<value>0.15</value>
-			</alpha>
-		</endcolor>
-		<startsize>
-			<value>0.60</value>
-		</startsize>
-		<endsize>
-			<value>0.4</value>
-		</endsize>
+			</size>
+		</end>
 		<life-sec>
 			<value>0.4</value>
 		</life-sec>
@@ -1303,8 +1324,8 @@ sweat by maggse
 	
 	<program>
 		<fluid>air</fluid>
-		<gravity>disabled</gravity>
-		<wind>disabled</wind>
+		<gravity>false</gravity>
+		<wind>false</wind>
 	</program>
 	
 </particlesystem>
@@ -1322,6 +1343,21 @@ sweat by maggse
 		<pitch-deg>90</pitch-deg>
 	</offsets>
 	
+	<condition>
+		<and>
+			<equals>
+				<!--<property>controls/engines/engine[0]/afterburner</property>-->
+				<property>engines/engine[4]/n1</property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<!--<property>controls/engines/engine[0]/cutoff</property>-->
+				<property>engines/engine[6]/n2</property>
+				<value>0</value>
+			</equals>
+		</and>
+	</condition>
+	
 	<attach>local</attach>
 	
 	<placer>
@@ -1334,80 +1370,68 @@ sweat by maggse
 		<theta-max-deg>0</theta-max-deg>
 		<phi-min-deg>0</phi-min-deg>
 		<phi-max-deg>0</phi-max-deg>
-		<speed>
+		<speed-mps>
 			<value>14</value>
 			<spread>0</spread>
-		</speed>
-		<rotspeed>
-			<minx>0</minx>
-			<miny>0</miny>
-			<minz>0</minz>
-			<maxx>0</maxx>
-			<maxy>0</maxy>
-			<maxz>0</maxz>
-		</rotspeed>
+		</speed-mps>
+		<rotation-speed>
+			<x-min-deg-sec>0</x-min-deg-sec>
+			<y-min-deg-sec>0</y-min-deg-sec>
+			<z-min-deg-sec>0</z-min-deg-sec>
+			<x-max-deg-sec>0</x-max-deg-sec>
+			<y-max-deg-sec>0</y-max-deg-sec>
+			<z-max-deg-sec>0</z-max-deg-sec>
+		</rotation-speed>
 	</shooter>
 	
 	<counter>
-		<pps>
+		<particles-per-sec>
 			<value>22</value>
 			<spread>0</spread>
-		</pps>
-		
-		<condition>
-			<and>
-				<equals>
-					<!--<property>controls/engines/engine[0]/afterburner</property>-->
-					<property>engines/engine[4]/n1</property>
-					<value>1</value>
-				</equals>
-				<equals>
-					<!--<property>controls/engines/engine[0]/cutoff</property>-->
-					<property>engines/engine[6]/n2</property>
-					<value>0</value>
-				</equals>
-			</and>
-		</condition>
-		
+		</particles-per-sec>
 	</counter>
 	
 	<align>billboard</align>
 	
 	<particle>
-		<startcolor>
-			<red>
-				<value>0.55</value>
-			</red>
-			<green>
+		<start>
+			<color>
+				<red>
+					<value>0.55</value>
+				</red>
+				<green>
+					<value>0.4</value>
+				</green>
+				<blue>
+					<value>0.34</value>
+				</blue>
+				<alpha>
+					<value>0.30</value>
+				</alpha>
+			</color>
+			<size>
+				<value>0.60</value>
+			</size>
+		</start>
+		<end>
+			<color>
+				<red>
+					<value>0.47</value>
+				</red>
+				<green>
+					<value>0.53</value>
+				</green>
+				<blue>
+					<value>0.34</value>
+				</blue>
+				<alpha>
+					<value>0.15</value>
+				</alpha>
+			</color>
+			<size>
 				<value>0.4</value>
-			</green>
-			<blue>
-				<value>0.34</value>
-			</blue>
-			<alpha>
-				<value>0.30</value>
-			</alpha>
-		</startcolor>
-		<endcolor>
-			<red>
-				<value>0.47</value>
-			</red>
-			<green>
-				<value>0.53</value>
-			</green>
-			<blue>
-				<value>0.34</value>
-			</blue>
-			<alpha>
-				<value>0.15</value>
-			</alpha>
-		</endcolor>
-		<startsize>
-			<value>0.60</value>
-		</startsize>
-		<endsize>
-			<value>0.4</value>
-		</endsize>
+			</size>
+		</end>
 		<life-sec>
 			<value>0.4</value>
 		</life-sec>
@@ -1417,8 +1441,8 @@ sweat by maggse
 	
 	<program>
 		<fluid>air</fluid>
-		<gravity>disabled</gravity>
-		<wind>disabled</wind>
+		<gravity>false</gravity>
+		<wind>false</wind>
 	</program>
 	
 </particlesystem>
@@ -1436,6 +1460,21 @@ sweat by maggse
 		<pitch-deg>90</pitch-deg>
 	</offsets>
 	
+	<condition>
+		<and>
+			<equals>
+				<!--<property>controls/engines/engine[0]/afterburner</property>-->
+				<property>engines/engine[4]/n1</property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<!--<property>controls/engines/engine[0]/cutoff</property>-->
+				<property>engines/engine[7]/n2</property>
+				<value>0</value>
+			</equals>
+		</and>
+	</condition>
+	
 	<attach>local</attach>
 	
 	<placer>
@@ -1448,80 +1487,68 @@ sweat by maggse
 		<theta-max-deg>0</theta-max-deg>
 		<phi-min-deg>0</phi-min-deg>
 		<phi-max-deg>0</phi-max-deg>
-		<speed>
+		<speed-mps>
 			<value>14</value>
 			<spread>0</spread>
-		</speed>
-		<rotspeed>
-			<minx>0</minx>
-			<miny>0</miny>
-			<minz>0</minz>
-			<maxx>0</maxx>
-			<maxy>0</maxy>
-			<maxz>0</maxz>
-		</rotspeed>
+		</speed-mps>
+		<rotation-speed>
+			<x-min-deg-sec>0</x-min-deg-sec>
+			<y-min-deg-sec>0</y-min-deg-sec>
+			<z-min-deg-sec>0</z-min-deg-sec>
+			<x-max-deg-sec>0</x-max-deg-sec>
+			<y-max-deg-sec>0</y-max-deg-sec>
+			<z-max-deg-sec>0</z-max-deg-sec>
+		</rotation-speed>
 	</shooter>
 	
 	<counter>
-		<pps>
+		<particles-per-sec>
 			<value>22</value>
 			<spread>0</spread>
-		</pps>
-		
-		<condition>
-			<and>
-				<equals>
-					<!--<property>controls/engines/engine[0]/afterburner</property>-->
-					<property>engines/engine[4]/n1</property>
-					<value>1</value>
-				</equals>
-				<equals>
-					<!--<property>controls/engines/engine[0]/cutoff</property>-->
-					<property>engines/engine[7]/n2</property>
-					<value>0</value>
-				</equals>
-			</and>
-		</condition>
-		
+		</particles-per-sec>
 	</counter>
 	
 	<align>billboard</align>
 	
 	<particle>
-		<startcolor>
-			<red>
-				<value>0.55</value>
-			</red>
-			<green>
+		<start>
+			<color>
+				<red>
+					<value>0.55</value>
+				</red>
+				<green>
+					<value>0.4</value>
+				</green>
+				<blue>
+					<value>0.34</value>
+				</blue>
+				<alpha>
+					<value>0.30</value>
+				</alpha>
+			</color>
+			<size>
+				<value>0.60</value>
+			</size>
+		</start>
+		<end>
+			<color>
+				<red>
+					<value>0.47</value>
+				</red>
+				<green>
+					<value>0.53</value>
+				</green>
+				<blue>
+					<value>0.34</value>
+				</blue>
+				<alpha>
+					<value>0.15</value>
+				</alpha>
+			</color>
+			<size>
 				<value>0.4</value>
-			</green>
-			<blue>
-				<value>0.34</value>
-			</blue>
-			<alpha>
-				<value>0.30</value>
-			</alpha>
-		</startcolor>
-		<endcolor>
-			<red>
-				<value>0.47</value>
-			</red>
-			<green>
-				<value>0.53</value>
-			</green>
-			<blue>
-				<value>0.34</value>
-			</blue>
-			<alpha>
-				<value>0.15</value>
-			</alpha>
-		</endcolor>
-		<startsize>
-			<value>0.60</value>
-		</startsize>
-		<endsize>
-			<value>0.4</value>
-		</endsize>
+			</size>
+		</end>
 		<life-sec>
 			<value>0.4</value>
 		</life-sec>
@@ -1531,8 +1558,8 @@ sweat by maggse
 	
 	<program>
 		<fluid>air</fluid>
-		<gravity>disabled</gravity>
-		<wind>disabled</wind>
+		<gravity>false</gravity>
+		<wind>false</wind>
 	</program>
 	
 </particlesystem>

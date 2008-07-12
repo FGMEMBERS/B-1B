@@ -16,7 +16,10 @@ sweat by maggse
 		<z-m>0.00</z-m>
 		<pitch-deg>90</pitch-deg>
 	</offsets>
-	
+<!--
+	<condition>
+	</condition>
+-->
 	<attach>world</attach>
 	
 	<placer>
@@ -29,69 +32,70 @@ sweat by maggse
 		<theta-max-deg>0</theta-max-deg>
 		<phi-min-deg>0</phi-min-deg>
 		<phi-max-deg>0</phi-max-deg>
-		<speed>
+		<speed-mps>
 			<value>11</value>
 			<spread>1</spread>
-		</speed>
-		<rotspeed>
-			<minx>0</minx>
-			<miny>0</miny>
-			<minz>10</minz>
-			<maxx>0</maxx>
-			<maxy>10</maxy>
-			<maxz>20</maxz>
-		</rotspeed>
+		</speed-mps>
+		<rotation-speed>
+<!--	used wrong tags, and so wasn't functional; tags fixed but commented out [mfranz]
+			<x-min-deg-sec>0</x-min-deg-sec>
+			<y-min-deg-sec>0</y-min-deg-sec>
+			<z-min-deg-sec>10</z-min-deg-sec>
+			<x-max-deg-sec>0</x-max-deg-sec>
+			<y-max-deg-sec>10</y-max-deg-sec>
+			<z-max-deg-sec>20</z-max-deg-sec>
+-->
+		</rotation-speed>
 	</shooter>
 	
 	<counter>
-		<pps>
+		<particles-per-sec>
 			<value>20</value>
 			<spread>0</spread>
-		</pps>
-		
-		<!--<condition>
-
-		</condition>-->
-		
+		</particles-per-sec>
 	</counter>
 	
 	<align>billboard</align>
 	
 	<particle>
-		<startcolor>
-			<red>
-				<value>0.9</value>
-			</red>
-			<green>
-				<value>0.6</value>
-			</green>
-			<blue>
-				<value>0.5</value>
-			</blue>
-			<alpha>
-				<value>0.40</value>
-			</alpha>
-		</startcolor>
-		<endcolor>
-			<red>
-				<value>0.65</value>
-			</red>
-			<green>
-				<value>0.45</value>
-			</green>
-			<blue>
-				<value>0.35</value>
-			</blue>
-			<alpha>
-				<value>0.2</value>
-			</alpha>
-		</endcolor>
-		<startsize>
-			<value>1.60</value>
-		</startsize>
-		<endsize>
-			<value>0.4</value>
-		</endsize>
+		<start>
+			<color>
+				<red>
+					<value>0.9</value>
+				</red>
+				<green>
+					<value>0.6</value>
+				</green>
+				<blue>
+					<value>0.5</value>
+				</blue>
+				<alpha>
+					<value>0.40</value>
+				</alpha>
+			</color>
+			<size>
+				<value>1.60</value>
+			</size>
+		</start>
+		<end>
+			<color>
+				<red>
+					<value>0.65</value>
+				</red>
+				<green>
+					<value>0.45</value>
+				</green>
+				<blue>
+					<value>0.35</value>
+				</blue>
+				<alpha>
+					<value>0.2</value>
+				</alpha>
+			</color>
+			<size>
+				<value>0.4</value>
+			</size>
+		</end>
 		<life-sec>
 			<value>1.0</value>
 		</life-sec>
@@ -101,8 +105,8 @@ sweat by maggse
 	
 	<program>
 		<fluid>air</fluid>
-		<gravity>enabled</gravity>
-		<wind>disabled</wind>
+		<gravity>true</gravity>
+		<wind>false</wind>
 	</program>
 	
 </particlesystem>
