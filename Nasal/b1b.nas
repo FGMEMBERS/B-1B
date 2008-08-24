@@ -3,6 +3,7 @@ setlistener("/sim/signals/fdm-initialized", func {
 });
 
 var init_b1b = func {
+setprop("systems/refuel/serviceable", 'false');
 setprop("instrumentation/teravd/target-vfpm-exec", 0);
 setprop("instrumentation/teravd/target-alt-exec", 0);
 setprop("autopilot/settings/target-altitude-ft", 0);
@@ -22,10 +23,10 @@ setprop("controls/switches/terrain-avoid-rng-25", 0);
 setprop("controls/switches/terrain-avoid-rng-50", 0);
 setprop("controls/switches/terrain-follow-map", 0);
 setprop("controls/switches/terrain-follow-clr", 0);
-setprop("controls/engines/engine[0]/cutoff", 0);#start with engines on
-setprop("controls/engines/engine[1]/cutoff", 0);
-setprop("controls/engines/engine[2]/cutoff", 0);
-setprop("controls/engines/engine[3]/cutoff", 0);
+setprop("controls/engines/engine[0]/cutoff", 1);#start with engines off
+setprop("controls/engines/engine[1]/cutoff", 1);
+setprop("controls/engines/engine[2]/cutoff", 1);
+setprop("controls/engines/engine[3]/cutoff", 1);
 setprop("consumables/fuel/tank[3]/level-gal_us", 5000);
 setprop("consumables/fuel/tank[5]/level-gal_us", 5000);
 setprop("instrumentation/cg/cg_mac_set", 25);
@@ -39,9 +40,46 @@ wingSweep(1);
 wingSweep(1);
 wingSweep(1);
 settimer(cg.cg_dist, 2);
+radardist.init();
+settimer(eta_waypoint, 1);
+settimer(enginefire.fire_loop, 3);
+#settimer(weapons.weapon_system, 3);
 #fuel_syst();
 settimer(eng_state, 3);
+settimer(tacan_follow, 4);
 print ("B-1B starting up!");
+}
+
+### doors and animations
+var hatch = aircraft.door.new ("canopy",15);
+var bay_fwd = aircraft.door.new ("doors/bay_fwd",3);
+var bay_intmd = aircraft.door.new ("doors/bay_intmd",3);
+var bay_aft = aircraft.door.new ("doors/bay_aft",3);
+var refuel_door = aircraft.door.new ("doors/refuel_door",3);
+
+### tacan follow autopilot
+var tacan_follow = func {
+var ap_state = getprop("autopilot/locks/heading");
+if (ap_state == "tacan-hold") {
+var tacan_hdg = getprop("instrumentation/tacan/indicated-bearing-true-deg");
+setprop("autopilot/settings/heading-bug-deg", tacan_hdg);
+}
+settimer(tacan_follow, 1);
+}
+
+### format waypoint data loop
+var eta_waypoint = func {
+var eta = getprop("autopilot/route-manager/wp/eta");
+if (eta == nil) {
+settimer(eta_waypoint, 0.1);
+} else {
+var spliteta = split(":", eta);
+var eta0 = spliteta[0];
+var eta1 = spliteta[1];
+setprop("autopilot/route-manager/wp/eta_h", eta0);
+setprop("autopilot/route-manager/wp/eta_m", eta1);
+settimer(eta_waypoint, 0.1);
+}
 }
 
 var aftburn_on = func {
@@ -432,8 +470,10 @@ var eng_state = func {
 
     if(getprop("controls/engines/engine[0]/cutoff") == 0){
         setprop("controls/engines/engine[0]/throttle-lever",getprop("controls/engines/engine[0]/throttle"));
-        setprop("sim/model/B-1B/n1[0]",getprop("engines/engine/n1"));
-        setprop("sim/model/B-1B/n2[0]",getprop("engines/engine/n2"));
+        interpolate("sim/model/B-1B/n1[0]",getprop("engines/engine/n1"),3);
+        interpolate("sim/model/B-1B/n2[0]",getprop("engines/engine/n2"),3);
+        #setprop("sim/model/B-1B/n1[0]",getprop("engines/engine/n1"));
+        #setprop("sim/model/B-1B/n2[0]",getprop("engines/engine/n2"));
     }else{
         setprop("controls/engines/engine[0]/throttle-lever", 0);
         interpolate("sim/model/B-1B/n1[0]",0,10);
@@ -442,8 +482,10 @@ var eng_state = func {
 
     if(getprop("controls/engines/engine[1]/cutoff") == 0){
         setprop("controls/engines/engine[1]/throttle-lever",getprop("controls/engines/engine[1]/throttle"));
-        setprop("sim/model/B-1B/n1[1]",getprop("engines/engine/n1"));
-        setprop("sim/model/B-1B/n2[1]",getprop("engines/engine/n2"));
+        interpolate("sim/model/B-1B/n1[1]",getprop("engines/engine[1]/n1"),3);
+        interpolate("sim/model/B-1B/n2[1]",getprop("engines/engine[1]/n2"),3);
+        #setprop("sim/model/B-1B/n1[1]",getprop("engines/engine/n1"));
+        #setprop("sim/model/B-1B/n2[1]",getprop("engines/engine/n2"));
     }else{
         setprop("controls/engines/engine[1]/throttle-lever", 0);
         interpolate("sim/model/B-1B/n1[1]",0,10);
@@ -452,8 +494,10 @@ var eng_state = func {
 
     if(getprop("controls/engines/engine[2]/cutoff") == 0){
         setprop("controls/engines/engine[2]/throttle-lever",getprop("controls/engines/engine[2]/throttle"));
-        setprop("sim/model/B-1B/n1[2]",getprop("engines/engine/n1"));
-        setprop("sim/model/B-1B/n2[2]",getprop("engines/engine/n2"));
+        interpolate("sim/model/B-1B/n1[2]",getprop("engines/engine[2]/n1"),3);
+        interpolate("sim/model/B-1B/n2[2]",getprop("engines/engine[2]/n2"),3);
+        #setprop("sim/model/B-1B/n1[2]",getprop("engines/engine/n1"));
+        #setprop("sim/model/B-1B/n2[2]",getprop("engines/engine/n2"));
     }else{
         setprop("controls/engines/engine[2]/throttle-lever", 0);
         interpolate("sim/model/B-1B/n1[2]",0,10);
@@ -462,8 +506,10 @@ var eng_state = func {
 
     if(getprop("controls/engines/engine[3]/cutoff") == 0){
         setprop("controls/engines/engine[3]/throttle-lever",getprop("controls/engines/engine[3]/throttle"));
-        setprop("sim/model/B-1B/n1[3]",getprop("engines/engine/n1"));
-        setprop("sim/model/B-1B/n2[3]",getprop("engines/engine/n2"));
+        interpolate("sim/model/B-1B/n1[3]",getprop("engines/engine[3]/n1"),3);
+        interpolate("sim/model/B-1B/n2[3]",getprop("engines/engine[3]/n2"),3);
+        #setprop("sim/model/B-1B/n1[3]",getprop("engines/engine/n1"));
+        #setprop("sim/model/B-1B/n2[3]",getprop("engines/engine/n2"));
     }else{
         setprop("controls/engines/engine[3]/throttle-lever", 0);
         interpolate("sim/model/B-1B/n1[3]",0,10);

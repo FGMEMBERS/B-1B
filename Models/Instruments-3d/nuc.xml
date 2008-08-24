@@ -126,4 +126,205 @@ maggse
 	</emission>
 </animation>
 
+<animation>
+	 <type>material</type>
+	 <object-name>nuc_close.001</object-name>
+	 <emission>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.1</blue>
+		 <factor-prop>doors/bay_fwd/position-norm</factor-prop>
+	 </emission>
+</animation>
+
+<animation>
+	 <type>material</type>
+	 <object-name>nuc_close.002</object-name>
+	 <emission>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.1</blue>
+		 <factor-prop>doors/bay_intmd/position-norm</factor-prop>
+	 </emission>
+</animation>
+
+<animation>
+	 <type>material</type>
+	 <object-name>nuc_close.003</object-name>
+	 <emission>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.1</blue>
+		 <factor-prop>doors/bay_aft/position-norm</factor-prop>
+	 </emission>
+</animation>
+
+<!-- door close -->
+<animation>
+	<type>material</type>
+	<object-name>nuc_close</object-name>
+	<emission>
+		<red>0.6</red>
+		<green>0.3</green>
+		<blue>0.2</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+</animation>
+
+<animation>
+	<type>pick</type>
+	<object-name>nuc_close</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.3</interval-sec>
+		<binding>
+			<command>nasal</command>
+			<script>b1b.bay_fwd.close()</script>
+		</binding>
+		<binding>
+			<command>nasal</command>
+			<script>b1b.bay_intmd.close()</script>
+		</binding>
+		<binding>
+			<command>nasal</command>
+			<script>b1b.bay_aft.close()</script>
+		</binding>
+	</action>
+</animation>
+
+<!-- time to waypoint -->
+<animation>
+	 <type>textranslate</type>
+	 <object-name>nuc_pt.001</object-name>
+	 <property>autopilot/route-manager/route/num</property>
+	 <factor>0.1</factor>
+	 <step>1</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>nuc_pt.003</object-name>
+	 <property>autopilot/route-manager/wp/eta_h</property>
+	 <factor>0.01</factor>
+	 <step>10</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>nuc_pt.002</object-name>
+	 <property>autopilot/route-manager/wp/eta_h</property>
+	 <factor>0.1</factor>
+	 <step>1</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>nuc_pt.004</object-name>
+	 <property>autopilot/route-manager/wp/eta_m</property>
+	 <factor>0.01</factor>
+	 <step>10</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>nuc_pt.005</object-name>
+	 <property>autopilot/route-manager/wp/eta_m</property>
+	 <factor>0.1</factor>
+	 <step>1</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ <!-- distance to wp -->
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>nuc_pt</object-name>
+	 <property>autopilot/route-manager/wp/dist</property>
+	 <factor>0.0001</factor>
+	 <step>1000</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>nuc_pt.006</object-name>
+	 <property>autopilot/route-manager/wp/dist</property>
+	 <factor>0.001</factor>
+	 <step>100</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>nuc_pt.007</object-name>
+	 <property>autopilot/route-manager/wp/dist</property>
+	 <factor>0.01</factor>
+	 <step>10</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>nuc_pt.008</object-name>
+	 <property>autopilot/route-manager/wp/dist</property>
+	 <factor>0.1</factor>
+	 <step>1</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	<type>material</type>
+	<object-name>nuc_pt</object-name>
+	<object-name>nuc_pt.001</object-name>
+	<object-name>nuc_pt.002</object-name>
+	<object-name>nuc_pt.003</object-name>
+	<object-name>nuc_pt.004</object-name>
+	<object-name>nuc_pt.005</object-name>
+	<object-name>nuc_pt.006</object-name>
+	<object-name>nuc_pt.007</object-name>
+	<object-name>nuc_pt.008</object-name>
+	<emission>
+		<red>0.6</red>
+		<green>0.3</green>
+		<blue>0.2</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+</animation>
+
 </PropertyList>

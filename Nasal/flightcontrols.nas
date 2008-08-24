@@ -44,9 +44,10 @@ setprop("sim/weight[1]/weight-lb", aftsweep);
 ##
 var fuelsweep = func {
 var sweep = getprop("controls/flight/wing-sweep");
-var fuelm = getprop("consumables/fuel/tank[0]/level-lbs");
+var fuelml = getprop("consumables/fuel/tank[0]/level-lbs");
+var fuelmr = getprop("consumables/fuel/tank[1]/level-lbs");
 
-var aftfuel = (fuelm * (1 - sweep) * 2);
+var aftfuel = ((fuelml + fuelmr) * (1 - sweep));
 var fwdfuel = (aftfuel * (-1));
 setprop("sim/weight[2]/weight-lb", fwdfuel);
 setprop("sim/weight[3]/weight-lb", aftfuel);

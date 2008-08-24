@@ -22,13 +22,13 @@ if (w4m == nil){w4m = 0;}
 var w4p = -29.5;
 var w5m = getprop("sim/weight[4]/weigth-lb");
 if (w5m == nil){w5m = 0;}
-var w5p = -16.0;
+var w5p = -15.3;
 var w6m = getprop("sim/weight[5]/weigth-lb");
 if (w6m == nil){w6m = 0;}
-var w6p = -21.0;
+var w6p = -20.0;
 var w7m = getprop("sim/weight[6]/weigth-lb");
 if (w7m == nil){w7m = 0;}
-var w7p = -31.0;
+var w7p = -35.2;
 #var w8m = getprop("sim/weight[7]/weigth-lb");
 #if (w8m == nil){w8m = 0;}
 #var w8p = -20.0;
@@ -43,15 +43,15 @@ var f2p = -26.2;
 var f3m = getprop("consumables/fuel/tank[2]/level-lbs");
 var f3p = -12.0;
 var f4m = getprop("consumables/fuel/tank[3]/level-lbs");
-var f4p = -20.0;
+var f4p = -18.5;
 var f5m = getprop("consumables/fuel/tank[4]/level-lbs");
-var f5p = -28.0;
+var f5p = -27.0;
 var f6m = getprop("consumables/fuel/tank[5]/level-lbs");
-var f6p = -36.0;
+var f6p = -34.0;
 var f7m = getprop("consumables/fuel/tank[6]/level-lbs");
-var f7p = -24.5;
+var f7p = -23.0;
 var f8m = getprop("consumables/fuel/tank[7]/level-lbs");
-var f8p = -24.5;
+var f8p = -23.0;
 #calculate the distance of cg from datum (in meters)
 var dist_cg = (acm * acp_e + w1m * w1p + w2m * w2p + w3m * w3p + w4m * w4p + w5m * w5p + w5m * w5p + w6m * w6p + w7m * w7p + f1m * f1p + f2m * f2p + f3m * f3p + f4m * f4p + f5m * f5p + f6m * f6p + f7m * f7p + f8m * f8p) / (getprop("yasim/gross-weight-lbs"));
 setprop("instrumentation/cg/dist_cg_from_datum_m", dist_cg);

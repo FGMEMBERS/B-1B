@@ -67,12 +67,36 @@ sweat by maggse
 	 <type>select</type>
 	 <object-name>rep_fire1</object-name>
 	 <condition>
+		 <or>
 		 <equals>
 			 <property>controls/switches/fire</property>
 			 <value>1.0</value>
 		 </equals>
+		 <equals>
+			 <property>controls/engines/engine[0]/on-fire</property>
+			 <value type="double">1.0</value>
+		 </equals>
+	         </or>
 	 </condition>
  </animation>
+ <animation>
+	 <type>pick</type>
+	 <object-name>rep_fire1</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/engines/engine[0]/fire-switch</property>
+		 </binding>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/engines/engine[0]/fire-bottle-discharge</property>
+		 </binding>
+	 </action>
+</animation>
+ 
  <animation>
 	 <type>material</type>
 	 <object-name>rep_fire1</object-name>
@@ -80,7 +104,7 @@ sweat by maggse
 		 <red>0.7</red>
 		 <green>0.4</green>
 		 <blue>0.3</blue>
-		 <factor-prop>controls/switches/fire</factor-prop>
+		 <factor-prop>controls/engines/engine[0]/on-fire</factor-prop>
 	 </emission>
 </animation>
  
@@ -88,12 +112,37 @@ sweat by maggse
 	 <type>select</type>
 	 <object-name>rep_fire2</object-name>
 	 <condition>
+		 <or>
 		 <equals>
 			 <property>controls/switches/fire</property>
 			 <value>1.0</value>
 		 </equals>
+		 <equals>
+			 <property>controls/engines/engine[1]/on-fire</property>
+			 <value type="double">1.0</value>
+		 </equals>
+	         </or>
 	 </condition>
  </animation>
+ 
+ <animation>
+	 <type>pick</type>
+	 <object-name>rep_fire2</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/engines/engine[1]/fire-switch</property>
+		 </binding>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/engines/engine[1]/fire-bottle-discharge</property>
+		 </binding>
+	 </action>
+</animation>
+ 
  <animation>
 	 <type>material</type>
 	 <object-name>rep_fire2</object-name>
@@ -101,7 +150,7 @@ sweat by maggse
 		 <red>0.7</red>
 		 <green>0.4</green>
 		 <blue>0.3</blue>
-		 <factor-prop>controls/switches/fire</factor-prop>
+		 <factor-prop>controls/engines/engine[1]/on-fire</factor-prop>
 	 </emission>
 </animation>
  
@@ -109,12 +158,37 @@ sweat by maggse
 	 <type>select</type>
 	 <object-name>rep_fire3</object-name>
 	 <condition>
+		 <or>
 		 <equals>
 			 <property>controls/switches/fire</property>
 			 <value>1.0</value>
 		 </equals>
+		 <equals>
+			 <property>controls/engines/engine[2]/on-fire</property>
+			 <value type="double">1.0</value>
+		 </equals>
+	         </or>
 	 </condition>
  </animation>
+ 
+ <animation>
+	 <type>pick</type>
+	 <object-name>rep_fire3</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/engines/engine[2]/fire-switch</property>
+		 </binding>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/engines/engine[2]/fire-bottle-discharge</property>
+		 </binding>
+	 </action>
+</animation>
+ 
  <animation>
 	 <type>material</type>
 	 <object-name>rep_fire3</object-name>
@@ -122,7 +196,7 @@ sweat by maggse
 		 <red>0.7</red>
 		 <green>0.4</green>
 		 <blue>0.3</blue>
-		 <factor-prop>controls/switches/fire</factor-prop>
+		 <factor-prop>controls/engines/engine[2]/on-fire</factor-prop>
 	 </emission>
 </animation>
  
@@ -130,12 +204,37 @@ sweat by maggse
 	 <type>select</type>
 	 <object-name>rep_fire4</object-name>
 	 <condition>
+		 <or>
 		 <equals>
 			 <property>controls/switches/fire</property>
 			 <value>1.0</value>
 		 </equals>
+		 <equals>
+			 <property>controls/engines/engine[3]/on-fire</property>
+			 <value type="double">1.0</value>
+		 </equals>
+	         </or>
 	 </condition>
  </animation>
+ 
+ <animation>
+	 <type>pick</type>
+	 <object-name>rep_fire4</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/engines/engine[3]/fire-switch</property>
+		 </binding>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/engines/engine[3]/fire-bottle-discharge</property>
+		 </binding>
+	 </action>
+</animation>
+ 
  <animation>
 	 <type>material</type>
 	 <object-name>rep_fire4</object-name>
@@ -143,7 +242,7 @@ sweat by maggse
 		 <red>0.7</red>
 		 <green>0.4</green>
 		 <blue>0.3</blue>
-		 <factor-prop>controls/switches/fire</factor-prop>
+		 <factor-prop>controls/engines/engine[3]/on-fire</factor-prop>
 	 </emission>
 </animation>
  
@@ -194,12 +293,37 @@ sweat by maggse
 	 <type>select</type>
 	 <object-name>rep_firelapu</object-name>
 	 <condition>
+		 <or>
 		 <equals>
 			 <property>controls/switches/fire</property>
 			 <value>1.0</value>
 		 </equals>
+		 <equals>
+			 <property>controls/APU/APUL-fire</property>
+			 <value type="double">1.0</value>
+		 </equals>
+	         </or>
 	 </condition>
  </animation>
+ 
+ <animation>
+	 <type>pick</type>
+	 <object-name>rep_firelapu</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/APU/APUL-fire-switch</property>
+		 </binding>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/APU/APUL-fire-bottle-discharge</property>
+		 </binding>
+	 </action>
+</animation>
+ 
  <animation>
 	 <type>material</type>
 	 <object-name>rep_firelapu</object-name>
@@ -207,7 +331,7 @@ sweat by maggse
 		 <red>0.7</red>
 		 <green>0.4</green>
 		 <blue>0.3</blue>
-		 <factor-prop>controls/switches/fire</factor-prop>
+		 <factor-prop>controls/APU/APUL-fire</factor-prop>
 	 </emission>
 </animation>
  
@@ -215,12 +339,38 @@ sweat by maggse
 	 <type>select</type>
 	 <object-name>rep_firerapu</object-name>
 	 <condition>
+		 <or>
 		 <equals>
 			 <property>controls/switches/fire</property>
 			 <value>1.0</value>
 		 </equals>
+		 
+		 <equals>
+			 <property>controls/APU/APUR-fire</property>
+			 <value type="double">1.0</value>
+		 </equals>
+	         </or>
 	 </condition>
  </animation>
+ 
+ <animation>
+	 <type>pick</type>
+	 <object-name>rep_firerapu</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/APU/APUR-fire-switch</property>
+		 </binding>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/APU/APUR-fire-bottle-discharge</property>
+		 </binding>
+	 </action>
+</animation>
+ 
  <animation>
 	 <type>material</type>
 	 <object-name>rep_firerapu</object-name>
@@ -228,12 +378,20 @@ sweat by maggse
 		 <red>0.7</red>
 		 <green>0.4</green>
 		 <blue>0.3</blue>
-		 <factor-prop>controls/switches/fire</factor-prop>
+		 <factor-prop>controls/APU/APUR-fire</factor-prop>
 	 </emission>
 </animation>
 
-<animation>
+<!--<animation>
 	<type>material</type>
+	<object-name>rep_fire1</object-name>
+	<object-name>rep_fire2</object-name>
+	<object-name>rep_fire3</object-name>
+	<object-name>rep_fire4</object-name>
+	<object-name>rep_fire5</object-name>
+	<object-name>rep_fire6</object-name>
+	<object-name>rep_firelapu</object-name>
+	<object-name>rep_firerapu</object-name>
 	<object-name>fire.001</object-name>
 	<emission>
 		<red>0.5</red>
@@ -241,6 +399,6 @@ sweat by maggse
 		<blue>0.2</blue>
 		<factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
-</animation>
+</animation>-->
 
 </PropertyList>

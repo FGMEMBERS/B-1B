@@ -16,10 +16,7 @@ sweat by maggse
 		<z-m>0.00</z-m>
 		<pitch-deg>90</pitch-deg>
 	</offsets>
-<!--
-	<condition>
-	</condition>
--->
+	
 	<attach>world</attach>
 	
 	<placer>
@@ -32,19 +29,17 @@ sweat by maggse
 		<theta-max-deg>0</theta-max-deg>
 		<phi-min-deg>0</phi-min-deg>
 		<phi-max-deg>0</phi-max-deg>
-		<speed-mps>
+		<speed>
 			<value>11</value>
 			<spread>1</spread>
-		</speed-mps>
+		</speed>
 		<rotation-speed>
-<!--	used wrong tags, and so wasn't functional; tags fixed but commented out [mfranz]
 			<x-min-deg-sec>0</x-min-deg-sec>
 			<y-min-deg-sec>0</y-min-deg-sec>
 			<z-min-deg-sec>10</z-min-deg-sec>
 			<x-max-deg-sec>0</x-max-deg-sec>
 			<y-max-deg-sec>10</y-max-deg-sec>
 			<z-max-deg-sec>20</z-max-deg-sec>
--->
 		</rotation-speed>
 	</shooter>
 	
@@ -53,6 +48,8 @@ sweat by maggse
 			<value>20</value>
 			<spread>0</spread>
 		</particles-per-sec>
+
+		
 	</counter>
 	
 	<align>billboard</align>
@@ -74,7 +71,7 @@ sweat by maggse
 				</alpha>
 			</color>
 			<size>
-				<value>1.60</value>
+          			<value>1.6</value>
 			</size>
 		</start>
 		<end>
@@ -96,6 +93,7 @@ sweat by maggse
 				<value>0.4</value>
 			</size>
 		</end>
+
 		<life-sec>
 			<value>1.0</value>
 		</life-sec>
@@ -105,8 +103,8 @@ sweat by maggse
 	
 	<program>
 		<fluid>air</fluid>
-		<gravity>true</gravity>
-		<wind>false</wind>
+		<gravity type="bool">true</gravity>
+		<wind type="bool">false</wind>
 	</program>
 	
 </particlesystem>

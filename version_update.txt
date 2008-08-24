@@ -1,5 +1,29 @@
 Rockwell B-1B Lancer "The Bone"
 
+XXXXXX  Version Nr: 0015 20082008 XXXXXX
+
+News/updates: Major update
+
+- Aft bay added
+- OSO panel and display
+- Functional weapon system (only unguided GBU31 at the moment)
+- Impact model relies on the vulcan-b2 installed
+- Tank locations updated
+- NUC panel in cockpit now shows time/nm to waypoint
+
+XXXXXX  Version Nr: 0014 06072008 XXXXXX
+
+News/updates: Major update
+
+- Cockpit/WSO cabin improvements (pilots and seats captured from f-14;))
+- Cockpit access ladder
+- Fire warning/extinguish system
+- Rear landing gear doors / gear with animation
+- Forward and Intermediate Weapon Bay
+- Refuel system serviceable
+- Engine start sequence available
+- Countless fixes I cant remember
+
 XXXXXX  Version Nr: 0013 16042008 XXXXXX
 
 News/updates: Minor update

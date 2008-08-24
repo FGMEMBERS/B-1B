@@ -33,7 +33,7 @@ more to come :-)
   
   <!-- trans parts -->
   <model>
-	  <name>transparent parts</name>
+	  <name>transparent_parts</name>
 	  <path>Aircraft/B-1B/Models/b1b_trans.xml</path>
 	  <offsets>
 		  <offsets>
@@ -486,6 +486,35 @@ more to come :-)
 		 </entry>
 		 <entry>
 			 <ind>1.0</ind>
+			 <dep>-70.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>6.74</x-m>
+		 <y-m>5.85</y-m>
+		 <z-m>-0.71</z-m>
+	 </center>
+	 <axis>
+		 <x>3.45</x>
+		 <y>2</y>
+		 <z>0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>spoiler_right3</object-name>
+	 <object-name>spoiler_right4</object-name>
+	 <property>surface-positions/right-spoiler-pos-norm</property>
+	 
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
 			 <dep>-40.0</dep>
 		 </entry>
 	 </interpolation>
@@ -662,6 +691,35 @@ more to come :-)
 	 <type>rotate</type>
 	 <object-name>spoiler_left1</object-name>
 	 <object-name>spoiler_left2</object-name>
+	 <property>surface-positions/right-spoiler-pos-norm</property>
+	 
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>70.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>6.74</x-m>
+		 <y-m>-5.85</y-m>
+		 <z-m>-0.71</z-m>
+	 </center>
+	 <axis>
+		 <x>3.45</x>
+		 <y>-2</y>
+		 <z>0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>spoiler_left3</object-name>
+	 <object-name>spoiler_left4</object-name>
 	 <property>surface-positions/right-spoiler-pos-norm</property>
 	 
 	 <interpolation>
@@ -1048,9 +1106,11 @@ more to come :-)
 	 <object-name>gear_fr_low</object-name>
 	 <object-name>axle.004</object-name>
 	 <object-name>gear_r_up</object-name>
+	 <object-name>gear_r_up.001</object-name>
 	 <object-name>gear_r_low</object-name>
 	 <object-name>gear_gear</object-name>
 	 <object-name>gear_l_up</object-name>
+	 <object-name>gear_l_up.001</object-name>
 	 <object-name>gear_l_low</object-name>
 	 <condition>
 		 <greater-than>
@@ -1062,6 +1122,7 @@ more to come :-)
  
  <animation>
 	 <type>select</type>
+	 <object-name>gear_l_up.002</object-name>
 	 <object-name>gear_l_up1</object-name>
 	 <object-name>gear_l_up1.001</object-name>
 	 <object-name>gear_l_up1.002</object-name>
@@ -1076,10 +1137,11 @@ more to come :-)
  
  <animation>
 	 <type>select</type>
-	 <object-name>gear_l_up1.004</object-name>
-	 <object-name>gear_l_up1.005</object-name>
-	 <object-name>gear_l_up1.006</object-name>
-	 <object-name>gear_l_up1.007</object-name>
+	 <object-name>gear_r_up.002</object-name>
+	 <object-name>gear_r_up1</object-name>
+	 <object-name>gear_r_up1.001</object-name>
+	 <object-name>gear_r_up1.002</object-name>
+	 <object-name>gear_r_up1.003</object-name>
 	 <condition>
 		 <greater-than>
 			 <property>gear/gear[0]/position-norm</property>
@@ -1323,7 +1385,7 @@ more to come :-)
 		 </entry>
 		 <entry>
 			 <ind>100.0</ind>
-			 <dep>-500.0</dep>
+			 <dep>-1000.0</dep>
 		 </entry>
 	 </interpolation>
 	 <center>
@@ -1430,41 +1492,11 @@ more to come :-)
 	 </axis>
  </animation>
  
- <!-- rear gear covers 
+ <!-- rear gear covers -->
  
  <animation>
 	 <type>rotate</type>
-	 <object-name>gcover_b1.001</object-name>
-	 <property>gear/gear[0]/position-norm</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-			 <dep>0.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>0.2</ind>
-			 <dep>90.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>1.0</ind>
-			 <dep>90.0</dep>
-		 </entry>
-	 </interpolation>
-	 <center>
-		 <x-m>-16.00</x-m>
-		 <y-m>2.31</y-m>
-		 <z-m>-1.18</z-m>
-	 </center>
-	 <axis>
-		 <x>1</x>
-		 <y>0</y>
-		 <z>0</z>
-	 </axis>
- </animation>
- 
- <animation>
-	 <type>rotate</type>
-	 <object-name>gcover_b1</object-name>
+	 <object-name>geardoor_right</object-name>
 	 <property>gear/gear[0]/position-norm</property>
 	 <interpolation>
 		 <entry>
@@ -1476,14 +1508,18 @@ more to come :-)
 			 <dep>-90.0</dep>
 		 </entry>
 		 <entry>
-			 <ind>1.0</ind>
+			 <ind>0.8</ind>
 			 <dep>-90.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>0.0</dep>
 		 </entry>
 	 </interpolation>
 	 <center>
 		 <x-m>-16.00</x-m>
-		 <y-m>-2.32</y-m>
-		 <z-m>-1.18</z-m>
+		 <y-m>0.07</y-m>
+		 <z-m>-1.32</z-m>
 	 </center>
 	 <axis>
 		 <x>1</x>
@@ -1494,7 +1530,7 @@ more to come :-)
  
  <animation>
 	 <type>rotate</type>
-	 <object-name>gcover_b1.002</object-name>
+	 <object-name>geardoor_right.001</object-name>
 	 <property>gear/gear[0]/position-norm</property>
 	 <interpolation>
 		 <entry>
@@ -1503,21 +1539,17 @@ more to come :-)
 		 </entry>
 		 <entry>
 			 <ind>0.2</ind>
-			 <dep>-93.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>0.8</ind>
-			 <dep>-93.0</dep>
+			 <dep>95.0</dep>
 		 </entry>
 		 <entry>
 			 <ind>1.0</ind>
-			 <dep>0.0</dep>
+			 <dep>95.0</dep>
 		 </entry>
 	 </interpolation>
 	 <center>
-		 <x-m>0.19</x-m>
-		 <y-m>0.19</y-m>
-		 <z-m>-1.20</z-m>
+		 <x-m>-16.00</x-m>
+		 <y-m>2.10</y-m>
+		 <z-m>-1.34</z-m>
 	 </center>
 	 <axis>
 		 <x>1</x>
@@ -1528,7 +1560,61 @@ more to come :-)
  
  <animation>
 	 <type>rotate</type>
-	 <object-name>gcover_b1.003</object-name>
+	 <object-name>geardoor_right.002</object-name>
+	 <object-name>geardoor_br</object-name>
+	 <property>gear/gear[0]/position-norm</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.8</ind>
+			 <dep>42.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-1.92</x-m>
+		 <y-m>2.10</y-m>
+		 <z-m>-1.32</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+  <animation>
+	 <type>rotate</type>
+	 <object-name>geardoor_right.002</object-name>
+	 <object-name>geardoor_br</object-name>
+	 <property>gear/gear[0]/position-norm</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.8</ind>
+			 <dep>42.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-1.67</x-m>
+		 <y-m>1.25</y-m>
+		 <z-m>-1.32</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>0</y>
+		 <z>1</z>
+	 </axis>
+ </animation>
+ 
+<animation>
+	 <type>rotate</type>
+	 <object-name>geardoor_left</object-name>
 	 <property>gear/gear[0]/position-norm</property>
 	 <interpolation>
 		 <entry>
@@ -1537,11 +1623,11 @@ more to come :-)
 		 </entry>
 		 <entry>
 			 <ind>0.2</ind>
-			 <dep>93.0</dep>
+			 <dep>90.0</dep>
 		 </entry>
 		 <entry>
 			 <ind>0.8</ind>
-			 <dep>93.0</dep>
+			 <dep>90.0</dep>
 		 </entry>
 		 <entry>
 			 <ind>1.0</ind>
@@ -1549,20 +1635,136 @@ more to come :-)
 		 </entry>
 	 </interpolation>
 	 <center>
-		 <x-m>0.19</x-m>
-		 <y-m>-0.19</y-m>
-		 <z-m>-1.20</z-m>
+		 <x-m>-16.00</x-m>
+		 <y-m>-0.02</y-m>
+		 <z-m>-1.32</z-m>
 	 </center>
 	 <axis>
 		 <x>1</x>
 		 <y>0</y>
 		 <z>0</z>
 	 </axis>
- </animation>-->
+ </animation>
  
-
+ <animation>
+	 <type>rotate</type>
+	 <object-name>geardoor_left.001</object-name>
+	 <property>gear/gear[0]/position-norm</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.2</ind>
+			 <dep>-95.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-95.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-16.00</x-m>
+		 <y-m>-2.07</y-m>
+		 <z-m>-1.34</z-m>
+	 </center>
+	 <axis>
+		 <x>1</x>
+		 <y>0</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>geardoor_left.002</object-name>
+	 <object-name>geardoor_bl</object-name>
+	 <property>gear/gear[0]/position-norm</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.8</ind>
+			 <dep>42.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-1.92</x-m>
+		 <y-m>2.10</y-m>
+		 <z-m>-1.32</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>geardoor_left.002</object-name>
+	 <object-name>geardoor_bl</object-name>
+	 <property>gear/gear[0]/position-norm</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.8</ind>
+			 <dep>-42.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-1.67</x-m>
+		 <y-m>-1.23</y-m>
+		 <z-m>-1.32</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>0</y>
+		 <z>1</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>geardoor_bl.001</object-name>
+	 <object-name>geardoor_br.001</object-name>
+	 <property>gear/gear[0]/position-norm</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.8</ind>
+			 <dep>50.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>50.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-1.92</x-m>
+		 <y-m>2.10</y-m>
+		 <z-m>-1.32</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
  
  <!-- left gear-->
+ 
+ <!-- left gear 1st move-->
  
  <animation>
 	 <type>translate</type>
@@ -1573,22 +1775,18 @@ more to come :-)
 	 <property>gear/gear[1]/position-norm</property>
 	 <interpolation>
 		 <entry>
-			 <ind>0.0</ind>
-			 <dep>3.36</dep>
+			 <ind>0.5</ind>
+			 <dep>1.80</dep>
 		 </entry>
 		 <entry>
-			 <ind>0.2</ind>
-			 <dep>3.36</dep>
-		 </entry>
-		 <entry>
-			 <ind>1.0</ind>
+			 <ind>0.8</ind>
 			 <dep>0.0</dep>
 		 </entry>
 	 </interpolation>
 	 <axis>
-		 <x>0</x>
-		 <y>0.45</y>
-		 <z>1</z>
+		 <x>0.0</x>
+		 <y>0.40</y>
+		 <z>0.5</z>
 	 </axis>
  </animation>
  
@@ -1600,50 +1798,180 @@ more to come :-)
 	 <property>gear/gear[2]/position-norm</property>
 	 <interpolation>
 		 <entry>
-			 <ind>0.0</ind>
-			 <dep>3.36</dep>
+			 <ind>0.5</ind>
+			 <dep>1.80</dep>
 		 </entry>
 		 <entry>
-			 <ind>0.2</ind>
-			 <dep>3.36</dep>
-		 </entry>
-		 <entry>
-			 <ind>1.0</ind>
+			 <ind>0.8</ind>
 			 <dep>0.0</dep>
 		 </entry>
 	 </interpolation>
 	 <axis>
-		 <x>0</x>
-		 <y>0.45</y>
-		 <z>1</z>
+		 <x>0.0</x>
+		 <y>0.40</y>
+		 <z>0.5</z>
 	 </axis>
  </animation>
  
  <animation>
 	 <type>translate</type>
 	 <object-name>gear_l_up</object-name>
+	 <object-name>gear_l_up.001</object-name>
+	 <object-name>gear_l_up.002</object-name>
 	 <object-name>gear_l_up1</object-name>
 	 <object-name>gear_l_up1.001</object-name>
-	 <object-name>gear_l_up1.003</object-name>
 	 <object-name>gear_l_up1.002</object-name>
+	 <object-name>gear_l_up1.003</object-name>
 	 <property>gear/gear[1]/position-norm</property>
 	 <interpolation>
 		 <entry>
-			 <ind>0.0</ind>
-			 <dep>3.36</dep>
+			 <ind>0.5</ind>
+			 <dep>1.80</dep>
 		 </entry>
 		 <entry>
-			 <ind>0.2</ind>
-			 <dep>3.36</dep>
-		 </entry>
-		 <entry>
-			 <ind>1.0</ind>
+			 <ind>0.8</ind>
 			 <dep>0.0</dep>
 		 </entry>
 	 </interpolation>
 	 <axis>
+		 <x>0.0</x>
+		 <y>0.40</y>
+		 <z>0.5</z>
+	 </axis>
+ </animation>
+ 
+ 
+ 
+ <!-- left gear 2nd move-->
+ 
+ <animation>
+	 <type>translate</type>
+	 <object-name>gear_l_low</object-name>
+	 <object-name>axle.001</object-name>
+	 <object-name>tyre.002</object-name>
+	 <object-name>tyre.003</object-name>
+	 <property>gear/gear[1]/position-norm</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.2</ind>
+			 <dep>1.90</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.5</ind>
+			 <dep>0.00</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.3</x>
+		 <y>0.00</y>
+		 <z>0.6</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>translate</type>
+	 <object-name>axle</object-name>
+	 <object-name>tyre.001</object-name>
+	 <object-name>tyre</object-name>
+	 <property>gear/gear[2]/position-norm</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.2</ind>
+			 <dep>1.90</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.5</ind>
+			 <dep>0.00</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.3</x>
+		 <y>0.00</y>
+		 <z>0.6</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>translate</type>
+	 <object-name>gear_l_up</object-name>
+	 <object-name>gear_l_up.001</object-name>
+	 <object-name>gear_l_up.002</object-name>
+	 <object-name>gear_l_up1</object-name>
+	 <object-name>gear_l_up1.001</object-name>
+	 <object-name>gear_l_up1.002</object-name>
+	 <object-name>gear_l_up1.003</object-name>
+	 <property>gear/gear[1]/position-norm</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.2</ind>
+			 <dep>1.90</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.5</ind>
+			 <dep>0.00</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.3</x>
+		 <y>0.00</y>
+		 <z>0.6</z>
+	 </axis>
+ </animation>
+ 
+ <!-- rotations -->
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>gear_l_up.002</object-name>
+	 <property>gear/gear[1]/position-norm</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.2</ind>
+			 <dep>-75.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.5</ind>
+			 <dep>-40.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.8</ind>
+			 <dep>0.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-0.30</x-m>
+		 <y-m>-1.89</y-m>
+		 <z-m>-2.56</z-m>
+	 </center>
+	 <axis>
 		 <x>0</x>
-		 <y>0.45</y>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>gear_l_up.002</object-name>
+	 <property>gear/gear[1]/position-norm</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.5</ind>
+			 <dep>35.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.8</ind>
+			 <dep>0.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-0.35</x-m>
+		 <y-m>-1.89</y-m>
+		 <z-m>-2.63</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>0</y>
 		 <z>1</z>
 	 </axis>
  </animation>
@@ -1651,26 +1979,21 @@ more to come :-)
  <animation>
 	 <type>rotate</type>
 	 <object-name>gear_l_up1</object-name>
-	 <object-name>gear_l_up1.001</object-name>
 	 <property>gear/gear[1]/position-norm</property>
 	 <interpolation>
 		 <entry>
-			 <ind>0.0</ind>
-			 <dep>150.0</dep>
-		 </entry>
-		 <entry>
 			 <ind>0.2</ind>
-			 <dep>150.0</dep>
+			 <dep>140.0</dep>
 		 </entry>
 		 <entry>
-			 <ind>1.0</ind>
+			 <ind>0.8</ind>
 			 <dep>0.0</dep>
 		 </entry>
 	 </interpolation>
 	 <center>
 		 <x-m>1.73</x-m>
-		 <y-m>-2.16</y-m>
-		 <z-m>-2.39</z-m>
+		 <y-m>-2.00</y-m>
+		 <z-m>-2.63</z-m>
 	 </center>
 	 <axis>
 		 <x>1</x>
@@ -1679,59 +2002,31 @@ more to come :-)
 	 </axis>
  </animation>
  
- <animation>
-	 <type>rotate</type>
-	 <object-name>gear_l_up1.001</object-name>
-	 <property>gear/gear[1]/position-norm</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-			 <dep>90.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>0.2</ind>
-			 <dep>90.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>1.0</ind>
-			 <dep>0.0</dep>
-		 </entry>
-	 </interpolation>
-	 <center>
-		 <x-m>1.73</x-m>
-		 <y-m>-2.16</y-m>
-		 <z-m>-1.77</z-m>
-	 </center>
-	 <axis>
-		 <x>1</x>
-		 <y>0</y>
-		 <z>0</z>
-	 </axis>
- </animation>
  
  <animation>
 	 <type>rotate</type>
 	 <object-name>gear_l_up1.003</object-name>
 	 <object-name>gear_l_up1.002</object-name>
+	 <object-name>gear_l_up1.001</object-name>
 	 <property>gear/gear[1]/position-norm</property>
 	 <interpolation>
 		 <entry>
-			 <ind>0.0</ind>
-			 <dep>-90.0</dep>
-		 </entry>
-		 <entry>
 			 <ind>0.2</ind>
-			 <dep>-90.0</dep>
+			 <dep>-70.0</dep>
 		 </entry>
 		 <entry>
-			 <ind>1.0</ind>
+			 <ind>0.5</ind>
+			 <dep>60.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.8</ind>
 			 <dep>0.0</dep>
 		 </entry>
 	 </interpolation>
 	 <center>
 		 <x-m>1.73</x-m>
-		 <y-m>-2.04</y-m>
-		 <z-m>-2.39</z-m>
+		 <y-m>-1.80</y-m>
+		 <z-m>-2.63</z-m>
 	 </center>
 	 <axis>
 		 <x>1</x>
@@ -1743,25 +2038,52 @@ more to come :-)
  <animation>
 	 <type>rotate</type>
 	 <object-name>gear_l_up1.002</object-name>
+	 <object-name>gear_l_up1.001</object-name>
 	 <property>gear/gear[1]/position-norm</property>
 	 <interpolation>
 		 <entry>
-			 <ind>0.0</ind>
-			 <dep>-40.0</dep>
+			 <ind>0.5</ind>
+			 <dep>-110.0</dep>
 		 </entry>
 		 <entry>
-			 <ind>0.2</ind>
-			 <dep>-40.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>1.0</ind>
+			 <ind>0.8</ind>
 			 <dep>0.0</dep>
 		 </entry>
 	 </interpolation>
 	 <center>
 		 <x-m>1.73</x-m>
-		 <y-m>-1.75</y-m>
-		 <z-m>-1.83</z-m>
+		 <y-m>-1.53</y-m>
+		 <z-m>-2.29</z-m>
+	 </center>
+	 <axis>
+		 <x>1</x>
+		 <y>0</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>gear_l_up1.001</object-name>
+	 <property>gear/gear[1]/position-norm</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.2</ind>
+			 <dep>-50.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.5</ind>
+			 <dep>-90.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.8</ind>
+			 <dep>0.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>1.73</x-m>
+		 <y-m>-1.17</y-m>
+		 <z-m>-1.77</z-m>
 	 </center>
 	 <axis>
 		 <x>1</x>
@@ -1772,6 +2094,8 @@ more to come :-)
  
  <!-- right gear-->
  
+ <!-- right gear first move-->
+ 
  <animation>
 	 <type>translate</type>
 	 <object-name>gear_r_low</object-name>
@@ -1781,22 +2105,18 @@ more to come :-)
 	 <property>gear/gear[3]/position-norm</property>
 	 <interpolation>
 		 <entry>
-			 <ind>0.0</ind>
-			 <dep>3.36</dep>
+			 <ind>0.5</ind>
+			 <dep>1.80</dep>
 		 </entry>
 		 <entry>
-			 <ind>0.2</ind>
-			 <dep>3.36</dep>
-		 </entry>
-		 <entry>
-			 <ind>1.0</ind>
+			 <ind>0.8</ind>
 			 <dep>0.0</dep>
 		 </entry>
 	 </interpolation>
 	 <axis>
-		 <x>0</x>
-		 <y>-0.45</y>
-		 <z>1</z>
+		 <x>0.0</x>
+		 <y>-0.30</y>
+		 <z>0.4</z>
 	 </axis>
  </animation>
  
@@ -1808,80 +2128,233 @@ more to come :-)
 	 <property>gear/gear[4]/position-norm</property>
 	 <interpolation>
 		 <entry>
-			 <ind>0.0</ind>
-			 <dep>3.36</dep>
+			 <ind>0.5</ind>
+			 <dep>1.80</dep>
 		 </entry>
 		 <entry>
-			 <ind>0.2</ind>
-			 <dep>3.36</dep>
-		 </entry>
-		 <entry>
-			 <ind>1.0</ind>
+			 <ind>0.8</ind>
 			 <dep>0.0</dep>
 		 </entry>
 	 </interpolation>
 	 <axis>
-		 <x>0</x>
-		 <y>-0.45</y>
-		 <z>1</z>
+		 <x>0.0</x>
+		 <y>-0.30</y>
+		 <z>0.4</z>
 	 </axis>
  </animation>
- 
- 
- <!-- right upper strut animation -->
  
  <animation>
 	 <type>translate</type>
 	 <object-name>gear_r_up</object-name>
-	 <object-name>gear_l_up1.007</object-name>
-	 <object-name>gear_l_up1.006</object-name>
-	 <object-name>gear_l_up1.004</object-name>
-	 <object-name>gear_l_up1.005</object-name>
+	 <object-name>gear_r_up.001</object-name>
+	 <object-name>gear_r_up.002</object-name>
+	 <object-name>gear_r_up1</object-name>
+	 <object-name>gear_r_up1.001</object-name>
+	 <object-name>gear_r_up1.002</object-name>
+	 <object-name>gear_r_up1.003</object-name>
 	 <property>gear/gear[3]/position-norm</property>
 	 <interpolation>
 		 <entry>
-			 <ind>0.0</ind>
-			 <dep>3.36</dep>
+			 <ind>0.5</ind>
+			 <dep>1.8</dep>
 		 </entry>
+		 <entry>
+			 <ind>0.8</ind>
+			 <dep>0.00</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>-0.30</y>
+		 <z>0.4</z>
+	 </axis>
+ </animation>
+ 
+  <!-- right gear 2nd move-->
+ 
+ <animation>
+	 <type>translate</type>
+	 <object-name>gear_r_low</object-name>
+	 <object-name>axle.002</object-name>
+	 <object-name>tyre.004</object-name>
+	 <object-name>tyre.005</object-name>
+	 <property>gear/gear[3]/position-norm</property>
+	 <interpolation>
 		 <entry>
 			 <ind>0.2</ind>
-			 <dep>3.36</dep>
+			 <dep>1.90</dep>
 		 </entry>
 		 <entry>
-			 <ind>1.0</ind>
+			 <ind>0.5</ind>
 			 <dep>0.0</dep>
 		 </entry>
 	 </interpolation>
 	 <axis>
+		 <x>0.3</x>
+		 <y>0.0</y>
+		 <z>0.6</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>translate</type>
+	 <object-name>axle.003</object-name>
+	 <object-name>tyre.006</object-name>
+	 <object-name>tyre.007</object-name>
+	 <property>gear/gear[4]/position-norm</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.2</ind>
+			 <dep>1.90</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.5</ind>
+			 <dep>0.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.3</x>
+		 <y>0.0</y>
+		 <z>0.6</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>translate</type>
+	 <object-name>gear_r_up</object-name>
+	 <object-name>gear_r_up.001</object-name>
+	 <object-name>gear_r_up.002</object-name>
+	 <object-name>gear_r_up1</object-name>
+	 <object-name>gear_r_up1.001</object-name>
+	 <object-name>gear_r_up1.002</object-name>
+	 <object-name>gear_r_up1.003</object-name>
+	 <property>gear/gear[3]/position-norm</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.2</ind>
+			 <dep>1.8</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.5</ind>
+			 <dep>0.00</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.3</x>
+		 <y>0.0</y>
+		 <z>0.6</z>
+	 </axis>
+ </animation>
+ 
+ <!-- rotations -->
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>gear_r_up.002</object-name>
+	 <property>gear/gear[3]/position-norm</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.2</ind>
+			 <dep>-75.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.5</ind>
+			 <dep>-40.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.8</ind>
+			 <dep>0.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-0.30</x-m>
+		 <y-m>1.88</y-m>
+		 <z-m>-2.56</z-m>
+	 </center>
+	 <axis>
 		 <x>0</x>
-		 <y>-0.45</y>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>gear_r_up.002</object-name>
+	 <property>gear/gear[3]/position-norm</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.5</ind>
+			 <dep>-35.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.8</ind>
+			 <dep>0.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-0.35</x-m>
+		 <y-m>1.88</y-m>
+		 <z-m>-2.63</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>0</y>
 		 <z>1</z>
 	 </axis>
  </animation>
  
  <animation>
 	 <type>rotate</type>
-	 <object-name>gear_l_up1.007</object-name>
-	 <object-name>gear_l_up1.006</object-name>
+	 <object-name>gear_r_up1</object-name>
 	 <property>gear/gear[3]/position-norm</property>
 	 <interpolation>
 		 <entry>
-			 <ind>0.0</ind>
-			 <dep>-150.0</dep>
-		 </entry>
-		 <entry>
 			 <ind>0.2</ind>
-			 <dep>-150.0</dep>
+			 <dep>-140.0</dep>
 		 </entry>
 		 <entry>
-			 <ind>1.0</ind>
+			 <ind>0.8</ind>
 			 <dep>0.0</dep>
 		 </entry>
 	 </interpolation>
 	 <center>
 		 <x-m>1.73</x-m>
-		 <y-m>2.16</y-m>
-		 <z-m>-2.39</z-m>
+		 <y-m>2.00</y-m>
+		 <z-m>-2.63</z-m>
+	 </center>
+	 <axis>
+		 <x>1</x>
+		 <y>0</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>gear_r_up1.001</object-name>
+	 <object-name>gear_r_up1.002</object-name>
+	 <object-name>gear_r_up1.003</object-name>
+	 <property>gear/gear[3]/position-norm</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.2</ind>
+			 <dep>70.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.5</ind>
+			 <dep>-60.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.8</ind>
+			 <dep>0.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>1.73</x-m>
+		 <y-m>1.78</y-m>
+		 <z-m>-2.63</z-m>
 	 </center>
 	 <axis>
 		 <x>1</x>
@@ -1892,26 +2365,23 @@ more to come :-)
  
  <animation>
 	 <type>rotate</type>
-	 <object-name>gear_l_up1.006</object-name>
+	 <object-name>gear_r_up1.001</object-name>
+	 <object-name>gear_r_up1.002</object-name>
 	 <property>gear/gear[3]/position-norm</property>
 	 <interpolation>
 		 <entry>
-			 <ind>0.0</ind>
-			 <dep>-90.0</dep>
+			 <ind>0.5</ind>
+			 <dep>110.0</dep>
 		 </entry>
 		 <entry>
-			 <ind>0.2</ind>
-			 <dep>-90.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>1.0</ind>
+			 <ind>0.8</ind>
 			 <dep>0.0</dep>
 		 </entry>
 	 </interpolation>
 	 <center>
 		 <x-m>1.73</x-m>
-		 <y-m>2.16</y-m>
-		 <z-m>-1.77</z-m>
+		 <y-m>1.51</y-m>
+		 <z-m>-2.28</z-m>
 	 </center>
 	 <axis>
 		 <x>1</x>
@@ -1922,57 +2392,26 @@ more to come :-)
  
  <animation>
 	 <type>rotate</type>
-	 <object-name>gear_l_up1.004</object-name>
-	 <object-name>gear_l_up1.005</object-name>
+	 <object-name>gear_r_up1.001</object-name>
 	 <property>gear/gear[3]/position-norm</property>
 	 <interpolation>
 		 <entry>
-			 <ind>0.0</ind>
+			 <ind>0.2</ind>
+			 <dep>50.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.5</ind>
 			 <dep>90.0</dep>
 		 </entry>
 		 <entry>
-			 <ind>0.2</ind>
-			 <dep>90.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>1.0</ind>
+			 <ind>0.8</ind>
 			 <dep>0.0</dep>
 		 </entry>
 	 </interpolation>
 	 <center>
 		 <x-m>1.73</x-m>
-		 <y-m>2.04</y-m>
-		 <z-m>-2.39</z-m>
-	 </center>
-	 <axis>
-		 <x>1</x>
-		 <y>0</y>
-		 <z>0</z>
-	 </axis>
- </animation>
- 
- <animation>
-	 <type>rotate</type>
-	 <object-name>gear_l_up1.005</object-name>
-	 <property>gear/gear[3]/position-norm</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-			 <dep>40.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>0.2</ind>
-			 <dep>40.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>1.0</ind>
-			 <dep>0.0</dep>
-		 </entry>
-	 </interpolation>
-	 <center>
-		 <x-m>1.73</x-m>
-		 <y-m>1.75</y-m>
-		 <z-m>-1.83</z-m>
+		 <y-m>1.15</y-m>
+		 <z-m>-1.76</z-m>
 	 </center>
 	 <axis>
 		 <x>1</x>
@@ -2062,6 +2501,761 @@ more to come :-)
 		 <y>1</y>
 		 <z>0</z>
 	 </axis>
+ </animation>
+ 
+ <!-- Canopy door and ladder -->
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>canopy_door</object-name>
+	 <object-name>canopy_door.001</object-name>
+	 <property>canopy/position-norm</property>
+	 
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.40</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.70</ind>
+			 <dep>67.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>67.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-15.14</x-m>
+		 <y-m>0.0</y-m>
+		 <z-m>-1.34</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>canopy_door.001</object-name>
+	 <property>canopy/position-norm</property>
+	 
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>-115.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.7</ind>
+			 <dep>-115.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.9</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-13.80</x-m>
+		 <y-m>0.0</y-m>
+		 <z-m>-1.26</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <!-- Hatch door -->
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>hatch_door</object-name>
+	 <object-name>hatch_door1</object-name>
+	 <object-name>hatch_handle</object-name>
+	 <property>canopy/position-norm</property>
+	 
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.1</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.40</ind>
+			 <dep>90.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>90.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-15.14</x-m>
+		 <y-m>-0.27</y-m>
+		 <z-m>0.02</z-m>
+	 </center>
+	 <axis>
+		 <x>1</x>
+		 <y>0</y>
+		 <z>0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>hatch_door1</object-name>
+	 <object-name>hatch_handle</object-name>
+	 <property>canopy/position-norm</property>
+	 
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.1</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.4</ind>
+			 <dep>-180.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-180.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-15.14</x-m>
+		 <y-m>0.17</y-m>
+		 <z-m>-0.01</z-m>
+	 </center>
+	 <axis>
+		 <x>1</x>
+		 <y>0</y>
+		 <z>0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>hatch_handle</object-name>
+	 <property>canopy/position-norm</property>
+	 
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>-35.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.10</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.90</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>35.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-15.16</x-m>
+		 <y-m>0.29</y-m>
+		 <z-m>0.01</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>0</y>
+		 <z>1</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
+	      <type>pick</type>
+	      <object-name>hatch_handle</object-name>
+	      <action>
+		      <button>0</button>
+		      <repeatable>true</repeatable>
+		      <interval-sec>1.0</interval-sec>
+		      <binding>
+			      <command>nasal</command>
+			      <script>b1b.hatch.toggle()</script>
+		 </binding>
+	      </action>
+      </animation>
+  
+      
+  <!-- bay doors -->
+  <animation>
+	 <type>rotate</type>
+	 <object-name>bay_fwd.001</object-name>
+	 <property>doors/bay_fwd/position-norm</property>
+	 
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-90.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-15.20</x-m>
+		 <y-m>-0.93</y-m>
+		 <z-m>-1.33</z-m>
+	 </center>
+	 <axis>
+		 <x>1</x>
+		 <y>0</y>
+		 <z>0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>bay_fwd.002</object-name>
+	 <property>doors/bay_fwd/position-norm</property>
+	 
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>90.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-15.20</x-m>
+		 <y-m>0.98</y-m>
+		 <z-m>-1.33</z-m>
+	 </center>
+	 <axis>
+		 <x>1</x>
+		 <y>0</y>
+		 <z>0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>bay_intmd.001</object-name>
+	 <property>doors/bay_intmd/position-norm</property>
+	 
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-90.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-15.20</x-m>
+		 <y-m>-0.93</y-m>
+		 <z-m>-1.33</z-m>
+	 </center>
+	 <axis>
+		 <x>1</x>
+		 <y>0</y>
+		 <z>0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>bay_intmd.002</object-name>
+	 <property>doors/bay_intmd/position-norm</property>
+	 
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>90.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-15.20</x-m>
+		 <y-m>0.98</y-m>
+		 <z-m>-1.33</z-m>
+	 </center>
+	 <axis>
+		 <x>1</x>
+		 <y>0</y>
+		 <z>0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>bay_aft.001</object-name>
+	 <property>doors/bay_aft/position-norm</property>
+	 
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-90.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-15.20</x-m>
+		 <y-m>-0.93</y-m>
+		 <z-m>-1.33</z-m>
+	 </center>
+	 <axis>
+		 <x>1</x>
+		 <y>0</y>
+		 <z>0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>bay_aft.002</object-name>
+	 <property>doors/bay_aft/position-norm</property>
+	 
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>90.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-15.20</x-m>
+		 <y-m>0.98</y-m>
+		 <z-m>-1.33</z-m>
+	 </center>
+	 <axis>
+		 <x>1</x>
+		 <y>0</y>
+		 <z>0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ 
+ <animation>
+	 <type>translate</type>
+	 <object-name>refuel_door</object-name>
+	 <property>doors/refuel_door/position-norm</property>
+	 
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>0.65</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-15.20</x-m>
+		 <y-m>0.98</y-m>
+		 <z-m>-1.33</z-m>
+	 </center>
+	 <axis>
+		 <x>-1</x>
+		 <y>0</y>
+		 <z>-0.25</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <!-- weapon system animation XXXXXX -->
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>rot_launcher</object-name>
+	 <object-name>gbu-31</object-name>
+	 <object-name>gbu-31.001</object-name>
+	 <object-name>gbu-31.002</object-name>
+	 <object-name>gbu-31.003</object-name>
+	 <object-name>gbu-31.004</object-name>
+	 <object-name>gbu-31.005</object-name>
+	 <object-name>gbu-31.006</object-name>
+	 <object-name>gbu-31.007</object-name>
+	 <property>armament/bay-fwd/rot-launcher-pos-anim</property>
+	 
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>8.0</ind>
+			 <dep>360.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-15.20</x-m>
+		 <y-m>0.019</y-m>
+		 <z-m>-0.218</z-m>
+	 </center>
+	 <axis>
+		 <x>1</x>
+		 <y>0</y>
+		 <z>0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>gbu-31</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay-fwd/rack0</property>
+			 <value>1.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>gbu-31.001</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay-fwd/rack1</property>
+			 <value>1.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>gbu-31.002</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay-fwd/rack2</property>
+			 <value>1.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>gbu-31.003</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay-fwd/rack3</property>
+			 <value>1.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>gbu-31.004</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay-fwd/rack4</property>
+			 <value>1.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>gbu-31.005</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay-fwd/rack5</property>
+			 <value>1.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>gbu-31.006</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay-fwd/rack6</property>
+			 <value>1.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>gbu-31.007</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay-fwd/rack7</property>
+			 <value>1.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ 
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>rot_launcher.001</object-name>
+	 <object-name>gbu-31.015</object-name>
+	 <object-name>gbu-31.014</object-name>
+	 <object-name>gbu-31.013</object-name>
+	 <object-name>gbu-31.012</object-name>
+	 <object-name>gbu-31.011</object-name>
+	 <object-name>gbu-31.010</object-name>
+	 <object-name>gbu-31.009</object-name>
+	 <object-name>gbu-31.008</object-name>
+	 <property>armament/bay-intmd/rot-launcher-pos-anim</property>
+	 
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>8.0</ind>
+			 <dep>360.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-15.20</x-m>
+		 <y-m>0.019</y-m>
+		 <z-m>-0.218</z-m>
+	 </center>
+	 <axis>
+		 <x>1</x>
+		 <y>0</y>
+		 <z>0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>gbu-31.015</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay-intmd/rack0</property>
+			 <value>1.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>gbu-31.014</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay-intmd/rack1</property>
+			 <value>1.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>gbu-31.013</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay-intmd/rack2</property>
+			 <value>1.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>gbu-31.012</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay-intmd/rack3</property>
+			 <value>1.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>gbu-31.011</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay-intmd/rack4</property>
+			 <value>1.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>gbu-31.010</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay-intmd/rack5</property>
+			 <value>1.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>gbu-31.009</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay-intmd/rack6</property>
+			 <value>1.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>gbu-31.008</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay-intmd/rack7</property>
+			 <value>1.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>rot_launcher.002</object-name>
+	 <object-name>gbu-31.016</object-name>
+	 <object-name>gbu-31.017</object-name>
+	 <object-name>gbu-31.018</object-name>
+	 <object-name>gbu-31.019</object-name>
+	 <object-name>gbu-31.020</object-name>
+	 <object-name>gbu-31.021</object-name>
+	 <object-name>gbu-31.022</object-name>
+	 <object-name>gbu-31.023</object-name>
+	 <property>armament/bay-aft/rot-launcher-pos-anim</property>
+	 
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>8.0</ind>
+			 <dep>360.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-15.20</x-m>
+		 <y-m>0.019</y-m>
+		 <z-m>-0.218</z-m>
+	 </center>
+	 <axis>
+		 <x>1</x>
+		 <y>0</y>
+		 <z>0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>gbu-31.016</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay-aft/rack0</property>
+			 <value>1.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>gbu-31.017</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay-aft/rack1</property>
+			 <value>1.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>gbu-31.018</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay-aft/rack2</property>
+			 <value>1.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>gbu-31.019</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay-aft/rack3</property>
+			 <value>1.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>gbu-31.020</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay-aft/rack4</property>
+			 <value>1.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>gbu-31.021</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay-aft/rack5</property>
+			 <value>1.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>gbu-31.022</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay-aft/rack6</property>
+			 <value>1.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>gbu-31.023</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay-aft/rack7</property>
+			 <value>1.0</value>
+		 </equals>
+	 </condition>
  </animation>
  
  <!-- afterburner flame 

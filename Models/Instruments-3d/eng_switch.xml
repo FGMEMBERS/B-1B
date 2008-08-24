@@ -57,6 +57,46 @@ sweat by maggse
 		 <binding>
 			 <command>property-toggle</command>
 			 <property>controls/engines/engine[0]/cutoff</property>
+			 <condition>
+		 <or>
+	          <and>
+		   <equals>
+			 <property>controls/APU/APUL_running</property>
+			 <value>1</value>
+		   </equals>
+		   <equals>
+			 <property>controls/APU/APUL_couple</property>
+			 <value>1</value>
+		   </equals>
+	          </and>
+		  <and>
+		   <equals>
+			 <property>controls/APU/APUL_running</property>
+			 <value>1</value>
+		   </equals>
+		   <equals>
+			 <property>controls/APU/APUL_bleed</property>
+			 <value>1</value>
+		   </equals>
+	          </and>
+		  <and>
+		   <equals>
+			 <property>controls/APU/APUR_running</property>
+			 <value>1</value>
+		   </equals>
+		   <equals>
+			 <property>controls/APU/APU_crossbleed</property>
+			 <value>1</value>
+		   </equals>
+	          </and>
+		  <and>
+		  <equals>
+			 <property>controls/engines/engine[0]/cutoff</property>
+			 <value>0</value>
+		   </equals>
+	         </and>
+	 	 </or>
+	         </condition>
 		 </binding>
 		 <binding>
 			 <command>nasal</command>
@@ -113,6 +153,45 @@ sweat by maggse
 		<binding>
 			<command>property-toggle</command>
 			<property>controls/engines/engine[1]/cutoff</property>
+			<condition>
+		 <or>
+	          <and>
+		   <equals>
+			 <property>controls/APU/APUL_running</property>
+			 <value>1</value>
+		   </equals>
+		   <equals>
+			 <property>controls/APU/APUL_couple</property>
+			 <value>1</value>
+		   </equals>
+	          </and>
+		  <and>
+		   <equals>
+			 <property>controls/APU/APUL_running</property>
+			 <value>1</value>
+		   </equals>
+		   <equals>
+			 <property>controls/APU/APUL_bleed</property>
+			 <value>1</value>
+		   </equals>
+	          </and>
+		  <and>
+		   <equals>
+			 <property>controls/APU/APUR_running</property>
+			 <value>1</value>
+		   </equals>
+		   <equals>
+			 <property>controls/APU/APU_crossbleed</property>
+			 <value>1</value>
+		   </equals>
+	          </and>
+		
+		  <equals>
+			 <property>controls/engines/engine[1]/cutoff</property>
+			 <value>0</value>
+		   </equals>
+	 	 </or>
+	        </condition>
 		</binding>
 		<binding>
 			<command>nasal</command>
@@ -169,6 +248,44 @@ sweat by maggse
 		<binding>
 			<command>property-toggle</command>
 			<property>controls/engines/engine[2]/cutoff</property>
+			<condition>
+		 <or>
+	          <and>
+		   <equals>
+			 <property>controls/APU/APUR_running</property>
+			 <value>1</value>
+		   </equals>
+		   <equals>
+			 <property>controls/APU/APUR_couple</property>
+			 <value>1</value>
+		   </equals>
+	          </and>
+		  <and>
+		   <equals>
+			 <property>controls/APU/APUR_running</property>
+			 <value>1</value>
+		   </equals>
+		   <equals>
+			 <property>controls/APU/APUR_bleed</property>
+			 <value>1</value>
+		   </equals>
+	          </and>
+		  <and>
+		   <equals>
+			 <property>controls/APU/APUL_running</property>
+			 <value>1</value>
+		   </equals>
+		   <equals>
+			 <property>controls/APU/APU_crossbleed</property>
+			 <value>1</value>
+		   </equals>
+	          </and>
+		  <equals>
+			 <property>controls/engines/engine[2]/cutoff</property>
+			 <value>0</value>
+		   </equals>
+	 	 </or>
+	 </condition>
 		</binding>
 		<binding>
 			<command>nasal</command>
@@ -225,6 +342,44 @@ sweat by maggse
 		<binding>
 			<command>property-toggle</command>
 			<property>controls/engines/engine[3]/cutoff</property>
+			<condition>
+		 <or>
+	          <and>
+		   <equals>
+			 <property>controls/APU/APUR_running</property>
+			 <value>1</value>
+		   </equals>
+		   <equals>
+			 <property>controls/APU/APUR_couple</property>
+			 <value>1</value>
+		   </equals>
+	          </and>
+		  <and>
+		   <equals>
+			 <property>controls/APU/APUR_running</property>
+			 <value>1</value>
+		   </equals>
+		   <equals>
+			 <property>controls/APU/APUR_bleed</property>
+			 <value>1</value>
+		   </equals>
+	          </and>
+		  <and>
+		   <equals>
+			 <property>controls/APU/APUL_running</property>
+			 <value>1</value>
+		   </equals>
+		   <equals>
+			 <property>controls/APU/APU_crossbleed</property>
+			 <value>1</value>
+		   </equals>
+	          </and>
+		  <equals>
+			 <property>controls/engines/engine[3]/cutoff</property>
+			 <value>0</value>
+		   </equals>
+	 	 </or>
+	 </condition>
 		</binding>
 		<binding>
 			<command>nasal</command>

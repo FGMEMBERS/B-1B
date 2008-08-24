@@ -29,6 +29,108 @@ sweat by maggse
 	 </offsets>
  </model>-->
 
+  <!-- pilot and seat taken from the f-14b -->
+ 
+ <model>
+	 <name>captain</name>
+	 <path>Aircraft/B-1B/Models/pilot_b1b.ac</path>
+	 
+	 <offsets>
+		 <x-m>-18.15</x-m>
+		 <y-m>0.55</y-m>
+		 <z-m>0.70</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <model>
+	 <name>captain_seat</name>
+	 <path>Aircraft/B-1B/Models/seat.ac</path>
+	 
+	 <offsets>
+		 <x-m>-17.75</x-m>
+		 <y-m>0.55</y-m>
+		 <z-m>0.75</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <model>
+	 <name>pilot</name>
+	 <path>Aircraft/B-1B/Models/pilot_b1b.ac</path>
+	 <condition>
+		 <not>
+		 <equals>
+			 <property>sim/current-view/view-number</property>
+			 <value>0</value>
+		 </equals>
+	         </not>
+	 </condition>
+	 <offsets>
+		 <x-m>-18.15</x-m>
+		 <y-m>-0.52</y-m>
+		 <z-m>0.70</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <model>
+	 <name>pilot_seat</name>
+	 <path>Aircraft/B-1B/Models/seat.ac</path>
+	 
+	 <offsets>
+		 <x-m>-17.75</x-m>
+		 <y-m>-0.52</y-m>
+		 <z-m>0.75</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <model>
+	 <name>OSO</name>
+	 <path>Aircraft/B-1B/Models/pilot_b1b.ac</path>
+	 <offsets>
+		 <x-m>-15.45</x-m>
+		 <y-m>-0.58</y-m>
+		 <z-m>0.85</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <model>
+	 <name>OSO_seat</name>
+	 <path>Aircraft/B-1B/Models/seat.ac</path>
+	 
+	 <offsets>
+		 <x-m>-15.05</x-m>
+		 <y-m>-0.58</y-m>
+		 <z-m>0.85</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <model>
+	 <name>DSO</name>
+	 <path>Aircraft/B-1B/Models/pilot_b1b.ac</path>
+	 <offsets>
+		 <x-m>-15.45</x-m>
+		 <y-m>0.63</y-m>
+		 <z-m>0.85</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <model>
+	 <name>DSO_seat</name>
+	 <path>Aircraft/B-1B/Models/seat.ac</path>
+	 
+	 <offsets>
+		 <x-m>-15.05</x-m>
+		 <y-m>0.63</y-m>
+		 <z-m>0.85</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
 
  <!-- pos lights -->
  
@@ -131,6 +233,72 @@ sweat by maggse
 		 <pitch-deg>0</pitch-deg>
 	 </offsets>
  </model>
+ 
+ <!-- aircraft wash modeled in the lines below -->
+ 
+ <model>
+	 <name>aircraft_wash_l</name>
+	 <path>Aircraft/B-1B/Models/aircraft_wash.xml</path>
+	 <condition>
+		 <equals>
+			 <property>controls/state/low_level</property>
+			 <value>1</value>
+		 </equals>
+	 </condition>
+	 <offsets>
+		 <x-m>25.000</x-m>
+		 <y-m>4.50</y-m>
+		 <z-m>0.0</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <model>
+	 <name>aircraft_wash_r</name>
+	 <path>Aircraft/B-1B/Models/aircraft_wash.xml</path>
+	 <condition>
+		 <equals>
+			 <property>controls/state/low_level</property>
+			 <value>1</value>
+		 </equals>
+	 </condition>
+	 <offsets>
+		 <x-m>25.000</x-m>
+		 <y-m>-4.50</y-m>
+		 <z-m>0.0</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+  
+  <animation>
+	 <type>translate</type>
+	 <object-name>aircraft_wash_l</object-name>
+	 <object-name>aircraft_wash_r</object-name>
+	 <property>position/altitude-agl-ft</property>
+	 <condition>
+		 <equals>
+			 <property>controls/state/low_level</property>
+			 <value>1</value>
+		 </equals>
+	 </condition>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>300.0</ind>
+			 <dep>-90</dep>
+		 </entry>
+	 </interpolation>
+	 
+	 <axis>
+		 <x>-1</x>
+		 <y>0</y>
+		 <z>1.0</z>
+	 </axis>
+	 
+ </animation>
  
  <!--<model>
 	 <name>strobe1</name>
@@ -426,6 +594,7 @@ sweat by maggse
 	 
 	 <placer>
 		 <type>point</type>
+		 
 	 </placer>
 	 
 	 <shooter>
@@ -433,10 +602,10 @@ sweat by maggse
 		 <theta-max-deg>0</theta-max-deg>
 		 <phi-min-deg>0</phi-min-deg>
 		 <phi-max-deg>0</phi-max-deg>
-		 <speed-mps>
+		 <speed>
 			 <value>1</value>
 			 <spread>0.3</spread>
-		 </speed-mps>
+		 </speed>
 		 <rotation-speed>
 			<x-min-deg-sec>0</x-min-deg-sec>
 			<y-min-deg-sec>0</y-min-deg-sec>
@@ -452,6 +621,7 @@ sweat by maggse
 			 <value>30</value>
 			 <spread>0</spread>
 		 </particles-per-sec>
+		 
 	 </counter>
 	 
 	 <align>billboard</align>
@@ -476,6 +646,7 @@ sweat by maggse
 				 <value>1.0</value>
 			 </size>
 		 </start>
+      
 		 <end>
 			 <color>
 				 <red>
@@ -495,6 +666,7 @@ sweat by maggse
 				 <value>2.8</value>
 			 </size>
 		 </end>
+		
 		 <life-sec>
 			 <value>1.5</value>
 		 </life-sec>
@@ -504,8 +676,8 @@ sweat by maggse
 	 
 	 <program>
 		 <fluid>air</fluid>
-		 <gravity>true</gravity>
-		 <wind>true</wind>
+		 <gravity type="bool">true</gravity>
+		 <wind type="bool">true</wind>
 	 </program>
 	 
 </particlesystem>
@@ -545,6 +717,7 @@ sweat by maggse
 	
 	<placer>
 		<type>point</type>
+		
 	</placer>
 	
 	<shooter>
@@ -552,10 +725,10 @@ sweat by maggse
 		<theta-max-deg>0</theta-max-deg>
 		<phi-min-deg>0</phi-min-deg>
 		<phi-max-deg>0</phi-max-deg>
-		<speed-mps>
+		<speed>
 			<value>1</value>
 			<spread>0.3</spread>
-		</speed-mps>
+		</speed>
 		<rotation-speed>
 			<x-min-deg-sec>0</x-min-deg-sec>
 			<y-min-deg-sec>0</y-min-deg-sec>
@@ -571,6 +744,7 @@ sweat by maggse
 			<value>30</value>
 			<spread>0</spread>
 		</particles-per-sec>
+		
 	</counter>
 	
 	<align>billboard</align>
@@ -614,6 +788,7 @@ sweat by maggse
 				<value>2.8</value>
 			</size>
 		</end>
+
 		<life-sec>
 			<value>1.5</value>
 		</life-sec>
@@ -623,8 +798,8 @@ sweat by maggse
 	
 	<program>
 		<fluid>air</fluid>
-		<gravity>true</gravity>
-		<wind>true</wind>
+		<gravity type="bool">true</gravity>
+		<wind type="bool">true</wind>
 	</program>
 	
 </particlesystem>
@@ -662,6 +837,7 @@ sweat by maggse
 	
 	<placer>
 		<type>point</type>
+		
 	</placer>
 	
 	<shooter>
@@ -669,10 +845,10 @@ sweat by maggse
 		<theta-max-deg>0</theta-max-deg>
 		<phi-min-deg>0</phi-min-deg>
 		<phi-max-deg>0</phi-max-deg>
-		<speed-mps>
+		<speed>
 			<value>10</value>
 			<spread>0</spread>
-		</speed-mps>
+		</speed>
 		<rotation-speed>
 			<x-min-deg-sec>0</x-min-deg-sec>
 			<y-min-deg-sec>0</y-min-deg-sec>
@@ -688,6 +864,7 @@ sweat by maggse
 			<value>15</value>
 			<spread>0</spread>
 		</particles-per-sec>
+		
 	</counter>
 	
 	<align>billboard</align>
@@ -709,7 +886,7 @@ sweat by maggse
 				</alpha>
 			</color>
 			<size>
-				<value>0.40</value>
+          			<value>0.4</value>
 			</size>
 		</start>
 		<end>
@@ -731,6 +908,7 @@ sweat by maggse
 				<value>0.25</value>
 			</size>
 		</end>
+
 		<life-sec>
 			<value>0.3</value>
 		</life-sec>
@@ -740,8 +918,8 @@ sweat by maggse
 	
 	<program>
 		<fluid>air</fluid>
-		<gravity>false</gravity>
-		<wind>false</wind>
+		<gravity type="bool">false</gravity>
+		<wind type="bool">false</wind>
 	</program>
 	
 </particlesystem>
@@ -785,10 +963,10 @@ sweat by maggse
 		<theta-max-deg>0</theta-max-deg>
 		<phi-min-deg>0</phi-min-deg>
 		<phi-max-deg>0</phi-max-deg>
-		<speed-mps>
+		<speed>
 			<value>10</value>
 			<spread>0</spread>
-		</speed-mps>
+		</speed>
 		<rotation-speed>
 			<x-min-deg-sec>0</x-min-deg-sec>
 			<y-min-deg-sec>0</y-min-deg-sec>
@@ -804,6 +982,7 @@ sweat by maggse
 			<value>15</value>
 			<spread>0</spread>
 		</particles-per-sec>
+		
 	</counter>
 	
 	<align>billboard</align>
@@ -825,7 +1004,7 @@ sweat by maggse
 				</alpha>
 			</color>
 			<size>
-				<value>0.40</value>
+          			<value>0.4</value>
 			</size>
 		</start>
 		<end>
@@ -847,6 +1026,7 @@ sweat by maggse
 				<value>0.25</value>
 			</size>
 		</end>
+
 		<life-sec>
 			<value>0.3</value>
 		</life-sec>
@@ -856,8 +1036,8 @@ sweat by maggse
 	
 	<program>
 		<fluid>air</fluid>
-		<gravity>false</gravity>
-		<wind>false</wind>
+		<gravity type="bool">false</gravity>
+		<wind type="bool">false</wind>
 	</program>
 	
 </particlesystem>
@@ -901,10 +1081,10 @@ sweat by maggse
 		<theta-max-deg>0</theta-max-deg>
 		<phi-min-deg>0</phi-min-deg>
 		<phi-max-deg>0</phi-max-deg>
-		<speed-mps>
+		<speed>
 			<value>10</value>
 			<spread>0</spread>
-		</speed-mps>
+		</speed>
 		<rotation-speed>
 			<x-min-deg-sec>0</x-min-deg-sec>
 			<y-min-deg-sec>0</y-min-deg-sec>
@@ -920,6 +1100,7 @@ sweat by maggse
 			<value>15</value>
 			<spread>0</spread>
 		</particles-per-sec>
+		
 	</counter>
 	
 	<align>billboard</align>
@@ -941,7 +1122,7 @@ sweat by maggse
 				</alpha>
 			</color>
 			<size>
-				<value>0.40</value>
+          			<value>0.4</value>
 			</size>
 		</start>
 		<end>
@@ -963,6 +1144,7 @@ sweat by maggse
 				<value>0.25</value>
 			</size>
 		</end>
+		
 		<life-sec>
 			<value>0.3</value>
 		</life-sec>
@@ -972,8 +1154,8 @@ sweat by maggse
 	
 	<program>
 		<fluid>air</fluid>
-		<gravity>false</gravity>
-		<wind>false</wind>
+		<gravity type="bool">false</gravity>
+		<wind type="bool">false</wind>
 	</program>
 	
 </particlesystem>
@@ -1017,10 +1199,10 @@ sweat by maggse
 		<theta-max-deg>0</theta-max-deg>
 		<phi-min-deg>0</phi-min-deg>
 		<phi-max-deg>0</phi-max-deg>
-		<speed-mps>
+		<speed>
 			<value>10</value>
 			<spread>0</spread>
-		</speed-mps>
+		</speed>
 		<rotation-speed>
 			<x-min-deg-sec>0</x-min-deg-sec>
 			<y-min-deg-sec>0</y-min-deg-sec>
@@ -1036,6 +1218,7 @@ sweat by maggse
 			<value>15</value>
 			<spread>0</spread>
 		</particles-per-sec>
+		
 	</counter>
 	
 	<align>billboard</align>
@@ -1057,7 +1240,7 @@ sweat by maggse
 				</alpha>
 			</color>
 			<size>
-				<value>0.40</value>
+          			<value>0.4</value>
 			</size>
 		</start>
 		<end>
@@ -1079,6 +1262,7 @@ sweat by maggse
 				<value>0.25</value>
 			</size>
 		</end>
+
 		<life-sec>
 			<value>0.3</value>
 		</life-sec>
@@ -1088,8 +1272,8 @@ sweat by maggse
 	
 	<program>
 		<fluid>air</fluid>
-		<gravity>false</gravity>
-		<wind>false</wind>
+		<gravity type="bool">false</gravity>
+		<wind type="bool">false</wind>
 	</program>
 	
 </particlesystem>
@@ -1136,10 +1320,10 @@ sweat by maggse
 		<theta-max-deg>0</theta-max-deg>
 		<phi-min-deg>0</phi-min-deg>
 		<phi-max-deg>0</phi-max-deg>
-		<speed-mps>
+		<speed>
 			<value>14</value>
 			<spread>0</spread>
-		</speed-mps>
+		</speed>
 		<rotation-speed>
 			<x-min-deg-sec>0</x-min-deg-sec>
 			<y-min-deg-sec>0</y-min-deg-sec>
@@ -1155,6 +1339,7 @@ sweat by maggse
 			<value>22</value>
 			<spread>0</spread>
 		</particles-per-sec>
+		
 	</counter>
 	
 	<align>billboard</align>
@@ -1176,7 +1361,7 @@ sweat by maggse
 				</alpha>
 			</color>
 			<size>
-				<value>0.60</value>
+          			<value>0.6</value>
 			</size>
 		</start>
 		<end>
@@ -1198,6 +1383,7 @@ sweat by maggse
 				<value>0.4</value>
 			</size>
 		</end>
+
 		<life-sec>
 			<value>0.4</value>
 		</life-sec>
@@ -1207,8 +1393,8 @@ sweat by maggse
 	
 	<program>
 		<fluid>air</fluid>
-		<gravity>false</gravity>
-		<wind>false</wind>
+		<gravity type="bool">false</gravity>
+		<wind type="bool">false</wind>
 	</program>
 	
 </particlesystem>
@@ -1253,10 +1439,10 @@ sweat by maggse
 		<theta-max-deg>0</theta-max-deg>
 		<phi-min-deg>0</phi-min-deg>
 		<phi-max-deg>0</phi-max-deg>
-		<speed-mps>
+		<speed>
 			<value>14</value>
 			<spread>0</spread>
-		</speed-mps>
+		</speed>
 		<rotation-speed>
 			<x-min-deg-sec>0</x-min-deg-sec>
 			<y-min-deg-sec>0</y-min-deg-sec>
@@ -1272,6 +1458,7 @@ sweat by maggse
 			<value>22</value>
 			<spread>0</spread>
 		</particles-per-sec>
+		
 	</counter>
 	
 	<align>billboard</align>
@@ -1293,7 +1480,7 @@ sweat by maggse
 				</alpha>
 			</color>
 			<size>
-				<value>0.60</value>
+          			<value>0.6</value>
 			</size>
 		</start>
 		<end>
@@ -1315,6 +1502,7 @@ sweat by maggse
 				<value>0.4</value>
 			</size>
 		</end>
+
 		<life-sec>
 			<value>0.4</value>
 		</life-sec>
@@ -1324,8 +1512,8 @@ sweat by maggse
 	
 	<program>
 		<fluid>air</fluid>
-		<gravity>false</gravity>
-		<wind>false</wind>
+		<gravity type="bool">false</gravity>
+		<wind type="bool">false</wind>
 	</program>
 	
 </particlesystem>
@@ -1370,10 +1558,10 @@ sweat by maggse
 		<theta-max-deg>0</theta-max-deg>
 		<phi-min-deg>0</phi-min-deg>
 		<phi-max-deg>0</phi-max-deg>
-		<speed-mps>
+		<speed>
 			<value>14</value>
 			<spread>0</spread>
-		</speed-mps>
+		</speed>
 		<rotation-speed>
 			<x-min-deg-sec>0</x-min-deg-sec>
 			<y-min-deg-sec>0</y-min-deg-sec>
@@ -1389,6 +1577,7 @@ sweat by maggse
 			<value>22</value>
 			<spread>0</spread>
 		</particles-per-sec>
+		
 	</counter>
 	
 	<align>billboard</align>
@@ -1410,7 +1599,7 @@ sweat by maggse
 				</alpha>
 			</color>
 			<size>
-				<value>0.60</value>
+          			<value>0.6</value>
 			</size>
 		</start>
 		<end>
@@ -1432,6 +1621,7 @@ sweat by maggse
 				<value>0.4</value>
 			</size>
 		</end>
+
 		<life-sec>
 			<value>0.4</value>
 		</life-sec>
@@ -1441,8 +1631,8 @@ sweat by maggse
 	
 	<program>
 		<fluid>air</fluid>
-		<gravity>false</gravity>
-		<wind>false</wind>
+		<gravity type="bool">false</gravity>
+		<wind type="bool">false</wind>
 	</program>
 	
 </particlesystem>
@@ -1487,10 +1677,10 @@ sweat by maggse
 		<theta-max-deg>0</theta-max-deg>
 		<phi-min-deg>0</phi-min-deg>
 		<phi-max-deg>0</phi-max-deg>
-		<speed-mps>
+		<speed>
 			<value>14</value>
 			<spread>0</spread>
-		</speed-mps>
+		</speed>
 		<rotation-speed>
 			<x-min-deg-sec>0</x-min-deg-sec>
 			<y-min-deg-sec>0</y-min-deg-sec>
@@ -1506,6 +1696,7 @@ sweat by maggse
 			<value>22</value>
 			<spread>0</spread>
 		</particles-per-sec>
+		
 	</counter>
 	
 	<align>billboard</align>
@@ -1527,7 +1718,7 @@ sweat by maggse
 				</alpha>
 			</color>
 			<size>
-				<value>0.60</value>
+          			<value>0.6</value>
 			</size>
 		</start>
 		<end>
@@ -1549,6 +1740,7 @@ sweat by maggse
 				<value>0.4</value>
 			</size>
 		</end>
+
 		<life-sec>
 			<value>0.4</value>
 		</life-sec>
@@ -1558,8 +1750,8 @@ sweat by maggse
 	
 	<program>
 		<fluid>air</fluid>
-		<gravity>false</gravity>
-		<wind>false</wind>
+		<gravity type="bool">false</gravity>
+		<wind type="bool">false</wind>
 	</program>
 	
 </particlesystem>

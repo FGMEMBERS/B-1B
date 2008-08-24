@@ -1,15 +1,43 @@
 Rockwell B-1B Lancer "The Bone"
 
 
-XXXXXX  Version Nr: 0012 03032008 XXXXXX
+XXXXXX  Version Nr: 0014 06072008 XXXXXX
 
 
 
 This aircraft model represents a hack of the B-1B variable wingsweep bomber. The available sweep angles are 15 (takeoff) 25 (slow flight) 45 (high altitude flight) 55/67 (low and high altitude fast flight). The wingsweep is simulated by adding lift/drag to the inner wing part. The outer wing part always stays at 67 degrees and represents the most accurate hack ;-). Afterburner is used for takeoff and for rapid climb/acceleration maneuvers.
 The bone is limited to 3g at wartime (currently warning light flashes at 4g), so turning radius is huge at high speeds.
 
+Plane starts with:
+- engines off
+- parking brake on
+- with 190000lb of fuel (full), some space is required to be able to trim the aircraft
 
 XXXX INSTRUCTIONS XXXX
+
+Animations designed for Flightgear cvs/OSG!
+
+Get on/offboard:
+
+- Switch to WSO view (aft cabin)
+- Look for Hatch handle on the floor and pull it to OPEN if you want to get out
+  or to CLOSE if you just boarded
+
+Start engine:
+
+- Switch main battery switch to ON (overhead middle)
+- Switch left(L) and right(R) APU on by switching MODE to ON/START (overhead left top)
+- 1st Method:
+-   Switch L DRIVE/R DRIVE to 2/4 ADS COUPLE
+-   Switch engines 1,2,3,4 to ON (middle console, aft)
+- 2nd Method:
+-   Switches to L/R BLEED AIR from OFF
+-   Switch engines ENG 1,2,3,4 to ON (middle console, aft)
+- Note: In case only one APU is running, switch to CRSVR AIR to allow engines 
+        in other nacelle to be started (left APU starts engine 1,2; right APU ->3,4
+- After engine start switch everything back to off, and switch off APUs now or
+  after takeoff climb if you expect to use full power (short field takeoff)
+- Engine shutdown sequence: 4,3,2,1 switches to OFF (middle console, aft)
 
 Takeoff:
 
@@ -18,16 +46,20 @@ Takeoff:
 - apply full throttle
 - apply afterburners
 - rotate at 160 - takeoff at 170/180 with full fuel weight
+- climb out with full afterburner, normally at 8 degrees
+- at 100ft above AGL retract gear, at 270 knots retract flaps
+- at 330 Knots operate wingsweep to 25 degrees
+- climb out until 360 knots with full afterburner
 
 Flight:
 
 - dependent on your altitude and speed choose 15/25/45/55/67 degrees wingweep (d/D)
 - max speed at sea level is mach 1.2, at altitude mach 1.3, at altitude short periods 
-  at mach 1.5 are possible, but you put the wings on danger to twist
+  at mach 1.5 are possible, but you put the wings on danger to twist on maneuvering
 - typical performance speed is around mach 0.8 - 0.95 @sea level and mach 0.9 - 1.2 at altitude.
 
-- 15 degrees ws: used for takeoff/landing <290 knots @ sealevel
-- 25 degrees ws: used for slow flight/refuelling < 350 knots @sealevel
+- 15 degrees ws: used for takeoff/landing <310 knots @ sealevel
+- 25 degrees ws: used for slow flight/refuelling < 370 knots @sealevel
 - 45 degrees ws: used for cruise at high altitude (mach 0.6 - 0.75)
 - 55 degrees ws: used for high/low alt flight (above mach 0.7)
 - 67 degrees ws: used for high/low alt flight (above mach 0.8)
@@ -35,15 +67,36 @@ Flight:
 
 Landing:
 
+- use 1/2 spoilers to decelerate
 - ws 15 degrees
-- use 1/2 flaps (on short final put full flaps)
-- touchdown speed is <175 knots with full fuel load, or 135 nearly empty
+- use 1/2 flaps, approach speed is about 190-210 knots
+- on short final use full flaps, speed 160-170 knots
+- touchdown speed is <165 knots with full fuel load, or 135 nearly empty
+- on touchdown apply full spoilers, decelerate to 120 knots then
+- apply brakes to full stop and use elevator as speedbrake (pull stick)
 
+Flight performance (especially TO/Landing) heavily depends on aircraft weight!
+
+In Flight Refueling:
+
+- Switch in AERIAL REFUEL panel SLIPWAY switch to ON (overhead middle)
+- Pull PULL REFUEL to open refuel door and enable the plane for aerial refuel
+- When desired amount of fuel is onboard (max 190000lb! watch TOTAL FUEL cockpit display
+  on panel (middle right)
+- Pull PULL REFUEL again to shut valves and close door
+- Switch SLIPWAY switch to OFF
+
+Fire extinguish system:
+
+- Set desired APU/engine on fire in top B-1B menu
+- Press warning button (panel middle), that automatically switches off the engine/APU 
+  and operates fire discharge bottle
+- When light extinguishes monitor if engine is down
+- Select emergency airport
+- Engine/APU is damaged and should not be restarted
 
 
 XXXX TERRAIN AVOIDANCE / FOLLOWING SYSTEMS XXXX
-
-It's OSG baby!
 
 Terrain Avoidance System (TAS)
 
@@ -58,9 +111,20 @@ There is a basic terrain following system (TFS) present. You have to enable the 
 The native tfs and the build in flightgear tfs(MAP) use the clearance settings from SET CLR.
 The clearance settings start from 0ft and increase in 200ft increments up to 2000ft. A=0ft, B=200ft, C=400ft,..., F=1000ft,..., K=2000ft.
 
+
 XXXX FCGMS Center of Gravity System XXXX
 
 This system sets the Center of Gravity (CG) in % of MAC, and lets you manipulate it in a destinct range. Enable the system by switching on SET on the FCGMS panel and choose your desired CG position. The display to the right shows your current CG position. This is done by using shifting fuel between 2 tanks, so the system works only within a certain margin.
+
+
+XXXX WEAPON SYSTEM XXXX
+
+On ground select Heavy(3 bays with 8xGBU31) or Light (Intermediate bay with 8 GBU31) from the B-1B menu. Switch to the OSO seat/view and you should see the GBU31 indicated.
+In air prior to release arm your weapons by using the SMS panel. First click on the bay (should be highlighted when selected) then on the station number to arm (indicated on panel).
+To release either press Ctrl j to initiate an automated release (bay doors open automatically) or use a manual release by opening the corresponding bay door and press Ctrl j. You can rotate the launcher by selecting bay and then press LAUNCHER ROT, the position of the launcher is indicated by an L on the SMS display. The launcher, when in release mode, always performs a full cycle and checks which stations are armed and if releases the weapons.
+After releasing the weapons close the bay doors manually.
+
+Note: Always use ALT hold to maintain level flight and never use TER AVD and TER FOLLOW when releasing the bombs as they interfere with each other.
 
 
 XXXX BLAST, FLARES, STROBE, SPOT XXXX
@@ -81,8 +145,8 @@ It's OSG baby!
 
 XXXX FEATURES XXXX
 
-serial: none
-name: none
+serial: FGFS 08107
+name: Bad To The Bone
 
 j/k 	decrease/increase spoilers
 o 	afterburner on
@@ -95,12 +159,12 @@ D	sweep wing fwd
 XXXX PROGRESS XXXX
 
 
-FDM:	 	alpha - in use / needs tuning		90%complete
-3D model:	alpha - in use / refinements ..		70%complete
-Textures:	alpha - in use / too few		30%complete
-Animations:	alpha - in use / more to come		80%complete
-Autopilot:	alpha - in use / needs finetuning	85%complete
-3Dcockpit:	alpha - in use / needs completion	85%complete
+FDM:	 	alpha - in use / needs tuning		92%complete
+3D model:	alpha - in use / refinements ..		85%complete
+Textures:	alpha - in use / too few		40%complete
+Animations:	alpha - in use / more to come		90%complete
+Autopilot:	alpha - in use / needs finetuning	90%complete
+3Dcockpit:	alpha - in use / needs completion	90%complete
 
 XXXX AUTHORS XXXX
 

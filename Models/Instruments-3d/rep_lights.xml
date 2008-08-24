@@ -34,10 +34,16 @@ sweat by maggse
 	 <type>select</type>
 	 <object-name>rep_light_eng1</object-name>
 	 <condition>
+		 <and>
 		 <equals>
 			 <property>controls/engines/engine[0]/cutoff</property>
 			 <value>0.0</value>
 		 </equals>
+		 <less-than>
+			 <property>sim/model/B-1B/n1[0]</property>
+			 <value>55.0</value>
+		 </less-than>
+	         </and>
 	 </condition>
  </animation>
  
@@ -45,10 +51,16 @@ sweat by maggse
 	 <type>select</type>
 	 <object-name>rep_eng2</object-name>
 	 <condition>
+		 <and>
 		 <equals>
 			 <property>controls/engines/engine[1]/cutoff</property>
 			 <value>0.0</value>
 		 </equals>
+		 <less-than>
+			 <property>sim/model/B-1B/n1[1]</property>
+			 <value>55.0</value>
+		 </less-than>
+	         </and>
 	 </condition>
  </animation>
  
@@ -56,10 +68,16 @@ sweat by maggse
 	 <type>select</type>
 	 <object-name>rep_light_eng3</object-name>
 	 <condition>
+		 <and>
 		 <equals>
 			 <property>controls/engines/engine[2]/cutoff</property>
 			 <value>0.0</value>
 		 </equals>
+		 <less-than>
+			 <property>sim/model/B-1B/n1[2]</property>
+			 <value>55.0</value>
+		 </less-than>
+	         </and>
 	 </condition>
  </animation>
  
@@ -67,10 +85,16 @@ sweat by maggse
 	 <type>select</type>
 	 <object-name>rep_light_eng4</object-name>
 	 <condition>
+		 <and>
 		 <equals>
 			 <property>controls/engines/engine[3]/cutoff</property>
 			 <value>0.0</value>
 		 </equals>
+		 <less-than>
+			 <property>sim/model/B-1B/n1[3]</property>
+			 <value>55.0</value>
+		 </less-than>
+	         </and>
 	 </condition>
  </animation>
  
@@ -78,10 +102,36 @@ sweat by maggse
 	 <type>select</type>
 	 <object-name>rep_light_battl</object-name>
 	 <condition>
+		 <and>
 		 <equals>
-			 <property>controls/switches/fire</property>
+			 <property>controls/electric/battery-switch</property>
 			 <value>1.0</value>
 		 </equals>
+		 
+		 <equals>
+			 <property>controls/APU/APUL_running</property>
+			 <value>0.0</value>
+		 </equals>
+		 <equals>
+			 <property>controls/APU/APUR_running</property>
+			 <value>0.0</value>
+		 </equals>
+	         
+		 
+		 <equals>
+			 <property>controls/engines/engine[0]/cutoff</property>
+			 <value>1.0</value>
+		 </equals>
+		 <equals>
+			 <property>controls/engines/engine[1]/cutoff</property>
+			 <value>1.0</value>
+		 </equals>
+		 <equals>
+			 <property>controls/engines/engine[3]/cutoff</property>
+			 <value>1.0</value>
+		 </equals>
+	         
+	         </and>
 	 </condition>
  </animation>
  
@@ -90,7 +140,7 @@ sweat by maggse
 	 <object-name>rep_light_apul</object-name>
 	 <condition>
 		 <equals>
-			 <property>controls/switches/fire</property>
+			 <property>controls/APU/APUL_running</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
@@ -100,10 +150,36 @@ sweat by maggse
 	 <type>select</type>
 	 <object-name>rep_light_battr</object-name>
 	 <condition>
+		 <and>
 		 <equals>
-			 <property>controls/switches/fire</property>
+			 <property>controls/electric/battery-switch</property>
 			 <value>1.0</value>
 		 </equals>
+		 
+		 <equals>
+			 <property>controls/APU/APUL_running</property>
+			 <value>0.0</value>
+		 </equals>
+		 <equals>
+			 <property>controls/APU/APUR_running</property>
+			 <value>0.0</value>
+		 </equals>
+	         
+		 
+		 <equals>
+			 <property>controls/engines/engine[0]/cutoff</property>
+			 <value>1.0</value>
+		 </equals>
+		 <equals>
+			 <property>controls/engines/engine[1]/cutoff</property>
+			 <value>1.0</value>
+		 </equals>
+		 <equals>
+			 <property>controls/engines/engine[3]/cutoff</property>
+			 <value>1.0</value>
+		 </equals>
+	         
+	         </and>
 	 </condition>
  </animation>
  
@@ -112,7 +188,7 @@ sweat by maggse
 	 <object-name>rep_light_apur</object-name>
 	 <condition>
 		 <equals>
-			 <property>controls/switches/fire</property>
+			 <property>controls/APU/APUR_running</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
@@ -167,7 +243,7 @@ sweat by maggse
 	 <object-name>rep_light.015</object-name>
 	 <condition>
 		 <equals>
-			 <property>controls/switches/fire</property>
+			 <property>canopy/position-norm</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
@@ -178,7 +254,7 @@ sweat by maggse
 	 <object-name>rep_light.014</object-name>
 	 <condition>
 		 <equals>
-			 <property>controls/switches/fire</property>
+			 <property>doors/bay_fwd/position-norm</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
