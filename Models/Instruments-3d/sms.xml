@@ -1,0 +1,543 @@
+<!--
+maggse
+-->
+
+<PropertyList>
+
+<path>sms.ac</path>
+
+<!--open/close bay doors  -->
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.024</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>b1b.bay_fwd.open()</script>
+		 </binding>
+
+	 </action>
+</animation>
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>sms_button.024</object-name>
+	 <property>doors/bay_fwd/position-norm</property>
+	 <factor>0.038</factor>
+         <step>1</step>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+ </animation>
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.021</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>b1b.bay_fwd.close()</script>
+		 </binding>
+
+	 </action>
+</animation>
+
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.025</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>b1b.bay_intmd.open()</script>
+		 </binding>
+
+	 </action>
+</animation>
+<animation>
+	 <type>textranslate</type>
+	 <object-name>sms_button.025</object-name>
+	 <property>doors/bay_intmd/position-norm</property>
+	 <factor>0.038</factor>
+         <step>1</step>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+ </animation>
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.022</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>b1b.bay_intmd.close()</script>
+		 </binding>
+
+	 </action>
+</animation>
+
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.026</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>b1b.bay_aft.open()</script>
+		 </binding>
+
+	 </action>
+</animation>
+<animation>
+	 <type>textranslate</type>
+	 <object-name>sms_button.026</object-name>
+	 <property>doors/bay_aft/position-norm</property>
+	 <factor>0.038</factor>
+         <step>1</step>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+ </animation>
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.023</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>b1b.bay_aft.close()</script>
+		 </binding>
+
+	 </action>
+</animation>
+
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.011</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.launcher_fwd_rot()</script>
+		 </binding>
+
+	 </action>
+</animation>
+
+<!-- bay and rack selection -->
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.launcher_select('fwd',1)</script>
+		 </binding>
+
+	 </action>
+	 <action>
+		 <button>1</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.launcher_select(0,0)</script>
+		 </binding>
+
+	 </action>
+</animation>
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.002</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.launcher_select('intmd',2)</script>
+		 </binding>
+
+	 </action>
+	 <action>
+		 <button>1</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.launcher_select(0,0)</script>
+		 </binding>
+
+	 </action>
+</animation>
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.004</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.launcher_select('aft',3)</script>
+		 </binding>
+
+	 </action>
+	 <action>
+		 <button>1</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.launcher_select(0,0)</script>
+		 </binding>
+
+	 </action>
+</animation>
+
+
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.012</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.arm(0,1)</script>
+		 </binding>
+
+	 </action>
+	 <action>
+		 <button>1</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.arm(0,0)</script>
+		 </binding>
+
+	 </action>
+</animation>
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.013</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.arm(1,1)</script>
+		 </binding>
+
+	 </action>
+	 <action>
+		 <button>1</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.arm(1,0)</script>
+		 </binding>
+
+	 </action>
+</animation>
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.014</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.arm(2,1)</script>
+		 </binding>
+
+	 </action>
+	 <action>
+		 <button>1</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.arm(2,0)</script>
+		 </binding>
+
+	 </action>
+</animation>
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.015</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.arm(3,1)</script>
+		 </binding>
+
+	 </action>
+	 <action>
+		 <button>1</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.arm(3,0)</script>
+		 </binding>
+
+	 </action>
+</animation>
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.016</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.arm(4,1)</script>
+		 </binding>
+
+	 </action>
+	 <action>
+		 <button>1</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.arm(4,0)</script>
+		 </binding>
+
+	 </action>
+</animation>
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.017</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.arm(5,1)</script>
+		 </binding>
+
+	 </action>
+	 <action>
+		 <button>1</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.arm(5,0)</script>
+		 </binding>
+
+	 </action>
+</animation>
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.018</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.arm(6,1)</script>
+		 </binding>
+
+	 </action>
+	 <action>
+		 <button>1</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.arm(6,0)</script>
+		 </binding>
+
+	 </action>
+</animation>
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.019</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.arm(7,1)</script>
+		 </binding>
+
+	 </action>
+	 <action>
+		 <button>1</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.arm(7,0)</script>
+		 </binding>
+
+	 </action>
+</animation>
+
+<animation>
+	 <type>textranslate</type>
+	 <object-name>sms_button</object-name>
+	 <property>armament/rot-launcher-selected-1</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>0.038</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+ </animation>
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>sms_button.002</object-name>
+	 <property>armament/rot-launcher-selected-2</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>0.038</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+ </animation>
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>sms_button.004</object-name>
+	 <property>armament/rot-launcher-selected-3</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>0.038</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+ </animation>
+ 
+<!--
+<animation>
+	<type>rotate</type>
+	<object-name>switch_eject.002</object-name>
+	<property>controls/switches/nuc</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>-30.0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>30.0</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m>0.005</x-m>
+		<y-m>0.165</y-m>
+		<z-m>0.037</z-m>
+	</center>
+</animation>
+<animation>
+	<type>material</type>
+	<object-name>switch_eject.002</object-name>
+	<emission>
+		<red>0.6</red>
+		<green>0.3</green>
+		<blue>0.2</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+</animation>
+
+<animation>
+	<type>pick</type>
+	<object-name>switch_eject.002</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.3</interval-sec>
+		<binding>
+			<command>property-toggle</command>
+			<property>controls/switches/nuc</property>
+		</binding>
+		<binding>
+			<command>nasal</command>
+			<script>b1b.nuc(0)</script>
+		</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>material</type>
+	<object-name>fltdir.001</object-name>
+	<emission>
+		<red>0.4</red>
+		<green>0.3</green>
+		<blue>0.2</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+</animation>-->
+
+</PropertyList>
