@@ -15,8 +15,8 @@ settimer(alt_border, 4);
 settimer(func {
 
   # Add listener for radar pulse contact_tf for terrain follow
-  setlistener("sim/radar/teravd/contact_tf", func {
-    var contact_tf = cmdarg().getValue();
+  setlistener("sim/radar/teravd/contact_tf", func(n) {
+    var contact_tf = n.getValue();
 
       var long = getprop(contact_tf ~ "/impact/longitude-deg");
       var lat = getprop(contact_tf ~ "/impact/latitude-deg");
@@ -48,8 +48,8 @@ setprop("instrumentation/teravd/i_dist", i_dist_ft);
 settimer(func {
 
   # Add listener for radar pulse contact_tf for terrain follow
-  setlistener("sim/radar/teravd/contact_in_tf", func {
-    var contact_in_tf = cmdarg().getValue();
+  setlistener("sim/radar/teravd/contact_in_tf", func(n) {
+    var contact_in_tf = n.getValue();
 
       var long = getprop(contact_in_tf ~ "/impact/longitude-deg");
       var lat = getprop(contact_in_tf ~ "/impact/latitude-deg");

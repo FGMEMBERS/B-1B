@@ -241,8 +241,8 @@ setprop("autopilot/settings/target-agl-ft", newclr);
 settimer(func {
 
   # Add listener for radar pulse contactm0d
-  setlistener("sim/radar/teravd/contactm0d", func {
-    var contactm0d = cmdarg().getValue();
+  setlistener("sim/radar/teravd/contactm0d", func(n) {
+    var contactm0d = n.getValue();
 #    var solid = getprop(contactm0d ~ "/material/solid");
     
 #    if (solid)
@@ -266,8 +266,8 @@ settimer(func {
 settimer(func {
 
   # Add listener for radar pulse contactm4d
-  setlistener("sim/radar/teravd/contactm4d", func {
-    var contactm4d = cmdarg().getValue();
+  setlistener("sim/radar/teravd/contactm4d", func(n) {
+    var contactm4d = n.getValue();
 #    var solid = getprop(contactm4d ~ "/material/solid");
     
 #    if (solid)
@@ -291,8 +291,8 @@ settimer(func {
 settimer(func {
 
   # Add listener for radar pulse contactm20d
-  setlistener("sim/radar/teravd/contactm20d", func {
-    var contactm20d = cmdarg().getValue();
+  setlistener("sim/radar/teravd/contactm20d", func(n) {
+    var contactm20d = n.getValue();
 #    var solid = getprop(contactm20d ~ "/material/solid");
     
 #    if (solid)
@@ -521,8 +521,8 @@ settimer(eng_state, 0);
 
 # checks wing sweep/flaps and allow flaps only to be extended at minimum sweep - adopted from limits.nas
 
-checkFlaps = func {
-  flapsetting = cmdarg().getValue();
+checkFlaps = func(n) {
+  flapsetting = n.getValue();
   if (flapsetting == 0)
     return;
 sweep = getprop("controls/flight/wing-sweep");
@@ -536,8 +536,8 @@ if ((flapsetting != 0) and (sweep != 1)) {
 }
 setlistener("controls/flight/flaps", checkFlaps);
 
-checkSweep = func {
-  sweepsetting = cmdarg().getValue();
+checkSweep = func(n) {
+  sweepsetting = n.getValue();
   if (sweepsetting == 1)
     return;
 flaps = getprop("controls/flight/flaps");

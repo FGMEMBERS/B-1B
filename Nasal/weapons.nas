@@ -262,8 +262,8 @@ if (weight_bay >= 2000) {
 }
 
 # Add listener for bomb impact (from vulcan b2)
-setlistener("ai/models/model-impact", func {
-    var impact = cmdarg().getValue();
+setlistener("ai/models/model-impact", func(n) {
+    var impact = n.getValue();
     var solid = getprop(impact ~ "/material/solid");
     
     if (solid)
