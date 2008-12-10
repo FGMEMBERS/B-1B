@@ -1,7 +1,7 @@
 Rockwell B-1B Lancer "The Bone"
 
 
-XXXXXX  Version Nr: 0014 06072008 XXXXXX
+XXXXXX  Version Nr: 0015 06122008 XXXXXX
 
 
 
@@ -119,10 +119,33 @@ This system sets the Center of Gravity (CG) in % of MAC, and lets you manipulate
 
 XXXX WEAPON SYSTEM XXXX
 
-On ground select Heavy(3 bays with 8xGBU31) or Light (Intermediate bay with 8 GBU31) from the B-1B menu. Switch to the OSO seat/view and you should see the GBU31 indicated.
+This plane is equipped with a bomb guiding system currently working on the intermediate bay. First select weapons by going to B-1B/Weapons menu and select Unguided(Fwd + Aft bay loaded with 2x8 GBU-31 non guided weapons) or guided(intmd bay loaded with 8 GBU-31 guidable weapons). Switch to the OSO seat/view and you should see the GBU31 indicated.
+
+All control panels are visible from OSO view.
+
+Release of unguided weapons(fwd + aft bay):
+
 In air prior to release arm your weapons by using the SMS panel. First click on the bay (should be highlighted when selected) then on the station number to arm (indicated on panel).
-To release either press Ctrl j to initiate an automated release (bay doors open automatically) or use a manual release by opening the corresponding bay door and press Ctrl j. You can rotate the launcher by selecting bay and then press LAUNCHER ROT, the position of the launcher is indicated by an L on the SMS display. The launcher, when in release mode, always performs a full cycle and checks which stations are armed and if releases the weapons.
+You can disarm a weapon by clicking on station number with middle mouse button.
+To release either press l to initiate an automated release (bay doors open automatically) or use a manual release by opening the corresponding bay door and press l. You can rotate the launcher by selecting bay and then press LAUNCHER ROT, the position of the launcher is indicated by an L on the SMS display. The launcher, when in release mode, always performs a full cycle and checks which stations are armed and if releases the weapons.
 After releasing the weapons close the bay doors manually.
+
+Release of unguided weapons(only intmd bay):
+
+You can use up to 4 guided weapons independently, but I would advise to use 1 or 2 at the beginning.
+
+1.)Arm 1-4 weapons using the SMS panel (about 5min prior to target)
+2.)Retrieve target coordinates:
+
+2a.)Type in manually at the B-1B/Weapons menu (can be done long before reaching target) or
+2b.)Switch to sniper pod view and click with your mouse on target and press t to confirm, next target: press r, then click on target and press t again (should always see confirmation dialog on screen);
+3.)Activate target tracking by clicking (in BOMB/NAV panel/ STEER) the button with square, left to X-hair-dest - should be highlighted when active. Typically done at 20nm to target.
+4.)When about 10nm away from target open intmd bay door
+5.)When about 10nm away from target, click on the button with the triangle below BOMB in BOM/NAV panel to activate the release timer;
+6.)Wait for the realease of the weapons, then you can take control of the aircraft and change course if you wish
+7.)After releasing the bombs, click on the button with the triangle below BOMB in BOM/NAV panel to de-activate the release timer; and you have to stop the target tracking too if you do not intend to release further bombs; close bay doors manually;
+
+The method to retrieve coordinates from the flightgear map server, typing them in and closing on the target is not as stressfull as using the sniper pod, but with she sniper pod you can identify targets much better.
 
 Note: Always use ALT hold to maintain level flight and never use TER AVD and TER FOLLOW when releasing the bombs as they interfere with each other.
 

@@ -133,7 +133,7 @@ maggse
 		 <red>0.9</red>
 		 <green>0.1</green>
 		 <blue>0.1</blue>
-		 <factor-prop>doors/bay_fwd/position-norm</factor-prop>
+		 <factor-prop>sim/multiplay/generic/float[2]</factor-prop>
 	 </emission>
 </animation>
 
@@ -144,7 +144,7 @@ maggse
 		 <red>0.9</red>
 		 <green>0.1</green>
 		 <blue>0.1</blue>
-		 <factor-prop>doors/bay_intmd/position-norm</factor-prop>
+		 <factor-prop>sim/multiplay/generic/float[3]</factor-prop>
 	 </emission>
 </animation>
 
@@ -155,7 +155,7 @@ maggse
 		 <red>0.9</red>
 		 <green>0.1</green>
 		 <blue>0.1</blue>
-		 <factor-prop>doors/bay_aft/position-norm</factor-prop>
+		 <factor-prop>sim/multiplay/generic/float[4]</factor-prop>
 	 </emission>
 </animation>
 
@@ -180,15 +180,15 @@ maggse
 		<interval-sec>0.3</interval-sec>
 		<binding>
 			<command>nasal</command>
-			<script>b1b.bay_fwd.close()</script>
+			<script>b1b.bay_fwd(0)</script>
 		</binding>
 		<binding>
 			<command>nasal</command>
-			<script>b1b.bay_intmd.close()</script>
+			<script>b1b.bay_intmd(0)</script>
 		</binding>
 		<binding>
 			<command>nasal</command>
-			<script>b1b.bay_aft.close()</script>
+			<script>b1b.bay_aft(0)</script>
 		</binding>
 	</action>
 </animation>

@@ -84,3 +84,17 @@ setlistener("controls/engines/engine[3]/cutoff", func {
 var conv = getprop("controls/engines/engine[0]/cutoff");
 setprop("engines/engine[7]/n2", conv);
 },1,0);
+
+##
+# enables hud for sniper pod view/dialog
+##
+setlistener("sim/current-view/name", func {
+var view = getprop("sim/current-view/name");
+if (view == 'Sniper Pod view') {
+setprop("sim/hud/visibility[1]", 1);
+#var sniper_pod_menu = #gui.Dialog.new("dialog","Aircraft/B-1B/Dialogs/sniperpodmenu.xml","sniperpodmenu");
+#sniper_pod_menu.open();
+} else {
+setprop("sim/hud/visibility[1]", 0);
+}
+},0,0);

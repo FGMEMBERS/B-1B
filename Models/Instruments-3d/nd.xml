@@ -71,11 +71,73 @@ hacked by maggse
    </center>
  </animation>
 
+ <animation>
+   <type>textranslate</type>
+   <object-name>hdg_bug</object-name>
+   <property>autopilot/settings/heading-bug-deg</property>
+   <factor>0.001</factor>
+   <step>100</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>hdg_bug.001</object-name>
+   <property>autopilot/settings/heading-bug-deg</property>
+   <factor>0.01</factor>
+   <step>10</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>hdg_bug.002</object-name>
+   <property>autopilot/settings/heading-bug-deg</property>
+   <factor>0.1</factor>
+   <step>1</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+ 
+ <animation>
+	 <type>pick</type>
+	 <object-name>hdg_knob</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.1</interval-sec>
+		 <binding>
+			 <command>nasal</command>
+			 <script>b1b.bug_hdg(1)</script>
+		 </binding>
+	 </action>
+	 <action>
+		 <button>1</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.1</interval-sec>
+		 <binding>
+			 <command>nasal</command>
+			 <script>b1b.bug_hdg(-1)</script>
+		 </binding>
+	 </action>
+ </animation>
+
 <!--
   <animation>
    <type>textranslate</type>
    <object-name>alttext</object-name>
-   <property>/autopilot/settings/target-altitude-ft</property>
+   <property>autopilot/settings/target-altitude-ft</property>
    <factor>0.00001</factor>
    <step>10000</step>
    <axis>
@@ -88,7 +150,7 @@ hacked by maggse
  <animation>
    <type>textranslate</type>
    <object-name>alttext.001</object-name>
-   <property>/autopilot/settings/target-altitude-ft</property>
+   <property>autopilot/settings/target-altitude-ft</property>
    <factor>0.0001</factor>
    <step>1000</step>
    <axis>
@@ -101,7 +163,7 @@ hacked by maggse
  <animation>
    <type>textranslate</type>
    <object-name>alttext.002</object-name>
-   <property>/autopilot/settings/target-altitude-ft</property>
+   <property>autopilot/settings/target-altitude-ft</property>
    <factor>0.001</factor>
    <step>100</step>
    <axis>

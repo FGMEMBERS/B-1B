@@ -23,16 +23,16 @@
 		<z>-2.0</z><!-- + = up -->
 	</position>
 	<orientation>
-		<x>180.0</x>
+		<x>-1.0</x>
 		<y>0.0</y>
 		<z>0.0</z>
-		<inner-angle>180.0</inner-angle>
-		<outer-angle>360.0</outer-angle>
+		<inner-angle>90.0</inner-angle>
+		<outer-angle>180.0</outer-angle>
 		<outer-gain>0.2</outer-gain>
 	</orientation>
 	<volume>
 		<property>/engines/engine[0]/thrust_lb</property>
-		<factor>0.000015</factor>
+		<factor>0.000066</factor>
 	</volume>
 </engine>
 
@@ -47,10 +47,10 @@
 		<not>
 			<property>/sim/current-view/internal</property>
 		</not>
-		<!--<equals>
+		<equals>
 			<property>/controls/engines/engine[0]/cutoff</property>
 			<value>0</value>
-		</equals>-->
+		</equals>
 	        </and>
 	</condition>
 	<position>
@@ -59,11 +59,11 @@
 		<z>-2.0</z>
 	</position>
 	<orientation>
-		<x>180.0</x>
+		<x>-1.0</x>
 		<y>0.0</y>
 		<z>0.0</z>
-		<inner-angle>180.0</inner-angle>
-		<outer-angle>360.0</outer-angle>
+		<inner-angle>90.0</inner-angle>
+		<outer-angle>180.0</outer-angle>
 		<outer-gain>0.5</outer-gain>
 	</orientation>
 	<pitch>
@@ -102,11 +102,11 @@
 		<z>-2.0</z>
 	</position>
 	<orientation>
-		<x>180.0</x>
+		<x>-1.0</x>
 		<y>0.0</y>
 		<z>0.0</z>
-		<inner-angle>240.0</inner-angle>
-		<outer-angle>360.0</outer-angle>
+		<inner-angle>90.0</inner-angle>
+		<outer-angle>180.0</outer-angle>
 		<outer-gain>0.5</outer-gain>
 	</orientation>
 	<volume>
@@ -168,16 +168,16 @@
 		  <z>-2.0</z><!-- + = up -->
 	  </position>
 	  <orientation>
-		  <x>180.0</x>
+		  <x>-1.0</x>
 		  <y>0.0</y>
 		  <z>0.0</z>
-		  <inner-angle>180.0</inner-angle>
-		  <outer-angle>360.0</outer-angle>
+		  <inner-angle>90.0</inner-angle>
+		  <outer-angle>180.0</outer-angle>
 		  <outer-gain>0.2</outer-gain>
 	  </orientation>
 	  <volume>
 		  <property>/engines/engine[1]/thrust_lb</property>
-		  <factor>0.000015</factor>
+		  <factor>0.000066</factor>
 	  </volume>
   </engine>
   
@@ -192,10 +192,10 @@
 		  <not>
 			  <property>/sim/current-view/internal</property>
 		  </not>
-		  <!--  <equals>
+		  <equals>
 			  <property>/controls/engines/engine[1]/cutoff</property>
 			  <value>0</value>
-			  </equals>-->
+			  </equals>
 	          </and>
 	  </condition>
 	  <position>
@@ -204,11 +204,11 @@
 		  <z>-2.0</z>
 	  </position>
 	  <orientation>
-		  <x>180.0</x>
+		  <x>-1.0</x>
 		  <y>0.0</y>
 		  <z>0.0</z>
-		  <inner-angle>180.0</inner-angle>
-		  <outer-angle>360.0</outer-angle>
+		  <inner-angle>90.0</inner-angle>
+		  <outer-angle>180.0</outer-angle>
 		  <outer-gain>0.5</outer-gain>
 	  </orientation>
 	  <pitch>
@@ -247,11 +247,11 @@
 		  <z>-2.0</z>
 	  </position>
 	  <orientation>
-		  <x>180.0</x>
+		  <x>-1.0</x>
 		  <y>0.0</y>
 		  <z>0.0</z>
 		  <inner-angle>240.0</inner-angle>
-		  <outer-angle>360.0</outer-angle>
+		  <outer-angle>180.0</outer-angle>
 		  <outer-gain>0.5</outer-gain>
 	  </orientation>
 	  <volume>
@@ -313,16 +313,16 @@
 		  <z>-2.0</z>
 	  </position>
 	  <orientation>
-		  <x>180.0</x>
+		  <x>-1.0</x>
 		  <y>0.0</y>
 		  <z>0.0</z>
-		  <inner-angle>180.0</inner-angle>
-		  <outer-angle>360.0</outer-angle>
+		  <inner-angle>90.0</inner-angle>
+		  <outer-angle>180.0</outer-angle>
 		  <outer-gain>0.2</outer-gain>
 	  </orientation>
 	  <volume>
 		  <property>/engines/engine[2]/thrust_lb</property>
-		  <factor>0.000015</factor>
+		  <factor>0.000066</factor>
 	  </volume>
   </engine>
   
@@ -337,10 +337,10 @@
 		  <not>
 			  <property>/sim/current-view/internal</property>
 		  </not>
-		  <!--<equals>
+		  <equals>
 			  <property>/controls/engines/engine[2]/cutoff</property>
 			  <value>0</value>
-			  </equals>-->
+			  </equals>
 	          </and>
 	  </condition>
 	  <position>
@@ -349,11 +349,11 @@
 		  <z>-2.0</z>
 	  </position>
 	  <orientation>
-		  <x>180.0</x>
+		  <x>-1.0</x>
 		  <y>0.0</y>
 		  <z>0.0</z>
-		  <inner-angle>180.0</inner-angle>
-		  <outer-angle>360.0</outer-angle>
+		  <inner-angle>90.0</inner-angle>
+		  <outer-angle>180.0</outer-angle>
 		  <outer-gain>0.5</outer-gain>
 	  </orientation>
 	  <pitch>
@@ -392,11 +392,11 @@
 		  <z>-2.0</z>
 	  </position>
 	  <orientation>
-		  <x>180.0</x>
+		  <x>-1.0</x>
 		  <y>0.0</y>
 		  <z>0.0</z>
 		  <inner-angle>240.0</inner-angle>
-		  <outer-angle>360.0</outer-angle>
+		  <outer-angle>180.0</outer-angle>
 		  <outer-gain>0.5</outer-gain>
 	  </orientation>
 	  <volume>
@@ -460,16 +460,16 @@
 		  <z>-2.0</z>
 	  </position>
 	  <orientation>
-		  <x>180.0</x>
+		  <x>-1.0</x>
 		  <y>0.0</y>
 		  <z>0.0</z>
-		  <inner-angle>180.0</inner-angle>
-		  <outer-angle>360.0</outer-angle>
+		  <inner-angle>90.0</inner-angle>
+		  <outer-angle>180.0</outer-angle>
 		  <outer-gain>0.2</outer-gain>
 	  </orientation>
 	  <volume>
 		  <property>/engines/engine[3]/thrust_lb</property>
-		  <factor>0.000015</factor>
+		  <factor>0.000066</factor>
 	  </volume>
   </engine>
   
@@ -484,10 +484,10 @@
 		  <not>
 			  <property>/sim/current-view/internal</property>
 		  </not>
-		  <!--<equals>
+		  <equals>
 			  <property>/controls/engines/engine[3]/cutoff</property>
 			  <value>0</value>
-			  </equals>-->
+			  </equals>
 	          </and>
 	  </condition>
 	  <position>
@@ -496,11 +496,11 @@
 		  <z>-2.0</z>
 	  </position>
 	  <orientation>
-		  <x>180.0</x>
+		  <x>-1.0</x>
 		  <y>0.0</y>
 		  <z>0.0</z>
-		  <inner-angle>180.0</inner-angle>
-		  <outer-angle>360.0</outer-angle>
+		  <inner-angle>90.0</inner-angle>
+		  <outer-angle>180.0</outer-angle>
 		  <outer-gain>0.5</outer-gain>
 	  </orientation>
 	  <pitch>
@@ -539,11 +539,11 @@
 		  <z>-2.0</z>
 	  </position>
 	  <orientation>
-		  <x>180.0</x>
+		  <x>-1.0</x>
 		  <y>0.0</y>
 		  <z>0.0</z>
 		  <inner-angle>240.0</inner-angle>
-		  <outer-angle>360.0</outer-angle>
+		  <outer-angle>180.0</outer-angle>
 		  <outer-gain>0.5</outer-gain>
 	  </orientation>
 	  <volume>
@@ -600,7 +600,7 @@
       <volume>
         <property>/velocities/airspeed-kt</property>
         <type>log</type>
-        <factor>0.12</factor>
+        <factor>0.14</factor>
       </volume>
     </rumble>
 
@@ -632,20 +632,6 @@
       </volume>
     </rumble>
 
-    <rumble>
-      <name>rumble3</name>
-      <mode>looped</mode>
-      <path>Sounds/rumble.wav</path>
-      <condition>
-        <property>/gear/gear[3]/wow</property>
-      </condition>
-      <volume>
-        <property>/velocities/airspeed-kt</property>
-        <type>log</type>
-        <factor>0.12</factor>
-      </volume>
-    </rumble>
-
 <!-- Gear -->
     <gear>
       <name>gear0</name>
@@ -654,9 +640,13 @@
       <property>/gear/gear[0]/position-norm</property>
       <pitch>
         <internal>dt_play</internal>
-        <offset>1.0</offset>
+        <offset>0.7</offset>
         <factor>-0.0010</factor>
       </pitch>
+      <volume>
+        <min>0.7</min>
+        <max>1.0</max>
+      </volume>
     </gear>
 
     <gear>
@@ -681,107 +671,6 @@
       </condition>
     </gear>
 
-    <gear>
-      <name>gear1</name>
-      <mode>in-transit</mode>
-      <path>Sounds/gear.wav</path>
-      <property>/gear/gear[1]/position-norm</property>
-      <pitch>
-        <internal>dt_play</internal>
-        <offset>1.0</offset>
-        <factor>-0.0010</factor>
-      </pitch>
-    </gear>
-
-    <gear>
-      <name>gear-lock1</name>
-      <path>Sounds/gear-lck.wav</path>
-      <condition>
-        <equals>
-          <property>/gear/gear[1]/position-norm</property>
-          <value>0</value>
-        </equals>
-      </condition>
-    </gear>
-
-    <gear>
-      <name>gear-lock1a</name>
-      <path>Sounds/gear-lck.wav</path>
-      <condition>
-        <equals>
-          <property>/gear/gear[1]/position-norm</property>
-          <value>1</value>
-        </equals>
-      </condition>
-    </gear>
-
-    <gear>
-      <name>gear2</name>
-      <mode>in-transit</mode>
-      <path>Sounds/gear.wav</path>
-      <property>/gear/gear[2]/position-norm</property>
-      <pitch>
-        <internal>dt_play</internal>
-        <offset>1.0</offset>
-        <factor>-0.0011</factor>
-      </pitch>
-    </gear>
-
-    <gear>
-      <name>gear-lock2</name>
-      <path>Sounds/gear-lck.wav</path>
-      <condition>
-        <equals>
-          <property>/gear/gear[2]/position-norm</property>
-          <value>0</value>
-        </equals>
-      </condition>
-    </gear>
-
-    <gear>
-      <name>gear-lock2a</name>
-      <path>Sounds/gear-lck.wav</path>
-      <condition>
-        <equals>
-          <property>/gear/gear[2]/position-norm</property>
-          <value>1</value>
-        </equals>
-      </condition>
-    </gear>
-
-    <gear>
-      <name>gear3</name>
-      <mode>in-transit</mode>
-      <path>Sounds/gear.wav</path>
-      <property>/gear/gear[3]/position-norm</property>
-      <pitch>
-        <internal>dt_play</internal>
-        <offset>1.0</offset>
-        <factor>-0.0011</factor>
-      </pitch>
-    </gear>
-
-    <gear>
-      <name>gear-lock3</name>
-      <path>Sounds/gear-lck.wav</path>
-      <condition>
-        <equals>
-          <property>/gear/gear[3]/position-norm</property>
-          <value>0</value>
-        </equals>
-      </condition>
-    </gear>
-
-    <gear>
-      <name>gear-lock3a</name>
-      <path>Sounds/gear-lck.wav</path>
-      <condition>
-        <equals>
-          <property>/gear/gear[3]/position-norm</property>
-          <value>1</value>
-        </equals>
-      </condition>
-    </gear>
 
 <!-- Squeal -->
     <squeal>
@@ -914,7 +803,7 @@
 	    </pitch>
     </squeal>
 
-<!-- Flaps -->
+<!-- Flaps 
     <flap>
       <name>flaps</name>
       <mode>in-transit</mode>
@@ -933,9 +822,9 @@
       <volume>
         <factor>0.25</factor>
       </volume>
-    </flap>
+    </flap>-->
 
-<!-- Spoilers -->
+<!-- Spoilers 
     <spoiler>
       <name>spoilers</name>
       <mode>in-transit</mode>
@@ -954,8 +843,8 @@
       <volume>
         <factor>0.25</factor>
       </volume>
-    </spoiler>
-<!--
+    </spoiler>-->
+
     <wind>
       <name>wind</name>
       <mode>looped</mode>
@@ -973,7 +862,7 @@
         <offset>1.25</offset>
       </pitch>
     </wind>
--->
+
     <stall>
       <name>stall</name>
       <path>Sounds/stall.wav</path>
@@ -1034,7 +923,7 @@
 		    <offset>0.0</offset>
             </pitch>
 	    <volume>
-		    <factor>0.6</factor>
+		    <factor>0.72</factor>
 	    </volume>
     </seperation>
     <seperation>
@@ -1051,7 +940,7 @@
 		    <offset>0.0</offset>
             </pitch>
 	    <volume>
-		    <factor>0.6</factor>
+		    <factor>0.72</factor>
 	    </volume>
     </seperation>
     <seperation>
@@ -1068,7 +957,7 @@
 		    <offset>0.0</offset>
             </pitch>
 	    <volume>
-		    <factor>0.6</factor>
+		    <factor>0.72</factor>
 	    </volume>
     </seperation>
     <seperation>
@@ -1085,7 +974,7 @@
 		    <offset>0.0</offset>
             </pitch>
 	    <volume>
-		    <factor>0.6</factor>
+		    <factor>0.72</factor>
 	    </volume>
     </seperation>
     <seperation>
@@ -1102,7 +991,7 @@
 		    <offset>0.0</offset>
             </pitch>
 	    <volume>
-		    <factor>0.6</factor>
+		    <factor>0.72</factor>
 	    </volume>
     </seperation>
     <seperation>
@@ -1119,7 +1008,7 @@
 		    <offset>0.0</offset>
             </pitch>
 	    <volume>
-		    <factor>0.6</factor>
+		    <factor>0.72</factor>
 	    </volume>
     </seperation>
     <seperation>
@@ -1136,7 +1025,7 @@
 		    <offset>0.0</offset>
             </pitch>
 	    <volume>
-		    <factor>0.6</factor>
+		    <factor>0.72</factor>
 	    </volume>
     </seperation>
     <seperation>
@@ -1153,7 +1042,7 @@
 		    <offset>0.0</offset>
             </pitch>
 	    <volume>
-		    <factor>0.6</factor>
+		    <factor>0.72</factor>
 	    </volume>
     </seperation>
 
@@ -1172,7 +1061,7 @@
 		    <offset>0.0</offset>
             </pitch>
 	    <volume>
-		    <factor>0.4</factor>
+		    <factor>0.58</factor>
 	    </volume>
     </seperation>
     <seperation>
@@ -1189,7 +1078,7 @@
 		    <offset>0.0</offset>
             </pitch>
 	    <volume>
-		    <factor>0.4</factor>
+		    <factor>0.58</factor>
 	    </volume>
     </seperation>
     <seperation>
@@ -1206,7 +1095,7 @@
 		    <offset>0.0</offset>
             </pitch>
 	    <volume>
-		    <factor>0.4</factor>
+		    <factor>0.58</factor>
 	    </volume>
     </seperation>
     <seperation>
@@ -1223,7 +1112,7 @@
 		    <offset>0.0</offset>
             </pitch>
 	    <volume>
-		    <factor>0.4</factor>
+		    <factor>0.58</factor>
 	    </volume>
     </seperation>
     <seperation>
@@ -1240,7 +1129,7 @@
 		    <offset>0.0</offset>
             </pitch>
 	    <volume>
-		    <factor>0.4</factor>
+		    <factor>0.58</factor>
 	    </volume>
     </seperation>
     <seperation>
@@ -1257,7 +1146,7 @@
 		    <offset>0.0</offset>
             </pitch>
 	    <volume>
-		    <factor>0.4</factor>
+		    <factor>0.58</factor>
 	    </volume>
     </seperation>
     <seperation>
@@ -1274,7 +1163,7 @@
 		    <offset>0.0</offset>
             </pitch>
 	    <volume>
-		    <factor>0.4</factor>
+		    <factor>0.58</factor>
 	    </volume>
     </seperation>
     <seperation>
@@ -1291,7 +1180,7 @@
 		    <offset>0.0</offset>
             </pitch>
 	    <volume>
-		    <factor>0.4</factor>
+		    <factor>0.58</factor>
 	    </volume>
     </seperation>
 <!-- no binding yet?

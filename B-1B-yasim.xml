@@ -67,7 +67,7 @@
 
   <wing x="-26.2" y="5.0" z="-2.2" taper="0.25" incidence="0" twist="-2"
         length="13.20" chord="10.16" sweep="53.0" dihedral="0.0">
-    <stall aoa="18.0" width="4" peak="1.4"/>
+    <stall aoa="15.0" width="4" peak="1.4"/>
     <flap0 start="0.5" end="0.90" lift="0.5" drag="1.1"/><!--lift="1.5"-->
     <flap1 start="0.1" end="0.5" lift="1.0" drag="15.0"/>
     
@@ -90,7 +90,7 @@
   
   <mstab x="-24.0" y="2.0" z="-2.2" taper="0.35" incidence="1.4"
 	 length="3.04" chord="11.43" sweep="-18.0" dihedral="-1.0">
-	  <stall aoa="22.0" width="5" peak="1.5"/>
+	  <stall aoa="12.0" width="5" peak="1.5"/>
 	  
 	  <flap0 start="0.0" end="0.5" lift="1.4" drag="1.4"/>
 	  <flap1 start="0.5" end="1.0" lift="1.22" drag="1.1"/><!-- wingsweep 15/25/45/55/67 -->
@@ -176,7 +176,7 @@
 
 <!-- Landing Gear -->
 <!-- front -->
-  <gear x="-9.01" y="0.0" z="-4.15" retract-time="12" compression="0.9" spring="1.4">
+  <gear x="-9.01" y="0.0" z="-4.15" retract-time="12" compression="0.85" spring="1.5">
     <control-input axis="/controls/flight/rudder" control="STEER" square="true"/>
     <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
     <!-- <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
@@ -189,7 +189,7 @@
 
 
 <!-- rear left front 27-->
-  <gear x="-26.0" y="2.4" z="-4.05" retract-time="12" compression="0.9" spring="1.3">
+  <gear x="-26.0" y="2.4" z="-4.05" retract-time="12" compression="0.8" spring="1.5">
     <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
     <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
     <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
@@ -199,17 +199,17 @@
   </gear>
   
   <!-- rear left aft 28.2-->
-  <gear x="-27.2" y="2.4" z="-4.15" retract-time="12" compression="1.6" spring="0.8">
+  <gear x="-27.2" y="2.4" z="-4.15" retract-time="12" compression="1.4" spring="0.9">
 	  <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
-	  <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
-	  <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+	  <!--<control-input axis="/controls/gear/brake-left" control="BRAKE"/>
+	  <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>-->
 	  <control-speed control="EXTEND" transition-time="12"/>
 	  <control-speed control="BRAKE" transition-time="0.5"/>
 	  <control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
   </gear>
 
 <!-- rear right front 27-->
-  <gear x="-26.0" y="-2.4" z="-4.05" retract-time="12" compression="0.9" spring="1.3">
+  <gear x="-26.0" y="-2.4" z="-4.05" retract-time="12" compression="0.8" spring="1.5">
     <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
     <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
     <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
@@ -219,23 +219,15 @@
   </gear>
   
   <!-- rear right aft 28.2-->
-  <gear x="-27.2" y="-2.4" z="-4.15" retract-time="12" compression="1.6" spring="0.8">
+  <gear x="-27.2" y="-2.4" z="-4.15" retract-time="12" compression="1.4" spring="0.9">
 	  <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
-	  <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
-	  <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+	  <!--<control-input axis="/controls/gear/brake-right" control="BRAKE"/>
+	  <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>-->
 	  <control-speed control="EXTEND" transition-time="12"/>
 	  <control-speed control="BRAKE" transition-time="0.5"/>
 	  <control-output control="EXTEND" prop="/gear/gear[4]/position-norm"/>
   </gear>
   
-  <!-- Canopy / Cockpit access behind front gear
-  <gear x="-5.0" y="0.0" z="0.0" retract-time="6" compression="0.6">
-	  <control-input axis="/controls/gear/brake-parking" control="EXTEND"/>
-	  <control-speed control="EXTEND" transition-time="6"/>
-	  <control-output control="EXTEND" prop="/canopy/position-norm"/>
-  </gear>-->
-
-
 <!-- 8 fuel tanks with total 210000lb capacity (190000lb used) -->
 
 <!-- wings tanks left and right-->

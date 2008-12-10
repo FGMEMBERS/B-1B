@@ -348,50 +348,6 @@ more to come :-)
 	  </offsets>
   </model>
   
-  <!--<model>
-	  <name>flaps handle</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/switch_flaps.xml</path>
-	  <offsets>
-		  <x-m>-18.190</x-m>
-		  <y-m>-0.490</y-m>
-		  <z-m>1.000</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model>-->
-  
-  <!--<model>
-	  <name>flaps scale</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/flaps_scale.xml</path>
-	  <offsets>
-		  <x-m>-18.190</x-m>
-		  <y-m>-0.490</y-m>
-		  <z-m>1.000</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model>-->
-  
-  <!--<model>
-	  <name>sweep handle</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/switch_sweep.xml</path>
-	  <offsets>
-		  <x-m>-18.190</x-m>
-		  <y-m>-0.600</y-m>
-		  <z-m>1.000</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model>
-  
-  <model>
-	  <name>sweep scale</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/sweep_scale.xml</path>
-	  <offsets>
-		  <x-m>-18.190</x-m>
-		  <y-m>-0.630</y-m>
-		  <z-m>1.000</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model>-->
-  
   <!-- left console -->
   <model>
 	  <name>sweep lever</name>
@@ -462,12 +418,12 @@ more to come :-)
   <!-- WSO instruments xxxxxxxxxxxxxxxxxxxxxxxxx -->
   
   <model>
-	  <name>DSO radar</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/nd_big.xml</path>
+	  <name>DSO nd</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/nd.xml</path>
 	  	 <condition>
 		 <equals>
-			 <property>sim/current-view/view-number</property>
-			 <value>7</value>
+			 <property>sim/current-view/name</property>
+			 <value>OSO view</value>
 		 </equals>
 	 </condition>
 	  <offsets>
@@ -483,8 +439,8 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/nd_big.ac</path>
 	  <condition>
 		 <equals>
-			 <property>sim/current-view/view-number</property>
-			 <value>7</value>
+			 <property>sim/current-view/name</property>
+			 <value>OSO view</value>
 		 </equals>
 	 </condition>
 	  <offsets>
@@ -500,8 +456,8 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/nd_big.ac</path>
 	  <condition>
 		 <equals>
-			 <property>sim/current-view/view-number</property>
-			 <value>7</value>
+			 <property>sim/current-view/name</property>
+			 <value>OSO view</value>
 		 </equals>
 	 </condition>
 	  <offsets>
@@ -517,8 +473,8 @@ more to come :-)
 	  <path>Aircraft/Instruments-3d/alt-2/alt2-3d.xml</path>
 	  <condition>
 		 <equals>
-			 <property>sim/current-view/view-number</property>
-			 <value>7</value>
+			 <property>sim/current-view/name</property>
+			 <value>OSO view</value>
 		 </equals>
 	 </condition>
 	  <offsets>
@@ -534,8 +490,8 @@ more to come :-)
 	  <path>Aircraft/Instruments-3d/attitude-indicator.xml</path>
 	  <condition>
 		 <equals>
-			 <property>sim/current-view/view-number</property>
-			 <value>7</value>
+			 <property>sim/current-view/name</property>
+			 <value>OSO view</value>
 		 </equals>
 	 </condition>
 	  <offsets>
@@ -548,22 +504,22 @@ more to come :-)
   
   <model>
 	  <name>OSO radar</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/nd_big.xml</path>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/nd.xml</path>
 	  <condition>
 	       <or>
 		 <equals>
-			 <property>sim/current-view/view-number</property>
-			 <value>7</value>
+			 <property>sim/current-view/name</property>
+			 <value>OSO view</value>
 		 </equals>
 		 <equals>
-			 <property>sim/current-view/view-number</property>
-			 <value>8</value>
+			 <property>sim/current-view/name</property>
+			 <value>DSO/OSO centered view</value>
 		 </equals>
 	       </or>
 	 </condition>
 	  <offsets>
 		  <x-m>-15.700</x-m>
-		  <y-m>0.400</y-m>
+		  <y-m>0.385</y-m>
 		  <z-m>1.380</z-m>
 		  <pitch-deg>-35</pitch-deg>
 	  </offsets>
@@ -575,65 +531,88 @@ more to come :-)
 	  <condition>
 	       <or>
 		 <equals>
-			 <property>sim/current-view/view-number</property>
-			 <value>7</value>
+			 <property>sim/current-view/name</property>
+			 <value>OSO view</value>
 		 </equals>
 		 <equals>
-			 <property>sim/current-view/view-number</property>
-			 <value>8</value>
+			 <property>sim/current-view/name</property>
+			 <value>DSO/OSO centered view</value>
 		 </equals>
 	       </or>
 	 </condition>
 	  <offsets>
 		  <x-m>-15.700</x-m>
-		  <y-m>0.640</y-m>
+		  <y-m>0.645</y-m>
 		  <z-m>1.380</z-m>
 		  <pitch-deg>-35</pitch-deg>
 	  </offsets>
   </model>
   
   <model>
-	  <name>OSO screen1</name>
+	  <name>OSO smsmonitor</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/sms_monitor.xml</path>
 	  <condition>
 	       <or>
 		 <equals>
-			 <property>sim/current-view/view-number</property>
-			 <value>7</value>
+			 <property>sim/current-view/name</property>
+			 <value>OSO view</value>
 		 </equals>
 		 <equals>
-			 <property>sim/current-view/view-number</property>
-			 <value>8</value>
+			 <property>sim/current-view/name</property>
+			 <value>DSO/OSO centered view</value>
 		 </equals>
 	       </or>
 	 </condition>
 	  <offsets>
-		  <x-m>-15.790</x-m>
-		  <y-m>0.530</y-m>
-		  <z-m>1.650</z-m>
+		  <x-m>-15.793</x-m>
+		  <y-m>0.615</y-m>
+		  <z-m>1.640</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
   
   <model>
-	  <name>OSO screen2</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/nd_big.ac</path>
+	  <name>OSO bombnav</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/bombnav.xml</path>
 	  <condition>
 	       <or>
 		 <equals>
-			 <property>sim/current-view/view-number</property>
-			 <value>7</value>
+			 <property>sim/current-view/name</property>
+			 <value>OSO view</value>
 		 </equals>
 		 <equals>
-			 <property>sim/current-view/view-number</property>
-			 <value>8</value>
+			 <property>sim/current-view/name</property>
+			 <value>DSO/OSO centered view</value>
 		 </equals>
 	       </or>
 	 </condition>
 	  <offsets>
-		  <x-m>-15.790</x-m>
-		  <y-m>0.270</y-m>
-		  <z-m>1.650</z-m>
+		  <x-m>-15.794</x-m>
+		  <y-m>0.283</y-m>
+		  <z-m>1.635</z-m>
+		  <pitch-deg>0</pitch-deg>
+	  </offsets>
+  </model>
+  
+  <model>
+	  <name>OSO targetmonitor</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/target_monitor.xml</path>
+	  <condition>
+	       <or>
+		 <equals>
+			 <property>sim/current-view/name</property>
+			 <value>OSO view</value>
+		 </equals>
+		 <equals>
+			 <property>sim/current-view/name</property>
+			 <value>DSO/OSO centered view</value>
+		 </equals>
+	       </or>
+	 </condition>
+	  <offsets>
+		  <x-m>-15.793</x-m>
+		  <y-m>0.380</y-m>
+		  <z-m>1.640</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -644,12 +623,12 @@ more to come :-)
 	  <condition>
 	       <or>
 		 <equals>
-			 <property>sim/current-view/view-number</property>
-			 <value>7</value>
+			 <property>sim/current-view/name</property>
+			 <value>OSO view</value>
 		 </equals>
 		 <equals>
-			 <property>sim/current-view/view-number</property>
-			 <value>8</value>
+			 <property>sim/current-view/name</property>
+			 <value>DSO/OSO centered view</value>
 		 </equals>
 	       </or>
 	 </condition>
@@ -667,12 +646,12 @@ more to come :-)
 	  <condition>
 	       <or>
 		 <equals>
-			 <property>sim/current-view/view-number</property>
-			 <value>7</value>
+			 <property>sim/current-view/name</property>
+			 <value>OSO view</value>
 		 </equals>
 		 <equals>
-			 <property>sim/current-view/view-number</property>
-			 <value>8</value>
+			 <property>sim/current-view/name</property>
+			 <value>DSO/OSO centered view</value>
 		 </equals>
 	       </or>
 	 </condition>

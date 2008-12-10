@@ -46,7 +46,7 @@
   <submodel>
 	  <name>gbu-31.000</name>
 	  <model>Aircraft/B-1B/Models/gbu-31f.xml</model>
-	  <trigger>armament/bay-fwd/rack0-released</trigger>
+	  <trigger>armament/bay-fwd/rack0-released-model</trigger>
 	  <value>0</value>
 	  <speed>0</speed>
 	  <repeat>false</repeat>
@@ -69,7 +69,7 @@
   <submodel>
 	  <name>gbu-31.001</name>
 	  <model>Aircraft/B-1B/Models/gbu-31f.xml</model>
-	  <trigger>armament/bay-fwd/rack1-released</trigger>
+	  <trigger>armament/bay-fwd/rack1-released-model</trigger>
 	  <value>0</value>
 	  <speed>0</speed>
 	  <repeat>false</repeat>
@@ -92,7 +92,7 @@
   <submodel>
 	  <name>gbu-31.002</name>
 	  <model>Aircraft/B-1B/Models/gbu-31f.xml</model>
-	  <trigger>armament/bay-fwd/rack2-released</trigger>
+	  <trigger>armament/bay-fwd/rack2-released-model</trigger>
 	  <value>0</value>
 	  <speed>0</speed>
 	  <repeat>false</repeat>
@@ -115,7 +115,7 @@
   <submodel>
 	  <name>gbu-31.003</name>
 	  <model>Aircraft/B-1B/Models/gbu-31f.xml</model>
-	  <trigger>armament/bay-fwd/rack3-released</trigger>
+	  <trigger>armament/bay-fwd/rack3-released-model</trigger>
 	  <value>0</value>
 	  <speed>0</speed>
 	  <repeat>false</repeat>
@@ -138,7 +138,7 @@
   <submodel>
 	  <name>gbu-31.004</name>
 	  <model>Aircraft/B-1B/Models/gbu-31f.xml</model>
-	  <trigger>armament/bay-fwd/rack4-released</trigger>
+	  <trigger>armament/bay-fwd/rack4-released-model</trigger>
 	  <value>0</value>
 	  <speed>0</speed>
 	  <repeat>false</repeat>
@@ -161,7 +161,7 @@
   <submodel>
 	  <name>gbu-31.005</name>
 	  <model>Aircraft/B-1B/Models/gbu-31f.xml</model>
-	  <trigger>armament/bay-fwd/rack5-released</trigger>
+	  <trigger>armament/bay-fwd/rack5-released-model</trigger>
 	  <value>0</value>
 	  <speed>0</speed>
 	  <repeat>false</repeat>
@@ -184,7 +184,7 @@
   <submodel>
 	  <name>gbu-31.006</name>
 	  <model>Aircraft/B-1B/Models/gbu-31f.xml</model>
-	  <trigger>armament/bay-fwd/rack6-released</trigger>
+	  <trigger>armament/bay-fwd/rack6-released-model</trigger>
 	  <value>0</value>
 	  <speed>0</speed>
 	  <repeat>false</repeat>
@@ -207,7 +207,7 @@
   <submodel>
 	  <name>gbu-31.007</name>
 	  <model>Aircraft/B-1B/Models/gbu-31f.xml</model>
-	  <trigger>armament/bay-fwd/rack7-released</trigger>
+	  <trigger>armament/bay-fwd/rack7-released-model</trigger>
 	  <value>0</value>
 	  <speed>0</speed>
 	  <repeat>false</repeat>
@@ -232,7 +232,7 @@
   <submodel>
 	  <name>gbu-31.008</name>
 	  <model>Aircraft/B-1B/Models/gbu-31i.xml</model>
-	  <trigger>armament/bay-intmd/rack0-released</trigger>
+	  <trigger>armament/bay-intmd/rack0-released-model</trigger>
 	  <value>0</value>
 	  <speed>0</speed>
 	  <repeat>false</repeat>
@@ -255,7 +255,7 @@
   <submodel>
 	  <name>gbu-31.009</name>
 	  <model>Aircraft/B-1B/Models/gbu-31i.xml</model>
-	  <trigger>armament/bay-intmd/rack1-released</trigger>
+	  <trigger>armament/bay-intmd/rack1-released-model</trigger>
 	  <value>0</value>
 	  <speed>0</speed>
 	  <repeat>false</repeat>
@@ -278,7 +278,7 @@
   <submodel>
 	  <name>gbu-31.010</name>
 	  <model>Aircraft/B-1B/Models/gbu-31i.xml</model>
-	  <trigger>armament/bay-intmd/rack2-released</trigger>
+	  <trigger>armament/bay-intmd/rack2-released-model</trigger>
 	  <value>0</value>
 	  <speed>0</speed>
 	  <repeat>false</repeat>
@@ -301,7 +301,7 @@
   <submodel>
 	  <name>gbu-31.011</name>
 	  <model>Aircraft/B-1B/Models/gbu-31i.xml</model>
-	  <trigger>armament/bay-intmd/rack3-released</trigger>
+	  <trigger>armament/bay-intmd/rack3-released-model</trigger>
 	  <value>0</value>
 	  <speed>0</speed>
 	  <repeat>false</repeat>
@@ -324,7 +324,7 @@
   <submodel>
 	  <name>gbu-31.012</name>
 	  <model>Aircraft/B-1B/Models/gbu-31i.xml</model>
-	  <trigger>armament/bay-intmd/rack4-released</trigger>
+	  <trigger>armament/bay-intmd/rack4-released-model</trigger>
 	  <value>0</value>
 	  <speed>0</speed>
 	  <repeat>false</repeat>
@@ -347,7 +347,7 @@
   <submodel>
 	  <name>gbu-31.013</name>
 	  <model>Aircraft/B-1B/Models/gbu-31i.xml</model>
-	  <trigger>armament/bay-intmd/rack5-released</trigger>
+	  <trigger>armament/bay-intmd/rack5-released-model</trigger>
 	  <value>0</value>
 	  <speed>0</speed>
 	  <repeat>false</repeat>
@@ -370,7 +370,7 @@
   <submodel>
 	  <name>gbu-31.014</name>
 	  <model>Aircraft/B-1B/Models/gbu-31i.xml</model>
-	  <trigger>armament/bay-intmd/rack6-released</trigger>
+	  <trigger>armament/bay-intmd/rack6-released-model</trigger>
 	  <value>0</value>
 	  <speed>0</speed>
 	  <repeat>false</repeat>
@@ -393,7 +393,7 @@
   <submodel>
 	  <name>gbu-31.015</name>
 	  <model>Aircraft/B-1B/Models/gbu-31i.xml</model>
-	  <trigger>armament/bay-intmd/rack7-released</trigger>
+	  <trigger>armament/bay-intmd/rack7-released-model</trigger>
 	  <value>0</value>
 	  <speed>0</speed>
 	  <repeat>false</repeat>
@@ -418,7 +418,7 @@
   <submodel>
 	  <name>gbu-31.016</name>
 	  <model>Aircraft/B-1B/Models/gbu-31a.xml</model>
-	  <trigger>armament/bay-aft/rack0-released</trigger>
+	  <trigger>armament/bay-aft/rack0-released-model</trigger>
 	  <value>0</value>
 	  <speed>0</speed>
 	  <repeat>false</repeat>
@@ -441,7 +441,7 @@
   <submodel>
 	  <name>gbu-31.017</name>
 	  <model>Aircraft/B-1B/Models/gbu-31a.xml</model>
-	  <trigger>armament/bay-aft/rack1-released</trigger>
+	  <trigger>armament/bay-aft/rack1-released-model</trigger>
 	  <value>0</value>
 	  <speed>0</speed>
 	  <repeat>false</repeat>
@@ -464,7 +464,7 @@
   <submodel>
 	  <name>gbu-31.018</name>
 	  <model>Aircraft/B-1B/Models/gbu-31a.xml</model>
-	  <trigger>armament/bay-aft/rack2-released</trigger>
+	  <trigger>armament/bay-aft/rack2-released-model</trigger>
 	  <value>0</value>
 	  <speed>0</speed>
 	  <repeat>false</repeat>
@@ -487,7 +487,7 @@
   <submodel>
 	  <name>gbu-31.019</name>
 	  <model>Aircraft/B-1B/Models/gbu-31a.xml</model>
-	  <trigger>armament/bay-aft/rack3-released</trigger>
+	  <trigger>armament/bay-aft/rack3-released-model</trigger>
 	  <value>0</value>
 	  <speed>0</speed>
 	  <repeat>false</repeat>
@@ -510,7 +510,7 @@
   <submodel>
 	  <name>gbu-31.020</name>
 	  <model>Aircraft/B-1B/Models/gbu-31a.xml</model>
-	  <trigger>armament/bay-aft/rack4-released</trigger>
+	  <trigger>armament/bay-aft/rack4-released-model</trigger>
 	  <value>0</value>
 	  <speed>0</speed>
 	  <repeat>false</repeat>
@@ -533,7 +533,7 @@
   <submodel>
 	  <name>gbu-31.021</name>
 	  <model>Aircraft/B-1B/Models/gbu-31a.xml</model>
-	  <trigger>armament/bay-aft/rack5-released</trigger>
+	  <trigger>armament/bay-aft/rack5-released-model</trigger>
 	  <value>0</value>
 	  <speed>0</speed>
 	  <repeat>false</repeat>
@@ -556,7 +556,7 @@
   <submodel>
 	  <name>gbu-31.022</name>
 	  <model>Aircraft/B-1B/Models/gbu-31a.xml</model>
-	  <trigger>armament/bay-aft/rack6-released</trigger>
+	  <trigger>armament/bay-aft/rack6-released-model</trigger>
 	  <value>0</value>
 	  <speed>0</speed>
 	  <repeat>false</repeat>
@@ -579,7 +579,7 @@
   <submodel>
 	  <name>gbu-31.023</name>
 	  <model>Aircraft/B-1B/Models/gbu-31a.xml</model>
-	  <trigger>armament/bay-aft/rack7-released</trigger>
+	  <trigger>armament/bay-aft/rack7-released-model</trigger>
 	  <value>0</value>
 	  <speed>0</speed>
 	  <repeat>false</repeat>

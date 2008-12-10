@@ -16,7 +16,7 @@ maggse
 		 <interval-sec>0.3</interval-sec>
 		 <binding>
 			      <command>nasal</command>
-			      <script>b1b.bay_fwd.open()</script>
+			      <script>b1b.bay_fwd(1)</script>
 		 </binding>
 
 	 </action>
@@ -24,7 +24,7 @@ maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>sms_button.024</object-name>
-	 <property>doors/bay_fwd/position-norm</property>
+	 <property>sim/multiplay/generic/float[2]</property>
 	 <factor>0.038</factor>
          <step>1</step>
 	 <axis>
@@ -42,7 +42,7 @@ maggse
 		 <interval-sec>0.3</interval-sec>
 		 <binding>
 			      <command>nasal</command>
-			      <script>b1b.bay_fwd.close()</script>
+			      <script>b1b.bay_fwd(0)</script>
 		 </binding>
 
 	 </action>
@@ -57,7 +57,7 @@ maggse
 		 <interval-sec>0.3</interval-sec>
 		 <binding>
 			      <command>nasal</command>
-			      <script>b1b.bay_intmd.open()</script>
+			      <script>b1b.bay_intmd(1)</script>
 		 </binding>
 
 	 </action>
@@ -65,7 +65,7 @@ maggse
 <animation>
 	 <type>textranslate</type>
 	 <object-name>sms_button.025</object-name>
-	 <property>doors/bay_intmd/position-norm</property>
+	 <property>sim/multiplay/generic/float[3]</property>
 	 <factor>0.038</factor>
          <step>1</step>
 	 <axis>
@@ -83,7 +83,7 @@ maggse
 		 <interval-sec>0.3</interval-sec>
 		 <binding>
 			      <command>nasal</command>
-			      <script>b1b.bay_intmd.close()</script>
+			      <script>b1b.bay_intmd(0)</script>
 		 </binding>
 
 	 </action>
@@ -98,7 +98,7 @@ maggse
 		 <interval-sec>0.3</interval-sec>
 		 <binding>
 			      <command>nasal</command>
-			      <script>b1b.bay_aft.open()</script>
+			      <script>b1b.bay_aft(1)</script>
 		 </binding>
 
 	 </action>
@@ -106,7 +106,7 @@ maggse
 <animation>
 	 <type>textranslate</type>
 	 <object-name>sms_button.026</object-name>
-	 <property>doors/bay_aft/position-norm</property>
+	 <property>sim/multiplay/generic/float[4]</property>
 	 <factor>0.038</factor>
          <step>1</step>
 	 <axis>
@@ -124,7 +124,7 @@ maggse
 		 <interval-sec>0.3</interval-sec>
 		 <binding>
 			      <command>nasal</command>
-			      <script>b1b.bay_aft.close()</script>
+			      <script>b1b.bay_aft(0)</script>
 		 </binding>
 
 	 </action>

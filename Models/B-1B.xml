@@ -31,6 +31,13 @@ more to come :-)
 	  </offsets>
   </model>
   
+  <animation>
+  <type>range</type>
+  <object-name>instruments</object-name>
+  <min-m>0</min-m>
+  <max-m>25</max-m>
+  </animation>
+  
   <!-- trans parts -->
   <model>
 	  <name>transparent_parts</name>
@@ -1221,6 +1228,9 @@ more to come :-)
 	 <type>select</type>
 	 <object-name>gear_fr_up</object-name>
 	 <object-name>gear_fr_up_hydr</object-name>
+	 <object-name>landing_spot</object-name>
+	 <object-name>landing_spot.001</object-name>
+	 <object-name>landing_spot.002</object-name>
 	 <condition>
 		 <greater-than>
 			 <property>gear/gear[0]/position-norm</property>
@@ -1271,6 +1281,9 @@ more to come :-)
 	 <type>rotate</type>
 	 <object-name>gear_fr_up</object-name>
 	 <object-name>gear_fr_up_hydr</object-name>
+	 <object-name>landing_spot</object-name>
+	 <object-name>landing_spot.001</object-name>
+	 <object-name>landing_spot.002</object-name>
 	 <property>gear/gear[0]/position-norm</property>
 	 <interpolation>
 		 <entry>
@@ -2708,9 +2721,40 @@ more to come :-)
       
   <!-- bay doors -->
   <animation>
+	 <type>translate</type>
+	 <object-name>bay_fwd.001</object-name>
+	 <object-name>bay_fwd.002</object-name>
+	 <property>sim/multiplay/generic/float[2]</property>
+	 <!--<property>doors/bay_fwd/position-norm</property>-->
+	 
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>0.25</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-15.20</x-m>
+		 <y-m>-0.93</y-m>
+		 <z-m>-1.33</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>0</y>
+		 <z>1</z>
+	 </axis>
+	 
+ </animation>
+  
+  <animation>
 	 <type>rotate</type>
 	 <object-name>bay_fwd.001</object-name>
-	 <property>doors/bay_fwd/position-norm</property>
+	 <property>sim/multiplay/generic/float[2]</property>
+	 <!--<property>doors/bay_fwd/position-norm</property>-->
 	 
 	 <interpolation>
 		 <entry>
@@ -2724,7 +2768,7 @@ more to come :-)
 	 </interpolation>
 	 <center>
 		 <x-m>-15.20</x-m>
-		 <y-m>-0.93</y-m>
+		 <y-m>-0.92</y-m>
 		 <z-m>-1.33</z-m>
 	 </center>
 	 <axis>
@@ -2738,7 +2782,8 @@ more to come :-)
  <animation>
 	 <type>rotate</type>
 	 <object-name>bay_fwd.002</object-name>
-	 <property>doors/bay_fwd/position-norm</property>
+	 <property>sim/multiplay/generic/float[2]</property>
+	 <!--<property>doors/bay_fwd/position-norm</property>-->
 	 
 	 <interpolation>
 		 <entry>
@@ -2752,7 +2797,7 @@ more to come :-)
 	 </interpolation>
 	 <center>
 		 <x-m>-15.20</x-m>
-		 <y-m>0.98</y-m>
+		 <y-m>0.97</y-m>
 		 <z-m>-1.33</z-m>
 	 </center>
 	 <axis>
@@ -2764,9 +2809,40 @@ more to come :-)
  </animation>
  
  <animation>
+	 <type>translate</type>
+	 <object-name>bay_intmd.001</object-name>
+	 <object-name>bay_intmd.002</object-name>
+	 <property>sim/multiplay/generic/float[3]</property>
+	 <!--<property>doors/bay_fwd/position-norm</property>-->
+	 
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>0.25</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-15.20</x-m>
+		 <y-m>-0.92</y-m>
+		 <z-m>-1.33</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>0</y>
+		 <z>1</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
 	 <type>rotate</type>
 	 <object-name>bay_intmd.001</object-name>
-	 <property>doors/bay_intmd/position-norm</property>
+	 <property>sim/multiplay/generic/float[3]</property>
+	 <!--<property>doors/bay_intmd/position-norm</property>-->
 	 
 	 <interpolation>
 		 <entry>
@@ -2780,7 +2856,7 @@ more to come :-)
 	 </interpolation>
 	 <center>
 		 <x-m>-15.20</x-m>
-		 <y-m>-0.93</y-m>
+		 <y-m>-0.92</y-m>
 		 <z-m>-1.33</z-m>
 	 </center>
 	 <axis>
@@ -2794,7 +2870,8 @@ more to come :-)
  <animation>
 	 <type>rotate</type>
 	 <object-name>bay_intmd.002</object-name>
-	 <property>doors/bay_intmd/position-norm</property>
+	 <property>sim/multiplay/generic/float[3]</property>
+	 <!--<property>doors/bay_intmd/position-norm</property>-->
 	 
 	 <interpolation>
 		 <entry>
@@ -2808,7 +2885,7 @@ more to come :-)
 	 </interpolation>
 	 <center>
 		 <x-m>-15.20</x-m>
-		 <y-m>0.98</y-m>
+		 <y-m>0.97</y-m>
 		 <z-m>-1.33</z-m>
 	 </center>
 	 <axis>
@@ -2820,9 +2897,40 @@ more to come :-)
  </animation>
  
  <animation>
+	 <type>translate</type>
+	 <object-name>bay_aft.001</object-name>
+	 <object-name>bay_aft.002</object-name>
+	 <property>sim/multiplay/generic/float[4]</property>
+	 <!--<property>doors/bay_fwd/position-norm</property>-->
+	 
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>0.25</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-15.20</x-m>
+		 <y-m>-0.93</y-m>
+		 <z-m>-1.33</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>0</y>
+		 <z>1</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
 	 <type>rotate</type>
 	 <object-name>bay_aft.001</object-name>
-	 <property>doors/bay_aft/position-norm</property>
+	 <property>sim/multiplay/generic/float[4]</property>
+	 <!--<property>doors/bay_aft/position-norm</property>-->
 	 
 	 <interpolation>
 		 <entry>
@@ -2836,7 +2944,7 @@ more to come :-)
 	 </interpolation>
 	 <center>
 		 <x-m>-15.20</x-m>
-		 <y-m>-0.93</y-m>
+		 <y-m>-0.92</y-m>
 		 <z-m>-1.33</z-m>
 	 </center>
 	 <axis>
@@ -2850,7 +2958,8 @@ more to come :-)
  <animation>
 	 <type>rotate</type>
 	 <object-name>bay_aft.002</object-name>
-	 <property>doors/bay_aft/position-norm</property>
+	 <property>sim/multiplay/generic/float[4]</property>
+	 <!--<property>doors/bay_aft/position-norm</property>-->
 	 
 	 <interpolation>
 		 <entry>
@@ -2864,7 +2973,7 @@ more to come :-)
 	 </interpolation>
 	 <center>
 		 <x-m>-15.20</x-m>
-		 <y-m>0.98</y-m>
+		 <y-m>0.97</y-m>
 		 <z-m>-1.33</z-m>
 	 </center>
 	 <axis>
@@ -2879,7 +2988,8 @@ more to come :-)
  <animation>
 	 <type>translate</type>
 	 <object-name>refuel_door</object-name>
-	 <property>doors/refuel_door/position-norm</property>
+	 <property>sim/multiplay/generic/float[5]</property>
+	 <!--<property>doors/refuel_door/position-norm</property>-->
 	 
 	 <interpolation>
 		 <entry>
@@ -3258,6 +3368,77 @@ more to come :-)
 	 </condition>
  </animation>
  
+ <!-- sniper pod -->
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>sniper_pod_head</object-name>
+	 <object-name>sniper_pod_sapphire</object-name>
+	 <object-name>sniper_pod_sapinn</object-name>
+	 <property>armament/sniper-pod/position-norm</property>
+	 
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>73.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>2.0</ind>
+			 <dep>123.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>3.0</ind>
+			 <dep>153.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>4.0</ind>
+			 <dep>183.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>5.0</ind>
+			 <dep>233.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-15.20</x-m>
+		 <y-m>1.203</y-m>
+		 <z-m>-1.663</z-m>
+	 </center>
+	 <axis>
+		 <x>1</x>
+		 <y>0</y>
+		 <z>0</z>
+	 </axis>
+	 
+ </animation>
+ 
+ <animation>
+	<type>pick</type>
+	<object-name>sniper_pod_head</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<interval-sec>1.5</interval-sec>
+		<binding>
+			<command>nasal</command>
+			<script>weapons.sniper_pod(1)</script>
+		</binding>
+	</action>
+	<action>
+		<button>1</button>
+		<repeatable>true</repeatable>
+		<interval-sec>1.5</interval-sec>
+		<binding>
+			<command>nasal</command>
+			<script>weapons.sniper_pod(-1)</script>
+		</binding>
+	</action>
+</animation>
+
  <!-- afterburner flame 
  
  <animation>

@@ -132,6 +132,49 @@ sweat by maggse
 	 </offsets>
  </model>
 
+ <!-- landing spots -->
+ 
+ <model>
+	 <name>landing spot</name>
+	 <path>Aircraft/B-1B/Models/landing_spot.xml</path>
+	 
+	 <offsets>
+		 <x-m>0.00</x-m>
+		 <y-m>0</y-m>
+		 <z-m>0</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <model>
+	 <name>landing spot cone</name>
+	 <path>Aircraft/B-1B/Models/landing_cone.xml</path>
+	 
+	 <offsets>
+		 <x-m>0.00</x-m>
+		 <y-m>0</y-m>
+		 <z-m>0</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <!--<model>
+	 <name>landing spot rwy</name>
+	 <path>Aircraft/B-1B/Models/landing_spot_rwy.xml</path>
+	 <condition>
+		 <equals>
+			 <property>gear/gear/wow</property>
+			 <value>1</value>
+		 </equals>
+	 </condition>
+	 <offsets>
+		 <x-m>0.00</x-m>
+		 <y-m>0</y-m>
+		 <z-m>0</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>-->
+ 
  <!-- pos lights -->
  
  <model>
@@ -166,7 +209,7 @@ sweat by maggse
 
 	 <offsets>
 		 <x-m>-3.000</x-m>
-		 <y-m>-4.50</y-m>
+		 <y-m>-4.45</y-m>
 		 <z-m>-0.9</z-m>
 		 <pitch-deg>0</pitch-deg>
 	 </offsets>
@@ -178,8 +221,20 @@ sweat by maggse
 	 
 	 <offsets>
 		 <x-m>-3.000</x-m>
-		 <y-m>4.50</y-m>
+		 <y-m>4.52</y-m>
 		 <z-m>-0.9</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <model>
+	 <name>strobe4</name>
+	 <path>Aircraft/B-1B/Models/strobe.xml</path>
+	 
+	 <offsets>
+		 <x-m>17.91</x-m>
+		 <y-m>0.01</y-m>
+		 <z-m>5.74</z-m>
 		 <pitch-deg>0</pitch-deg>
 	 </offsets>
  </model>

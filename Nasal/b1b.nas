@@ -35,27 +35,53 @@ setprop("instrumentation/tacan/frequencies/selected-channel[12]", 2);
 settimer(flightcontrols.fuelsweep, 1);
 setprop("sim/weight[7]/weigth-lb", 0);
 setprop("sim/weight[8]/weigth-lb", 0);
+setprop("ai/guided/id-number", 0);
+setprop("ai/guided/target-number", 0);
+setprop("ai/guided/id-release", 0);
+setprop("armament/sniper-pod/position-norm",0);
 wingSweep(1);#sweep wings to fwd position
 wingSweep(1);
 wingSweep(1);
 wingSweep(1);
 settimer(cg.cg_dist, 2);
-radardist.init();
+#radardist.init();
 settimer(eta_waypoint, 1);
 settimer(enginefire.fire_loop, 3);
 #settimer(weapons.weapon_system, 3);
 #fuel_syst();
 settimer(eng_state, 3);
 settimer(tacan_follow, 4);
+setprop("sim/multiplay/generic/float[2]",0);
+setprop("sim/multiplay/generic/float[3]",0);
+setprop("sim/multiplay/generic/float[4]",0);
+setprop("sim/multiplay/generic/float[5]",0);
 print ("B-1B starting up!");
 }
 
 ### doors and animations
 var hatch = aircraft.door.new ("canopy",15);
-var bay_fwd = aircraft.door.new ("doors/bay_fwd",3);
-var bay_intmd = aircraft.door.new ("doors/bay_intmd",3);
-var bay_aft = aircraft.door.new ("doors/bay_aft",3);
-var refuel_door = aircraft.door.new ("doors/refuel_door",3);
+var bay_fwd = func(n) {
+interpolate("sim/multiplay/generic/float[2]",n,3);
+setprop("doors/bay_fwd/position-norm",n);
+}
+var bay_intmd = func(n) {
+interpolate("sim/multiplay/generic/float[3]",n,3);
+setprop("doors/bay_intmd/position-norm",n);
+}
+var bay_aft = func(n) {
+interpolate("sim/multiplay/generic/float[4]",n,3);
+getprop("doors/bay_aft/position-norm",n);
+}
+var refuel_door = func {
+interpolate("sim/multiplay/generic/float[5]",getprop("controls/switches/refuel-lid"),3);
+}
+#var bay_fwd = aircraft.door.new ("sim/multiplay/generic/float[2]",3);
+#var bay_intmd = aircraft.door.new ("sim/multiplay/generic/float[3]",3);
+#var bay_aft = aircraft.door.new ("sim/multiplay/generic/float[4]",3);
+#var refuel_door = aircraft.door.new ("sim/multiplay/generic/float[5]",3);
+
+### failure dialog
+var engine_failures = gui.Dialog.new("dialog","Aircraft/B-1B/Dialogs/failures.xml");
 
 ### tacan follow autopilot
 var tacan_follow = func {
@@ -70,34 +96,55 @@ settimer(tacan_follow, 1);
 ### format waypoint data loop
 var eta_waypoint = func {
 var eta = getprop("autopilot/route-manager/wp/eta");
-if (eta == nil) {
-settimer(eta_waypoint, 0.1);
-} else {
-var spliteta = split(":", eta);
-var eta0 = spliteta[0];
-var eta1 = spliteta[1];
-setprop("autopilot/route-manager/wp/eta_h", eta0);
-setprop("autopilot/route-manager/wp/eta_m", eta1);
-settimer(eta_waypoint, 0.1);
-}
-}
-
-var aftburn_on = func {
-
-setprop("controls/engines/engine[0]/afterburner", 1);
-setprop("controls/engines/engine[1]/afterburner", 1);
-setprop("controls/engines/engine[2]/afterburner", 1);
-setprop("controls/engines/engine[3]/afterburner", 1);
-
+if ((eta == nil) or (eta == '')) {
+  settimer(eta_waypoint, 0.1);
+  } else {
+    var spliteta = split(":", eta);
+    var eta0 = spliteta[0];
+    if ((eta0 == nil) or (eta0 == '')){
+      var eta0 = 0;
+      }
+    var eta1 = spliteta[1];
+    if ((eta1 == nil) or (eta1 == '')){
+      var eta1 = 0;
+      }
+  setprop("autopilot/route-manager/wp/eta_h", eta0);
+  setprop("autopilot/route-manager/wp/eta_m", eta1);
+  settimer(eta_waypoint, 0.1);
+  }
 }
 
-var aftburn_off = func {
-
-setprop("controls/engines/engine[0]/afterburner", 0);
-setprop("controls/engines/engine[1]/afterburner", 0);
-setprop("controls/engines/engine[2]/afterburner", 0);
-setprop("controls/engines/engine[3]/afterburner", 0);
+### bug heading selector
+var bug_hdg = func(n) {
+var hdg = getprop("autopilot/settings/heading-bug-deg");
+if (hdg == nil){
+var hdg = 0;
 }
+var hdg_new = hdg + n;
+if (hdg_new == 360){
+var hdg_new = 0;
+}
+if (hdg_new == -1){
+var hdg_new = 359;
+}
+setprop("autopilot/settings/heading-bug-deg",hdg_new);
+}
+
+### autoengage afterburner when full throttle applied
+setlistener("controls/engines/engine[0]/throttle-lever", func(n) {
+  var lever_eng0 = n.getValue();
+  if (lever_eng0 >= 0.98) {
+    setprop("controls/engines/engine[0]/afterburner", 1);
+    setprop("controls/engines/engine[1]/afterburner", 1);
+    setprop("controls/engines/engine[2]/afterburner", 1);
+    setprop("controls/engines/engine[3]/afterburner", 1);
+  } else {
+    setprop("controls/engines/engine[0]/afterburner", 0);
+    setprop("controls/engines/engine[1]/afterburner", 0);
+    setprop("controls/engines/engine[2]/afterburner", 0);
+    setprop("controls/engines/engine[3]/afterburner", 0);
+    }
+});
 
 ##
 # Wrapper around stepProps() which emulates the "old" wing sweep behavior for
@@ -521,8 +568,8 @@ settimer(eng_state, 0);
 
 # checks wing sweep/flaps and allow flaps only to be extended at minimum sweep - adopted from limits.nas
 
-checkFlaps = func(n) {
-  flapsetting = n.getValue();
+checkFlaps = func {
+  flapsetting = cmdarg().getValue();
   if (flapsetting == 0)
     return;
 sweep = getprop("controls/flight/wing-sweep");
@@ -536,8 +583,8 @@ if ((flapsetting != 0) and (sweep != 1)) {
 }
 setlistener("controls/flight/flaps", checkFlaps);
 
-checkSweep = func(n) {
-  sweepsetting = n.getValue();
+checkSweep = func {
+  sweepsetting = cmdarg().getValue();
   if (sweepsetting == 1)
     return;
 flaps = getprop("controls/flight/flaps");

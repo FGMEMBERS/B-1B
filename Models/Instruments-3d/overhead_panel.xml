@@ -51,7 +51,7 @@ maggse
 		 </binding>
 		 <binding>
 			 <command>nasal</command>
-			 <script>b1b.refuel_door.toggle()</script>
+			 <script>b1b.refuel_door()</script>
 			 <condition>
 				 <property>controls/switches/refuel-slipway</property>
 				 <value>1</value>

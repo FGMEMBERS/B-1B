@@ -1,5 +1,22 @@
 Rockwell B-1B Lancer "The Bone"
 
+XXXXXX  Version Nr: 0017 06122008 XXXXXX
+
+News/updates: Experimental update
+
+- weapon dialogs introduced
+- launch system updated
+- textures added
+- target display added
+
+XXXXXX  Version Nr: 0016 08102008 XXXXXX
+
+News/updates: Experimental update
+
+- guided weapons system introduced
+- automated launch system
+- sniper pod added
+
 XXXXXX  Version Nr: 0015 20082008 XXXXXX
 
 News/updates: Major update

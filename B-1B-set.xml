@@ -92,29 +92,18 @@ B-1B set file.
     </view>
     
     <view n="96003">
-      <name>Bay view</name>
+      <name>Sniper Pod view</name>
       <type>lookfrom</type>
       <internal archive="y">true</internal>
       <config>
         <from-model type="bool">true</from-model>
         <from-model-idx type="int">0</from-model-idx>
-        <ground-level-nearplane-m type="double">0.05f</ground-level-nearplane-m>
-        <default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
-        <default-pitch-deg type="double">0</default-pitch-deg>
-        <default-heading-deg type="double">0</default-heading-deg>
-        <front-direction-deg type="double">0</front-direction-deg>
-        <front-left-direction-deg type="double">45</front-left-direction-deg>
-        <left-direction-deg type="double">90</left-direction-deg>
-        <back-left-direction-deg type="double">135</back-left-direction-deg>
-        <back-direction-deg type="double">180</back-direction-deg>
-        <back-right-direction-deg type="double">225</back-right-direction-deg>
-        <right-direction-deg type="double">270</right-direction-deg>
-        <front-right-direction-deg type="double">315</front-right-direction-deg>
-        <x-offset-m archive="y">0.0</x-offset-m>
-        <y-offset-m archive="y">-0.9</y-offset-m>
-        <z-offset-m archive="y">17.00</z-offset-m>
-        <pitch-offset-deg>0</pitch-offset-deg>
-        <default-field-of-view-deg>55</default-field-of-view-deg>
+        <x-offset-m archive="y">1.20</x-offset-m>
+        <y-offset-m archive="y">-1.43</y-offset-m>
+        <z-offset-m archive="y">11.20</z-offset-m>
+        <pitch-offset-deg>-10</pitch-offset-deg>
+        <default-pitch-deg type="double">-10</default-pitch-deg>
+        <default-field-of-view-deg>50</default-field-of-view-deg>
       </config>
     </view>
 
@@ -141,11 +130,11 @@ B-1B set file.
       </config>
     </view>
 
-    <view n="5">
+    <!--<view n="5">
       <config>
         <target-z-offset-m archive="y" type="double">2.0</target-z-offset-m>
       </config>
-    </view>
+    </view>-->
 
     <sound>
       <audible>true</audible>
@@ -161,6 +150,31 @@ B-1B set file.
       <path>Aircraft/B-1B/Panels/there_is_no_spoon.747</path>
 </panel>-->
 
+  <hud>
+   <path n="1">Huds/NTPS.xml</path>
+   <visibility n="0" type="bool">false</visibility>
+   <visibility n="1" type="bool">false</visibility>
+
+   <color>
+    <transparent type="bool">true</transparent>
+    <antialiased type="bool">true</antialiased>
+    <brightness type="float">0.85</brightness>
+    <alpha type="float">0.85</alpha>
+   </color>
+   <palette>
+    <color n="0">
+     <red type="float">0.38</red>
+     <green type="float">1.0</green>
+     <blue type="float">0.22</blue>
+    </color>
+    <color n="1">
+     <red type="float">1.0</red>
+     <green type="float">0.0</green>
+     <blue type="float">0.0</blue>
+    </color>
+   </palette>
+
+  </hud>
 
     <model>
       <path>Aircraft/B-1B/Models/B-1B.xml</path>
@@ -179,6 +193,26 @@ B-1B set file.
               <start-offset-m>35</start-offset-m>
         </runways>
 </airport>
+
+<multiplay>
+	<generic>	
+		<!--<float n="0">0</float> free  -->
+		<!--<float n="1">0</float> free  -->
+		<float n="2">0</float><!-- fwd baydoor   -->
+		<float n="3">0</float><!-- intmd baydoor    -->
+		<float n="4">0</float><!-- aft baydoor  -->
+		<float n="5">0</float><!-- refuel door -->
+		<!--<float n="6">0</float> free   -->
+		<!--<int n="0" type="int">0</int>     free      -->
+		<!--<int n="1" type="int">0</int>     free -->
+		<!--<int n="2" type="int">0</int>     free -->
+		<!--<int n="3" type="int">0</int>     free -->
+		<!--<int n="4" type="int">0</int>     free -->
+		<!--<int n="5" type="int">0</int>     free -->
+		<!--<int n="6" type="int">0</int>     free -->
+	</generic>
+</multiplay>
+
 
 <menubar>
         <default>
@@ -211,77 +245,32 @@ B-1B set file.
                         <property>canopy/position-norm</property>
                     </binding>
                 </item>
-		<item>
+		<!--<item>
                     <label>Light Weapon Config</label>
 		    <binding>
 			      <command>nasal</command>
 			      <script>weapons.intmd_load()</script>
 		 </binding>
-                </item>
+                </item>-->
 		<item>
-                    <label>Heavy Weapon Config</label>
+		  <label>Weapon Management</label>
 		    <binding>
 			      <command>nasal</command>
-			      <script>weapons.intmd_load()</script>
-		    </binding>
-		    <binding>
-			      <command>nasal</command>
-			      <script>weapons.fwd_load()</script>
-		    </binding>
-		    <binding>
-			      <command>nasal</command>
-			      <script>weapons.aft_load()</script>
-		    </binding>
-                </item>
-		<item>
-                    <label>Failures:</label>
-                </item>
-                <item>
-                    <label>Set Engine 1 On Fire</label>
-                    <binding>
-                        <command>property-assign</command>
-                        <property>controls/engines/engine[0]/on-fire</property>
-                        <value type="double">1</value>
+			<script>weapons.weapon_select.open()</script>
                     </binding>
                 </item>
 		<item>
-                    <label>Set Engine 2 On Fire</label>
+		  <label>Failures</label>
                     <binding>
-                        <command>property-assign</command>
-                        <property>controls/engines/engine[1]/on-fire</property>
-                        <value type="double">1</value>
+			<command>nasal</command>
+			<script>b1b.engine_failures.open()</script>
                     </binding>
                 </item>
 		<item>
-                    <label>Set Left APU On Fire</label>
+                   <label>Request Tanker</label>
                     <binding>
-                        <command>property-assign</command>
-                        <property>controls/APU/APUL-fire</property>
-                        <value type="double">1</value>
-                    </binding>
-                </item>
-		<item>
-                    <label>Set Engine 3 On Fire</label>
-                    <binding>
-                        <command>property-assign</command>
-                        <property>controls/engines/engine[2]/on-fire</property>
-                        <value type="double">1</value>
-                    </binding>
-                </item>
-		<item>
-                    <label>Set Engine 4 On Fire</label>
-                    <binding>
-                        <command>property-assign</command>
-                        <property>controls/engines/engine[3]/on-fire</property>
-                        <value type="double">1</value>
-                    </binding>
-                </item>
-		<item>
-                    <label>Set Right APU On Fire</label>
-                    <binding>
-                        <command>property-assign</command>
-                        <property>controls/APU/APUR-fire</property>
-                        <value type="double">1</value>
+                   <command>dialog-show</command>
+                   <dialog-name>tanker-dialog</dialog-name>
                     </binding>
                 </item>
                 <!--<item>
@@ -299,9 +288,6 @@ B-1B set file.
 	<autopilot>
         <path>Aircraft/B-1B/Systems/b1b-autopilot.xml</path>
 	</autopilot>
-      <!--<electrical>
-        <path>Aircraft/B-1B/Systems/b1b-electrical.xml</path>
-      </electrical>-->
     </systems>
 
       <rendering>
@@ -386,34 +372,38 @@ B-1B set file.
         <desc>decrease/increase spoilers</desc>
       </key>
       <key>
-	      <name>o</name>
-	      <desc>afterburner on</desc>
-      </key>
-      <key>
-	      <name>O</name>
-	      <desc>afterburner off</desc>
-      </key>
-      <key>
-	      <name>d</name>
+	      <name>f</name>
 	      <desc>sweep wing back</desc>
       </key>
       <key>
-	      <name>D</name>
+	      <name>F</name>
 	      <desc>sweep wing fwd</desc>
       </key>
       <key>
-	      <name>Ctrl d</name>
+	      <name>L</name>
 	      <desc>Flare out</desc>
       </key>
        <key> 
-		       <name>Ctrl j</name>
+		       <name>l</name>
 		       <desc>Weapon launch sequence</desc>
+       </key>
+       <key> 
+		       <name>r</name>
+		       <desc>Select next ordonance</desc>
+       </key>
+       <key> 
+		       <name>R</name>
+		       <desc>Select prev ordonance</desc>
+       </key>
+       <key> 
+		       <name>t</name>
+		       <desc>Assign target</desc>
        </key>
       <!-- <key>
 	      <name>CTRL B</name>
 	      <desc>toggle airbrakes</desc>
       </key>-->
-      <line>Afterburner(ab) used for TakeOff/Climb</line>
+      <line>Afterburner(ab) auto applied at full throttle</line>
       <line>For takeoff apply 1/2 flaps, full ab</line>
       <line>Rotate at 160kts/takeoff at 170/180kts</line>
       <line>---------------------------------------</line>
@@ -472,6 +462,11 @@ B-1B set file.
     </ai>-->
   </sim>
 
+  <systems>
+		<refuel>
+			<type>boom</type>
+		</refuel>
+  </systems>
 
 
   <autopilot>
@@ -603,7 +598,7 @@ B-1B set file.
   <input>
 	  <keyboard>
 		  
-		  <!-- map keys for afterburner -->
+		  <!-- map keys for afterburner 
 		  <key n="79"> 
 			  <name>O</name>
 			  <desc>afterburner/off</desc>
@@ -620,21 +615,12 @@ B-1B set file.
 				  <command>nasal</command>
 				<script>b1b.aftburn_on()</script>
 			  </binding>
-		  </key>
-		  
-		  <key n="2">
-			  <name>Ctrl-B</name>
-			  <desc>Toggle speedbrake.</desc>
-			  <binding>
-				  <command>property-toggle</command>
-				  <property>controls/flight/speedbrake</property>
-			  </binding>
-      		  </key>
+		  </key>-->
 		  
 		  <!-- map keys for wingsweep -->
 		  
-		  <key n="100">
-			  <name>d</name>
+		  <key n="102">
+			  <name>f</name>
 			  <desc>Increase sweep</desc>
 			  <binding>
 				  <command>nasal</command>
@@ -648,8 +634,8 @@ B-1B set file.
 			  </mod-up>
 		  </key>
 		  
-		  <key n="68">
-			  <name>D</name>
+		  <key n="70">
+			  <name>F</name>
 			  <desc>Decrease sweep</desc>
 			  <binding>
 				  <command>nasal</command>
@@ -663,8 +649,8 @@ B-1B set file.
 			  </mod-up>
  </key>
  
- <key n="4">
-	 <name>Ctrl-D</name>
+ <key n="76">
+	 <name>L</name>
 	 <desc>Flare out</desc>
 	 <binding>
 		 <command>property-toggle</command>
@@ -672,9 +658,9 @@ B-1B set file.
 	 </binding>
    </key>
 		  
-   <key n="10"> 
-		       <name>Ctrl j</name>
-		       <desc>rotate forward rotation launcher</desc>
+   <key n="108"> 
+		       <name>l</name>
+		       <desc>automated bomb launcher</desc>
 		       <binding> 
 			        <command>nasal</command>
 				<script>weapons.auto_launcher()</script>
@@ -694,19 +680,31 @@ B-1B set file.
 				</binding>
   </key>
   
-  <key n="116">
-				<name>t</name>
-				<desc>Autotrim</desc>
+  <key n="114">
+				<name>r</name>
+				<desc>Select next Ordonance</desc>
 				<binding>
 					<command>nasal</command>
-					<script>aircraft.autotrim.start()</script>
+					<script>weapons.target_number(1)</script>
 				</binding>
-				<mod-up>
+  </key>
+  
+  <key n="82">
+				<name>R</name>
+				<desc>Select prev Ordonance</desc>
 					<binding>
 						<command>nasal</command>
-						<script>aircraft.autotrim.stop()</script>
+					<script>weapons.target_number(-1)</script>
+				</binding>
+  </key>
+  
+  <key n="116">
+				<name>t</name>
+				<desc>Target designator</desc>
+				<binding>
+					<command>nasal</command>
+					<script>weapons.target_des()</script>
 					</binding>
-				</mod-up>
   </key>
 		  
 	  </keyboard>
@@ -717,10 +715,10 @@ B-1B set file.
 	<b1b>
 		<file>Aircraft/B-1B/Nasal/b1b.nas</file>
 	</b1b>
-	<b1b-fuel>
-		<module>fuel-aar</module>
+	<fuel>
 		<file>Aircraft/Generic/aar.nas</file>
-	</b1b-fuel>
+		<file>Aircraft/Generic/tanker.nas</file>
+	</fuel>
 	<flightcontrols>
 		<file>Aircraft/B-1B/Nasal/flightcontrols.nas</file>
 	</flightcontrols>
@@ -739,14 +737,16 @@ B-1B set file.
 	<radar>
 		<file>Aircraft/B-1B/Nasal/radar.nas</file>
 	</radar>
-	<radardist>
+	<!--<radardist>
 		<file>Aircraft/Generic/radardist.nas</file>
-	</radardist>
+	</radardist>-->
 	<enginefire>
 		<file>Aircraft/B-1B/Nasal/enginefire.nas</file>
 	</enginefire>
 	<weapons>
 		<file>Aircraft/B-1B/Nasal/weapons.nas</file>
+		<file>Aircraft/B-1B/Nasal/guide_to_target.nas</file>
+		<file>Aircraft/B-1B/Nasal/oso_target.nas</file>
 	</weapons>
 
 </nasal>
