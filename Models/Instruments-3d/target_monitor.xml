@@ -1,0 +1,576 @@
+<?xml version="1.0"?>
+<!--
+sweat by maggse
+    -->
+<PropertyList>
+
+ <path>target_monitor.ac</path>
+ 
+  <!--targets-->
+
+<!-- <animation>
+	 <type>select</type>
+	 <object-name>target_01</object-name>
+	 <condition>
+		 <equals>
+		 <property>instrumentation/radar/range[0]</property>
+		 <value>10</value>
+		 </equals>
+	 </condition>
+ </animation>-->
+
+<animation> 
+   <type>rotate</type>
+   <object-name>target_01</object-name>
+   <property>ai/models/aircraft[0]/radar/bearing-deg[0]</property>
+     <axis> 
+       <x>-1</x>
+       <y>0</y>
+       <z>0</z>
+     </axis>
+     <center>
+       <x-m>0.009</x-m>
+       <y-m>0.0</y-m>
+       <z-m>0.0</z-m>
+     </center>
+</animation>
+<animation> 
+  <type>rotate</type>
+  <object-name>target_01</object-name>
+  <property>orientation/heading-deg[0]</property>
+    <axis> 
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>0.09</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+</animation>
+ <animation> 
+	<type>translate</type>
+	<object-name>target_01</object-name>
+	<property>ai/models/aircraft[0]/radar/range-nm[0]</property>
+<factor>0.0080</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+<animation> 
+   <type>rotate</type>
+   <object-name>target_02</object-name>
+   <property>ai/models/aircraft[1]/radar/bearing-deg[0]</property>
+     <axis> 
+       <x>-1</x>
+       <y>0</y>
+       <z>0</z>
+     </axis>
+     <center>
+       <x-m>0.009</x-m>
+       <y-m>0.0</y-m>
+       <z-m>0.0</z-m>
+     </center>
+</animation>
+<animation> 
+  <type>rotate</type>
+  <object-name>target_02</object-name>
+  <property>orientation/heading-deg[0]</property>
+    <axis> 
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>0.09</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+</animation>
+ <animation> 
+	<type>translate</type>
+	<object-name>target_02</object-name>
+	<property>ai/models/aircraft[1]/radar/range-nm[0]</property>
+<factor>0.0080</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+<animation> 
+   <type>rotate</type>
+   <object-name>target_03</object-name>
+   <property>ai/models/aircraft[2]/radar/bearing-deg[0]</property>
+     <axis> 
+       <x>-1</x>
+       <y>0</y>
+       <z>0</z>
+     </axis>
+     <center>
+       <x-m>0.009</x-m>
+       <y-m>0.0</y-m>
+       <z-m>0.0</z-m>
+     </center>
+</animation>
+<animation> 
+  <type>rotate</type>
+  <object-name>target_03</object-name>
+  <property>orientation/heading-deg[0]</property>
+    <axis> 
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>0.09</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+</animation>
+ <animation> 
+	<type>translate</type>
+	<object-name>target_03</object-name>
+	<property>ai/models/aircraft[2]/radar/range-nm[0]</property>
+<factor>0.0080</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+<animation> 
+   <type>rotate</type>
+   <object-name>target_04</object-name>
+   <property>ai/models/aircraft[3]/radar/bearing-deg[0]</property>
+     <axis> 
+       <x>-1</x>
+       <y>0</y>
+       <z>0</z>
+     </axis>
+     <center>
+       <x-m>0.009</x-m>
+       <y-m>0.0</y-m>
+       <z-m>0.0</z-m>
+     </center>
+</animation>
+<animation> 
+  <type>rotate</type>
+  <object-name>target_04</object-name>
+  <property>orientation/heading-deg[0]</property>
+    <axis> 
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>0.09</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+</animation>
+ <animation> 
+	<type>translate</type>
+	<object-name>target_04</object-name>
+	<property>ai/models/aircraft[3]/radar/range-nm[0]</property>
+<factor>0.0080</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+<animation> 
+   <type>rotate</type>
+   <object-name>target_05</object-name>
+   <property>ai/models/aircraft[4]/radar/bearing-deg[0]</property>
+     <axis> 
+       <x>-1</x>
+       <y>0</y>
+       <z>0</z>
+     </axis>
+     <center>
+       <x-m>0.009</x-m>
+       <y-m>0.0</y-m>
+       <z-m>0.0</z-m>
+     </center>
+</animation>
+<animation> 
+  <type>rotate</type>
+  <object-name>target_05</object-name>
+  <property>orientation/heading-deg[0]</property>
+    <axis> 
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>0.09</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+</animation>
+ <animation> 
+	<type>translate</type>
+	<object-name>target_05</object-name>
+	<property>ai/models/aircraft[4]/radar/range-nm[0]</property>
+<factor>0.0080</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+<animation> 
+   <type>rotate</type>
+   <object-name>target_06</object-name>
+   <property>ai/models/aircraft[5]/radar/bearing-deg[0]</property>
+     <axis> 
+       <x>-1</x>
+       <y>0</y>
+       <z>0</z>
+     </axis>
+     <center>
+       <x-m>0.009</x-m>
+       <y-m>0.0</y-m>
+       <z-m>0.0</z-m>
+     </center>
+</animation>
+<animation> 
+  <type>rotate</type>
+  <object-name>target_06</object-name>
+  <property>orientation/heading-deg[0]</property>
+    <axis> 
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>0.09</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+</animation>
+ <animation> 
+	<type>translate</type>
+	<object-name>target_06</object-name>
+	<property>ai/models/aircraft[5]/radar/range-nm[0]</property>
+<factor>0.0080</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+<animation> 
+   <type>rotate</type>
+   <object-name>target_07</object-name>
+   <property>ai/models/aircraft[6]/radar/bearing-deg[0]</property>
+     <axis> 
+       <x>-1</x>
+       <y>0</y>
+       <z>0</z>
+     </axis>
+     <center>
+       <x-m>0.009</x-m>
+       <y-m>0.0</y-m>
+       <z-m>0.0</z-m>
+     </center>
+</animation>
+<animation> 
+  <type>rotate</type>
+  <object-name>target_07</object-name>
+  <property>orientation/heading-deg[0]</property>
+    <axis> 
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>0.09</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+</animation>
+ <animation> 
+	<type>translate</type>
+	<object-name>target_07</object-name>
+	<property>ai/models/aircraft[6]/radar/range-nm[0]</property>
+<factor>0.0080</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+<animation> 
+   <type>rotate</type>
+   <object-name>target_08</object-name>
+   <property>ai/models/aircraft[7]/radar/bearing-deg[0]</property>
+     <axis> 
+       <x>-1</x>
+       <y>0</y>
+       <z>0</z>
+     </axis>
+     <center>
+       <x-m>0.009</x-m>
+       <y-m>0.0</y-m>
+       <z-m>0.0</z-m>
+     </center>
+</animation>
+<animation> 
+  <type>rotate</type>
+  <object-name>target_08</object-name>
+  <property>orientation/heading-deg[0]</property>
+    <axis> 
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>0.09</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+</animation>
+ <animation> 
+	<type>translate</type>
+	<object-name>target_08</object-name>
+	<property>ai/models/aircraft[7]/radar/range-nm[0]</property>
+<factor>0.0080</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+<!-- target marker -->
+<animation> 
+   <type>rotate</type>
+   <object-name>target_mark1</object-name>
+   <property>ai/guided/bomb[0]/target-bearing</property>
+     <axis> 
+       <x>-1</x>
+       <y>0</y>
+       <z>0</z>
+     </axis>
+     <center>
+       <x-m>0.009</x-m>
+       <y-m>0.0</y-m>
+       <z-m>0.0</z-m>
+     </center>
+</animation>
+
+<animation> 
+  <type>rotate</type>
+  <object-name>target_mark1</object-name>
+  <property>orientation/heading-deg[0]</property>
+    <axis> 
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>0.09</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>target_mark1</object-name>
+	<property>ai/guided/bomb[0]/target-distance</property>
+<factor>0.0080</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+<animation> 
+   <type>rotate</type>
+   <object-name>target_mark2</object-name>
+   <property>ai/guided/bomb[1]/target-bearing</property>
+     <axis> 
+       <x>-1</x>
+       <y>0</y>
+       <z>0</z>
+     </axis>
+     <center>
+       <x-m>0.009</x-m>
+       <y-m>0.0</y-m>
+       <z-m>0.0</z-m>
+     </center>
+</animation>
+
+<animation> 
+  <type>rotate</type>
+  <object-name>target_mark2</object-name>
+  <property>orientation/heading-deg[0]</property>
+    <axis> 
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>0.09</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>target_mark2</object-name>
+	<property>ai/guided/bomb[1]/target-distance</property>
+  <factor>0.0080</factor>
+  <axis> 
+    <x>0</x>
+    <y>0</y>
+    <z>1</z>
+  </axis>
+</animation>
+
+<animation> 
+   <type>rotate</type>
+   <object-name>target_mark3</object-name>
+   <property>ai/guided/bomb[2]/target-bearing</property>
+     <axis> 
+       <x>-1</x>
+       <y>0</y>
+       <z>0</z>
+     </axis>
+     <center>
+       <x-m>0.009</x-m>
+       <y-m>0.0</y-m>
+       <z-m>0.0</z-m>
+     </center>
+</animation>
+
+<animation> 
+  <type>rotate</type>
+  <object-name>target_mark3</object-name>
+  <property>orientation/heading-deg[0]</property>
+    <axis> 
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>0.09</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>target_mark3</object-name>
+	<property>ai/guided/bomb[2]/target-distance</property>
+  <factor>0.0080</factor>
+  <axis> 
+    <x>0</x>
+    <y>0</y>
+    <z>1</z>
+  </axis>
+</animation>
+
+<animation> 
+   <type>rotate</type>
+   <object-name>target_mark4</object-name>
+   <property>ai/guided/bomb[3]/target-bearing</property>
+     <axis> 
+       <x>-1</x>
+       <y>0</y>
+       <z>0</z>
+     </axis>
+     <center>
+       <x-m>0.009</x-m>
+       <y-m>0.0</y-m>
+       <z-m>0.0</z-m>
+     </center>
+</animation>
+
+<animation> 
+  <type>rotate</type>
+  <object-name>target_mark4</object-name>
+  <property>orientation/heading-deg[0]</property>
+    <axis> 
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>0.09</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>target_mark4</object-name>
+	<property>ai/guided/bomb[3]/target-distance</property>
+  <factor>0.0080</factor>
+  <axis> 
+    <x>0</x>
+    <y>0</y>
+    <z>1</z>
+  </axis>
+</animation>
+ 
+ <!--
+ <animation>
+	 <status_w>material</status_w>
+	 <object-name>rep_light</object-name>
+	 <object-name>rep_light.001</object-name>
+	 <object-name>rep_light_eng1</object-name>
+	 <object-name>rep_eng2</object-name>
+	 <object-name>rep_light_eng3</object-name>
+	 <object-name>rep_light_eng4</object-name>
+	 <object-name>rep_light_battl</object-name>
+	 <object-name>rep_light_apul</object-name>
+	 <object-name>rep_light_battr</object-name>
+	 <object-name>rep_light_apur</object-name>
+	 <object-name>rep_light.010</object-name>
+	 <object-name>rep_light.011</object-name>
+	 <object-name>rep_light.012</object-name>
+	 <object-name>rep_light.013</object-name>
+	 <object-name>rep_light.014</object-name>
+	 <object-name>rep_light.015</object-name>
+	 <object-name>rep_light.016</object-name>
+	 <object-name>rep_light.017</object-name>
+	 <emission>
+		 <red>0.6</red>
+		 <green>0.6</green>
+		 <blue>0.5</blue>
+		 <factor-prop>controls/electric/battery-switch</factor-prop>
+	 </emission>
+</animation>
+
+<animation>
+	<status_w>material</status_w>
+	<object-name>report_lights</object-name>
+	<emission>
+		<red>0.2</red>
+		<green>0.2</green>
+		<blue>0.0</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+</animation>-->
+
+
+</PropertyList>

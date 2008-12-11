@@ -1,0 +1,290 @@
+<PropertyList>
+
+ <name>weapons</name>
+ <modal>false</modal>
+ <layout>vbox</layout>
+ 
+ <text>
+    <label>Weapon Management</label>
+ </text>
+
+ <hrule/>
+ 
+  <!--<nasal>
+    <open>
+	#nasal
+    </open>
+  </nasal>-->
+
+  <text>
+    <label></label>
+  </text>
+  <text>
+    <label>Load Weapons</label>
+  </text>
+ 
+  <group>
+   <layout>vbox</layout>
+
+   <text>
+    <label>Fwd and aft bays are loaded with 8 unguided 2000lb bombs each</label>
+    <halign>left</halign>
+   </text>
+  <button>
+	<legend>Load Unguided Ordonance</legend>
+	<default>true</default>
+	<pref-width>180</pref-width>
+	  <binding>
+		<command>nasal</command>
+		<script>weapons.fwd_load()</script>
+	  </binding>
+	  <binding>
+		<command>nasal</command>
+		<script>weapons.aft_load()</script>
+	  </binding>
+	<binding>
+		<command>dialog-apply</command>
+	</binding>
+  </button>
+
+  </group>
+  
+  <group>
+   <layout>vbox</layout>
+
+   <text>
+    <label>Intmd bay is loaded with 8 guidable GBU-31 2000lb bombs</label>
+    <halign>left</halign>
+   </text>
+  <button>
+	<legend>Load Guided Ordonance</legend>
+	<default>true</default>
+	<pref-width>180</pref-width>
+	<binding>
+		<command>nasal</command>
+		<script>weapons.intmd_load()</script>
+	</binding>
+	<binding>
+		<command>dialog-apply</command>
+	</binding>
+  </button>
+
+  </group>
+
+  <hrule/>
+
+  <text>
+    <label></label>
+  </text>
+  <text>
+    <label>Target Coordinates</label>
+  </text>
+  <text>
+    <label></label>
+  </text>
+  <text>
+    <label>(Either type in Lat/Long eg.: KTNX is 37.7836/-116.7726 or</label>
+  </text>
+  <text>
+    <label>via Sniperpod: mouseclick + pressing t button (r next target))</label>
+  </text>
+  <text>
+    <label></label>
+  </text>
+	  
+  <group>
+    <layout>hbox</layout>
+
+    <text>
+    <label>Target Nr:</label>
+    <row>0</row><col>0</col>
+   </text>
+   <text>
+    <label>Latitude</label>
+    <row>0</row><col>1</col>
+   </text>
+   <text>
+    <label>Longitude</label>
+    <row>0</row><col>2</col>
+   </text>
+    <text>
+    <label>Distance</label>
+    <row>0</row><col>3</col>
+   </text>
+    
+  </group>
+  
+  <group>
+    <layout>hbox</layout>
+    
+    <text>
+    <label>Target 1:</label>
+    <halign>left</halign>
+    <row>1</row><col>0</col>
+   </text>
+    
+    <input>
+          <row>1</row><col>1</col>
+          <property>ai/guided/bomb[0]/target-latitude-deg</property>
+          <live>true</live>
+          <binding>
+            <command>dialog-apply</command>
+          </binding>
+    </input>
+    
+    <input>
+          <row>1</row><col>2</col>
+          <property>ai/guided/bomb[0]/target-longitude-deg</property>
+	  <live>true</live>
+	  <binding>
+		<command>nasal</command>
+		<script>weapons.target_input(0)</script>
+	  </binding>
+          <binding>
+            <command>dialog-apply</command>
+          </binding>
+    </input>
+    
+    <text>
+     <row>1</row><col>3</col>
+     <label>-99.999</label> <!-- placeholder for width -->
+     <format>%-0.2f km</format>
+     <property>ai/guided/bomb[0]/target-distance</property>
+     <live>true</live>
+    </text>
+    
+  </group>
+  
+  <group>
+    <layout>hbox</layout>
+    
+    <text>
+    <label>Target 2:</label>
+    <halign>left</halign>
+    <row>2</row><col>1</col>
+   </text>
+    
+    <input>
+          <row>2</row><col>2</col>
+          <property>ai/guided/bomb[1]/target-latitude-deg</property>
+          <live>true</live>
+          <binding>
+            <command>dialog-apply</command>
+          </binding>
+    </input>
+    
+    <input>
+          <row>2</row><col>3</col>
+          <property>ai/guided/bomb[1]/target-longitude-deg</property>
+          <live>true</live>
+	  <binding>
+		<command>nasal</command>
+		<script>weapons.target_input(1)</script>
+	  </binding>
+          <binding>
+            <command>dialog-apply</command>
+          </binding>
+    </input>
+    
+    <text>
+     <row>2</row><col>4</col>
+     <label>-99.999</label>
+     <format>%-0.2f km</format>
+     <property>ai/guided/bomb[1]/target-distance</property>
+     <live>true</live>
+    </text>
+    
+  </group>
+  
+  <group>
+    <layout>hbox</layout>
+    
+    <text>
+    <label>Target 3:</label>
+    <halign>left</halign>
+    <row>3</row><col>1</col>
+   </text>
+    
+    <input>
+          <row>3</row><col>2</col>
+          <property>ai/guided/bomb[2]/target-latitude-deg</property>
+          <live>true</live>
+          <binding>
+            <command>dialog-apply</command>
+          </binding>
+    </input>
+    
+    <input>
+          <row>3</row><col>3</col>
+          <property>ai/guided/bomb[2]/target-longitude-deg</property>
+          <live>true</live>
+	  <binding>
+		<command>nasal</command>
+		<script>weapons.target_input(2)</script>
+	  </binding>
+          <binding>
+            <command>dialog-apply</command>
+          </binding>
+    </input>
+    
+    <text>
+     <row>3</row><col>4</col>
+     <label>-99.999</label>
+     <format>%-0.2f km</format>
+     <property>ai/guided/bomb[2]/target-distance</property>
+     <live>true</live>
+    </text>
+    
+  </group>
+  
+  <group>
+    <layout>hbox</layout>
+    
+    <text>
+    <label>Target 4:</label>
+    <halign>left</halign>
+    <row>4</row><col>1</col>
+   </text>
+    
+    <input>
+          <row>4</row><col>2</col>
+          <property>ai/guided/bomb[3]/target-latitude-deg</property>
+          <live>true</live>
+          <binding>
+            <command>dialog-apply</command>
+          </binding>
+    </input>
+    
+    <input>
+          <row>4</row><col>3</col>
+          <property>ai/guided/bomb[3]/target-longitude-deg</property>
+          <live>true</live>
+	  <binding>
+		<command>nasal</command>
+		<script>weapons.target_input(3)</script>
+	  </binding>
+          <binding>
+            <command>dialog-apply</command>
+          </binding>
+    </input>
+    
+    <text>
+     <row>4</row><col>4</col>
+     <label>-99.999</label>
+     <format>%-0.2f km</format>
+     <property>ai/guided/bomb[3]/target-distance</property>
+     <live>true</live>
+    </text>
+    
+  </group>
+  
+  <hrule/>
+  
+  <button>
+    <legend>Close</legend>
+    <binding>
+     <command>dialog-close</command>
+    </binding>
+   </button>
+
+</PropertyList>
