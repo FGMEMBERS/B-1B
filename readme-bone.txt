@@ -1,7 +1,7 @@
 Rockwell B-1B Lancer "The Bone"
 
 
-XXXXXX  Version Nr: 0015 06122008 XXXXXX
+XXXXXX  Version Nr: 0016 20012010 XXXXXX
 
 
 
@@ -41,7 +41,7 @@ Start engine:
 
 Takeoff:
 
-- swing wing to most forward position (15) --> button D/d (present at start)
+- swing wing to most forward position (15) --> button F/f (present at start)
 - apply 1/2 flaps
 - apply full throttle
 - apply afterburners
@@ -53,12 +53,12 @@ Takeoff:
 
 Flight:
 
-- dependent on your altitude and speed choose 15/25/45/55/67 degrees wingweep (d/D)
-- max speed at sea level is mach 1.2, at altitude mach 1.3, at altitude short periods 
+- dependent on your altitude and speed choose 15/25/45/55/67 degrees wingweep (f/F)
+- max speed at sea level is mach 1.2, at altitude mach 1.4, at altitude short periods 
   at mach 1.5 are possible, but you put the wings on danger to twist on maneuvering
-- typical performance speed is around mach 0.8 - 0.95 @sea level and mach 0.9 - 1.2 at altitude.
+- typical performance speed is around mach 0.8 - 0.95 @sea level and mach 0.9 - 1.3 at altitude.
 
-- 15 degrees ws: used for takeoff/landing <310 knots @ sealevel
+- 15 degrees ws: used for takeoff/landing <320 knots @ sealevel
 - 25 degrees ws: used for slow flight/refuelling < 370 knots @sealevel
 - 45 degrees ws: used for cruise at high altitude (mach 0.6 - 0.75)
 - 55 degrees ws: used for high/low alt flight (above mach 0.7)
@@ -69,10 +69,10 @@ Landing:
 
 - use 1/2 spoilers to decelerate
 - ws 15 degrees
-- use 1/2 flaps, approach speed is about 190-210 knots
-- on short final use full flaps, speed 160-170 knots
-- touchdown speed is <165 knots with full fuel load, or 135 nearly empty
-- on touchdown apply full spoilers, decelerate to 120 knots then
+- use 1/2 flaps, approach speed is about 210-230 knots
+- on short final use full flaps, speed 170-180 knots
+- touchdown speed is <180 knots with full fuel load, or 145 nearly empty
+- on touchdown apply full spoilers, decelerate to 130 knots then
 - apply brakes to full stop and use elevator as speedbrake (pull stick)
 
 Flight performance (especially TO/Landing) heavily depends on aircraft weight!
@@ -119,18 +119,17 @@ This system sets the Center of Gravity (CG) in % of MAC, and lets you manipulate
 
 XXXX WEAPON SYSTEM XXXX
 
-This plane is equipped with a bomb guiding system currently working on the intermediate bay. First select weapons by going to B-1B/Weapons menu and select Unguided(Fwd + Aft bay loaded with 2x8 GBU-31 non guided weapons) or guided(intmd bay loaded with 8 GBU-31 guidable weapons). Switch to the OSO seat/view and you should see the GBU31 indicated.
+This plane is equipped with a bomb guiding system currently working on the intermediate bay. First select weapons by going to B-1B/Weapons menu and select guided(intmd bay loaded with 8 GBU-31 guidable weapons). Switch to the OSO seat/view and you should see the GBU31 indicated.
 
 All control panels are visible from OSO view.
 
-Release of unguided weapons(fwd + aft bay):
+Release of guided weapons(only intmd bay):
 
 In air prior to release arm your weapons by using the SMS panel. First click on the bay (should be highlighted when selected) then on the station number to arm (indicated on panel).
 You can disarm a weapon by clicking on station number with middle mouse button.
-To release either press l to initiate an automated release (bay doors open automatically) or use a manual release by opening the corresponding bay door and press l. You can rotate the launcher by selecting bay and then press LAUNCHER ROT, the position of the launcher is indicated by an L on the SMS display. The launcher, when in release mode, always performs a full cycle and checks which stations are armed and if releases the weapons.
+Use a manual release by opening the corresponding bay door. You can rotate the launcher by selecting bay and then press LAUNCHER ROT, the position of the launcher is indicated by an L on the SMS display. The launcher, when in release mode, always performs a full cycle and checks which stations are armed and if releases the weapons.
 After releasing the weapons close the bay doors manually.
 
-Release of unguided weapons(only intmd bay):
 
 You can use up to 4 guided weapons independently, but I would advise to use 1 or 2 at the beginning.
 
@@ -174,18 +173,18 @@ name: Bad To The Bone
 j/k 	decrease/increase spoilers
 o 	afterburner on
 O	afterburner off
-d	sweep wing backw
-D	sweep wing fwd
+f	sweep wing backw
+F	sweep wing fwd
 
 
 
 XXXX PROGRESS XXXX
 
 
-FDM:	 	alpha - in use / needs tuning		92%complete
-3D model:	alpha - in use / refinements ..		85%complete
-Textures:	alpha - in use / too few		40%complete
-Animations:	alpha - in use / more to come		90%complete
+FDM:	 	alpha - in use / needs tuning		95%complete
+3D model:	alpha - in use / refinements ..		89%complete
+Textures:	alpha - in use / too few		50%complete
+Animations:	alpha - in use / more to come		92%complete
 Autopilot:	alpha - in use / needs finetuning	90%complete
 3Dcockpit:	alpha - in use / needs completion	90%complete
 
@@ -204,4 +203,4 @@ Terms of usage: Released under terms of GPL v2.
 
 Have Fun! Good Luck!
 
-Markus Zojer,  03/03/2008
+Markus Zojer,  20/01/2010

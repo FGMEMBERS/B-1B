@@ -131,9 +131,9 @@
     <input>
       <prop>/autopilot/internal/true-heading-error-deg</prop>
     </input>
-    <target>
-      <prop>0.0</prop>
-    </target>
+    <reference>
+      <value>0.0</value>
+    </reference>
     <output>
       <prop>/autopilot/internal/target-roll-deg</prop>
     </output>
@@ -184,7 +184,7 @@
 
   <!-- Stage #1 sets target roll based on diff between current heading -->
   <!-- and target heading. -->
-  <pi-simple-controller>
+  <pid-controller>
     <name>Nav1 Hold Stage 1</name>
     <debug>false</debug>
     <enable>
@@ -211,7 +211,7 @@
       <u_min>-30.0</u_min> <!-- minimum output clamp -->
       <u_max>30.0</u_max>  <!-- maximum output clamp -->
     </config>
-  </pi-simple-controller>
+  </pid-controller>
 
   <!-- Stage #2 drives the ailerons to achieve the desired roll deg. -->
   <pid-controller>
@@ -274,7 +274,7 @@
     </config>
   </pid-controller>
 
-
+  
     <!-- Tacan hold.  2 stage cascade controller. -->
 
   <!-- Stage #1 sets target roll based on diff between current heading -->

@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <!--
 Syd Adams, Josh Wilson
 787 ND 
@@ -70,7 +71,7 @@ hacked by maggse
      <z-m>-0.040</z-m>
    </center>
  </animation>
-
+ 
  <animation>
    <type>textranslate</type>
    <object-name>hdg_bug</object-name>
@@ -172,11 +173,9 @@ hacked by maggse
      <z>0</z>
    </axis>
  </animation>
-
-
-
 -->
  
+
  <animation>
    <type>textranslate</type>
    <object-name>hdgtext</object-name>
@@ -2248,7 +2247,7 @@ hacked by maggse
    </center>
 </animation>
 
-<!-- tacan -->
+<!-- tacannnnnnnnnnnnn -->
 
 <animation>
 	<type>select</type>
@@ -2712,6 +2711,8 @@ hacked by maggse
 	</axis>
 </animation>
 
+<!-- adf22222222222222222222222222222222 -->
+
 <animation>
 <type>select</type>
 <object-name>adf2</object-name>
@@ -2755,24 +2756,24 @@ hacked by maggse
    </center>
 </animation>
 
-<!-- AI RADAR -->
-<!-- AI 1-->
+<!-- AI RADARRRRRRRRRRRRRRRRR -->
+<!-- AI 1
 <animation>
-<type>select</type>
-<object-name>AI1a</object-name>
-<condition>
-<and>
-<equals>
-<property>instrumentation/radar/range[0]</property>
-<value>10</value>
-</equals>
-<equals>
-<property>ai/models/aircraft[0]/radar/in-range</property>
-<value>true</value>
-</equals>
-</and>
-</condition>
- </animation>
+  <type>select</type>
+  <object-name>AI1a</object-name>
+  <condition>
+    <and>
+    <equals>
+      <property>instrumentation/radar/range[0]</property>
+      <value>10</value>
+    </equals>
+    <equals>
+      <property>ai/models/aircraft[0]/radar/in-range</property>
+      <value>true</value>
+    </equals>
+    </and>
+  </condition>
+</animation>
 
  <animation> 
 	<type>rotate</type>
@@ -6661,38 +6662,35 @@ hacked by maggse
      <y-m>0.0</y-m>
      <z-m>-0.047</z-m>
    </center>
+</animation>-->
+
+<!--########################################## begin of multiplayer -->
+<!--
+<animation>
+  <type>select</type>
+  <object-name>MP1a</object-name>
+  <condition>
+    <equals>
+      <property>ai/models/multiplayer[0]/radar/in-range</property>
+      <value>true</value>
+    </equals>
+  </condition>
 </animation>
 
-<!--######### begin of multiplayer -->
-
 <animation>
-<type>select</type>
-<object-name>MP1a</object-name>
-<condition>
-<and>
-
-<equals>
-<property>ai/models/multiplayer[0]/radar/in-range</property>
-<value>true</value>
-</equals>
-</and>
-</condition>
- </animation>
-
- <animation> 
-	<type>rotate</type>
-	<object-name>MP1a</object-name>
-	<property>ai/models/multiplayer[0]/radar/bearing-deg[0]</property>
-	<axis> 
+  <type>rotate</type>
+  <object-name>MP1a</object-name>
+  <property>ai/models/multiplayer[0]/radar/bearing-deg[0]</property>
+    <axis> 
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
-	</axis>
-	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+    </axis>
+    <center>
+	  <x-m>0.0</x-m>
+          <y-m>0.0</y-m>
+          <z-m>-0.047</z-m>
+    </center>
 </animation>
 
  <animation> 
@@ -6711,16 +6709,16 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
-	<type>translate</type>
-	<object-name>MP1a</object-name>
-	<property>ai/models/multiplayer[0]/radar/draw-range-nm[0]</property>
-<factor>1</factor>
-<axis> 
-<x>0</x>
-<y>0</y>
-<z>1</z>
-</axis>
+<animation> 
+  <type>translate</type>
+  <object-name>MP1a</object-name>
+  <property>ai/models/multiplayer[0]/radar/draw-range-nm[0]</property>
+  <factor>1</factor>
+  <axis> 
+    <x>0</x>
+    <y>0</y>
+    <z>1</z>
+  </axis>
 </animation>
 
  <animation> 
@@ -6728,15 +6726,15 @@ hacked by maggse
 	<object-name>MP1a</object-name>
 	<property>ai/models/multiplayer[0]/orientation/true-heading-deg[0]</property>
 	<axis> 
-	<x>-1</x>
-	<y>0</y>
-	<z>0</z>
+	  <x>-1</x>
+	  <y>0</y>
+	  <z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+	  <x-m>0.0</x-m>
+          <y-m>0.0</y-m>
+          <z-m>-0.047</z-m>
+        </center>
 </animation>
 
  <animation> 
@@ -6778,8 +6776,9 @@ hacked by maggse
 		<y>-1</y>
 		<z>0</z>
 	</axis>
-</animation>
+</animation>-->
 
+<!--
 <animation>
 <type>select</type>
 <object-name>MP2a</object-name>
@@ -8045,7 +8044,7 @@ hacked by maggse
 		<y>-1</y>
 		<z>0</z>
 	</axis>
-</animation>
+</animation>-->
 
 
 

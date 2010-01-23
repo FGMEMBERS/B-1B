@@ -29,7 +29,7 @@ var r_init = getprop("controls/switches/radar_init");
  if (r_init == 1) {
 #print("init2");
     var i = getprop("controls/switches/radar_i");
-    var range_mp = getprop("ai/models/multiplayer[" ~ i ~ "]/radar/range-nm[0]");
+    var range_mp = getprop("ai/models/multiplayer[" ~ i ~ "]/distance-to-nm[0]");
     var range_radar = getprop("instrumentation/radar/range[0]");
       if (range_mp == nil) {
         range_mp = 0;

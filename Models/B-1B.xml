@@ -9,9 +9,9 @@ more to come :-)
   <path>b1b.ac</path>
   
   <offsets>
-	  <x-m>25.0</x-m>
+	  <x-m>25.0</x-m><!-- was 25 -->
 	  <y-m>0.0</y-m>
-          <z-m>0.24</z-m>
+          <z-m>0.0</z-m><!-- was 0.24 -->
     <pitch-deg>0</pitch-deg>
     
   </offsets>
@@ -32,10 +32,10 @@ more to come :-)
   </model>
   
   <animation>
-  <type>range</type>
-  <object-name>instruments</object-name>
-  <min-m>0</min-m>
-  <max-m>25</max-m>
+    <type>range</type>
+    <object-name>instruments</object-name>
+    <min-m>0</min-m>
+    <max-m>25</max-m>
   </animation>
   
   <!-- trans parts -->
@@ -140,8 +140,6 @@ more to come :-)
 		  </entry>
 	  </interpolation>
 	  <center>
-		  <!--<x-m>-2.00</x-m>
-		  <y-m>4.94</y-m>-->
 		  <x-m>-1.66</x-m>
 		  <y-m>3.99</y-m>
 		  <z-m>0.00</z-m>
@@ -1373,7 +1371,7 @@ more to come :-)
 			      <value>1</value>
 			 </equals>
 		 </condition>
-	      <factor>50</factor>
+	      <factor>60</factor>
 	      <center>
 		      <x-m>-15.993</x-m>
 		      <y-m>0.0</y-m>
@@ -1413,6 +1411,7 @@ more to come :-)
 	 </axis>
  </animation>
  
+
  <!-- front gear covers -->
  
  <animation>
@@ -1773,7 +1772,7 @@ more to come :-)
 		 <z>0</z>
 	 </axis>
  </animation>
- 
+
  
  <!-- left gear-->
  
@@ -2104,6 +2103,7 @@ more to come :-)
 		 <z>0</z>
 	 </axis>
  </animation>
+ 
  
  <!-- right gear-->
  
@@ -2498,12 +2498,120 @@ more to come :-)
 	 </axis>
  </animation>
  
+ <animation>
+	 <type>spin</type>
+	 <object-name>tyre.004</object-name>
+	 <object-name>tyre.005</object-name>
+	 <property>gear/gear[3]/rollspeed-ms</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0</dep>
+		 </entry>
+		 <entry>
+			 <ind>100.0</ind>
+			 <dep>-1000.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>0.053</x-m>
+		 <y-m>1.19</y-m>
+		 <z-m>-3.679</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>spin</type>
+	 <object-name>tyre.002</object-name>
+	 <object-name>tyre.003</object-name>
+	 <property>gear/gear[1]/rollspeed-ms</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0</dep>
+		 </entry>
+		 <entry>
+			 <ind>100.0</ind>
+			 <dep>-1000.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>0.053</x-m>
+		 <y-m>-1.19</y-m>
+		 <z-m>-3.679</z-m><!-- -3.679-->
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+</animation>
+
+<animation>
+	 <type>spin</type>
+	 <object-name>tyre</object-name>
+	 <object-name>tyre.001</object-name>
+	 <property>gear/gear[2]/rollspeed-ms</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0</dep>
+		 </entry>
+		 <entry>
+			 <ind>100.0</ind>
+			 <dep>-1000.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>1.256</x-m>
+		 <y-m>0.0</y-m>
+		 <z-m>-3.822</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>spin</type>
+	 <object-name>tyre.006</object-name>
+	 <object-name>tyre.007</object-name>
+	 <property>gear/gear[4]/rollspeed-ms</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0</dep>
+		 </entry>
+		 <entry>
+			 <ind>100.0</ind>
+			 <dep>-1000.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>1.256</x-m>
+		 <y-m>0.0</y-m>
+		 <z-m>-3.822</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
  <!-- Elevator bits -->
  <animation>
 	 <type>rotate</type>
-	 <object-name>elevator</object-name>
-	 <property>surface-positions/elevator-pos-norm</property>
-	 <factor>25</factor>
+	 <object-name>elevator_left</object-name>
+	 <property>surface-positions/left-elevator-pos-norm</property>
+	 <factor>20</factor>
 	 <center>
 		 <x-m>15.70</x-m>
 		 <y-m>0.0</y-m>
@@ -2513,6 +2621,58 @@ more to come :-)
 		 <x>0</x>
 		 <y>1</y>
 		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+  <animation>
+	 <type>rotate</type>
+	 <object-name>elevator_right</object-name>
+	 <property>surface-positions/right-elevator-pos-norm</property>
+	 <factor>20</factor>
+	 <center>
+		 <x-m>15.70</x-m>
+		 <y-m>0.0</y-m>
+		 <z-m>2.70</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+  <!-- Fwd Cadards -->
+ <animation>
+	 <type>rotate</type>
+	 <object-name>canard_left</object-name>
+	 <property>surface-positions/left-elevator-pos-norm</property>
+	 <factor>10</factor>
+	 <center>
+		 <x-m>-20.17</x-m>
+		 <y-m>-0.76</y-m>
+		 <z-m>-0.80</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>-3</y>
+		 <z>-1</z>
+	 </axis>
+ </animation>
+ 
+  <animation>
+	 <type>rotate</type>
+	 <object-name>canard_right</object-name>
+	 <property>surface-positions/right-elevator-pos-norm</property>
+	 <factor>-10</factor>
+	 <center>
+		 <x-m>-20.17</x-m>
+		 <y-m>0.76</y-m>
+		 <z-m>-0.80</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>3</y>
+		 <z>-1</z>
 	 </axis>
  </animation>
  
@@ -2725,7 +2885,7 @@ more to come :-)
 	 <object-name>bay_fwd.001</object-name>
 	 <object-name>bay_fwd.002</object-name>
 	 <property>sim/multiplay/generic/float[2]</property>
-	 <!--<property>doors/bay_fwd/position-norm</property>-->
+	 <property>doors/bay_fwd/position-norm</property>
 	 
 	 <interpolation>
 		 <entry>
@@ -2754,7 +2914,7 @@ more to come :-)
 	 <type>rotate</type>
 	 <object-name>bay_fwd.001</object-name>
 	 <property>sim/multiplay/generic/float[2]</property>
-	 <!--<property>doors/bay_fwd/position-norm</property>-->
+	 <property>doors/bay_fwd/position-norm</property>
 	 
 	 <interpolation>
 		 <entry>
@@ -2783,7 +2943,7 @@ more to come :-)
 	 <type>rotate</type>
 	 <object-name>bay_fwd.002</object-name>
 	 <property>sim/multiplay/generic/float[2]</property>
-	 <!--<property>doors/bay_fwd/position-norm</property>-->
+	 <property>doors/bay_fwd/position-norm</property>
 	 
 	 <interpolation>
 		 <entry>
@@ -2813,7 +2973,7 @@ more to come :-)
 	 <object-name>bay_intmd.001</object-name>
 	 <object-name>bay_intmd.002</object-name>
 	 <property>sim/multiplay/generic/float[3]</property>
-	 <!--<property>doors/bay_fwd/position-norm</property>-->
+	 <property>doors/bay_fwd/position-norm</property>
 	 
 	 <interpolation>
 		 <entry>
@@ -2842,7 +3002,7 @@ more to come :-)
 	 <type>rotate</type>
 	 <object-name>bay_intmd.001</object-name>
 	 <property>sim/multiplay/generic/float[3]</property>
-	 <!--<property>doors/bay_intmd/position-norm</property>-->
+	 <property>doors/bay_intmd/position-norm</property>
 	 
 	 <interpolation>
 		 <entry>
@@ -2871,7 +3031,7 @@ more to come :-)
 	 <type>rotate</type>
 	 <object-name>bay_intmd.002</object-name>
 	 <property>sim/multiplay/generic/float[3]</property>
-	 <!--<property>doors/bay_intmd/position-norm</property>-->
+	 <property>doors/bay_intmd/position-norm</property>
 	 
 	 <interpolation>
 		 <entry>
@@ -2901,7 +3061,7 @@ more to come :-)
 	 <object-name>bay_aft.001</object-name>
 	 <object-name>bay_aft.002</object-name>
 	 <property>sim/multiplay/generic/float[4]</property>
-	 <!--<property>doors/bay_fwd/position-norm</property>-->
+	 <property>doors/bay_fwd/position-norm</property>
 	 
 	 <interpolation>
 		 <entry>
@@ -2930,7 +3090,7 @@ more to come :-)
 	 <type>rotate</type>
 	 <object-name>bay_aft.001</object-name>
 	 <property>sim/multiplay/generic/float[4]</property>
-	 <!--<property>doors/bay_aft/position-norm</property>-->
+	 <property>doors/bay_aft/position-norm</property>
 	 
 	 <interpolation>
 		 <entry>
@@ -2959,7 +3119,7 @@ more to come :-)
 	 <type>rotate</type>
 	 <object-name>bay_aft.002</object-name>
 	 <property>sim/multiplay/generic/float[4]</property>
-	 <!--<property>doors/bay_aft/position-norm</property>-->
+	 <property>doors/bay_aft/position-norm</property>
 	 
 	 <interpolation>
 		 <entry>
@@ -2989,7 +3149,7 @@ more to come :-)
 	 <type>translate</type>
 	 <object-name>refuel_door</object-name>
 	 <property>sim/multiplay/generic/float[5]</property>
-	 <!--<property>doors/refuel_door/position-norm</property>-->
+	 <property>doors/refuel_door/position-norm</property>
 	 
 	 <interpolation>
 		 <entry>

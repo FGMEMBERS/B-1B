@@ -142,6 +142,10 @@ maggse
 	 <object-name>ind_mach1</object-name>
 	 <object-name>ind_knots1</object-name>
 	 <object-name>switch_fcgms_mode.002</object-name>
+	 <object-name>macfuel1.002</object-name>
+	 <object-name>macfuel2.002</object-name>
+	 <object-name>macfuel3.002</object-name>
+	 <object-name>ind_alt_lmob.002</object-name>
 	 <emission>
 		 <red>0.6</red>
 		 <green>0.4</green>

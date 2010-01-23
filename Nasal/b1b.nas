@@ -1,4 +1,4 @@
-setlistener("/sim/signals/fdm-initialized", func {
+_setlistener("/sim/signals/fdm-initialized", func {
 	init_b1b();
 });
 
@@ -55,25 +55,33 @@ setprop("sim/multiplay/generic/float[2]",0);
 setprop("sim/multiplay/generic/float[3]",0);
 setprop("sim/multiplay/generic/float[4]",0);
 setprop("sim/multiplay/generic/float[5]",0);
+b1b.elevon();
 print ("B-1B starting up!");
+}
+
+var elevon = func() {
+  var aileron = getprop("controls/flight/aileron");
+  var elevon = aileron * 0.3;
+  setprop("controls/flight/elevon",elevon);
+  settimer(b1b.elevon,0);
 }
 
 ### doors and animations
 var hatch = aircraft.door.new ("canopy",15);
-var bay_fwd = func(n) {
-interpolate("sim/multiplay/generic/float[2]",n,3);
-setprop("doors/bay_fwd/position-norm",n);
+var bay_fwd = func(m) {
+  interpolate("sim/multiplay/generic/float[2]",m,3);
+  setprop("doors/bay_fwd/position-norm",m);
 }
-var bay_intmd = func(n) {
-interpolate("sim/multiplay/generic/float[3]",n,3);
-setprop("doors/bay_intmd/position-norm",n);
+var bay_intmd = func(m) {
+  interpolate("sim/multiplay/generic/float[3]",m,3);
+  setprop("doors/bay_intmd/position-norm",m);
 }
-var bay_aft = func(n) {
-interpolate("sim/multiplay/generic/float[4]",n,3);
-getprop("doors/bay_aft/position-norm",n);
+var bay_aft = func(m) {
+  interpolate("sim/multiplay/generic/float[4]",m,3);
+  setprop("doors/bay_aft/position-norm",m);
 }
 var refuel_door = func {
-interpolate("sim/multiplay/generic/float[5]",getprop("controls/switches/refuel-lid"),3);
+#  interpolate("sim/multiplay/generic/float[5]",getprop("controls/switches/refuel-lid"),3);
 }
 #var bay_fwd = aircraft.door.new ("sim/multiplay/generic/float[2]",3);
 #var bay_intmd = aircraft.door.new ("sim/multiplay/generic/float[3]",3);
@@ -81,14 +89,15 @@ interpolate("sim/multiplay/generic/float[5]",getprop("controls/switches/refuel-l
 #var refuel_door = aircraft.door.new ("sim/multiplay/generic/float[5]",3);
 
 ### failure dialog
-var engine_failures = gui.Dialog.new("dialog","Aircraft/B-1B/Dialogs/failures.xml");
+#var engine_failures = gui.Dialog.new("dialog","Aircraft/B-1B/Dialogs/failures.xml");
+var distance_tanker = gui.Dialog.new("dialog","Aircraft/B-1B/Dialogs/distance_to_tanker.xml");
 
 ### tacan follow autopilot
 var tacan_follow = func {
 var ap_state = getprop("autopilot/locks/heading");
 if (ap_state == "tacan-hold") {
-var tacan_hdg = getprop("instrumentation/tacan/indicated-bearing-true-deg");
-setprop("autopilot/settings/heading-bug-deg", tacan_hdg);
+  var tacan_hdg = getprop("instrumentation/tacan/indicated-bearing-true-deg");
+  setprop("autopilot/settings/heading-bug-deg", tacan_hdg);
 }
 settimer(tacan_follow, 1);
 }
@@ -568,8 +577,8 @@ settimer(eng_state, 0);
 
 # checks wing sweep/flaps and allow flaps only to be extended at minimum sweep - adopted from limits.nas
 
-checkFlaps = func {
-  flapsetting = cmdarg().getValue();
+checkFlaps = func(n) {
+  var flapsetting = n.getValue();
   if (flapsetting == 0)
     return;
 sweep = getprop("controls/flight/wing-sweep");
@@ -583,17 +592,17 @@ if ((flapsetting != 0) and (sweep != 1)) {
 }
 setlistener("controls/flight/flaps", checkFlaps);
 
-checkSweep = func {
-  sweepsetting = cmdarg().getValue();
+checkSweep = func(n) {
+  var sweepsetting = n.getValue();
   if (sweepsetting == 1)
     return;
-flaps = getprop("controls/flight/flaps");
+  flaps = getprop("controls/flight/flaps");
 
-if ((sweepsetting != 1) and (flaps != 0)) {
+  if ((sweepsetting != 1) and (flaps != 0)) {
 
-  b1b.wingSweep(1);
-  ltext = "Wings can only be swept with retracted flaps!";
-  screen.log.write(ltext);
+    b1b.wingSweep(1);
+    ltext = "Wings can only be swept with retracted flaps!";
+    screen.log.write(ltext);
 }
 }
 setlistener("controls/flight/wing-sweep", checkSweep);

@@ -6,15 +6,37 @@ sweat by maggse
 
  <path>apmode.ac</path>
  
- <!-- apmode button animations -->
- 
- <animation>
+ <!-- apmode button animations 
+
+<animation>
 	 <type>material</type>
 	 <object-name>apmode_alt</object-name>
+	 <condition>
+	   <equals>
+             <property>/controls/lighting/instruments-norm</property>
+             <value type="bool">true</value>
+           </equals>
+
+         </condition>
+
+	 <emission>
+		 <red>0.1</red>
+		 <green>0.3</green>
+		 <blue>0.1</blue>
+		 
+	 </emission>
+</animation>-->
+
+<animation>
+	 <type>material</type>
+	 <object-name>apmode_alt</object-name>
+	 <object-name>apmode_button</object-name>
+
 	 <emission>
 		 <red>0.5</red>
 		 <green>0.8</green>
 		 <blue>0.5</blue>
+		 <!--<factor-prop>controls/lighting/instruments-norm</factor-prop>-->
 		 <factor-prop>controls/switches/apmode/alt-hold</factor-prop>
 	 </emission>
 </animation>
@@ -42,6 +64,7 @@ sweat by maggse
       <animation>
 	      <type>material</type>
 	      <object-name>apmode_vfpm</object-name>
+	      <object-name>apmode_button.001</object-name>
 	      <emission>
 		      <red>0.5</red>
 		      <green>0.8</green>
@@ -73,6 +96,7 @@ sweat by maggse
       <animation>
 	      <type>material</type>
 	      <object-name>apmode_ptch</object-name>
+	      <object-name>apmode_button.002</object-name>
 	      <emission>
 		      <red>0.5</red>
 		      <green>0.8</green>
@@ -104,6 +128,7 @@ sweat by maggse
       <animation>
 	      <type>material</type>
 	      <object-name>apmode_bhdg</object-name>
+	      <object-name>apmode_button.004</object-name>
 	      <emission>
 		      <red>0.5</red>
 		      <green>0.8</green>
@@ -135,6 +160,7 @@ sweat by maggse
       <animation>
 	      <type>material</type>
 	      <object-name>apmode_thdg</object-name>
+	      <object-name>apmode_button.005</object-name>
 	      <emission>
 		      <red>0.5</red>
 		      <green>0.8</green>
@@ -166,6 +192,7 @@ sweat by maggse
       <animation>
 	      <type>material</type>
 	      <object-name>apmode_spd</object-name>
+	      <object-name>apmode_button.007</object-name>
 	      <emission>
 		      <red>0.5</red>
 		      <green>0.8</green>
@@ -197,6 +224,7 @@ sweat by maggse
       <animation>
 	      <type>material</type>
 	      <object-name>apmode_spdptch</object-name>
+	      <object-name>apmode_button.008</object-name>
 	      <emission>
 		      <red>0.5</red>
 		      <green>0.8</green>

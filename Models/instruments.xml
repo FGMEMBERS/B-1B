@@ -27,9 +27,9 @@ more to come :-)
 	  </condition>
  </animation>
   
-  <!--   cockpit-->
-
-  <model>
+  <!--   cockpit -->
+  
+    <model>
 	  <name>pfdb1-copilot</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/pfdb1.xml</path>
 	  <offsets>
@@ -401,7 +401,7 @@ more to come :-)
 		  <pitch-deg>-90</pitch-deg>
 	  </offsets>
   </model>
-
+  
   <!-- overhead panel -->
   
   <model>

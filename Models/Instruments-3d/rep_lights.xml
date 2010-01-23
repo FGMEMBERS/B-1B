@@ -67,7 +67,7 @@ sweat by maggse
  <animation>
 	 <type>select</type>
 	 <object-name>rep_light_eng3</object-name>
-	 <condition>
+	 	 <condition>
 		 <and>
 		 <equals>
 			 <property>controls/engines/engine[2]/cutoff</property>
@@ -84,7 +84,7 @@ sweat by maggse
  <animation>
 	 <type>select</type>
 	 <object-name>rep_light_eng4</object-name>
-	 <condition>
+	 	 	 <condition>
 		 <and>
 		 <equals>
 			 <property>controls/engines/engine[3]/cutoff</property>

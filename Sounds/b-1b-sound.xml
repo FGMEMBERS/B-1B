@@ -908,7 +908,7 @@
 		    <offset>1.0</offset>
             </pitch>
     </rain>
-
+    
     <seperation>
 	    <name>rack0</name>
 	    <path>Sounds/door_close.wav</path>

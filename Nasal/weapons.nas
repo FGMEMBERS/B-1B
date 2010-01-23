@@ -241,7 +241,7 @@ var rack_guided = getprop("armament/bay-fwd/rack" ~ l1 ~ "-guided");
       setprop("armament/bay-fwd/racks-armed",r);
     weapons.launch();
     weight_adjust(4);
-    l1 = l1 + 1;
+        l1 = l1 + 1;
     setprop("armament/bay-fwd/rot-launcher-pos", l1);
     interpolate("armament/bay-fwd/rot-launcher-pos-anim",l1,1);
 
@@ -260,7 +260,7 @@ var rack_guided = getprop("armament/bay-fwd/rack" ~ l1 ~ "-guided");
 
     } else {
       setprop("armament/bay-fwd/rot-launcher-active",0);
-  }
+      }
 }
 var launch_fwd_done = func {
 setprop("armament/bay-fwd/rot-launcher-active",0);
@@ -294,7 +294,7 @@ var rack_guided = getprop("armament/bay-intmd/rack" ~ l2 ~ "-guided");
       var r = r_armed - 1;
       setprop("armament/bay-intmd/racks-armed",r);
     weight_adjust(5);
-    l2 = l2 + 1;
+        l2 = l2 + 1;
     setprop("armament/bay-intmd/rot-launcher-pos", l2);
     interpolate("armament/bay-intmd/rot-launcher-pos-anim",l2,1);
     setprop("armament/bay-intmd/rot-launcher-active",1);
@@ -334,7 +334,7 @@ print("forrelease" ~ nr_rel ~ "");
 
     } else {
       setprop("armament/bay-intmd/rot-launcher-active",0);
-  }
+      }
 }
 var launch_intmd_done = func {
 setprop("armament/bay-intmd/rot-launcher-active",0);
@@ -454,9 +454,9 @@ if (weight_bay >= 2000) {
 setlistener("ai/models/model-impact", func(n) {
     var impact = n.getValue();
     var solid = getprop(impact ~ "/material/solid");
-    
+
     if (solid){
-      var long = getprop(impact ~ "/impact/longitude-deg");    
+      var long = getprop(impact ~ "/impact/longitude-deg");
       var lat = getprop(impact ~ "/impact/latitude-deg");
 
       geo.put_model("Aircraft/vulcanb2/Models/crater.ac",lat, long);
@@ -478,4 +478,26 @@ var pod_pos = getprop("armament/sniper-pod/position-norm");
   if ((pod_pos >= 0.01) and (pod_pos <= 0.99)) {
     interpolate("armament/sniper-pod/position-norm",0,1);
   }
+}
+
+var wave_3sec = func {
+var status = getprop("sim/wave/status");
+if (status != 1){
+status = 0;
+setprop("sim/wave/status",0);
+}
+if (status == 0){
+setprop("sim/wave/status_1",2);
+interpolate("sim/wave/status_1",1,10);
+var n = getprop("sim/wave/status_1");
+interpolate("sim/wave/status",n,10);#3 is the time in sec
+
+} elsif (status == 1){
+setprop("sim/wave/status_2",-1);
+interpolate("sim/wave/status_2",0,10);
+var n = getprop("sim/wave/status_2");
+interpolate("sim/wave/status",n,10);#3 is the time in sec
+
+}
+settimer(wave_3sec,10.1)
 }

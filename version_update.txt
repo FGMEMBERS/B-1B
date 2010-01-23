@@ -1,5 +1,14 @@
 Rockwell B-1B Lancer "The Bone"
 
+XXXXXX  Version Nr: 0018 20102010 XXXXXX
+
+News/updates: Major update
+
+- FDM adjusted
+- now only guided ordonance available
+- cockpit updated
+- lots of small bugs removed
+
 XXXXXX  Version Nr: 0017 06122008 XXXXXX
 
 News/updates: Experimental update
