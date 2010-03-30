@@ -52,10 +52,23 @@ more to come :-)
 	  </offsets>
   </model>
 
+<!-- pushback -->
+  
+<model>
+  <name>Pushback</name>
+  <path>Models\Airport\Pushback\Goldhofert.xml</path>
+  <offsets>
+    <x-m>-18.0</x-m>
+    <y-m>0</y-m>
+    <z-m>-4.2</z-m>
+  </offsets>
+</model>
+
   <!-- correct wing position -->
   <animation>
 	  <type>translate</type>
 	  <object-name>wing_right</object-name>
+	  <object-name>wing_right.001</object-name>
 	  <object-name>slat_right</object-name>
 	  <object-name>slat_right_up</object-name>
 	  <object-name>flap_right1</object-name>
@@ -91,6 +104,7 @@ more to come :-)
  <animation>
 	 <type>translate</type>
 	 <object-name>wing_left</object-name>
+	 <object-name>wing_left.001</object-name>
 	 <object-name>slat_left</object-name>
 	 <object-name>slat_left_up</object-name>
 	 <object-name>flap_left1</object-name>
@@ -127,6 +141,7 @@ more to come :-)
   <animation>
 	  <type>rotate</type>
 	  <object-name>wing_right</object-name>
+	  <object-name>wing_right.001</object-name>
 	  <property>rotors/main/blade[0]/position-deg</property>
 	  
 	  <interpolation>
@@ -601,6 +616,7 @@ more to come :-)
  <animation>
 	 <type>rotate</type>
 	 <object-name>wing_left</object-name>
+	 <object-name>wing_left.001</object-name>
 	 <property>rotors/main/blade[0]/position-deg</property>
 	 
 	 <interpolation>
@@ -1229,6 +1245,8 @@ more to come :-)
 	 <object-name>landing_spot</object-name>
 	 <object-name>landing_spot.001</object-name>
 	 <object-name>landing_spot.002</object-name>
+	 <object-name>landing_spot.003</object-name>
+	 <object-name>landing_spot.004</object-name>
 	 <condition>
 		 <greater-than>
 			 <property>gear/gear[0]/position-norm</property>
@@ -1282,6 +1300,8 @@ more to come :-)
 	 <object-name>landing_spot</object-name>
 	 <object-name>landing_spot.001</object-name>
 	 <object-name>landing_spot.002</object-name>
+	 <object-name>landing_spot.003</object-name>
+	 <object-name>landing_spot.004</object-name>
 	 <property>gear/gear[0]/position-norm</property>
 	 <interpolation>
 		 <entry>
@@ -3187,7 +3207,7 @@ more to come :-)
 	 <object-name>gbu-31.005</object-name>
 	 <object-name>gbu-31.006</object-name>
 	 <object-name>gbu-31.007</object-name>
-	 <property>armament/bay-fwd/rot-launcher-pos-anim</property>
+	 <property>armament/bay0/launcher-pos-anim</property>
 	 
 	 <interpolation>
 		 <entry>
@@ -3217,7 +3237,7 @@ more to come :-)
 	 <object-name>gbu-31</object-name>
 	 <condition>
 		 <equals>
-			 <property>armament/bay-fwd/rack0</property>
+			 <property>armament/bay0/rack0</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
@@ -3227,7 +3247,7 @@ more to come :-)
 	 <object-name>gbu-31.001</object-name>
 	 <condition>
 		 <equals>
-			 <property>armament/bay-fwd/rack1</property>
+			 <property>armament/bay0/rack1</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
@@ -3237,7 +3257,7 @@ more to come :-)
 	 <object-name>gbu-31.002</object-name>
 	 <condition>
 		 <equals>
-			 <property>armament/bay-fwd/rack2</property>
+			 <property>armament/bay0/rack2</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
@@ -3247,7 +3267,7 @@ more to come :-)
 	 <object-name>gbu-31.003</object-name>
 	 <condition>
 		 <equals>
-			 <property>armament/bay-fwd/rack3</property>
+			 <property>armament/bay0/rack3</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
@@ -3257,7 +3277,7 @@ more to come :-)
 	 <object-name>gbu-31.004</object-name>
 	 <condition>
 		 <equals>
-			 <property>armament/bay-fwd/rack4</property>
+			 <property>armament/bay0/rack4</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
@@ -3267,7 +3287,7 @@ more to come :-)
 	 <object-name>gbu-31.005</object-name>
 	 <condition>
 		 <equals>
-			 <property>armament/bay-fwd/rack5</property>
+			 <property>armament/bay0/rack5</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
@@ -3277,7 +3297,7 @@ more to come :-)
 	 <object-name>gbu-31.006</object-name>
 	 <condition>
 		 <equals>
-			 <property>armament/bay-fwd/rack6</property>
+			 <property>armament/bay0/rack6</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
@@ -3287,7 +3307,7 @@ more to come :-)
 	 <object-name>gbu-31.007</object-name>
 	 <condition>
 		 <equals>
-			 <property>armament/bay-fwd/rack7</property>
+			 <property>armament/bay0/rack7</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
@@ -3305,7 +3325,7 @@ more to come :-)
 	 <object-name>gbu-31.010</object-name>
 	 <object-name>gbu-31.009</object-name>
 	 <object-name>gbu-31.008</object-name>
-	 <property>armament/bay-intmd/rot-launcher-pos-anim</property>
+	 <property>armament/bay1/launcher-pos-anim</property>
 	 
 	 <interpolation>
 		 <entry>
@@ -3335,7 +3355,7 @@ more to come :-)
 	 <object-name>gbu-31.015</object-name>
 	 <condition>
 		 <equals>
-			 <property>armament/bay-intmd/rack0</property>
+			 <property>armament/bay1/rack0</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
@@ -3345,7 +3365,7 @@ more to come :-)
 	 <object-name>gbu-31.014</object-name>
 	 <condition>
 		 <equals>
-			 <property>armament/bay-intmd/rack1</property>
+			 <property>armament/bay1/rack1</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
@@ -3355,7 +3375,7 @@ more to come :-)
 	 <object-name>gbu-31.013</object-name>
 	 <condition>
 		 <equals>
-			 <property>armament/bay-intmd/rack2</property>
+			 <property>armament/bay1/rack2</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
@@ -3365,7 +3385,7 @@ more to come :-)
 	 <object-name>gbu-31.012</object-name>
 	 <condition>
 		 <equals>
-			 <property>armament/bay-intmd/rack3</property>
+			 <property>armament/bay1/rack3</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
@@ -3375,7 +3395,7 @@ more to come :-)
 	 <object-name>gbu-31.011</object-name>
 	 <condition>
 		 <equals>
-			 <property>armament/bay-intmd/rack4</property>
+			 <property>armament/bay1/rack4</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
@@ -3385,7 +3405,7 @@ more to come :-)
 	 <object-name>gbu-31.010</object-name>
 	 <condition>
 		 <equals>
-			 <property>armament/bay-intmd/rack5</property>
+			 <property>armament/bay1/rack5</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
@@ -3395,7 +3415,7 @@ more to come :-)
 	 <object-name>gbu-31.009</object-name>
 	 <condition>
 		 <equals>
-			 <property>armament/bay-intmd/rack6</property>
+			 <property>armament/bay1/rack6</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
@@ -3405,7 +3425,7 @@ more to come :-)
 	 <object-name>gbu-31.008</object-name>
 	 <condition>
 		 <equals>
-			 <property>armament/bay-intmd/rack7</property>
+			 <property>armament/bay1/rack7</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
@@ -3422,7 +3442,7 @@ more to come :-)
 	 <object-name>gbu-31.021</object-name>
 	 <object-name>gbu-31.022</object-name>
 	 <object-name>gbu-31.023</object-name>
-	 <property>armament/bay-aft/rot-launcher-pos-anim</property>
+	 <property>armament/bay2/launcher-pos-anim</property>
 	 
 	 <interpolation>
 		 <entry>
@@ -3452,7 +3472,7 @@ more to come :-)
 	 <object-name>gbu-31.016</object-name>
 	 <condition>
 		 <equals>
-			 <property>armament/bay-aft/rack0</property>
+			 <property>armament/bay2/rack0</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
@@ -3462,7 +3482,7 @@ more to come :-)
 	 <object-name>gbu-31.017</object-name>
 	 <condition>
 		 <equals>
-			 <property>armament/bay-aft/rack1</property>
+			 <property>armament/bay2/rack1</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
@@ -3472,7 +3492,7 @@ more to come :-)
 	 <object-name>gbu-31.018</object-name>
 	 <condition>
 		 <equals>
-			 <property>armament/bay-aft/rack2</property>
+			 <property>armament/bay2/rack2</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
@@ -3482,7 +3502,7 @@ more to come :-)
 	 <object-name>gbu-31.019</object-name>
 	 <condition>
 		 <equals>
-			 <property>armament/bay-aft/rack3</property>
+			 <property>armament/bay2/rack3</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
@@ -3492,7 +3512,7 @@ more to come :-)
 	 <object-name>gbu-31.020</object-name>
 	 <condition>
 		 <equals>
-			 <property>armament/bay-aft/rack4</property>
+			 <property>armament/bay2/rack4</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
@@ -3502,7 +3522,7 @@ more to come :-)
 	 <object-name>gbu-31.021</object-name>
 	 <condition>
 		 <equals>
-			 <property>armament/bay-aft/rack5</property>
+			 <property>armament/bay2/rack5</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
@@ -3512,7 +3532,7 @@ more to come :-)
 	 <object-name>gbu-31.022</object-name>
 	 <condition>
 		 <equals>
-			 <property>armament/bay-aft/rack6</property>
+			 <property>armament/bay2/rack6</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
@@ -3522,7 +3542,7 @@ more to come :-)
 	 <object-name>gbu-31.023</object-name>
 	 <condition>
 		 <equals>
-			 <property>armament/bay-aft/rack7</property>
+			 <property>armament/bay2/rack7</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
@@ -3599,58 +3619,27 @@ more to come :-)
 	</action>
 </animation>
 
- <!-- afterburner flame 
+<!-- glass cockpit shaders -->
  
- <animation>
-	 <type>select</type>
-	 <object-name>eng_flame</object-name>
-	 <object-name>eng_flame.001</object-name>
-	 <object-name>eng_flame.002</object-name>
-	 <object-name>eng_flame.003</object-name>
-	 <condition>
-		 <greater-than>
-			 <property>controls/engines/engine[0]/afterburner</property>
-			 <value>0.0</value>
-		 </greater-than>
-	 </condition>
- </animation>
- 
- <animation>
-	 <type>noshadow</type>
-	 <object-name>eng_flame</object-name>
-	 <object-name>eng_flame.001</object-name>
-	 <object-name>eng_flame.002</object-name>
-	 <object-name>eng_flame.003</object-name>
+<animation>
+	<type>shader</type>
+	<shader>chrome</shader>
+	<texture>Aircraft/B-1B/Models/window_green_tp.png</texture>
+	<object-name>window_left_front</object-name>
+	<object-name>window_right_front</object-name>
+	<object-name>window_left_top</object-name>
+	<object-name>window_right_top</object-name>
 </animation>
 
 <animation>
-	<type>blend</type>
-	<object-name>eng_flame</object-name>
-	<object-name>eng_flame.001</object-name>
-	<object-name>eng_flame.002</object-name>
-	<object-name>eng_flame.003</object-name>
-	<property>controls/engines/engine[0]/throttle</property>
-	<offset>0.95</offset>
-	<factor>-0.20</factor>
-</animation>-->
- 
- <!-- engine fire 
- 
- <animation>
-	 <type>noshadow</type>
-	 <object-name>eng_left_ex</object-name>
-	 <object-name>eng_right_ex</object-name>
- </animation>
- 
- <animation>
-	 <type>blend</type>
-	 <object-name>eng_left_ex</object-name>
-	 <object-name>eng_right_ex</object-name>
-	 <property>engines/engine[0]/thrust-lbs</property>
-	 <offset>0.9</offset>
-	 <factor>-0.000033</factor>
- </animation>-->
-
+	<type>shader</type>
+	<shader>chrome</shader>
+	<texture>Aircraft/B-1B/Models/window_red_tp.png</texture>
+	<object-name>window_left_side</object-name>
+	<object-name>window_right_side</object-name>
+	<object-name>window_left_aft</object-name>
+	<object-name>window_right_aft</object-name>
+</animation>
 
 
 </PropertyList>

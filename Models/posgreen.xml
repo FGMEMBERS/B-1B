@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <PropertyList>
 
- <path>posgreen.ac</path>
+ <path>poslightgreen.ac</path>
  <offsets>
     <x-m> 0.0 </x-m>
     <y-m> 0.0 </y-m>
@@ -10,19 +10,19 @@
 
 <animation>
 	 <type>billboard</type>
-	 <object-name>poslightgreen</object-name>
+	 <object-name>right_poslight</object-name>
 	 <spherical type="bool">true</spherical>
 </animation>
  
 
  <animation>
 	 <type>alpha-test</type>
-	 <object-name>poslightgreen</object-name>
+	 <object-name>right_poslight</object-name>
 	 <alpha-factor>0.001</alpha-factor>
  </animation>
  <animation>
 	 <type>select</type>
-	 <object-name>poslightgreen</object-name>
+	 <object-name>right_poslight</object-name>
 	 <condition>
 		 <and>
 			 <equals>

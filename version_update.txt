@@ -1,5 +1,16 @@
 Rockwell B-1B Lancer "The Bone"
 
+XXXXXX  Version Nr: 0019 20032010 XXXXXX
+
+News/updates: Major update
+
+- terrain following script rewritten
+- guided ordonance system rewritten
+- exterior model texture improvenments
+- new instruments(IKB + MFD) for WSO position
+- cdu-900 prototype for nav/com input/display
+- radar now sorts for distance, displays closest
+
 XXXXXX  Version Nr: 0018 20102010 XXXXXX
 
 News/updates: Major update

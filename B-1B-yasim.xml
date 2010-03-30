@@ -171,7 +171,7 @@
 <jet x="-30.3" y="3.2" z="-1.9" mass="4400" tsfc="0.6" thrust="17390" afterburner="30780" epr="4.6">
 	<actionpt x="-34.3" y="3.2" z="-1.9"/>
 	<control-input axis="/controls/engines/engine[1]/throttle-lever" control="THROTTLE"/>
-	<control-input axis="/controls/engines/engine[0]/afterburner" control="REHEAT"/>
+	<control-input axis="/controls/engines/engine[1]/afterburner" control="REHEAT"/>
 </jet>
 
 <!-- right wing engines -->
@@ -179,14 +179,20 @@
 <jet x="-30.3" y="-3.2" z="-1.9" mass="4400" tsfc="0.6" thrust="17390" afterburner="30780" epr="4.6">
 	<actionpt x="-34.3" y="-3.2" z="-1.9"/>
 	<control-input axis="/controls/engines/engine[2]/throttle-lever" control="THROTTLE"/>
-	<control-input axis="/controls/engines/engine[0]/afterburner" control="REHEAT"/>
+	<control-input axis="/controls/engines/engine[2]/afterburner" control="REHEAT"/>
 </jet>
 
 <jet x="-30.3" y="-4.2" z="-1.9" mass="4400" tsfc="0.6" thrust="17390" afterburner="30780" epr="4.6">
 	<actionpt x="-34.3" y="-4.2" z="-1.9"/>
 	<control-input axis="/controls/engines/engine[3]/throttle-lever" control="THROTTLE"/>
-	<control-input axis="/controls/engines/engine[0]/afterburner" control="REHEAT"/>
-  </jet>
+	<control-input axis="/controls/engines/engine[3]/afterburner" control="REHEAT"/>
+</jet>
+
+<!-- pushback position and force -->
+<thruster x="-9.246"  y="0.00" z="-3.7" vx="1" vy="0" vz="0" thrust="20000">
+  <control-input axis="/sim/model/pushback/target-speed-fps" control="THROTTLE" src0="-1" src1="1" dst0="-1" dst1="1"/>
+</thruster>
+
 
 <!-- Landing Gear -->
 <!-- front -->
@@ -284,10 +290,6 @@
       mass-prop="sim/weight[5]/weight-lb"/>
 <weight x="-35.20" y="0.00"   z="0.00" size="0.0"
       mass-prop="sim/weight[6]/weight-lb"/>
-<!-- fuel exchange to maintain cg 
-<weight x="-20.00" y="0.00"   z="0.0" size="0.0"
-	mass-prop="sim/weight[7]/weight-lb"/>
-<weight x="-36.00" y="0.00"   z="0.0" size="0.0"
-      mass-prop="sim/weight[8]/weight-lb"/>-->
+
 
 </airplane>

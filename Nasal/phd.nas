@@ -5,7 +5,7 @@
 
 var disp_length	= 0.0856; # lenght of the plots line in m (3D model).
 var disp_def	= 50; # number of plots in the line (3D model).
-var dev_calibration = 5.5; # factors vert. deviation for better readability (2.5).
+var dev_calibration = 2.75; # factors vert. deviation for better readability (5.5).
 
 var UPDATE_PERIOD = 0.2;
 

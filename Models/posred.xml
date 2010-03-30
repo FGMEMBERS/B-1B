@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <PropertyList>
 
- <path>posred.ac</path>
+ <path>poslightleft.ac</path>
  <offsets>
     <x-m> 0.0 </x-m>
     <y-m> 0.0 </y-m>
@@ -10,20 +10,20 @@
 
 <animation>
 	 <type>billboard</type>
-	 <object-name>poslightred</object-name>
+	 <object-name>left_poslight</object-name>
 	 <spherical type="bool">true</spherical>
 </animation>
  
 
  <animation>
 	 <type>alpha-test</type>
-	 <object-name>poslightred</object-name>
+	 <object-name>left_poslight</object-name>
 	 <alpha-factor>0.001</alpha-factor>
  </animation>
  
  <animation>
 	 <type>select</type>
-	 <object-name>poslightred</object-name>
+	 <object-name>left_poslight</object-name>
 	 <condition>
 		 <and>
 			 <equals>

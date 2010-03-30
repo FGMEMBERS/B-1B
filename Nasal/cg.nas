@@ -93,43 +93,47 @@ settimer(cg_dist, 0.5);
 var cg_adjust = func {
 var cg_on = getprop("controls/switches/cg-adjust");
 if (cg_on == 1) {
-#setprop("/sim/freeze/fuel", 1);
-var cg_macf = getprop("instrumentation/cg/cg_mac");
-var cg_mac_set = getprop("instrumentation/cg/cg_mac_set");
+  #setprop("/sim/freeze/fuel", 1);
+  var cg_macf = getprop("instrumentation/cg/cg_mac");
+  var cg_mac_set = getprop("instrumentation/cg/cg_mac_set");
 
-var fuel_fwd = getprop("consumables/fuel/tank[3]/level-lbs");
-var fuel_aft = getprop("consumables/fuel/tank[5]/level-lbs");
-var fuel_fwd_cap = getprop("consumables/fuel/tank[3]/capacity-gal_us");
-var fuel_aft_cap = getprop("consumables/fuel/tank[5]/capacity-gal_us");
-var fuel_dens = getprop("consumables/fuel/tank[3]/density-ppg");
+  var fuel_fwd = getprop("consumables/fuel/tank[3]/level-lbs");
+  var fuel_aft = getprop("consumables/fuel/tank[5]/level-lbs");
+  #var fuel_fwd1 = props.globals.getNode("consumables/fuel/tank[3]/level-lbs",1);
+  #var fuel_aft1 = props.globals.getNode("consumables/fuel/tank[5]/level-lbs",1);
+  var fuel_fwd_cap = getprop("consumables/fuel/tank[3]/capacity-gal_us");
+  var fuel_aft_cap = getprop("consumables/fuel/tank[5]/capacity-gal_us");
+  var fuel_dens = getprop("consumables/fuel/tank[3]/density-ppg");
 
-var utime = 1;
-var ffrate = (200 * utime);# in lb/sec
-var fuel_fwd_caplb = fuel_fwd_cap * fuel_dens;
-var fuel_aft_caplb = fuel_aft_cap * fuel_dens;
-var fuel_fwd_space = fuel_fwd_caplb - fuel_fwd;
-var fuel_aft_space = fuel_aft_caplb - fuel_aft;
+  var utime = 1;
+  var ffrate = (200 * utime);# in lb/sec
+  var fuel_fwd_caplb = fuel_fwd_cap * fuel_dens;
+  var fuel_aft_caplb = fuel_aft_cap * fuel_dens;
+  var fuel_fwd_space = fuel_fwd_caplb - fuel_fwd;
+  var fuel_aft_space = fuel_aft_caplb - fuel_aft;
 
 
-if (cg_macf > cg_mac_set) {
+  if (cg_macf > cg_mac_set) {
   if (((fuel_fwd + ffrate) <= fuel_fwd_caplb) and ((fuel_aft) >= (0 + ffrate))) {
     var fuel_fwd_new = (fuel_fwd + ffrate) / fuel_dens;
     var fuel_aft_new = (fuel_aft - ffrate) / fuel_dens;
+
     setprop("/consumables/fuel/tank[3]/level-gal_us", fuel_fwd_new);
     setprop("/consumables/fuel/tank[5]/level-gal_us", fuel_aft_new);
     #print ("weight dist1");
   }
-}
-if (cg_macf < cg_mac_set) {
+  }
+    if (cg_macf < cg_mac_set) {
   if (((fuel_fwd) >= (0 + ffrate)) and ((fuel_aft + ffrate) <= fuel_aft_caplb)) {
     var fuel_fwd_new = (fuel_fwd - ffrate) / fuel_dens;
     var fuel_aft_new = (fuel_aft + ffrate) / fuel_dens;
+
     setprop("/consumables/fuel/tank[3]/level-gal_us", fuel_fwd_new);
     setprop("/consumables/fuel/tank[5]/level-gal_us", fuel_aft_new);
     #print ("weight dist2");
   }
-}
-#setprop("/sim/freeze/fuel", 0);
-settimer(cg_adjust, utime);
-}
+    }
+    #setprop("/sim/freeze/fuel", 0);
+    settimer(cg_adjust, utime);
+  }
 }

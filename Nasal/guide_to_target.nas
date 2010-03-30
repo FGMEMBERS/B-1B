@@ -13,7 +13,7 @@
 # At the end there is an exp script that calculates if the target is in range/then releases the model
 ##### by glazmax 2008
 
-var launch = func {
+var launch = func(n) {
 
 # aircraft parameters = initial bomb position
 var calt_m = getprop("position/altitude-ft") / 3.28084;
@@ -23,12 +23,7 @@ var clat = getprop("position/latitude-deg") + 0.00000000;
 var clong = getprop("position/longitude-deg") + 0.00000000;
 var cspeed_mps = getprop("velocities/groundspeed-kt") * 0.51444;
 
-var n = getprop("ai/guided/id-number");
-var m = n + 1;
-if (m == 4) {
-var m = 0;
-}
-setprop("ai/guided/id-number", m);
+#setprop("ai/guided/id-number", n);
 
 setprop("ai/guided/bomb[" ~ n ~ "]/prop-latitude-deg",clat);
 setprop("ai/guided/bomb[" ~ n ~ "]/prop-longitude-deg",clong);
@@ -66,234 +61,59 @@ setprop ("models/model[" ~ n ~ "]/elevation-ft-prop", "ai/guided/bomb[" ~ n ~ "]
 setprop ("models/model[" ~ n ~ "]/heading-deg-prop", "ai/guided/bomb[" ~ n ~ "]/prop-heading-deg");
 aircraft.makeNode("models/model[" ~ n ~ "]/load");
 
-if (n == 0) {
-settimer(target_guide0, 2);
-}
-if (n == 1) {
-settimer(target_guide1, 2);
-}
-if (n == 2) {
-settimer(target_guide2, 2);
-}
-if (n == 3) {
-settimer(target_guide3, 2);
-}
-
+settimer(func{target_guide(n);}, 2);
 }
 
 #####
 ## guidance to target (bomb nr 0)
 #####
-var target_guide0 = func  {
+var target_guide = func(n) {
 
 # target parameters
-#var target = geo.click_position();
-#var tlat = target.lat();
-#var tlong = target.lon();
-var tlat = getprop("ai/guided/bomb[0]/target-latitude-deg");
-var tlong = getprop("ai/guided/bomb[0]/target-longitude-deg");
+var tlat = getprop("ai/guided/bomb["~ n ~"]/target-latitude-deg");
+var tlong = getprop("ai/guided/bomb["~ n ~"]/target-longitude-deg");
 var talt_m = geo.elevation(tlat, tlong);
-setprop("ai/guided/bomb[0]/target-altitude-m",talt_m);
+setprop("ai/guided/bomb["~ n ~"]/target-altitude-m",talt_m);
 
 #calculation of distance, arrival time and heading
-var alat = getprop("ai/guided/bomb[0]/alat");
-var along = getprop("ai/guided/bomb[0]/along");
-var aalt_m = getprop("ai/guided/bomb[0]/aalt_m");
+var alat = getprop("ai/guided/bomb["~ n ~"]/alat");
+var along = getprop("ai/guided/bomb["~ n ~"]/along");
+var aalt_m = getprop("ai/guided/bomb["~ n ~"]/aalt_m");
 var apos = geo.Coord.new().set_latlon(alat, along, aalt_m);
 var tpos = geo.Coord.new().set_latlon(tlat, tlong, talt_m);
 var tdist = apos.direct_distance_to(tpos);
-setprop("ai/guided/bomb[0]/target-distance",tdist);
+setprop("ai/guided/bomb["~ n ~"]/target-distance",tdist);
 var cspeed_mps = getprop("velocities/airspeed-kt") * 0.51444;
 var ttime = tdist / cspeed_mps;
 var thdg = apos.course_to(tpos);
-setprop("ai/guided/bomb[0]/target-heading",thdg);
+setprop("ai/guided/bomb["~ n ~"]/target-heading",thdg);
 
 #interpolation to target
-interpolate("ai/guided/bomb[0]/prop-latitude-deg",tlat,ttime);
-interpolate("ai/guided/bomb[0]/prop-longitude-deg",tlong,ttime);
-interpolate("ai/guided/bomb[0]/prop-altitude-ft",talt_m * 3.28084,ttime);
-interpolate("ai/guided/bomb[0]/prop-heading-deg",thdg,ttime / 4);
+interpolate("ai/guided/bomb["~ n ~"]/prop-latitude-deg",tlat,ttime);
+interpolate("ai/guided/bomb["~ n ~"]/prop-longitude-deg",tlong,ttime);
+interpolate("ai/guided/bomb["~ n ~"]/prop-altitude-ft",talt_m * 3.28084,ttime);
+interpolate("ai/guided/bomb["~ n ~"]/prop-heading-deg",thdg,ttime / 4);
 
-#settimer(impact_detect, 2);
-impact_detect0();
-}
-
-###guidance to target (bomb nr 1)
-var target_guide1 = func  {
-
-# target parameters
-#var target = geo.click_position();
-#var tlat = target.lat();
-#var tlong = target.lon();
-var tlat = getprop("ai/guided/bomb[1]/target-latitude-deg");
-var tlong = getprop("ai/guided/bomb[1]/target-longitude-deg");
-var talt_m = geo.elevation(tlat, tlong);
-setprop("ai/guided/bomb[1]/target-altitude-m",talt_m);
-
-#calculation of distance and arrival time
-var alat = getprop("ai/guided/bomb[1]/alat");
-var along = getprop("ai/guided/bomb[1]/along");
-var aalt_m = getprop("ai/guided/bomb[1]/aalt_m");
-var apos = geo.Coord.new().set_latlon(alat, along, aalt_m);
-var tpos = geo.Coord.new().set_latlon(tlat, tlong, talt_m);
-var tdist = apos.direct_distance_to(tpos);
-setprop("ai/guided/bomb[1]/target-distance",tdist);
-var cspeed_mps = getprop("velocities/airspeed-kt") * 0.51444;
-var ttime = tdist / cspeed_mps;
-var thdg = apos.course_to(tpos);
-setprop("ai/guided/bomb[1]/target-heading",thdg);
-
-#interpolation to target
-interpolate("ai/guided/bomb[1]/prop-latitude-deg",tlat,ttime);
-interpolate("ai/guided/bomb[1]/prop-longitude-deg",tlong,ttime);
-interpolate("ai/guided/bomb[1]/prop-altitude-ft",talt_m * 3.28084,ttime);
-interpolate("ai/guided/bomb[1]/prop-heading-deg",thdg,ttime / 4);
-
-#settimer(impact_detect, 2);
-impact_detect1();
-}
-
-###guidance to target (bomb nr 2)
-var target_guide2 = func  {
-
-# target parameters
-#var target = geo.click_position();
-#var tlat = target.lat();
-#var tlong = target.lon();
-var tlat = getprop("ai/guided/bomb[2]/target-latitude-deg");
-var tlong = getprop("ai/guided/bomb[2]/target-longitude-deg");
-var talt_m = geo.elevation(tlat, tlong);
-setprop("ai/guided/bomb[2]/target-altitude-m",talt_m);
-
-#calculation of distance and arrival time
-var alat = getprop("ai/guided/bomb[2]/alat");
-var along = getprop("ai/guided/bomb[2]/along");
-var aalt_m = getprop("ai/guided/bomb[2]/aalt_m");
-var apos = geo.Coord.new().set_latlon(alat, along, aalt_m);
-var tpos = geo.Coord.new().set_latlon(tlat, tlong, talt_m);
-var tdist = apos.direct_distance_to(tpos);
-setprop("ai/guided/bomb[2]/target-distance",tdist);
-var cspeed_mps = getprop("velocities/airspeed-kt") * 0.51444;
-var ttime = tdist / cspeed_mps;
-var thdg = apos.course_to(tpos);
-setprop("ai/guided/bomb[2]/target-heading",thdg);
-
-#interpolation to target
-interpolate("ai/guided/bomb[2]/prop-latitude-deg",tlat,ttime);
-interpolate("ai/guided/bomb[2]/prop-longitude-deg",tlong,ttime);
-interpolate("ai/guided/bomb[2]/prop-altitude-ft",talt_m * 3.28084,ttime);
-interpolate("ai/guided/bomb[2]/prop-heading-deg",thdg,ttime / 4);
-
-#settimer(impact_detect, 2);
-impact_detect2();
-}
-
-###guidance to target (bomb nr 3)
-var target_guide3 = func  {
-
-# target parameters
-#var target = geo.click_position();
-#var tlat = target.lat();
-#var tlong = target.lon();
-var tlat = getprop("ai/guided/bomb[3]/target-latitude-deg");
-var tlong = getprop("ai/guided/bomb[3]/target-longitude-deg");
-var talt_m = geo.elevation(tlat, tlong);
-setprop("ai/guided/bomb[3]/target-altitude-m",talt_m);
-
-#calculation of distance and arrival time
-var alat = getprop("ai/guided/bomb[3]/alat");
-var along = getprop("ai/guided/bomb[3]/along");
-var aalt_m = getprop("ai/guided/bomb[3]/aalt_m");
-var apos = geo.Coord.new().set_latlon(alat, along, aalt_m);
-var tpos = geo.Coord.new().set_latlon(tlat, tlong, talt_m);
-var tdist = apos.direct_distance_to(tpos);
-setprop("ai/guided/bomb[3]/target-distance",tdist);
-var cspeed_mps = getprop("velocities/airspeed-kt") * 0.51444;
-var ttime = tdist / cspeed_mps;
-var thdg = apos.course_to(tpos);
-setprop("ai/guided/bomb[3]/target-heading",thdg);
-
-#interpolation to target
-interpolate("ai/guided/bomb[3]/prop-latitude-deg",tlat,ttime);
-interpolate("ai/guided/bomb[3]/prop-longitude-deg",tlong,ttime);
-interpolate("ai/guided/bomb[3]/prop-altitude-ft",talt_m * 3.28084,ttime);
-interpolate("ai/guided/bomb[3]/prop-heading-deg",thdg,ttime / 4);
-
-#settimer(impact_detect, 2);
-impact_detect3();
+weapons.impact_detect(n);
 }
 
 #####
-## detect impact (bomb 0)
+## detect impact (bomb n)
 #####
-var impact_detect0 = func {
-var galt = getprop("ai/guided/bomb[0]/prop-altitude-ft");
-var talt = getprop("ai/guided/bomb[0]/target-altitude-m");
-var glat = getprop("ai/guided/bomb[0]/prop-latitude-deg");
-var glong = getprop("ai/guided/bomb[0]/prop-longitude-deg");
+var impact_detect = func(n) {
+var galt = getprop("ai/guided/bomb["~ n ~"]/prop-altitude-ft");
+var talt = getprop("ai/guided/bomb["~ n ~"]/target-altitude-m");
+var glat = getprop("ai/guided/bomb["~ n ~"]/prop-latitude-deg");
+var glong = getprop("ai/guided/bomb["~ n ~"]/prop-longitude-deg");
 
 if (galt - (talt * 3.28084) <= 3) {
-setprop ("ai/guided/bomb[0]/i-latitude-deg", glat);
-setprop ("ai/guided/bomb[0]/i-longitude-deg", glong);
+  setprop ("ai/guided/bomb["~ n ~"]/i-latitude-deg", glat);
+  setprop ("ai/guided/bomb["~ n ~"]/i-longitude-deg", glong);
 
-impact_report(0);
-#props.globals.getNode("/models", 1).removeChild("model", 0);
-} else {
-  settimer(impact_detect0, 0);
-  }
-}
-
-#detect impact (bomb 1)
-var impact_detect1 = func {
-var galt = getprop("ai/guided/bomb[1]/prop-altitude-ft");
-var talt = getprop("ai/guided/bomb[1]/target-altitude-m");
-var glat = getprop("ai/guided/bomb[1]/prop-latitude-deg");
-var glong = getprop("ai/guided/bomb[1]/prop-longitude-deg");
-
-if (galt - (talt * 3.28084) <= 3) {
-setprop ("ai/guided/bomb[1]/i-latitude-deg", glat);
-setprop ("ai/guided/bomb[1]/i-longitude-deg", glong);
-
-impact_report(1);
-#props.globals.getNode("/models", 1).removeChild("model", 0);
-} else {
-  settimer(impact_detect1, 0);
-  }
-}
-
-#detect impact (bomb 2)
-var impact_detect2 = func {
-var galt = getprop("ai/guided/bomb[2]/prop-altitude-ft");
-var talt = getprop("ai/guided/bomb[2]/target-altitude-m");
-var glat = getprop("ai/guided/bomb[2]/prop-latitude-deg");
-var glong = getprop("ai/guided/bomb[2]/prop-longitude-deg");
-
-if (galt - (talt * 3.28084) <= 3) {
-setprop ("ai/guided/bomb[2]/i-latitude-deg", glat);
-setprop ("ai/guided/bomb[2]/i-longitude-deg", glong);
-
-impact_report(2);
-#props.globals.getNode("/models", 1).removeChild("model", 0);
-} else {
-  settimer(impact_detect2, 0);
-  }
-}
-
-#detect impact (bomb 3)
-var impact_detect3 = func {
-var galt = getprop("ai/guided/bomb[3]/prop-altitude-ft");
-var talt = getprop("ai/guided/bomb[3]/target-altitude-m");
-var glat = getprop("ai/guided/bomb[3]/prop-latitude-deg");
-var glong = getprop("ai/guided/bomb[3]/prop-longitude-deg");
-
-if (galt - (talt * 3.28084) <= 3) {
-setprop ("ai/guided/bomb[3]/i-latitude-deg", glat);
-setprop ("ai/guided/bomb[3]/i-longitude-deg", glong);
-
-impact_report(3);
-#props.globals.getNode("/models", 1).removeChild("model", 0);
-} else {
-  settimer(impact_detect3, 0);
+  weapons.impact_report(n);
+  #props.globals.getNode("/models", 1).removeChild("model", 0);
+  } else {
+    settimer(func{impact_detect(n);}, 0);
   }
 }
 
@@ -344,31 +164,18 @@ setprop("ai/models/model-impact", '/ai/models/guided['"" ~ p ~ ""']');
 #}
 }
 
-#####
-## target designator (mouseclick and button)
-#####
-var target_des_xxx = func {
-var n = getprop("ai/guided/target-number");
-var o = n + 1;
-var m = n + 1;
-if (m == 4) {
-var m = 0;
-}
-setprop("ai/guided/target-number", m);
-# target parameters
-var target = geo.click_position();
-var tlat = target.lat();
-var tlong = target.lon();
-setprop("ai/guided/bomb[" ~ n ~ "]/target-latitude-deg",tlat);
-setprop("ai/guided/bomb[" ~ n ~ "]/target-longitude-deg",tlong);
-setprop("ai/guided/bomb[" ~ n ~ "]/launched",0);
-setprop("ai/guided/bomb[" ~ n ~ "]/target-in_range", 0);
-setprop("ai/guided/number_for_release", 0);
-var ltext = "Coordinates for target " ~ o ~ " stored";
-screen.log.write(ltext);
-}
+## Add listener for bomb impact (from vulcan b2)
+setlistener("ai/models/model-impact", func(n) {
+    var impact = n.getValue();
+    var solid = getprop(impact ~ "/material/solid");
+
+    if (solid){
+      var long = getprop(impact ~ "/impact/longitude-deg");
+      var lat = getprop(impact ~ "/impact/latitude-deg");
+
+      geo.put_model("Aircraft/vulcanb2/Models/crater.ac",lat, long);
+    }
+});
 
 #removing
 #props.globals.getNode("/models", 1).removeChild("model", 0);
-
-#print("clear downhill");

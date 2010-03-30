@@ -136,10 +136,10 @@ maggse
 	 <action>
 		 <button>0</button>
 		 <repeatable>true</repeatable>
-		 <interval-sec>0.3</interval-sec>
+		 <interval-sec>1.0</interval-sec>
 		 <binding>
 			      <command>nasal</command>
-			      <script>weapons.launcher_fwd_rot()</script>
+			      <script>weapons.launcher_rot(1)</script>
 		 </binding>
 
 	 </action>
@@ -155,7 +155,7 @@ maggse
 		 <interval-sec>0.3</interval-sec>
 		 <binding>
 			      <command>nasal</command>
-			      <script>weapons.launcher_select('fwd',1)</script>
+			      <script>weapons.oso_sms_select(1,0)</script>
 		 </binding>
 
 	 </action>
@@ -165,7 +165,7 @@ maggse
 		 <interval-sec>0.3</interval-sec>
 		 <binding>
 			      <command>nasal</command>
-			      <script>weapons.launcher_select(0,0)</script>
+			      <script>weapons.oso_sms_select(1,0)</script>
 		 </binding>
 
 	 </action>
@@ -179,7 +179,7 @@ maggse
 		 <interval-sec>0.3</interval-sec>
 		 <binding>
 			      <command>nasal</command>
-			      <script>weapons.launcher_select('intmd',2)</script>
+			      <script>weapons.oso_sms_select(1,1)</script>
 		 </binding>
 
 	 </action>
@@ -189,7 +189,7 @@ maggse
 		 <interval-sec>0.3</interval-sec>
 		 <binding>
 			      <command>nasal</command>
-			      <script>weapons.launcher_select(0,0)</script>
+			      <script>weapons.oso_sms_select(1,1)</script>
 		 </binding>
 
 	 </action>
@@ -203,7 +203,7 @@ maggse
 		 <interval-sec>0.3</interval-sec>
 		 <binding>
 			      <command>nasal</command>
-			      <script>weapons.launcher_select('aft',3)</script>
+			      <script>weapons.oso_sms_select(1,2)</script>
 		 </binding>
 
 	 </action>
@@ -213,13 +213,13 @@ maggse
 		 <interval-sec>0.3</interval-sec>
 		 <binding>
 			      <command>nasal</command>
-			      <script>weapons.launcher_select(0,0)</script>
+			      <script>weapons.oso_sms_select(1,2)</script>
 		 </binding>
 
 	 </action>
 </animation>
 
-
+<!-- SMS number buttons -->
 <animation>
 	 <type>pick</type>
 	 <object-name>sms_button.012</object-name>
@@ -229,17 +229,7 @@ maggse
 		 <interval-sec>0.3</interval-sec>
 		 <binding>
 			      <command>nasal</command>
-			      <script>weapons.arm(0,1)</script>
-		 </binding>
-
-	 </action>
-	 <action>
-		 <button>1</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.3</interval-sec>
-		 <binding>
-			      <command>nasal</command>
-			      <script>weapons.arm(0,0)</script>
+			      <script>weapons.oso_sms_select(2,0)</script>
 		 </binding>
 
 	 </action>
@@ -253,17 +243,7 @@ maggse
 		 <interval-sec>0.3</interval-sec>
 		 <binding>
 			      <command>nasal</command>
-			      <script>weapons.arm(1,1)</script>
-		 </binding>
-
-	 </action>
-	 <action>
-		 <button>1</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.3</interval-sec>
-		 <binding>
-			      <command>nasal</command>
-			      <script>weapons.arm(1,0)</script>
+			      <script>weapons.oso_sms_select(2,1)</script>
 		 </binding>
 
 	 </action>
@@ -277,17 +257,7 @@ maggse
 		 <interval-sec>0.3</interval-sec>
 		 <binding>
 			      <command>nasal</command>
-			      <script>weapons.arm(2,1)</script>
-		 </binding>
-
-	 </action>
-	 <action>
-		 <button>1</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.3</interval-sec>
-		 <binding>
-			      <command>nasal</command>
-			      <script>weapons.arm(2,0)</script>
+			      <script>weapons.oso_sms_select(2,2)</script>
 		 </binding>
 
 	 </action>
@@ -301,17 +271,7 @@ maggse
 		 <interval-sec>0.3</interval-sec>
 		 <binding>
 			      <command>nasal</command>
-			      <script>weapons.arm(3,1)</script>
-		 </binding>
-
-	 </action>
-	 <action>
-		 <button>1</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.3</interval-sec>
-		 <binding>
-			      <command>nasal</command>
-			      <script>weapons.arm(3,0)</script>
+			      <script>weapons.oso_sms_select(2,3)</script>
 		 </binding>
 
 	 </action>
@@ -325,17 +285,7 @@ maggse
 		 <interval-sec>0.3</interval-sec>
 		 <binding>
 			      <command>nasal</command>
-			      <script>weapons.arm(4,1)</script>
-		 </binding>
-
-	 </action>
-	 <action>
-		 <button>1</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.3</interval-sec>
-		 <binding>
-			      <command>nasal</command>
-			      <script>weapons.arm(4,0)</script>
+			      <script>weapons.oso_sms_select(2,4)</script>
 		 </binding>
 
 	 </action>
@@ -349,17 +299,7 @@ maggse
 		 <interval-sec>0.3</interval-sec>
 		 <binding>
 			      <command>nasal</command>
-			      <script>weapons.arm(5,1)</script>
-		 </binding>
-
-	 </action>
-	 <action>
-		 <button>1</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.3</interval-sec>
-		 <binding>
-			      <command>nasal</command>
-			      <script>weapons.arm(5,0)</script>
+			      <script>weapons.oso_sms_select(2,5)</script>
 		 </binding>
 
 	 </action>
@@ -373,17 +313,7 @@ maggse
 		 <interval-sec>0.3</interval-sec>
 		 <binding>
 			      <command>nasal</command>
-			      <script>weapons.arm(6,1)</script>
-		 </binding>
-
-	 </action>
-	 <action>
-		 <button>1</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.3</interval-sec>
-		 <binding>
-			      <command>nasal</command>
-			      <script>weapons.arm(6,0)</script>
+			      <script>weapons.oso_sms_select(2,6)</script>
 		 </binding>
 
 	 </action>
@@ -397,34 +327,70 @@ maggse
 		 <interval-sec>0.3</interval-sec>
 		 <binding>
 			      <command>nasal</command>
-			      <script>weapons.arm(7,1)</script>
+			      <script>weapons.oso_sms_select(2,7)</script>
 		 </binding>
 
 	 </action>
+</animation>
+
+<!-- arm/dearm switch -->
+
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.009</object-name>
 	 <action>
-		 <button>1</button>
+		 <button>0</button>
 		 <repeatable>true</repeatable>
 		 <interval-sec>0.3</interval-sec>
 		 <binding>
 			      <command>nasal</command>
-			      <script>weapons.arm(7,0)</script>
+			      <script>weapons.oso_arm(1)</script>
+		 </binding>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.wso_mfd_draw()</script>
 		 </binding>
 
 	 </action>
 </animation>
 
 <animation>
+	 <type>pick</type>
+	 <object-name>sms_button.010</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.oso_arm(0)</script>
+		 </binding>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.wso_mfd_draw()</script>
+		 </binding>
+
+	 </action>
+</animation>
+
+
+
+<animation>
 	 <type>textranslate</type>
 	 <object-name>sms_button</object-name>
-	 <property>armament/rot-launcher-selected-1</property>
+	 <property>armament/oso/bay-selected</property>
 	 <interpolation>
 		 <entry>
-			 <ind>0.0</ind>
+			 <ind>-1.0</ind>
 			 <dep>0.0</dep>
 		 </entry>
 		 <entry>
-			 <ind>1.0</ind>
+			 <ind>0.0</ind>
 			 <dep>0.038</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>0.0</dep>
 		 </entry>
 	 </interpolation>
 	 <axis>
@@ -436,7 +402,7 @@ maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>sms_button.002</object-name>
-	 <property>armament/rot-launcher-selected-2</property>
+	 <property>armament/oso/bay-selected</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -445,6 +411,10 @@ maggse
 		 <entry>
 			 <ind>1.0</ind>
 			 <dep>0.038</dep>
+		 </entry>
+		 <entry>
+			 <ind>2.0</ind>
+			 <dep>0.0</dep>
 		 </entry>
 	 </interpolation>
 	 <axis>
@@ -456,14 +426,14 @@ maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>sms_button.004</object-name>
-	 <property>armament/rot-launcher-selected-3</property>
+	 <property>armament/oso/bay-selected</property>
 	 <interpolation>
 		 <entry>
-			 <ind>0.0</ind>
+			 <ind>1.0</ind>
 			 <dep>0.0</dep>
 		 </entry>
 		 <entry>
-			 <ind>1.0</ind>
+			 <ind>2.0</ind>
 			 <dep>0.038</dep>
 		 </entry>
 	 </interpolation>
@@ -474,70 +444,52 @@ maggse
 	 </axis>
  </animation>
  
-<!--
-<animation>
-	<type>rotate</type>
-	<object-name>switch_eject.002</object-name>
-	<property>controls/switches/nuc</property>
-	<interpolation>
-		<entry>
-			<ind>0.0</ind>
-			<dep>-30.0</dep>
-		</entry>
-		<entry>
-			<ind>1.0</ind>
-			<dep>30.0</dep>
-		</entry>
-	</interpolation>
-	<axis>
-		<x>0.0</x>
-		<y>1.0</y>
-		<z>0.0</z>
-	</axis>
-	<center>
-		<x-m>0.005</x-m>
-		<y-m>0.165</y-m>
-		<z-m>0.037</z-m>
-	</center>
-</animation>
 <animation>
 	<type>material</type>
-	<object-name>switch_eject.002</object-name>
+  <object-name>sms_button</object-name>
+  <object-name>sms_button.001</object-name>
+  <object-name>sms_button.002</object-name>
+  <object-name>sms_button.003</object-name>
+  <object-name>sms_button.004</object-name>
+  <object-name>sms_button.005</object-name>
+  <object-name>sms_button.006</object-name>
+  <object-name>sms_button.007</object-name>
+  <object-name>sms_button.008</object-name>
+  <object-name>sms_button.009</object-name>
+  <object-name>sms_button.010</object-name>
+  <object-name>sms_button.011</object-name>
+  <object-name>sms_button.012</object-name>
+  <object-name>sms_button.013</object-name>
+  <object-name>sms_button.014</object-name>
+  <object-name>sms_button.015</object-name>
+  <object-name>sms_button.016</object-name>
+  <object-name>sms_button.017</object-name>
+  <object-name>sms_button.018</object-name>
+  <object-name>sms_button.019</object-name>
+  <object-name>sms_button.020</object-name>
+  <object-name>sms_button.021</object-name>
+  <object-name>sms_button.022</object-name>
+  <object-name>sms_button.023</object-name>
+  <object-name>sms_button.024</object-name>
+  <object-name>sms_button.025</object-name>
+  <object-name>sms_button.026</object-name>
 	<emission>
-		<red>0.6</red>
+	<red>0.5</red>
 		<green>0.3</green>
-		<blue>0.2</blue>
+	<blue>0.3</blue>
 		<factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
 
 <animation>
-	<type>pick</type>
-	<object-name>switch_eject.002</object-name>
-	<action>
-		<button>0</button>
-		<repeatable>true</repeatable>
-		<interval-sec>0.3</interval-sec>
-		<binding>
-			<command>property-toggle</command>
-			<property>controls/switches/nuc</property>
-		</binding>
-		<binding>
-			<command>nasal</command>
-			<script>b1b.nuc(0)</script>
-		</binding>
-	</action>
-</animation>
-
-<animation>
 	<type>material</type>
-	<object-name>fltdir.001</object-name>
+  <object-name>sms</object-name>
 	<emission>
-		<red>0.4</red>
-		<green>0.3</green>
+	<red>0.3</red>
+	<green>0.2</green>
 		<blue>0.2</blue>
 		<factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
-</animation>-->
+</animation>
 
 </PropertyList>

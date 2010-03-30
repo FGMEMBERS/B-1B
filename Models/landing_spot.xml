@@ -8,11 +8,7 @@
     <z-m> 0.0 </z-m>
  </offsets>
 
-<!--<animation>
-	 <type>billboard</type>
-	 <object-name>spot_light1</object-name>
-	 <spherical type="bool">true</spherical>
-</animation>-->
+
  
 
  <animation>
@@ -37,11 +33,7 @@
 	 </condition>
 </animation>
 
-<!--<animation>-0.208
-	 <type>billboard</type>
-	 <object-name>spot_light2</object-name>
-	 <spherical type="bool">true</spherical>
-</animation>-->
+
  
 
  <animation>

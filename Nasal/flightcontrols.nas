@@ -68,6 +68,18 @@ setlistener("controls/engines/engine[0]/afterburner", func {
 var conv = getprop("controls/engines/engine[0]/afterburner");
 setprop("engines/engine[4]/n1", conv);
 },0,0);
+setlistener("controls/engines/engine[1]/afterburner", func {
+var conv = getprop("controls/engines/engine[1]/afterburner");
+setprop("engines/engine[5]/n1", conv);
+},0,0);
+setlistener("controls/engines/engine[2]/afterburner", func {
+var conv = getprop("controls/engines/engine[2]/afterburner");
+setprop("engines/engine[6]/n1", conv);
+},0,0);
+setlistener("controls/engines/engine[3]/afterburner", func {
+var conv = getprop("controls/engines/engine[3]/afterburner");
+setprop("engines/engine[7]/n1", conv);
+},0,0);
 setlistener("controls/engines/engine[0]/cutoff", func {
 var conv = getprop("controls/engines/engine[0]/cutoff");
 setprop("engines/engine[4]/n2", conv);

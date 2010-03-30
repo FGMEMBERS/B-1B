@@ -568,8 +568,6 @@ maggse
 	 </emission>
 </animation>
  
- <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
- 
  <animation>
 	 <type>pick</type>
 	 <object-name>switch_oh.050</object-name>
@@ -584,20 +582,20 @@ maggse
 	 </action>
 </animation>
 
-<!-- strobe lights-->
+<!-- anti collission lights-->
 
 <animation>
 	<type>rotate</type>
-	<object-name>switch_oh.051</object-name>
-	<property>controls/lighting/strobe</property>
+	<object-name>switch_oh.049</object-name>
+	<property>sim/multiplay/generic/int[0]</property>
 	<interpolation>
 		<entry>
 			<ind>0.0</ind>
-			<dep>30.0</dep>
+			<dep>-30.0</dep>
 		</entry>
 		<entry>
 			<ind>1.0</ind>
-			<dep>-30.0</dep>
+			<dep>30.0</dep>
 		</entry>
 	</interpolation>
 	<axis>
@@ -613,7 +611,7 @@ maggse
 </animation>
 <animation>
 	<type>material</type>
-	<object-name>switch_oh.051</object-name>
+	<object-name>switch_oh.049</object-name>
 	<emission>
 		<red>0.5</red>
 		<green>0.3</green>
@@ -622,18 +620,16 @@ maggse
 	</emission>
 </animation>
 
-<!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
-
 <animation>
 	<type>pick</type>
-	<object-name>switch_oh.051</object-name>
+	<object-name>switch_oh.049</object-name>
 	<action>
 		<button>0</button>
 		<repeatable>true</repeatable>
 		<interval-sec>0.5</interval-sec>
 		<binding>
 			<command>property-toggle</command>
-			<property>controls/lighting/strobe</property>
+			<property>sim/multiplay/generic/int[0]</property>
 		</binding>
 	</action>
 </animation>

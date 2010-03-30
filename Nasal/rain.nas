@@ -12,11 +12,11 @@ var rain = getprop("environment/rain/rain");
 var speed = getprop("velocities/airspeed-kt");
 if (rain >= 50) {
 setprop("environment/rain/rain", 1);
-settimer(rain_loop, 0.15);
+settimer(rain_loop, 0.5);
 } else {
   var rain_new = (rain + 1);
   setprop("environment/rain/rain", rain_new);
-  settimer(rain_loop, 0.15);
+  settimer(rain_loop, 0.5);
   }
 }
 

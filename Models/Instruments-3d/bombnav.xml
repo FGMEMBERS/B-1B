@@ -16,18 +16,18 @@ maggse
 		 <interval-sec>0.5</interval-sec>
 		 <binding>
 			 <command>property-toggle</command>
-			 <property>armament/auto-release</property>
+			 <property>armament/oso/auto-release</property>
 		 </binding>
 		 <binding>
 			      <command>nasal</command>
-			      <script>weapons.release_timer()</script>
+			      <script>weapons.rot_launch_rel()</script>
 		 </binding>
 	 </action>
 </animation>
 <animation>
 	 <type>textranslate</type>
 	 <object-name>bombnav_button.017</object-name>
-	 <property>armament/auto-release</property>
+	 <property>armament/oso/auto-release</property>
 	 <factor>0.038</factor>
          <step>1</step>
 	 <axis>
@@ -40,25 +40,37 @@ maggse
 <!--activate target data calculation  -->
 <animation>
 	 <type>pick</type>
-	 <object-name>bombnav_button.021</object-name>
+	 <object-name>bombnav_button.013</object-name>
 	 <action>
 		 <button>0</button>
 		 <repeatable>true</repeatable>
 		 <interval-sec>0.5</interval-sec>
 		 <binding>
 			 <command>property-toggle</command>
-			 <property>armament/x-to-target</property>
+			 <property>armament/oso/x-to-target</property>
 		 </binding>
 		 <binding>
 			      <command>nasal</command>
-			      <script>weapons.target_data()</script>
+			      <script>weapons.wpn_update()</script>
 		 </binding>
 	 </action>
 </animation>
 <animation>
 	 <type>textranslate</type>
-	 <object-name>bombnav_button.021</object-name>
-	 <property>armament/x-to-target</property>
+	 <object-name>bombnav_button.013</object-name>
+	 <property>armament/oso/x-to-target</property>
+	 <factor>0.038</factor>
+         <step>1</step>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+</animation>
+<animation>
+	 <type>textranslate</type>
+	 <object-name>bombnav_button.014</object-name>
+	 <property>armament/oso/x-to-target</property>
 	 <factor>0.038</factor>
          <step>1</step>
 	 <axis>
@@ -68,36 +80,49 @@ maggse
 	 </axis>
 </animation>
 
-
-
-<!--
 <animation>
-	<type>pick</type>
-	<object-name>switch_eject.002</object-name>
-	<action>
-		<button>0</button>
-		<repeatable>true</repeatable>
-		<interval-sec>0.3</interval-sec>
-		<binding>
-			<command>property-toggle</command>
-			<property>controls/switches/nuc</property>
-		</binding>
-		<binding>
-			<command>nasal</command>
-			<script>b1b.nuc(0)</script>
-		</binding>
-	</action>
+	<type>material</type>
+  <object-name>bombnav_button</object-name>
+  <object-name>bombnav_button.001</object-name>
+  <object-name>bombnav_button.002</object-name>
+  <object-name>bombnav_button.003</object-name>
+  <object-name>bombnav_button.004</object-name>
+  <object-name>bombnav_button.005</object-name>
+  <object-name>bombnav_button.006</object-name>
+  <object-name>bombnav_button.007</object-name>
+  <object-name>bombnav_button.008</object-name>
+  <object-name>bombnav_button.009</object-name>
+  <object-name>bombnav_button.010</object-name>
+  <object-name>bombnav_button.011</object-name>
+  <object-name>bombnav_button.012</object-name>
+  <object-name>bombnav_button.013</object-name>
+  <object-name>bombnav_button.014</object-name>
+  <object-name>bombnav_button.015</object-name>
+  <object-name>bombnav_button.016</object-name>
+  <object-name>bombnav_button.017</object-name>
+  <object-name>bombnav_button.018</object-name>
+  <object-name>bombnav_button.019</object-name>
+  <object-name>bombnav_button.020</object-name>
+  <object-name>bombnav_button.021</object-name>
+  <object-name>bombnav_button.022</object-name>
+	<emission>
+	<red>0.5</red>
+		<green>0.3</green>
+	<blue>0.3</blue>
+	<factor-prop>controls/lighting/instruments-norm</factor-prop>
+  </emission>
 </animation>
 
 <animation>
-	<type>material</type>
-	<object-name>fltdir.001</object-name>
-	<emission>
-		<red>0.4</red>
-		<green>0.3</green>
+  <type>material</type>
+  <object-name>bombnav</object-name>
+  <emission>
+	<red>0.3</red>
+	<green>0.2</green>
 		<blue>0.2</blue>
 		<factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
-</animation>-->
+</animation>
+
 
 </PropertyList>

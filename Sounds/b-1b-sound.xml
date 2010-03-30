@@ -914,7 +914,7 @@
 	    <path>Sounds/door_close.wav</path>
 	    <condition>
 			    <equals>
-				    <property>armament/bay-fwd/rack0-released</property>
+				    <property>armament/bay0/rack0-released</property>
 				    <value>1</value>
 			    </equals>
 	 </condition>
@@ -931,7 +931,7 @@
 	    <path>Sounds/door_close.wav</path>
 	    <condition>
 			    <equals>
-				    <property>armament/bay-fwd/rack1-released</property>
+				    <property>armament/bay0/rack1-released</property>
 				    <value>1</value>
 			    </equals>
 	 </condition>
@@ -948,7 +948,7 @@
 	    <path>Sounds/door_close.wav</path>
 	    <condition>
 			    <equals>
-				    <property>armament/bay-fwd/rack2-released</property>
+				    <property>armament/bay0/rack2-released</property>
 				    <value>1</value>
 			    </equals>
 	 </condition>
@@ -965,7 +965,7 @@
 	    <path>Sounds/door_close.wav</path>
 	    <condition>
 			    <equals>
-				    <property>armament/bay-fwd/rack3-released</property>
+				    <property>armament/bay0/rack3-released</property>
 				    <value>1</value>
 			    </equals>
 	 </condition>
@@ -982,7 +982,7 @@
 	    <path>Sounds/door_close.wav</path>
 	    <condition>
 			    <equals>
-				    <property>armament/bay-fwd/rack4-released</property>
+				    <property>armament/bay0/rack4-released</property>
 				    <value>1</value>
 			    </equals>
 	 </condition>
@@ -999,7 +999,7 @@
 	    <path>Sounds/door_close.wav</path>
 	    <condition>
 			    <equals>
-				    <property>armament/bay-fwd/rack5-released</property>
+				    <property>armament/bay0/rack5-released</property>
 				    <value>1</value>
 			    </equals>
 	 </condition>
@@ -1016,7 +1016,7 @@
 	    <path>Sounds/door_close.wav</path>
 	    <condition>
 			    <equals>
-				    <property>armament/bay-fwd/rack6-released</property>
+				    <property>armament/bay0/rack6-released</property>
 				    <value>1</value>
 			    </equals>
 	 </condition>
@@ -1033,7 +1033,7 @@
 	    <path>Sounds/door_close.wav</path>
 	    <condition>
 			    <equals>
-				    <property>armament/bay-fwd/rack7-released</property>
+				    <property>armament/bay0/rack7-released</property>
 				    <value>1</value>
 			    </equals>
 	 </condition>
@@ -1052,7 +1052,7 @@
 	    <path>Sounds/door_close.wav</path>
 	    <condition>
 			    <equals>
-				    <property>armament/bay-intmd/rack0-released</property>
+				    <property>armament/bay1/rack0-released</property>
 				    <value>1</value>
 			    </equals>
 	 </condition>
@@ -1061,7 +1061,7 @@
 		    <offset>0.0</offset>
             </pitch>
 	    <volume>
-		    <factor>0.58</factor>
+		    <factor>0.65</factor>
 	    </volume>
     </seperation>
     <seperation>
@@ -1069,7 +1069,7 @@
 	    <path>Sounds/door_close.wav</path>
 	    <condition>
 			    <equals>
-				    <property>armament/bay-intmd/rack1-released</property>
+				    <property>armament/bay1/rack1-released</property>
 				    <value>1</value>
 			    </equals>
 	 </condition>
@@ -1078,7 +1078,7 @@
 		    <offset>0.0</offset>
             </pitch>
 	    <volume>
-		    <factor>0.58</factor>
+		    <factor>0.65</factor>
 	    </volume>
     </seperation>
     <seperation>
@@ -1086,7 +1086,7 @@
 	    <path>Sounds/door_close.wav</path>
 	    <condition>
 			    <equals>
-				    <property>armament/bay-intmd/rack2-released</property>
+				    <property>armament/bay1/rack2-released</property>
 				    <value>1</value>
 			    </equals>
 	 </condition>
@@ -1095,7 +1095,7 @@
 		    <offset>0.0</offset>
             </pitch>
 	    <volume>
-		    <factor>0.58</factor>
+		    <factor>0.65</factor>
 	    </volume>
     </seperation>
     <seperation>
@@ -1103,7 +1103,7 @@
 	    <path>Sounds/door_close.wav</path>
 	    <condition>
 			    <equals>
-				    <property>armament/bay-intmd/rack3-released</property>
+				    <property>armament/bay1/rack3-released</property>
 				    <value>1</value>
 			    </equals>
 	 </condition>
@@ -1112,7 +1112,7 @@
 		    <offset>0.0</offset>
             </pitch>
 	    <volume>
-		    <factor>0.58</factor>
+		    <factor>0.65</factor>
 	    </volume>
     </seperation>
     <seperation>
@@ -1120,7 +1120,7 @@
 	    <path>Sounds/door_close.wav</path>
 	    <condition>
 			    <equals>
-				    <property>armament/bay-intmd/rack4-released</property>
+				    <property>armament/bay1/rack4-released</property>
 				    <value>1</value>
 			    </equals>
 	 </condition>
@@ -1129,7 +1129,7 @@
 		    <offset>0.0</offset>
             </pitch>
 	    <volume>
-		    <factor>0.58</factor>
+		    <factor>0.65</factor>
 	    </volume>
     </seperation>
     <seperation>
@@ -1137,7 +1137,7 @@
 	    <path>Sounds/door_close.wav</path>
 	    <condition>
 			    <equals>
-				    <property>armament/bay-intmd/rack5-released</property>
+				    <property>armament/bay1/rack5-released</property>
 				    <value>1</value>
 			    </equals>
 	 </condition>
@@ -1146,7 +1146,7 @@
 		    <offset>0.0</offset>
             </pitch>
 	    <volume>
-		    <factor>0.58</factor>
+		    <factor>0.65</factor>
 	    </volume>
     </seperation>
     <seperation>
@@ -1154,7 +1154,7 @@
 	    <path>Sounds/door_close.wav</path>
 	    <condition>
 			    <equals>
-				    <property>armament/bay-intmd/rack6-released</property>
+				    <property>armament/bay1/rack6-released</property>
 				    <value>1</value>
 			    </equals>
 	 </condition>
@@ -1163,7 +1163,7 @@
 		    <offset>0.0</offset>
             </pitch>
 	    <volume>
-		    <factor>0.58</factor>
+		    <factor>0.65</factor>
 	    </volume>
     </seperation>
     <seperation>
@@ -1171,7 +1171,7 @@
 	    <path>Sounds/door_close.wav</path>
 	    <condition>
 			    <equals>
-				    <property>armament/bay-intmd/rack7-released</property>
+				    <property>armament/bay1/rack7-released</property>
 				    <value>1</value>
 			    </equals>
 	 </condition>
@@ -1180,7 +1180,7 @@
 		    <offset>0.0</offset>
             </pitch>
 	    <volume>
-		    <factor>0.58</factor>
+		    <factor>0.65</factor>
 	    </volume>
     </seperation>
 <!-- no binding yet?

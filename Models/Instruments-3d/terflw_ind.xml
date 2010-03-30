@@ -279,7 +279,7 @@ sweat by maggse
 	</action>
 </animation>
 
-<!-- terrain avoidance set clr setting -->
+<!-- terrain follow set clr setting -->
 
 <animation>
 	<type>rotate</type>
@@ -382,6 +382,79 @@ sweat by maggse
 	</action>
 </animation>
 
+<!-- terrain follow smh setting -->
+
+<animation>
+	<type>rotate</type>
+	<object-name>knob_smh</object-name>
+	<property>controls/switches/terrain-follow-rng</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>40</dep>
+		</entry>
+		<entry>
+			<ind>1</ind>
+			<dep>0</dep>
+		</entry>
+		<entry>
+			<ind>2</ind>
+			<dep>-40</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m>0.013</x-m>
+		<y-m>-0.435</y-m>
+		<z-m>-0.058</z-m>
+	</center>
+</animation>
+
+<!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+<animation>
+	<type>pick</type>
+	<object-name>knob_smh</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.2</interval-sec>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/terrain-follow-rng</property>
+			<step>1</step>
+			<min>0.0</min>
+			<max>2.0</max>
+		</binding>
+		<binding>
+			<command>nasal</command>
+			<script>tfs.range_set()</script>
+		</binding>
+	</action>
+	<action>
+		<button>1</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.2</interval-sec>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/terrain-follow-rng</property>
+			<step>-1</step>
+			<min>0.0</min>
+			<max>2.0</max>
+		</binding>
+		<binding>
+			<command>nasal</command>
+			<script>tfs.range_set()</script>
+		</binding>
+	</action>
+</animation>
+
+
+
 <animation>
 	<type>material</type>
 	<object-name>switch_terflw</object-name>
@@ -390,6 +463,7 @@ sweat by maggse
 	<object-name>knob_rng</object-name>
 	<object-name>knob_clrpln</object-name>
 	<object-name>knob_setclr</object-name>
+	<object-name>knob_smh</object-name>
 	<object-name>fuel_valves.001</object-name>
 	<emission>
 		<red>0.6</red>

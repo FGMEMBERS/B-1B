@@ -33,8 +33,6 @@ setprop("instrumentation/cg/cg_mac_set", 25);
 setprop("instrumentation/cg/cg_mac", 30);
 setprop("instrumentation/tacan/frequencies/selected-channel[12]", 2);
 settimer(flightcontrols.fuelsweep, 1);
-setprop("sim/weight[7]/weigth-lb", 0);
-setprop("sim/weight[8]/weigth-lb", 0);
 setprop("ai/guided/id-number", 0);
 setprop("ai/guided/target-number", 0);
 setprop("ai/guided/id-release", 0);
@@ -56,7 +54,8 @@ setprop("sim/multiplay/generic/float[3]",0);
 setprop("sim/multiplay/generic/float[4]",0);
 setprop("sim/multiplay/generic/float[5]",0);
 b1b.elevon();
-print ("B-1B starting up!");
+b1b.cdu_set(2,1);
+print ("B-1B systems starting!");
 }
 
 var elevon = func() {
@@ -81,16 +80,12 @@ var bay_aft = func(m) {
   setprop("doors/bay_aft/position-norm",m);
 }
 var refuel_door = func {
-#  interpolate("sim/multiplay/generic/float[5]",getprop("controls/switches/refuel-lid"),3);
+  interpolate("sim/multiplay/generic/float[5]",getprop("controls/switches/refuel-lid"),3);
 }
-#var bay_fwd = aircraft.door.new ("sim/multiplay/generic/float[2]",3);
-#var bay_intmd = aircraft.door.new ("sim/multiplay/generic/float[3]",3);
-#var bay_aft = aircraft.door.new ("sim/multiplay/generic/float[4]",3);
-#var refuel_door = aircraft.door.new ("sim/multiplay/generic/float[5]",3);
 
 ### failure dialog
 #var engine_failures = gui.Dialog.new("dialog","Aircraft/B-1B/Dialogs/failures.xml");
-var distance_tanker = gui.Dialog.new("dialog","Aircraft/B-1B/Dialogs/distance_to_tanker.xml");
+#var distance_tanker = gui.Dialog.new("dialog","Aircraft/B-1B/Dialogs/distance_to_tanker.xml");
 
 ### tacan follow autopilot
 var tacan_follow = func {
@@ -142,15 +137,37 @@ setprop("autopilot/settings/heading-bug-deg",hdg_new);
 ### autoengage afterburner when full throttle applied
 setlistener("controls/engines/engine[0]/throttle-lever", func(n) {
   var lever_eng0 = n.getValue();
-  if (lever_eng0 >= 0.98) {
+  var enabled = getprop("controls/switches/engines/afterburner[0]");
+  if ((lever_eng0 >= 0.98) and (enabled)) {
     setprop("controls/engines/engine[0]/afterburner", 1);
-    setprop("controls/engines/engine[1]/afterburner", 1);
-    setprop("controls/engines/engine[2]/afterburner", 1);
-    setprop("controls/engines/engine[3]/afterburner", 1);
   } else {
     setprop("controls/engines/engine[0]/afterburner", 0);
+    }
+});
+setlistener("controls/engines/engine[1]/throttle-lever", func(n) {
+  var lever_eng1 = n.getValue();
+  var enabled = getprop("controls/switches/engines/afterburner[1]");
+  if ((lever_eng1 >= 0.98) and (enabled)) {
+    setprop("controls/engines/engine[1]/afterburner", 1);
+  } else {
     setprop("controls/engines/engine[1]/afterburner", 0);
+    }
+});
+setlistener("controls/engines/engine[2]/throttle-lever", func(n) {
+  var lever_eng2 = n.getValue();
+  var enabled = getprop("controls/switches/engines/afterburner[2]");
+  if ((lever_eng2 >= 0.98) and (enabled)) {
+    setprop("controls/engines/engine[2]/afterburner", 1);
+  } else {
     setprop("controls/engines/engine[2]/afterburner", 0);
+    }
+});
+setlistener("controls/engines/engine[3]/throttle-lever", func(n) {
+  var lever_eng3 = n.getValue();
+  var enabled = getprop("controls/switches/engines/afterburner[3]");
+  if ((lever_eng3 >= 0.98) and (enabled)) {
+    setprop("controls/engines/engine[3]/afterburner", 1);
+  } else {
     setprop("controls/engines/engine[3]/afterburner", 0);
     }
 });
@@ -699,43 +716,60 @@ if (radran == 0.00) {
 # tacan block
 ##
 var tacan = func(add) {
-var ch2 = getprop("instrumentation/tacan/frequencies/selected-channel");
-var ch21 = int(ch2 / 10);
-var ch21_new = ch21;
+  var ch2 = getprop("instrumentation/tacan/frequencies/selected-channel");
+  var ch21 = int(ch2 / 10);
+  var ch21_new = ch21;
 
-if ((add == 1) and (ch21 <= 11.5)) {
-var ch21_new = ch21 + 1;
-} elsif ((add == -1) and (ch21 >= 0.5)) {
-var ch21_new = ch21 - 1;
-}
+  if ((add == 1) and (ch21 <= 11.5)) {
+    var ch21_new = ch21 + 1;
+  } elsif ((add == -1) and (ch21 >= 0.5)) {
+      var ch21_new = ch21 - 1;
+    }
 
-var ch1_new = int(ch21_new / 10);
-setprop("instrumentation/tacan/frequencies/selected-channel[1]", ch1_new);
+  var ch1_new = int(ch21_new / 10);
+  setprop("instrumentation/tacan/frequencies/selected-channel[1]", ch1_new);
 
-if (ch1_new >= 0.95) {
-var ch2_new = ch21_new - 10;
-setprop("instrumentation/tacan/frequencies/selected-channel[2]", ch2_new);
-} elsif (ch1_new <= 0.95) {
-var ch2_new = ch21_new;
-setprop("instrumentation/tacan/frequencies/selected-channel[2]", ch2_new);
-}
+  if (ch1_new >= 0.95) {
+    var ch2_new = ch21_new - 10;
+    setprop("instrumentation/tacan/frequencies/selected-channel[2]", ch2_new);
+  } elsif (ch1_new <= 0.95) {
+      var ch2_new = ch21_new;
+      setprop("instrumentation/tacan/frequencies/selected-channel[2]", ch2_new);
+    }
 }
 
 var tacanxy = func() {
-var xy = getprop("instrumentation/tacan/frequencies/selected-channel[4]");
-if (xy == "X") {
-setprop("instrumentation/tacan/frequencies/selected-channel[4]", "Y");
-} elsif (xy == "Y") {
-setprop("instrumentation/tacan/frequencies/selected-channel[4]", "X");
+  var xy = getprop("instrumentation/tacan/frequencies/selected-channel[4]");
+  if (xy == "X") {
+    setprop("instrumentation/tacan/frequencies/selected-channel[4]", "Y");
+    } elsif (xy == "Y") {
+        setprop("instrumentation/tacan/frequencies/selected-channel[4]", "X");
+      }
 }
+
+#----------------------------------------------------------------------------
+# View change: Ctrl-V switchback to view #0 but switch to OSO view when already
+# in view #0.
+#----------------------------------------------------------------------------
+var toggle_cockpit_views = func() {
+var CurrentView_Num = props.globals.getNode("sim/current-view/view-number");
+var oso_view_num = view.indexof("OSO view");
+
+  var cur_v = CurrentView_Num.getValue();
+  if (cur_v != 0 ) {
+    CurrentView_Num.setValue(0);
+  } else {
+    CurrentView_Num.setValue(oso_view_num);
+  }
 }
+
 
 ##
 # nuc switch
 ##
 var nuc = func {
-if (getprop("controls/switches/nuc") == 1) {
-ltext = "Sorry, Duke Nukem not available yet on this plane(t)!";
+  if (getprop("controls/switches/nuc") == 1) {
+    ltext = "Sorry, Duke Nukem not available yet on this plane(t)!";
   screen.log.write(ltext);
-}
+  }
 }

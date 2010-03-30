@@ -1,7 +1,7 @@
 Rockwell B-1B Lancer "The Bone"
 
 
-XXXXXX  Version Nr: 0016 20012010 XXXXXX
+XXXXXX  Version Nr: 0019 20032010 XXXXXX
 
 
 
@@ -10,12 +10,12 @@ The bone is limited to 3g at wartime (currently warning light flashes at 4g), so
 
 Plane starts with:
 - engines off
-- parking brake on
+- parking brake off
 - with 190000lb of fuel (full), some space is required to be able to trim the aircraft
+- you can immidiately change fuel/weapon status in the B-1B menu, but only on the ground.
 
 XXXX INSTRUCTIONS XXXX
 
-Animations designed for Flightgear cvs/OSG!
 
 Get on/offboard:
 
@@ -54,12 +54,12 @@ Takeoff:
 Flight:
 
 - dependent on your altitude and speed choose 15/25/45/55/67 degrees wingweep (f/F)
-- max speed at sea level is mach 1.2, at altitude mach 1.4, at altitude short periods 
-  at mach 1.5 are possible, but you put the wings on danger to twist on maneuvering
+- max speed at sea level is mach 1.2, at altitude mach 1.4, short periods 
+  at mach 1.5 for fast escape are possible, but you put the wings on danger to twist on maneuvering
 - typical performance speed is around mach 0.8 - 0.95 @sea level and mach 0.9 - 1.3 at altitude.
 
 - 15 degrees ws: used for takeoff/landing <320 knots @ sealevel
-- 25 degrees ws: used for slow flight/refuelling < 370 knots @sealevel
+- 25 degrees ws: used for slow flight/refuelling < 360 knots @sealevel
 - 45 degrees ws: used for cruise at high altitude (mach 0.6 - 0.75)
 - 55 degrees ws: used for high/low alt flight (above mach 0.7)
 - 67 degrees ws: used for high/low alt flight (above mach 0.8)
@@ -71,9 +71,9 @@ Landing:
 - ws 15 degrees
 - use 1/2 flaps, approach speed is about 210-230 knots
 - on short final use full flaps, speed 170-180 knots
-- touchdown speed is <180 knots with full fuel load, or 145 nearly empty
+- touchdown speed is ~180 knots with full fuel load, or 145 nearly empty
 - on touchdown apply full spoilers, decelerate to 130 knots then
-- apply brakes to full stop and use elevator as speedbrake (pull stick)
+- apply brakes to full stop and use elevator as speedbrake when below 90 knots (pull stick)
 
 Flight performance (especially TO/Landing) heavily depends on aircraft weight!
 
@@ -86,7 +86,7 @@ In Flight Refueling:
 - Pull PULL REFUEL again to shut valves and close door
 - Switch SLIPWAY switch to OFF
 
-Fire extinguish system:
+Fire extinguish system:(not in use atm)
 
 - Set desired APU/engine on fire in top B-1B menu
 - Press warning button (panel middle), that automatically switches off the engine/APU 
@@ -95,6 +95,12 @@ Fire extinguish system:
 - Select emergency airport
 - Engine/APU is damaged and should not be restarted
 
+Afterburner:
+
+Automatically engaged at full throttle, but with the switches directly behind the throttle levers (ALTER THROT)
+ the afterburners for each engine can be deactivated (DECR) or activated (INCR). 
+Important when using the autopilot: Switch the afterburners for eng 1 and 4 off, depending on flight also for
+eng 3 or/and eng 4. This prevents oscillations of the throttle levers.
 
 XXXX TERRAIN AVOIDANCE / FOLLOWING SYSTEMS XXXX
 
@@ -116,54 +122,61 @@ XXXX FCGMS Center of Gravity System XXXX
 
 This system sets the Center of Gravity (CG) in % of MAC, and lets you manipulate it in a destinct range. Enable the system by switching on SET on the FCGMS panel and choose your desired CG position. The display to the right shows your current CG position. This is done by using shifting fuel between 2 tanks, so the system works only within a certain margin.
 
+XXXX CDU-900 SYSTEM XXXXX
+
+The CDU is an integrated flight computer currently used to visualize/manipulate NAV and COM properties.
+At the moment the topmost  left/right aerrow buttons are used to skip through the submenus, select desired value to change
+with the aerrow buttons (right side aerrows) and manipulate with the num block navigation (up/down=coarse,left/right=fine).
+You can access the main menus by direct selection on the uppermost row of buttons.
+
 
 XXXX WEAPON SYSTEM XXXX
 
-This plane is equipped with a bomb guiding system currently working on the intermediate bay. First select weapons by going to B-1B/Weapons menu and select guided(intmd bay loaded with 8 GBU-31 guidable weapons). Switch to the OSO seat/view and you should see the GBU31 indicated.
-
-All control panels are visible from OSO view.
-
-Release of guided weapons(only intmd bay):
-
-In air prior to release arm your weapons by using the SMS panel. First click on the bay (should be highlighted when selected) then on the station number to arm (indicated on panel).
-You can disarm a weapon by clicking on station number with middle mouse button.
-Use a manual release by opening the corresponding bay door. You can rotate the launcher by selecting bay and then press LAUNCHER ROT, the position of the launcher is indicated by an L on the SMS display. The launcher, when in release mode, always performs a full cycle and checks which stations are armed and if releases the weapons.
-After releasing the weapons close the bay doors manually.
+This plane is equipped with a bomb guiding system currently working on the intermediate bay. First select weapons
+ by going to B-1B/Weapons menu and select LOAD GUIDED(intmd bay loaded with 8 GBU-31 guidable weapons). 
+Switch to the OSO seat/view and you should see the GBU31 indicated on SMS display.
 
 
-You can use up to 4 guided weapons independently, but I would advise to use 1 or 2 at the beginning.
+Release of guided weapons(only intmd bay currently):
 
-1.)Arm 1-4 weapons using the SMS panel (about 5min prior to target)
+In air prior to release arm your weapons by using the SMS panel. First click on the BAY (should be highlighted when selected),
+ then on the station number to arm, then press ARM button(indicated on panel) or SAFE the weapon.
+You can rotate the launcher by selecting bay and then press LAUNCHER ROT, the position of the launcher is indicated by an L on the SMS display.
+
+
+You can use up to 8 guided weapons independently, but I would advise to use 1 or 2 at the beginning.
+
+1.)Arm 1-2 weapons using the SMS panel (about 5min prior to target)
 2.)Retrieve target coordinates:
 
-2a.)Type in manually at the B-1B/Weapons menu (can be done long before reaching target) or
+2a.)Type in manually at the OSO view position via the IKB (can be done long before reaching target) or
 2b.)Switch to sniper pod view and click with your mouse on target and press t to confirm, next target: press r, then click on target and press t again (should always see confirmation dialog on screen);
-3.)Activate target tracking by clicking (in BOMB/NAV panel/ STEER) the button with square, left to X-hair-dest - should be highlighted when active. Typically done at 20nm to target.
-4.)When about 10nm away from target open intmd bay door
-5.)When about 10nm away from target, click on the button with the triangle below BOMB in BOM/NAV panel to activate the release timer;
+3.)Activate target tracking by clicking (in BOMB/NAV panel/ -->STEER --> BOMB button with triangle) the left/upper button  - should be highlighted when active. Typically done at ~25nm to target.
+4.)Intmd bay door opening is automated now
+5.)When about 15nm away from target, click on the button with the triangle below -->BOMB in BOM/NAV panel to activate the release timer;
 6.)Wait for the realease of the weapons, then you can take control of the aircraft and change course if you wish
 7.)After releasing the bombs, click on the button with the triangle below BOMB in BOM/NAV panel to de-activate the release timer; and you have to stop the target tracking too if you do not intend to release further bombs; close bay doors manually;
 
-The method to retrieve coordinates from the flightgear map server, typing them in and closing on the target is not as stressfull as using the sniper pod, but with she sniper pod you can identify targets much better.
+ad 2a.)Using the IKB for manual target coordinats input:
+- use left aerrow buttons for quick selection/navigation
+- top button (up aerrow) brings you back to main menu
+- select STATN1 --> click aerrow button right to SET IKB
+- now click on the num buttons of IKB to input coordinates, below you can see at wich pos you currently are
+- with the BS and AS you can change the digit to change (none visible means 0)
+- first digit (0) sets negative/positive coord -(press 0) or +(press 1) (+not shown)
+- then press AS to switch to next digit (1), now press 1(for eg 123.4567) or 0 for (023.4567 => 23.4567 shown)
+- now proceed for the whole coordinate, when finished press either SET LON or SET LAT and you should see the coordinates updated
+- proceed for the next coordinate -> SET LON or LON again and you should see your target coordinates at STATN1 LAT/LON
 
-Note: Always use ALT hold to maintain level flight and never use TER AVD and TER FOLLOW when releasing the bombs as they interfere with each other.
+The method to retrieve coordinates from the flightgear map/mp server, typing them in and closing on the target is not as stressfull as using the sniper pod, but with she sniper pod you can identify targets much better.
+
+Note: Always use ALT hold to maintain level flight and never use TER AVD and TER FOLLOW when releasing the bombs.
 
 
 XXXX BLAST, FLARES, STROBE, SPOT XXXX
 
-Based on preexisting osg files some eyecandy for engine blast, strobe and flares was added.
-An experimental landing light can be activated by uncommenting the link in Models/b1b-trans.xml, and you have to recompile flightgear cvs with the following additions in /src/main/renderer.cxx.
-In the class SGPuDrawable block after 
-stateSet->setTextureAttribute(0, new osg::TexEnv(osg::TexEnv::MODULATE));
-I added:
-    // Test for more light sources
-    stateSet->setMode(GL_LIGHTING, osg::StateAttribute::ON);
-    stateSet->setMode(GL_LIGHT0, osg::StateAttribute::ON);
-    stateSet->setMode(GL_LIGHT1, osg::StateAttribute::ON);
+Based on preexisting osg files some eyecandy for engine blast, smoke, vapour and flares was added.
 
-recompile current fgfs cvs and it should work.
-
-It's OSG baby!
 
 XXXX FEATURES XXXX
 
@@ -171,8 +184,6 @@ serial: FGFS 08107
 name: Bad To The Bone
 
 j/k 	decrease/increase spoilers
-o 	afterburner on
-O	afterburner off
 f	sweep wing backw
 F	sweep wing fwd
 
@@ -181,12 +192,12 @@ F	sweep wing fwd
 XXXX PROGRESS XXXX
 
 
-FDM:	 	alpha - in use / needs tuning		95%complete
-3D model:	alpha - in use / refinements ..		89%complete
-Textures:	alpha - in use / too few		50%complete
-Animations:	alpha - in use / more to come		92%complete
-Autopilot:	alpha - in use / needs finetuning	90%complete
-3Dcockpit:	alpha - in use / needs completion	90%complete
+FDM:	 	beta - in use / needs tuning		95%complete
+3D model:	beta - in use / refinements ..		90%complete
+Textures:	alpha - in use / ...			65%complete
+Animations:	beta - in use / more to come		95%complete
+Autopilot:	beta - in use / needs finetuning	90%complete
+3Dcockpit:	beta - in use / needs completion	90%complete
 
 XXXX AUTHORS XXXX
 
@@ -198,9 +209,11 @@ This model was created via use of Wings3D. Wings3D is an open source 3D modeler 
 
 FDM/Instruments/Animations/3D modelling by Markus Zojer
 
+Many thanks to XIII,jano,mfranz,AndersG for support.
+
 Terms of usage: Released under terms of GPL v2.
 
 
 Have Fun! Good Luck!
 
-Markus Zojer,  20/01/2010
+Markus Zojer,  20/03/2010

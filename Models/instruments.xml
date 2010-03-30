@@ -134,7 +134,7 @@ more to come :-)
 	  <offsets>
 		  <x-m>-18.210</x-m>
 		  <y-m>-0.270</y-m>
-		  <z-m>1.210</z-m>
+		  <z-m>1.160</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -353,10 +353,34 @@ more to come :-)
 	  <name>sweep lever</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/sweep_lever.xml</path>
 	  <offsets>
-		  <x-m>-17.680</x-m>
-		  <y-m>-1.050</y-m>
-		  <z-m>0.780</z-m>
+		  <x-m>-17.770</x-m>
+		  <y-m>-1.075</y-m>
+		  <z-m>0.770</z-m>
 		  <pitch-deg>0</pitch-deg>
+		  <heading-deg>-5</heading-deg>
+	  </offsets>
+  </model>
+  
+  <model>
+	  <name>throttle2</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/throttle_left.xml</path>
+	  <offsets>
+		  <x-m>-17.550</x-m>
+		  <y-m>-0.823</y-m>
+		  <z-m>0.870</z-m>
+		  <pitch-deg>-90</pitch-deg>
+		  <roll-deg>-5</roll-deg>
+	  </offsets>
+  </model>
+  <model>
+	  <name>alter throt left</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/alter_throt_l.xml</path>
+	  <offsets>
+		  <x-m>-17.620</x-m>
+		  <y-m>-1.266</y-m>
+		  <z-m>0.907</z-m>
+		  <pitch-deg>-90</pitch-deg>
+		  <roll-deg>-3</roll-deg>
 	  </offsets>
   </model>
   
@@ -395,8 +419,18 @@ more to come :-)
 	  <name>throttle</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/throttle.xml</path>
 	  <offsets>
-		  <x-m>-17.700</x-m>
+		  <x-m>-17.730</x-m>
 		  <y-m>0.185</y-m>
+		  <z-m>0.710</z-m>
+		  <pitch-deg>-90</pitch-deg>
+	  </offsets>
+  </model>
+  <model>
+	  <name>alter throt</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/alter_throt.xml</path>
+	  <offsets>
+		  <x-m>-17.830</x-m>
+		  <y-m>-0.263</y-m>
 		  <z-m>0.710</z-m>
 		  <pitch-deg>-90</pitch-deg>
 	  </offsets>
@@ -414,6 +448,7 @@ more to come :-)
 		  <pitch-deg>75</pitch-deg>
 	  </offsets>
   </model>
+  
   
   <!-- WSO instruments xxxxxxxxxxxxxxxxxxxxxxxxx -->
   
@@ -502,9 +537,10 @@ more to come :-)
 	  </offsets>
   </model>
   
+<!-- OSO instrumentation -->
   <model>
-	  <name>OSO radar</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/nd.xml</path>
+	  <name>OSO mfd</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/wso_mfd.xml</path>
 	  <condition>
 	       <or>
 		 <equals>
@@ -518,9 +554,9 @@ more to come :-)
 	       </or>
 	 </condition>
 	  <offsets>
-		  <x-m>-15.700</x-m>
-		  <y-m>0.385</y-m>
-		  <z-m>1.380</z-m>
+		  <x-m>-15.715</x-m>
+		  <y-m>0.370</y-m>
+		  <z-m>1.385</z-m>
 		  <pitch-deg>-35</pitch-deg>
 	  </offsets>
   </model>
@@ -541,8 +577,8 @@ more to come :-)
 	       </or>
 	 </condition>
 	  <offsets>
-		  <x-m>-15.700</x-m>
-		  <y-m>0.645</y-m>
+		  <x-m>-15.710</x-m>
+		  <y-m>0.660</y-m>
 		  <z-m>1.380</z-m>
 		  <pitch-deg>-35</pitch-deg>
 	  </offsets>
@@ -568,6 +604,29 @@ more to come :-)
 		  <y-m>0.615</y-m>
 		  <z-m>1.640</z-m>
 		  <pitch-deg>0</pitch-deg>
+	  </offsets>
+  </model>
+  
+  <model>
+	  <name>OSO ikb</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/ikb.xml</path>
+	  <condition>
+	       <or>
+		 <equals>
+			 <property>sim/current-view/name</property>
+			 <value>OSO view</value>
+		 </equals>
+		 <equals>
+			 <property>sim/current-view/name</property>
+			 <value>DSO/OSO centered view</value>
+		 </equals>
+	       </or>
+	 </condition>
+	  <offsets>
+		  <x-m>-15.710</x-m>
+		  <y-m>0.492</y-m>
+		  <z-m>1.380</z-m>
+		  <pitch-deg>-35</pitch-deg>
 	  </offsets>
   </model>
   
