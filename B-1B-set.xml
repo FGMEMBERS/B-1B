@@ -452,9 +452,9 @@ B-1B set file.
 
             <max-fuel-transfer-lbs-min>6000</max-fuel-transfer-lbs-min>
             <contact-radius-m>8</contact-radius-m>
-            <offset-x-m>9</offset-x-m>
+            <offset-x-m>4</offset-x-m>
             <offset-y-m>0</offset-y-m>
-            <offset-z-m>3</offset-z-m>
+            <offset-z-m>0.7</offset-z-m>
 		</refuel>
   </systems>
 
