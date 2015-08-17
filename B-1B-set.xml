@@ -15,7 +15,13 @@ B-1B set file.
     </startup>
 
     <flight-model>yasim</flight-model>
-    <status>alpha</status>
+    <status>beta</status>
+    <rating>
+      <FDM type="int">3</FDM>
+      <systems type="int">3</systems>
+      <cockpit type="int">4</cockpit>
+      <model type="int">3</model>
+    </rating>
     <author>Markus Zojer, Paul Jay Schrenker</author>
     <aero>B-1B-yasim</aero>
     <fuel-fraction>1.0</fuel-fraction>
