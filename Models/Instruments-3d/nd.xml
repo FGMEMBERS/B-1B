@@ -110,28 +110,30 @@ hacked by maggse
      <z>0</z>
    </axis>
  </animation>
- 
+
  <animation>
-	 <type>pick</type>
-	 <object-name>hdg_knob</object-name>
-	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.1</interval-sec>
-		 <binding>
-			 <command>nasal</command>
-			 <script>b1b.bug_hdg(1)</script>
-		 </binding>
-	 </action>
-	 <action>
-		 <button>1</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.1</interval-sec>
-		 <binding>
-			 <command>nasal</command>
-			 <script>b1b.bug_hdg(-1)</script>
-		 </binding>
-	 </action>
+   <type>knob</type>
+   <object-name>hdg_knob</object-name>
+   <property>autopilot/settings/heading-bug-deg</property>
+   <center>
+     <x-m>0.011721</x-m>
+     <y-m>0.0573765</y-m>
+     <z-m>-0.1074415</z-m>
+   </center>
+   <axis>
+     <x>1</x>
+     <y>0</y>
+     <z>0</z>
+   </axis>
+   <action>
+     <binding>
+       <command>property-adjust</command>
+       <property>autopilot/settings/heading-bug-deg</property>
+       <min>0</min>
+       <max>360</max>
+       <wrap>true</wrap>
+     </binding>
+   </action>
  </animation>
 
 <!--
