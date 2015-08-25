@@ -474,12 +474,17 @@ B-1B set file.
    <!--<ai>
 
     </ai>-->
-</sim>
+  </sim>
 
   <systems>
-		<refuel>
-			<type>boom</type>
-		</refuel>
+    <refuel>
+      <type>boom</type>
+      <serviceable type="bool">false</serviceable>
+      <max-fuel-transfer-lbs-min>6000</max-fuel-transfer-lbs-min>
+      <offset-x-m>4</offset-x-m>
+      <offset-y-m>0</offset-y-m>
+      <offset-z-m>0</offset-z-m>
+    </refuel>
   </systems>
 
 
