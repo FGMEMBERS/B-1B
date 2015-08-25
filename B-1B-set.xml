@@ -116,13 +116,15 @@ B-1B set file.
     
     
 
-<!-- Shift the camera target point back -->
+    <!-- Shift the camera target point back -->
+    <!-- helicopter view -->
     <view n="1">
       <config>
         <target-z-offset-m archive="y" type="double">20.0</target-z-offset-m>
       </config>
     </view>
 
+    <!-- chase view -->
     <view n="2">
       <config>
         <x-offset-m archive="y" type="double">8.0</x-offset-m>
@@ -131,17 +133,40 @@ B-1B set file.
       </config>
     </view>
 
+    <!-- tower view -->
     <view n="3">
       <config>
         <target-z-offset-m archive="y" type="double">20.0</target-z-offset-m>
       </config>
     </view>
 
-    <!--<view n="5">
+    <!-- tower view look from -->
+    <view n="4">
       <config>
-        <target-z-offset-m archive="y" type="double">2.0</target-z-offset-m>
+        <target-z-offset-m archive="y" type="double">20.0</target-z-offset-m>
       </config>
-    </view>-->
+    </view>
+
+    <!-- chase view without yaw -->
+    <view n="5">
+      <config>
+        <target-z-offset-m archive="y" type="double">20.0</target-z-offset-m>
+      </config>
+    </view>
+
+    <!-- fly-by view -->
+    <view n="6">
+      <config>
+        <target-z-offset-m archive="y" type="double">20.0</target-z-offset-m>
+      </config>
+    </view>
+
+    <!-- model view -->
+    <view n="7">
+      <config>
+        <target-z-offset-m archive="y" type="double">20.0</target-z-offset-m>
+      </config>
+    </view>
 
     <sound>
       <audible>true</audible>
