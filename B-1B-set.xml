@@ -15,6 +15,9 @@ B-1B set file.
     </startup>
 
     <flight-model>yasim</flight-model>
+    <aircraft-version>0020 2015-08-29</aircraft-version>
+    <!-- See version_update.txt for a changelog prior to version 0019
+         and the FGAddon log for versions after that -->
     <status>beta</status>
     <rating>
       <FDM type="int">3</FDM>
