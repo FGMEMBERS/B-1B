@@ -731,23 +731,6 @@ var tacanxy = func() {
       }
 }
 
-#----------------------------------------------------------------------------
-# View change: Ctrl-V switchback to view #0 but switch to OSO view when already
-# in view #0.
-#----------------------------------------------------------------------------
-var toggle_cockpit_views = func() {
-var CurrentView_Num = props.globals.getNode("sim/current-view/view-number");
-var oso_view_num = view.indexof("OSO view");
-
-  var cur_v = CurrentView_Num.getValue();
-  if (cur_v != 0 ) {
-    CurrentView_Num.setValue(0);
-  } else {
-    CurrentView_Num.setValue(oso_view_num);
-  }
-}
-
-
 ##
 # nuc switch
 ##
