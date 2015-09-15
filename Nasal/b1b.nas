@@ -673,10 +673,18 @@ if (fltd == 0.00) {
   setprop("instrumentation/tacan/serviceable", "0");
 } elsif (fltd == 1.00) {
   setprop("instrumentation/adf/serviceable", "0");
-#  setprop("instrumentation/nav/serviceable", "0");
+  setprop("instrumentation/nav/serviceable", "0");
   setprop("instrumentation/tacan/serviceable", "1");
 }
 
+  n = props.globals.getNode ("instrumentation/hsi/indicated-distance-nm");
+  n.unalias ();
+  if (getprop ("instrumentation/tacan/serviceable")) {
+    n.alias ("instrumentation/tacan/indicated-distance-nm");
+  }
+  elsif (getprop ("instrumentation/nav/serviceable")) {
+    n.alias ("instrumentation/dme/indicated-distance-nm");
+  }
 }
 
 var radar_range = func {

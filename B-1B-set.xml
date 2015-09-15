@@ -319,12 +319,12 @@ B-1B set file.
     </menubar>
 
     <systems>
-      <electrical>
-        <path>Aircraft/Generic/generic-electrical.xml</path>
-      </electrical>
       <autopilot>
         <path>Aircraft/B-1B/Systems/b1b-autopilot.xml</path>
       </autopilot>
+      <property-rule n="100">
+        <path>Aircraft/B-1B/Models/Instruments-3d/instrument-filters.xml</path>
+      </property-rule>
     </systems>
 
     <rendering>

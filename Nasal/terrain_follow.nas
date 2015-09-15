@@ -57,6 +57,11 @@ var beam_max = func() {
   }
 }
 
+var BULK=1;  # the log levels for logprint ()
+# var DEBUG=2;
+# var INFO=3;
+# var WARN=4;
+
 #compute following behaviour according to scan results
 var ap_react = func(n,m,o){
 
@@ -72,7 +77,7 @@ var ap_react = func(n,m,o){
   var c_alt = getprop("position/altitude-ft");
 
   if (point_ele > c_alt) {
-    print("^up");
+    logprint(BULK, "^up");
     if (high < point_ele){
       high = point_ele;
       time = t_time;
@@ -89,7 +94,7 @@ var ap_react = func(n,m,o){
     ap_adjust(high);
 
   } elsif (point_ele < c_alt){
-      print("vdown");
+      logprint(BULK, "vdown");
       setprop("instrumentation/tfs/high", -999);  
       time -= 0.1;
       setprop("instrumentation/tfs/time", time);
@@ -113,7 +118,7 @@ var ap_adjust = func(n) {
   var t_alt = n;
   setprop("autopilot/settings/target-follow-altitude-ft",t_alt);
   setprop("autopilot/locks/altitude", "terrain-follow");
-  #print("t_alt:");
+  logprint(BULK, "t_alt:");
   #debug.dump(t_alt);
 }
 
@@ -123,5 +128,5 @@ var range_set = func(){
   var r_set = getprop("controls/switches/terrain-follow-rng");
   setprop("instrumentation/tfs/range",ranges[r_set]);
   var set_print = ranges[r_set];
-  #print("tfs_range: " ~ set_print ~ "!");
+  logprint(BULK, "tfs_range: " ~ set_print ~ "!");
 }
