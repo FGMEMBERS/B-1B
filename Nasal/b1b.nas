@@ -705,6 +705,8 @@ if (radran == 0.00) {
 }
 
 ##
+aircraft.livery.init("Models/Liveries");
+
 # tacan block
 ##
 var tacan = func(add) {

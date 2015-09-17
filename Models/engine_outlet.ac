@@ -11,7 +11,7 @@ OBJECT poly
 name "engine_outlet.009_0"
 data 8
 fuse.021
-texture "bone-body.png"
+texture "Liveries/bad-to-the-bone-body.png"
 texrep 1 1
 crease 30
 numvert 10
@@ -176,7 +176,7 @@ OBJECT poly
 name "engine_outlet.015_0"
 data 8
 fuse.027
-texture "bone-body.png"
+texture "Liveries/bad-to-the-bone-body.png"
 texrep 1 1
 crease 30
 numvert 10
@@ -341,7 +341,7 @@ OBJECT poly
 name "engine_outlet.014_0"
 data 8
 fuse.026
-texture "bone-body.png"
+texture "Liveries/bad-to-the-bone-body.png"
 texrep 1 1
 crease 30
 numvert 10
@@ -506,7 +506,7 @@ OBJECT poly
 name "engine_outlet.008_0"
 data 8
 fuse.020
-texture "bone-body.png"
+texture "Liveries/bad-to-the-bone-body.png"
 texrep 1 1
 crease 30
 numvert 10
@@ -671,7 +671,7 @@ OBJECT poly
 name "engine_outlet.016_0"
 data 8
 fuse.028
-texture "bone-body.png"
+texture "Liveries/bad-to-the-bone-body.png"
 texrep 1 1
 crease 30
 numvert 10
@@ -836,7 +836,7 @@ OBJECT poly
 name "engine_outlet.011_0"
 data 8
 fuse.023
-texture "bone-body.png"
+texture "Liveries/bad-to-the-bone-body.png"
 texrep 1 1
 crease 30
 numvert 10
@@ -1001,7 +1001,7 @@ OBJECT poly
 name "engine_outlet.010_0"
 data 8
 fuse.022
-texture "bone-body.png"
+texture "Liveries/bad-to-the-bone-body.png"
 texrep 1 1
 crease 30
 numvert 10
@@ -1166,7 +1166,7 @@ OBJECT poly
 name "engine_outlet.013_0"
 data 8
 fuse.025
-texture "bone-body.png"
+texture "Liveries/bad-to-the-bone-body.png"
 texrep 1 1
 crease 30
 numvert 10
@@ -1331,7 +1331,7 @@ OBJECT poly
 name "engine_outlet.012_0"
 data 8
 fuse.024
-texture "bone-body.png"
+texture "Liveries/bad-to-the-bone-body.png"
 texrep 1 1
 crease 30
 numvert 10
@@ -1496,7 +1496,7 @@ OBJECT poly
 name "engine_outlet.002_0"
 data 8
 fuse.014
-texture "bone-body.png"
+texture "Liveries/bad-to-the-bone-body.png"
 texrep 1 1
 crease 30
 numvert 10
@@ -1661,7 +1661,7 @@ OBJECT poly
 name "engine_outlet.003_0"
 data 8
 fuse.015
-texture "bone-body.png"
+texture "Liveries/bad-to-the-bone-body.png"
 texrep 1 1
 crease 30
 numvert 10
@@ -1826,7 +1826,7 @@ OBJECT poly
 name "engine_outlet.001_0"
 data 8
 fuse.013
-texture "bone-body.png"
+texture "Liveries/bad-to-the-bone-body.png"
 texrep 1 1
 crease 30
 numvert 12
@@ -1997,7 +1997,7 @@ OBJECT poly
 name "engine_outlet.006_0"
 data 8
 fuse.018
-texture "bone-body.png"
+texture "Liveries/bad-to-the-bone-body.png"
 texrep 1 1
 crease 30
 numvert 10
@@ -2162,7 +2162,7 @@ OBJECT poly
 name "engine_outlet.007_0"
 data 8
 fuse.019
-texture "bone-body.png"
+texture "Liveries/bad-to-the-bone-body.png"
 texrep 1 1
 crease 30
 numvert 10
@@ -2327,7 +2327,7 @@ OBJECT poly
 name "engine_outlet.004_0"
 data 8
 fuse.016
-texture "bone-body.png"
+texture "Liveries/bad-to-the-bone-body.png"
 texrep 1 1
 crease 30
 numvert 10
@@ -2492,7 +2492,7 @@ OBJECT poly
 name "engine_outlet.005_0"
 data 8
 fuse.017
-texture "bone-body.png"
+texture "Liveries/bad-to-the-bone-body.png"
 texrep 1 1
 crease 30
 numvert 10

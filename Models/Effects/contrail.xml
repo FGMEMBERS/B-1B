@@ -1,7 +1,7 @@
 <PropertyList>
 <particlesystem>
    <name>smoke</name>
-   <texture>smoke.rgb</texture>
+   <texture>smoke.png</texture>
 
    <emissive type="bool">false</emissive>
    <lighting type="bool">false</lighting>
@@ -10,11 +10,11 @@
      <and>
        <greater-than>
          <property>/position/altitude-ft</property>
-         <value>25000</value>
+         <value>12000</value>
        </greater-than>
        <less-than>
          <property>environment/temperature-degc</property>
-         <value>-40</value>
+         <value>10</value>
        </less-than>
      </and>
    </condition>
@@ -31,8 +31,8 @@
      <phi-min-deg>-1.5</phi-min-deg>
      <phi-max-deg>1.5</phi-max-deg>
      <speed-mps>
-       <value>0</value>
-       <spread>0</spread>
+       <value>5</value>
+       <spread>2.5</spread>
      </speed-mps>
      <rotation-speed>
        <x-min-deg-sec>0</x-min-deg-sec>
@@ -56,30 +56,30 @@
    <particle>
      <start>
        <color>
-         <red><value>   0.7 </value></red>
-         <green><value> 0.7 </value></green>
-         <blue><value>  0.7 </value></blue>
-         <alpha><value> 0.3 </value></alpha>
+         <red><value>   0.65 </value></red>
+         <green><value> 0.65 </value></green>
+         <blue><value>  0.65 </value></blue>
+         <alpha><value> 0.25 </value></alpha>
        </color>
        <size>
-         <value>2.45</value>
+         <value>3</value>
        </size>
      </start>
 
      <end>
        <color>
-         <red><value>   1.0 </value></red>
-         <green><value> 1.0 </value></green>
-         <blue><value>  1.0 </value></blue>
-         <alpha><value> 0.8 </value></alpha>
+         <red><value>   0.85 </value></red>
+         <green><value> 0.85 </value></green>
+         <blue><value>  0.85 </value></blue>
+         <alpha><value> 0.35 </value></alpha>
        </color>
        <size>
-         <value>4</value>
+         <value>5</value>
        </size>
      </end>
 
      <life-sec>
-       <value>9</value>
+       <value>5</value>
      </life-sec>
         
      <mass-kg>  0.5 </mass-kg>

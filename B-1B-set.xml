@@ -226,6 +226,9 @@ B-1B set file.
 	  </PHD>
 	</instrumentation>
       </A-6E>
+      <livery>
+        <file type="string">bad-to-the-bone</file>
+      </livery>
     </model>
 
     <airport>
@@ -304,6 +307,13 @@ B-1B set file.
             <binding>
               <command>dialog-show</command>
               <dialog-name>pushback</dialog-name>
+            </binding>
+          </item>
+          <item n="11">
+            <label>Select Livery</label>
+            <binding>
+              <command>nasal</command>
+              <script>aircraft.livery.dialog.toggle()</script>
             </binding>
           </item>
 

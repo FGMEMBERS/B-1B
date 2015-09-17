@@ -1139,7 +1139,7 @@ OBJECT poly
 name "gbu-31_1"
 data 8
 Tube.002
-texture "bone-body.png"
+texture "Liveries/bad-to-the-bone-body.png"
 texrep 1 1
 crease 30.000000
 numvert 193
