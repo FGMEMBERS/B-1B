@@ -1,12 +1,4 @@
 <?xml version="1.0"?>
-<!--
-************************************************************************
-B-1B set file.
-
-2007-5-10 Markus Zojer
-************************************************************************
--->
-
 <PropertyList>
   <sim>
 
@@ -15,7 +7,7 @@ B-1B set file.
     </startup>
 
     <flight-model>yasim</flight-model>
-    <aircraft-version>0020 2015-08-29</aircraft-version>
+    <aircraft-version>0021 2015-09-18</aircraft-version>
     <!-- See version_update.txt for a changelog prior to version 0019
          and the FGAddon log for versions after that -->
     <status>beta</status>
@@ -25,7 +17,7 @@ B-1B set file.
       <cockpit type="int">4</cockpit>
       <model type="int">3</model>
     </rating>
-    <author>Markus Zojer, Paul Jay Schrenker</author>
+    <author>Markus Zojer, Paul Jay Schrenker, Ludovic Brenta (systems), Andreas Spiekermann (livery)</author>
     <aero>B-1B-yasim</aero>
     <fuel-fraction>1.0</fuel-fraction>
 
