@@ -2007,7 +2007,7 @@ more to come :-)
     <object-name>axle</object-name>
     <object-name>tyre.001</object-name>
     <object-name>tyre</object-name>
-    <property>gear/gear[2]/position-norm</property>
+    <property>gear/gear[1]/position-norm</property>
     <interpolation>
       <entry>
 	<ind>0.5</ind>
@@ -2085,7 +2085,7 @@ more to come :-)
     <object-name>axle</object-name>
     <object-name>tyre.001</object-name>
     <object-name>tyre</object-name>
-    <property>gear/gear[2]/position-norm</property>
+    <property>gear/gear[1]/position-norm</property>
     <interpolation>
       <entry>
 	<ind>0.2</ind>
@@ -2315,7 +2315,7 @@ more to come :-)
     <object-name>axle.002</object-name>
     <object-name>tyre.004</object-name>
     <object-name>tyre.005</object-name>
-    <property>gear/gear[3]/position-norm</property>
+    <property>gear/gear[2]/position-norm</property>
     <interpolation>
       <entry>
 	<ind>0.5</ind>
@@ -2338,7 +2338,7 @@ more to come :-)
     <object-name>axle.003</object-name>
     <object-name>tyre.006</object-name>
     <object-name>tyre.007</object-name>
-    <property>gear/gear[4]/position-norm</property>
+    <property>gear/gear[2]/position-norm</property>
     <interpolation>
       <entry>
 	<ind>0.5</ind>
@@ -2365,7 +2365,7 @@ more to come :-)
     <object-name>gear_r_up1.001</object-name>
     <object-name>gear_r_up1.002</object-name>
     <object-name>gear_r_up1.003</object-name>
-    <property>gear/gear[3]/position-norm</property>
+    <property>gear/gear[2]/position-norm</property>
     <interpolation>
       <entry>
 	<ind>0.5</ind>
@@ -2391,7 +2391,7 @@ more to come :-)
     <object-name>axle.002</object-name>
     <object-name>tyre.004</object-name>
     <object-name>tyre.005</object-name>
-    <property>gear/gear[3]/position-norm</property>
+    <property>gear/gear[2]/position-norm</property>
     <interpolation>
       <entry>
 	<ind>0.2</ind>
@@ -2414,7 +2414,7 @@ more to come :-)
     <object-name>axle.003</object-name>
     <object-name>tyre.006</object-name>
     <object-name>tyre.007</object-name>
-    <property>gear/gear[4]/position-norm</property>
+    <property>gear/gear[2]/position-norm</property>
     <interpolation>
       <entry>
 	<ind>0.2</ind>
@@ -2441,7 +2441,7 @@ more to come :-)
     <object-name>gear_r_up1.001</object-name>
     <object-name>gear_r_up1.002</object-name>
     <object-name>gear_r_up1.003</object-name>
-    <property>gear/gear[3]/position-norm</property>
+    <property>gear/gear[2]/position-norm</property>
     <interpolation>
       <entry>
 	<ind>0.2</ind>
@@ -2464,7 +2464,7 @@ more to come :-)
   <animation>
     <type>rotate</type>
     <object-name>gear_r_up.002</object-name>
-    <property>gear/gear[3]/position-norm</property>
+    <property>gear/gear[2]/position-norm</property>
     <interpolation>
       <entry>
 	<ind>0.2</ind>
@@ -2494,7 +2494,7 @@ more to come :-)
   <animation>
     <type>rotate</type>
     <object-name>gear_r_up.002</object-name>
-    <property>gear/gear[3]/position-norm</property>
+    <property>gear/gear[2]/position-norm</property>
     <interpolation>
       <entry>
 	<ind>0.5</ind>
@@ -2520,7 +2520,7 @@ more to come :-)
   <animation>
     <type>rotate</type>
     <object-name>gear_r_up1</object-name>
-    <property>gear/gear[3]/position-norm</property>
+    <property>gear/gear[2]/position-norm</property>
     <interpolation>
       <entry>
 	<ind>0.2</ind>
@@ -2549,7 +2549,7 @@ more to come :-)
     <object-name>gear_r_up1.001</object-name>
     <object-name>gear_r_up1.002</object-name>
     <object-name>gear_r_up1.003</object-name>
-    <property>gear/gear[3]/position-norm</property>
+    <property>gear/gear[2]/position-norm</property>
     <interpolation>
       <entry>
 	<ind>0.2</ind>
@@ -2580,7 +2580,7 @@ more to come :-)
     <type>rotate</type>
     <object-name>gear_r_up1.001</object-name>
     <object-name>gear_r_up1.002</object-name>
-    <property>gear/gear[3]/position-norm</property>
+    <property>gear/gear[2]/position-norm</property>
     <interpolation>
       <entry>
 	<ind>0.5</ind>
@@ -2606,7 +2606,7 @@ more to come :-)
   <animation>
     <type>rotate</type>
     <object-name>gear_r_up1.001</object-name>
-    <property>gear/gear[3]/position-norm</property>
+    <property>gear/gear[2]/position-norm</property>
     <interpolation>
       <entry>
 	<ind>0.2</ind>

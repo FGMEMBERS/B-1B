@@ -262,6 +262,38 @@ B-1B set file.
       </generic>
     </multiplay>
 
+    <flight-recorder>
+      <replay-config type="int">0</replay-config>
+      <config n="0" include="/Aircraft/Generic/flightrecorder/generic-jet.xml">
+        <name type="string">B-1B Flight Recorder</name>
+        <signal>
+          <type>float</type> <!-- right wing sweep -->
+          <property type="string">rotors/main/blade[0]/position-deg</property>
+        </signal>
+        <signal>
+          <type>float</type> <!-- left wing sweep -->
+          <property type="string">rotors/main/blade[1]/position-deg</property>
+        </signal>
+        <!--
+        <signal>
+          <type>bool</type>
+          <property type="string">/switches/engines[0]/afterburner</property>
+        </signal>
+        <signal>
+          <type>bool</type>
+          <property type="string">/switches/engines[1]/afterburner</property>
+        </signal>
+        <signal>
+          <type>bool</type>
+          <property type="string">/switches/engines[2]/afterburner</property>
+        </signal>
+        <signal>
+          <type>bool</type>
+          <property type="string">/switches/engines[3]/afterburner</property>
+          </signal>
+          -->
+      </config>
+    </flight-recorder>
 
     <menubar>
       <default>
