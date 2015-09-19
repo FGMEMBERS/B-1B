@@ -1,10 +1,6 @@
 Rockwell B-1B Lancer "The Bone"
 
 
-XXXXXX  Version Nr: 0019 20032010 XXXXXX
-
-
-
 This aircraft model represents a hack of the B-1B variable wingsweep bomber. The available sweep angles are 15 (takeoff) 25 (slow flight) 45 (high altitude flight) 55/67 (low and high altitude fast flight). The wingsweep is simulated by adding lift/drag to the inner wing part. The outer wing part always stays at 67 degrees and represents the most accurate hack ;-). Afterburner is used for takeoff and for rapid climb/acceleration maneuvers.
 The bone is limited to 3g at wartime (currently warning light flashes at 4g), so turning radius is huge at high speeds.
 
@@ -12,7 +8,7 @@ Plane starts with:
 - engines off
 - parking brake off
 - with 190000lb of fuel (full), some space is required to be able to trim the aircraft
-- you can immidiately change fuel/weapon status in the B-1B menu, but only on the ground.
+- you can immediately change fuel/weapon status in the B-1B menu, but only on the ground.
 
 XXXX INSTRUCTIONS XXXX
 
@@ -198,6 +194,13 @@ Textures:	alpha - in use / ...			65%complete
 Animations:	beta - in use / more to come		95%complete
 Autopilot:	beta - in use / needs finetuning	90%complete
 3Dcockpit:	beta - in use / needs completion	90%complete
+
+XXXX CONTRIBUTING XXXX
+
+The B-1B is part of the official collection of aircrft; the latest
+release is always available at http://www.flightgear.org/download.  If
+you would like to help improve this aircraft further, please send an
+email to flightgear-devel@lists.flightgear.org.
 
 XXXX AUTHORS XXXX
 

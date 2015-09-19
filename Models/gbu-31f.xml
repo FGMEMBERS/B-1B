@@ -9,11 +9,20 @@ more to come :-)
   <path>gbu-31.ac</path>
   
   <offsets>
-	  <x-m>25.0</x-m>
-	  <y-m>0.0</y-m>
-          <z-m>0.24</z-m>
+    <x-m>25.0</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.24</z-m>
     <pitch-deg>0</pitch-deg>
-    
   </offsets>
+
+  <!-- Livery selection -->
+  <animation>
+    <type>material</type>
+    <property-base>sim/model/livery</property-base>
+    <object-name>gbu-31_1</object-name>
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>bad-to-the-bone-body.png</texture>
+  </animation>
 
 </PropertyList>

@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!--
+Filters that compute values for various instruments in the B-1B.
+Copyright (C) 2015 Ludovic Brenta <ludovic@ludovic-brenta.org>
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+-->
+<PropertyList>
+
+  <filter>
+    <name>HSI: compute the bearing needle angle when TACAN is selected and in range</name>
+    <debug>false</debug>
+    <type>gain</type>
+    <enable>
+      <condition>
+        <greater-than>
+	  <property>systems/electrical/outputs/hsi</property>
+	  <value>24</value>
+        </greater-than>
+        <property>instrumentation/tacan/serviceable</property>
+        <property>instrumentation/tacan/in-range</property>
+      </condition>
+    </enable>
+    <input>
+      <property>instrumentation/tacan/indicated-bearing-true-deg</property>
+      <offset>
+        <property>environment/magnetic-variation-deg</property>
+        <scale>-1</scale>
+      </offset>
+    </input>
+    <output>/instrumentation/hsi/bearing-needle-1-deg</output>
+  </filter>
+
+  <filter>
+    <name>HSI: compute the bearing needle angle when ADF is selected and in range</name>
+    <debug>false</debug>
+    <type>gain</type>
+    <enable>
+      <condition>
+        <and>
+          <greater-than>
+	    <property>systems/electrical/outputs/hsi</property>
+	    <value>24</value>
+          </greater-than>
+          <not>
+	    <property>instrumentation/tacan/serviceable</property>
+          </not>
+          <property>instrumentation/adf/serviceable</property>
+          <property>instrumentation/adf/in-range</property>
+        </and>
+      </condition>
+    </enable>
+    <input>
+      <property>instrumentation/adf/indicated-bearing-deg</property>
+      <offset>
+        <property>orientation/heading-magnetic-deg</property>
+      </offset>
+    </input>
+    <output>/instrumentation/hsi/bearing-needle-1-deg</output>
+  </filter>
+
+</PropertyList>

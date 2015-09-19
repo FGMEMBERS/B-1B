@@ -8,5 +8,13 @@ more to come :-)
 
   <path>gbu-31.ac</path>
 
+  <!-- Livery selection -->
+  <animation>
+    <type>material</type>
+    <object-name>gbu-31_1</object-name>
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>bad-to-the-bone-body.png</texture>
+  </animation>
 
 </PropertyList>

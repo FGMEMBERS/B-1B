@@ -1,12 +1,4 @@
 <?xml version="1.0"?>
-<!--
-************************************************************************
-B-1B set file.
-
-2007-5-10 Markus Zojer
-************************************************************************
--->
-
 <PropertyList>
   <sim>
 
@@ -15,7 +7,7 @@ B-1B set file.
     </startup>
 
     <flight-model>yasim</flight-model>
-    <aircraft-version>0020 2015-08-29</aircraft-version>
+    <aircraft-version>0021 2015-09-18</aircraft-version>
     <!-- See version_update.txt for a changelog prior to version 0019
          and the FGAddon log for versions after that -->
     <status>beta</status>
@@ -25,7 +17,7 @@ B-1B set file.
       <cockpit type="int">4</cockpit>
       <model type="int">3</model>
     </rating>
-    <author>Markus Zojer, Paul Jay Schrenker</author>
+    <author>Markus Zojer, Paul Jay Schrenker, Ludovic Brenta (systems), Andreas Spiekermann (livery)</author>
     <aero>B-1B-yasim</aero>
     <fuel-fraction>1.0</fuel-fraction>
 
@@ -226,6 +218,9 @@ B-1B set file.
 	  </PHD>
 	</instrumentation>
       </A-6E>
+      <livery>
+        <file type="string">bad-to-the-bone</file>
+      </livery>
     </model>
 
     <airport>
@@ -259,6 +254,38 @@ B-1B set file.
       </generic>
     </multiplay>
 
+    <flight-recorder>
+      <replay-config type="int">0</replay-config>
+      <config n="0" include="/Aircraft/Generic/flightrecorder/generic-jet.xml">
+        <name type="string">B-1B Flight Recorder</name>
+        <signal>
+          <type>float</type> <!-- right wing sweep -->
+          <property type="string">rotors/main/blade[0]/position-deg</property>
+        </signal>
+        <signal>
+          <type>float</type> <!-- left wing sweep -->
+          <property type="string">rotors/main/blade[1]/position-deg</property>
+        </signal>
+        <!--
+        <signal>
+          <type>bool</type>
+          <property type="string">/switches/engines[0]/afterburner</property>
+        </signal>
+        <signal>
+          <type>bool</type>
+          <property type="string">/switches/engines[1]/afterburner</property>
+        </signal>
+        <signal>
+          <type>bool</type>
+          <property type="string">/switches/engines[2]/afterburner</property>
+        </signal>
+        <signal>
+          <type>bool</type>
+          <property type="string">/switches/engines[3]/afterburner</property>
+          </signal>
+          -->
+      </config>
+    </flight-recorder>
 
     <menubar>
       <default>
@@ -306,6 +333,13 @@ B-1B set file.
               <dialog-name>pushback</dialog-name>
             </binding>
           </item>
+          <item n="11">
+            <label>Select Livery</label>
+            <binding>
+              <command>nasal</command>
+              <script>aircraft.livery.dialog.toggle()</script>
+            </binding>
+          </item>
 
 	  <!--<item>
 	      <label>Failures</label>
@@ -319,12 +353,12 @@ B-1B set file.
     </menubar>
 
     <systems>
-      <electrical>
-        <path>Aircraft/Generic/generic-electrical.xml</path>
-      </electrical>
       <autopilot>
         <path>Aircraft/B-1B/Systems/b1b-autopilot.xml</path>
       </autopilot>
+      <property-rule n="100">
+        <path>Aircraft/B-1B/Models/Instruments-3d/instrument-filters.xml</path>
+      </property-rule>
     </systems>
 
     <rendering>
