@@ -15,7 +15,7 @@
       <FDM type="int">3</FDM>
       <systems type="int">3</systems>
       <cockpit type="int">4</cockpit>
-      <model type="int">3</model>
+      <model type="int">4</model>
     </rating>
     <author>Markus Zojer, Paul Jay Schrenker, Ludovic Brenta (systems), Andreas Spiekermann (livery)</author>
     <aero>B-1B-yasim</aero>
