@@ -266,24 +266,55 @@
           <type>float</type> <!-- left wing sweep -->
           <property type="string">rotors/main/blade[1]/position-deg</property>
         </signal>
-        <!--
+        
         <signal>
-          <type>bool</type>
-          <property type="string">/switches/engines[0]/afterburner</property>
+          <type>float</type>
+          <property type="string">/controls/engines[0]/afterburner</property>
         </signal>
         <signal>
-          <type>bool</type>
-          <property type="string">/switches/engines[1]/afterburner</property>
+          <type>float</type>
+          <property type="string">/controls/engines[1]/afterburner</property>
         </signal>
         <signal>
-          <type>bool</type>
-          <property type="string">/switches/engines[2]/afterburner</property>
+          <type>float</type>
+          <property type="string">/controls/engines[2]/afterburner</property>
         </signal>
         <signal>
-          <type>bool</type>
-          <property type="string">/switches/engines[3]/afterburner</property>
-          </signal>
-          -->
+          <type>float</type>
+          <property type="string">/controls/engines[3]/afterburner</property>
+        </signal>
+	<signal>
+          <type>float</type>
+          <property type="string">/controls/engines[0]/throttle-lever</property>
+        </signal>
+        <signal>
+          <type>float</type>
+          <property type="string">/controls/engines[1]/throttle-lever</property>
+        </signal>
+        <signal>
+          <type>float</type>
+          <property type="string">/controls/engines[2]/throttle-lever</property>
+        </signal>
+        <signal>
+          <type>float</type>
+          <property type="string">/controls/engines[3]/throttle-lever</property>
+        </signal>
+	<signal>
+          <type>float</type>
+          <property type="string">engines/engine[0]/n2</property>
+        </signal>
+        <signal>
+          <type>float</type>
+          <property type="string">engines/engine[1]/n2</property>
+        </signal>
+        <signal>
+          <type>float</type>
+          <property type="string">engines/engine[2]/n2</property>
+        </signal>
+        <signal>
+          <type>float</type>
+          <property type="string">engines/engine[3]/n2</property>
+        </signal>
       </config>
     </flight-recorder>
 
