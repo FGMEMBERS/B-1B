@@ -571,7 +571,7 @@
       <target-pitch-deg type="float">0</target-pitch-deg>
       <target-vfps type="float">0</target-vfps>
       <take-off-pitch-deg type="float">2.0</take-off-pitch-deg>
-      <target-speed-kt type="float">350.0</target-speed-kt>
+      <target-speed-kt type="float">300.0</target-speed-kt>
       <climb-out-initial-pitch-deg type="float">6.0</climb-out-initial-pitch-deg>
       <climb-out-final-pitch-deg type="float">3.0</climb-out-final-pitch-deg>
       <target-climb-rate-fpm type="float">2000.0</target-climb-rate-fpm>
