@@ -7,6 +7,7 @@
     <y-m> 0.0 </y-m>
     <z-m> 0.0 </z-m>
 </offsets>
+<nopreview/>
 
 <!--<effect>
 	<inherits-from>Effects/light-cone</inherits-from>
