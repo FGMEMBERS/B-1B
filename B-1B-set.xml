@@ -17,6 +17,23 @@
       <cockpit type="int">4</cockpit>
       <model type="int">4</model>
     </rating>
+    <tags>
+	<tag>bomber</tag>
+	<tag>boeing</tag>
+	<tag>1980s</tag>
+	<tag>1990s</tag>
+	<tag>2000s</tag>
+	<tag>2010s</tag>
+	<tag>gulfwar1</tag>
+	<tag>gulfwar2</tag>
+	<tag>retractable-gear</tag>
+	<tag>variable-geometry</tag>
+	<tag>ifr</tag>
+	<tag>hud</tag>
+	<tag>supersonic</tag>
+	<tag>afterburner</tag>
+	<tag>jet</tag>
+    </tags>
     <author>Markus Zojer, Paul Jay Schrenker, Ludovic Brenta (systems), Andreas Spiekermann (livery)</author>
     <aero>B-1B-yasim</aero>
     <fuel-fraction>1.0</fuel-fraction>
